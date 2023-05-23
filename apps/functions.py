@@ -132,7 +132,7 @@ class MultiFileDownloader(object):
         file, path = mkstemp()
         os.close(file)
         new_filename = "Comrate_{}_{}_{}.{}".format(name, filename.replace("whatif_", ""), timestr, file_ext)
-        export_dataframe_to_image(data, path)
+        dfi.export(data, path)
         image = Image.open(path)
         new_image = Image.new(image.mode, size=(image.size[0], image.size[1]))
         new_image.putdata(image.getdata())
