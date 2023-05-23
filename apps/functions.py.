@@ -204,8 +204,8 @@ class MultiFileDownloader(object):
     def download_table(self, data, filename, file_ext, label, name, font_size):
         file, path = mkstemp()
         os.close(file)
-        new_filename = "Comrate_{}_{}_{}.{}".format(self.name, self.filename.replace("whatif_", ""), timestr, self.file_ext)
-        dfi.export(self.data, path)
+        new_filename = "Comrate_{}_{}_{}.{}".format(name, filename.replace("whatif_", ""), timestr, file_ext)
+        dfi.export(data, path)
         image = Image.open(path)
         new_image = Image.new(image.mode, size=(image.size[0], image.size[1]))
         new_image.putdata(image.getdata())
