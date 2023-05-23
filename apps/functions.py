@@ -102,7 +102,7 @@ class MultiFileDownloader(object):
                 zf.writestr(new_filename, data)
         zip_file.seek(0)
         b64 = base64.b64encode(zip_file.getvalue()).decode()
-        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #25476A; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
+        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
         filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name, timestr)
         st.download_button(
             label="Download",
@@ -119,7 +119,7 @@ class MultiFileDownloader(object):
                 zf.writestr(new_filename, data)
         zip_file.seek(0)
         b64 = base64.b64encode(zip_file.getvalue()).decode()
-        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #25476A; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
+        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
         filename_out = "Comrate_{}_financial_statements_simulation_analysis_{}".format(name, timestr)
         st.download_button(
             label="Download",
@@ -190,7 +190,7 @@ class MultiFileDownloader(object):
         b64 = base64.b64encode(zip_file.getvalue()).decode()
 
         st.markdown(
-            """<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #25476A; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
+            """<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
             unsafe_allow_html=True)
         filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name, timestr)
         st.download_button(
@@ -233,7 +233,7 @@ class MultiFileDownloader(object):
         b64 = base64.b64encode(zip_file.getvalue()).decode()
 
         st.markdown(
-            """<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #25476A; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
+            """<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
             unsafe_allow_html=True)
         filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name, timestr)
         st.download_button(
