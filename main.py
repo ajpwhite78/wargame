@@ -6,7 +6,7 @@ import os
 from apps import manual_analysis, simulation_analysis
 
 
-st.set_page_config(page_title="Paydar", page_icon="images/favicon.png", layout="wide")
+st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
 
 dirpath = os.path.dirname(__file__)
 
