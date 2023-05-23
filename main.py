@@ -8,33 +8,6 @@ from apps import manual_analysis, simulation_analysis
 
 st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
 
-def set_page_title(title):
-    st.sidebar.markdown(unsafe_allow_html=True, body=f"""
-        <iframe height=0 srcdoc="<script>
-            const title = window.parent.document.querySelector('title') \
-                
-            const oldObserver = window.parent.titleObserver
-            if (oldObserver) {{
-                oldObserver.disconnect()
-            }} \
-
-            const newObserver = new MutationObserver(function(mutations) {{
-                const target = mutations[0].target
-                if (target.text !== '{title}') {{
-                    target.text = '{title}'
-                }}
-            }}) \
-
-            newObserver.observe(title, {{ childList: true }})
-            window.parent.titleObserver = newObserver \
-
-            title.text = '{title}'
-        </script>" />
-    """)
-
-
-set_page_title("My new title")
-
 dirpath = os.path.dirname(__file__)
 
 if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.session_state or "df_field_name_mapping" not in st.session_state:
