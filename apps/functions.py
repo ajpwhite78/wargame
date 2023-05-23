@@ -93,6 +93,23 @@ class MultiFileDownloader(object):
 
     def __init__(self):
         super(MultiFileDownloader, self).__init__()
+    
+    def export_dataframe_to_image(dataframe, image_path):
+    # Use an alternative method to export the dataframe to an image
+    # Modify this function according to your chosen method for exporting the dataframe
+
+    # Example:
+    # Save the DataFrame as a PNG image using pandas' to_html() and savefig() from matplotlib
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
+    html = dataframe.to_html()
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.axis('off')
+    ax.axis('tight')
+    ax.table(cellText=dataframe.values, colLabels=dataframe.columns, loc='center')
+    plt.savefig(image_path, bbox_inches='tight')
+    plt.close()
 
     def download_manual_figures(self, files, name):
         zip_file = io.BytesIO()
@@ -132,7 +149,7 @@ class MultiFileDownloader(object):
         file, path = mkstemp()
         os.close(file)
         new_filename = "Comrate_{}_{}_{}.{}".format(name, filename.replace("whatif_", ""), timestr, file_ext)
-        dfi.export(data, path, fontsize=3.8, dpi=800, table_conversion="matplotlib")
+        export_dataframe_to_image(data, path)
         image = Image.open(path)
         new_image = Image.new(image.mode, size=(image.size[0], image.size[1]))
         new_image.putdata(image.getdata())
@@ -205,7 +222,7 @@ class MultiFileDownloader(object):
         file, path = mkstemp()
         os.close(file)
         new_filename = "Comrate_{}_{}_{}.{}".format(name, filename.replace("whatif_", ""), timestr, file_ext)
-        dfi.export(data, path, fontsize=3.8, dpi=800, table_conversion="matplotlib")
+        export_dataframe_to_image(data, path)
         image = Image.open(path)
         new_image = Image.new(image.mode, size=(image.size[0], image.size[1]))
         new_image.putdata(image.getdata())
