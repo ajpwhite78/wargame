@@ -4,7 +4,6 @@ import numpy as np
 from numpy import nanpercentile
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from matplotlib import font_manager
-import matplotlib.pyplot as plt
 import urllib
 import base64
 import time
@@ -94,15 +93,6 @@ class MultiFileDownloader(object):
 
     def __init__(self):
         super(MultiFileDownloader, self).__init__()
-    
-    def export_dataframe_to_image(dataframe, image_path):
-        html = dataframe.to_html()
-        fig, ax = plt.subplots(figsize=(8, 6))
-        ax.axis('off')
-        ax.axis('tight')
-        ax.table(cellText=dataframe.values, colLabels=dataframe.columns, loc='center')
-        plt.savefig(image_path, bbox_inches='tight')
-        plt.close()
 
     def download_manual_figures(self, files, name):
         zip_file = io.BytesIO()
