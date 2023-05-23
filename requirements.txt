@@ -1,5 +1,6 @@
 dataframe-image==0.1.10
 kaleido==0.2.1
+lxml==4.9.2
 matplotlib==3.6.1
 numpy==1.23.3
 pandas==1.4.4
