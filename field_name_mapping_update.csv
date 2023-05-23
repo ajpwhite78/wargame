@@ -1,0 +1,67 @@
+field_name,comrate_field_name
+Sales Revenue,sales_revenue
+Sales Revenue Growth %,sales_revenue_growth
+COGS (Excluding D&A),cost_of_goods_sold_excl_DA
+COGS (Excluding D&A) Margin %,cost_of_goods_sold_excl_DA_margin
+D&A Expenses,depreciation_and_amortization_expenses
+COGS (Including D&A),cost_of_goods_sold_incl_depreciation_amortization
+Gross Profit,gross_profit
+Gross Profit Margin %,gross_profit_margin
+SG&A (Other) Expenses,sga_oth
+R&D Expenses,research_and_development_expenses
+SG&A (Including R&D) Expenses,sales_general_and_admin_expenses
+EBIT,ebit
+EBIT Margin %,ebit_margin
+Other Income (Expenses),other_income_expense
+Interest Expenses,interest_expense
+Interest Rate %,interest_rate
+PBT,pbt
+Income Tax Expense,income_tax_expense
+Tax Rate %,tax_rate
+Net Income,net_income
+Net Income Margin %,net_income_margin
+Dividend or Distributions Paid,dividend_or_distributions_paid
+Dividend Payout Ratio %,dividend_payout_ratio
+D&A Expenses / Sales %,depreciation_and_amortization_expenses_sales
+Increase (Decrease) in Other Items,increase_decrease_in_other_items
+Funds from Operations,funds_from_operations
+Change in Working Capital,change_in_working_capital
+Net Cash from Operating Activities,net_cash_from_operating_activities
+Capital Expenditure,capital_expenditure
+Capital Expenditure / Sales %,capital_expenditure_sales
+Other Investing Activities,other_investing_activities
+Net Cash from Investing Activities,net_cash_from_investing_activities
+Sale (Repurchase) of Equity,sale_repurchase_of_equity
+Issuance (Reduction) of Debt,issuance_reduction_of_debt
+Other Financing Activities,other_financing_activities
+Net Cash from Financing Activities,net_cash_from_financing_activities
+Net Increase in Cash & Equivalents,net_increase_in_cash_and_equivalents
+Cash & Short Term Investments,cash_and_short_term_investments
+Accounts Receivable,accounts_receivable
+Accounts Receivable Days,accounts_receivable_days
+Inventory,inventory
+Inventory Days,inventory_days
+Other Current Assets,other_current_assets
+Total Current Assets,total_current_assets
+"Property, Plant & Equipment",property_plant_and_equipment
+Accumulated Depreciation,accumulated_depreciation
+Net Fixed Assets,net_fixed_assets
+Intangible Assets,intangible_assets
+Total Other Assets,total_other_assets
+Total Assets,total_assets
+Accounts Payable,accounts_payable
+Accounts Payable Days,accounts_payable_days
+Short Term Notes Payable,short_term_notes_payable
+Other Short Term Liabilities,other_short_term_liabilities
+Total Current Liabilities,total_current_liabilities
+Long Term Notes Payable,long_term_notes_payable
+Other Long Term Liabilities,other_long_term_liabilities
+Total Non Current Liabilities,total_non_current_liabilities
+Total Liabilities,total_liabilities
+Stock Value,stock_value
+Retained Earnings,retained_earnings
+Capital Stock,capital_stock
+Other Equity,other_equity
+Adjustments,adjustments
+Total Shareholders Equity,total_shareholders_equity
+Balance Check,balance_check
