@@ -5,6 +5,9 @@ import base64
 import os
 from apps import manual_analysis, simulation_analysis
 
+st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
+
+
 def set_page_title(title):
     st.sidebar.markdown(unsafe_allow_html=True, body=f"""
         <iframe height=0 srcdoc="<script>
@@ -31,8 +34,6 @@ def set_page_title(title):
 
 
 set_page_title("My new title")
-
-st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
 
 dirpath = os.path.dirname(__file__)
 
