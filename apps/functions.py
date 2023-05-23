@@ -4,6 +4,7 @@ import numpy as np
 from numpy import nanpercentile
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from matplotlib import font_manager
+import matplotlib.pyplot as plt
 import urllib
 import base64
 import time
@@ -95,21 +96,13 @@ class MultiFileDownloader(object):
         super(MultiFileDownloader, self).__init__()
     
     def export_dataframe_to_image(dataframe, image_path):
-    # Use an alternative method to export the dataframe to an image
-    # Modify this function according to your chosen method for exporting the dataframe
-
-    # Example:
-    # Save the DataFrame as a PNG image using pandas' to_html() and savefig() from matplotlib
-    import pandas as pd
-    import matplotlib.pyplot as plt
-
-    html = dataframe.to_html()
-    fig, ax = plt.subplots(figsize=(8, 6))
-    ax.axis('off')
-    ax.axis('tight')
-    ax.table(cellText=dataframe.values, colLabels=dataframe.columns, loc='center')
-    plt.savefig(image_path, bbox_inches='tight')
-    plt.close()
+        html = dataframe.to_html()
+        fig, ax = plt.subplots(figsize=(8, 6))
+        ax.axis('off')
+        ax.axis('tight')
+        ax.table(cellText=dataframe.values, colLabels=dataframe.columns, loc='center')
+        plt.savefig(image_path, bbox_inches='tight')
+        plt.close()
 
     def download_manual_figures(self, files, name):
         zip_file = io.BytesIO()
