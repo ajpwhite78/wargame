@@ -424,8 +424,11 @@ header3 = """
 
         .left1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
-            justify-content: flex-start;
+            justify-content: center;
             text-align: center;
+            display: flex;
+            align-items: center;
+            float: left;
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
         .left1-column img {{
@@ -433,7 +436,7 @@ header3 = """
             display: flex;
             align-items: center;
             justify-content: center;
-            float: right;
+            float: left;
           }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
