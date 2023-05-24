@@ -697,7 +697,10 @@ media_query = '''
     @media (max-width: 600px) {
         p {
             margin-top: 2em;
-            font-size: 1.5em;
+            font-size: 2.4em;
+        }
+        span {
+            border: 0.5em solid #25476A !important;
         }
     }
     </style>
