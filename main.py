@@ -365,6 +365,13 @@ header3 = """
             display: inline-block;
             vertical-align: middle
         }}
+        .logo-wrapper {{
+        max-width: 100%;
+    }}
+
+    .logo-wrapper img {{
+        max-width: 100%;
+    }}
         .button-div {{
             display: flex;
             justify-content: flex-start;
@@ -433,6 +440,9 @@ header3 = """
             display: inline-block;
             vertical-align: middle;
           }}
+          .logo-wrapper {{
+            max-width: 80%;  /* Adjust the logo width as per your preference */
+        }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             font-size: 7em;
