@@ -425,6 +425,7 @@ header3 = """
         .left1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: flex-start;
+            text-align: center;
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
         .left-column img {{
@@ -434,7 +435,7 @@ header3 = """
           }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
-            font-size: 6em;
+            font-size: 8em;
             text-align: center;  /* Center align text on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
@@ -453,7 +454,7 @@ header3 = """
     </style>
     <div class="header">
         <div class="left1-column">
-            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="50%">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="100%">
         </div>
         <div class="right1-column">
             WarGame Scenario Analysis
