@@ -361,7 +361,7 @@ header3 = """
             margin-right: auto;
         }}
         .left1-column img {{
-            max-width: 120%;
+            max-width: 200%;
             display: inline-block;
             vertical-align: middle
         }}
@@ -430,9 +430,10 @@ header3 = """
         }}
         .left1-column img {{
             width: 50%;
+            display: flex;
             align-items: center;
-            horizontal-align: middle;
-            vertical-align: middle;
+            justify-content: center;
+            float: left;
           }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
