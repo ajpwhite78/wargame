@@ -695,7 +695,7 @@ introduction_text = '<p style="margin-top: 0em; margin-bottom: 1.25em; text-alig
 media_query = '''
    <style>
      @media (max-width: 600px) {{
-        p {
+        p {{
             font-size: 2.4em !important;
             margin-top: 1.25em !important;
         }}
