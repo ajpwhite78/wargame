@@ -698,8 +698,9 @@ media_query = '''
     <style>
     @media (max-width: 600px) {
         p {
-            margin-top: 2em; 
             font-size: 2.4em;
+            margin-top: 1.25em;
+            border-width: 0.5em;
         }
     }
     </style>
