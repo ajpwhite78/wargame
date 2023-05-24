@@ -659,7 +659,7 @@ input[type=number]:hover {
 </style>
 """, unsafe_allow_html=True)
 
-introduction_text = '<p style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.75em; padding-bottom: 0.75em; font-family: sans-serif; font-size: 1.125em; font-weight: bold; display: block; width: 100%; border: 0.375em solid #25476A;">Welcome to Comrate&apos;s wargame scenario analysis application, offering a comprehensive corporate financial analysis and decision-making solution. The application leverages Comrate&apos;s proprietary credit ratings models to predict ratings for target companies based on historical financial data and expected financial scenarios. Our application allows you to conduct both manual and scenario-based financial statement analyses and generate credit rating predictions, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>'
+introduction_text = '<p style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.75em; padding-bottom: 0.75em; font-family: sans-serif; font-size: 1.125em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Welcome to Comrate&apos;s wargame scenario analysis application, offering a comprehensive corporate financial analysis and decision-making solution. The application leverages Comrate&apos;s proprietary credit ratings models to predict ratings for target companies based on historical financial data and expected financial scenarios. Our application allows you to conduct both manual and scenario-based financial statement analyses and generate credit rating predictions, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>'
 
 media_query = '''
     <style>
@@ -672,11 +672,6 @@ media_query = '''
 '''
 
 st.markdown(media_query + introduction_text, unsafe_allow_html=True)
-
-
-introduction_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:12px; padding-bottom:12px; font-family:sans-serif; font-size: 18px; font-weight: bold; display: block; width: 100%; border: 3px solid #25476A;">Welcome to Comrate&apos;s wargame scenario analysis application, offering a comprehensive corporate financial analysis and decision-making solution. The application leverages Comrate&apos;s proprietary credit ratings models to predict ratings for target companies based on historical financial data and expected financial scenarios. Our application allows you to conduct both manual and scenario-based financial statement analyses and generate credit rating predictions, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>'
-st.markdown(introduction_text, unsafe_allow_html=True)
-
 
 subtext1A = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
