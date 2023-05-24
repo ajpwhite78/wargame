@@ -698,7 +698,7 @@ media_query = '''
         p {
             font-size: 2.4em;
             margin-top: 1.25em;
-            border-width: 0.8em;
+            border: 0.5em;
         }
     }
     </style>
