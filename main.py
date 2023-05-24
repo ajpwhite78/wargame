@@ -420,7 +420,7 @@ header3 = """
             justify-content: center;
             align-items: center;
             padding: 0.8em;  /* Adjust padding for smaller screens */
-       } }
+       }}
 
         .left1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
@@ -444,7 +444,7 @@ header3 = """
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
         }}
-    }
+    }}
     </style>
     <div class="header">
         <div class="left1-column">
