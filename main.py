@@ -369,7 +369,7 @@ header3 = """
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 50%;
+            width: 40%;
             gap: 1em;  /* Convert 20px to em units */
         }}
         .button {{
@@ -447,6 +447,7 @@ header3 = """
 
         .welcome-container {{
             width: 50%;  /* Set width to 100% for full width on smaller screens */
+            font-size: 3em;
             justify-content: center;  /* Center align items on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
