@@ -401,7 +401,7 @@ header3 = """
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
         .welcome-text {{
-            font-size: 2em;  /* Adjust font size as per your preference */
+            font-size: 1.6em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         }}
@@ -446,13 +446,13 @@ header3 = """
         }}
 
         .welcome-container {{
-            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
 
         .button-div {{
-            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
         }}
     }}
