@@ -76,8 +76,8 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr style="border:0em; background-color: #03A9F4; margin-top: 0em;">'
-line2 = '<hr style="border:0em; background-color: #25476A; margin-top: -1.8em;">'
+line = '<hr class="line" style="border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line2 = '<hr class="line" style="border:0em; background-color: #25476A; margin-top: -1.8em;">'
 line_media_query = '''
     <style>
     @media (max-width: 600px) {
