@@ -76,19 +76,19 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr class="line" style="height:0.84em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line = '<hr class="line" style="height:0.24em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
 line2 = '<hr class="line" style="border:0em; background-color: #25476A; margin-top: -1.8em;">'
 line_media_query = '''
     <style>
     @media (max-width: 600px) {
         .line {
-            height: 100%;
+            border-top: 0.6em solid #03A9F4;
         }
     }
 
     @media (min-width: 601px) {
         .line {
-            height: 20%;
+            border-top: 0em solid #03A9F4;
         }
     }
     </style>
