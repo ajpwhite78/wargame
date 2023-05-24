@@ -453,7 +453,7 @@ header3 = """
     </style>
     <div class="header">
         <div class="left1-column">
-            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="100%">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="50%">
         </div>
         <div class="right1-column">
             WarGame Scenario Analysis
