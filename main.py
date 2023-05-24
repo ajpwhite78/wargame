@@ -428,13 +428,13 @@ header3 = """
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
         .left-column img {{
-            max-width: 80%;
+            max-width: 50%;
             display: inline-block;
             vertical-align: middle;
           }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
-            font-size: 5em;
+            font-size: 6em;
             text-align: center;  /* Center align text on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
