@@ -715,9 +715,6 @@ media_query = '''
         .intro-paragraph {
             font-size: 2.4em;
         }
-        .intro-span {
-            border: 0.5em solid #25476A !important;
-        }
     }
     </style>
 '''
