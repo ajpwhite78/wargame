@@ -700,6 +700,7 @@ media_query = '''
         p {
             font-size: 2.4em;
         }
+        border: 0.5em solid #25476A !important;
     }
     </style>
 '''
