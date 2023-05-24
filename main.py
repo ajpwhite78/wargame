@@ -76,8 +76,39 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr style="height: 0.24em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
-line2 = '<hr style="height: 0.14em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
+line = '<hr style="border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line2 = '<hr style="border:0em; background-color: #25476A; margin-top: -1.8em;">'
+line_media_query = '''
+    <style>
+    @media (max-width: 600px) {
+        .line {
+            height: 0.54em;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .line {
+            height: 0.24em;
+        }
+    }
+    </style>
+'''
+line_media_query2 = '''
+    <style>
+    @media (max-width: 600px) {
+        .line {
+            height: 0.34em;
+        }
+    }
+
+    @media (min-width: 601px) {
+        .line {
+            height: 0.14em;
+        }
+    }
+    </style>
+'''
+
 
 header = """
     <style>
@@ -676,8 +707,8 @@ st.markdown(media_query + introduction_text, unsafe_allow_html=True)
 
 subtext1A = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
-st.markdown(line, unsafe_allow_html=True)
-st.markdown(line2, unsafe_allow_html=True)
+st.markdown(line_media_query + line, unsafe_allow_html=True)
+st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
 instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Use the dropdown menus to select the sector, company name and reporting period of the company you want to analyze. Click "Run" once you have made your selections or click "Cancel" to reset.</span></p>'
 st.markdown(instructions_text, unsafe_allow_html=True)
 col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 1, 0.5, 0.5])
