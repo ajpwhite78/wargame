@@ -433,7 +433,7 @@ header3 = """
             display: flex;
             align-items: center;
             justify-content: center;
-            float: left;
+            float: right;
           }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
