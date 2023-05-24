@@ -431,7 +431,7 @@ header3 = """
         .left1-column img {{
             width: 50%;
             align-items: center;
-            display: inline-block;
+            horizontal-align: middle;
             vertical-align: middle;
           }}
         .right1-column {{
