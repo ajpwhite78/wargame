@@ -408,7 +408,7 @@ header3 = """
         .welcome-container {{
             display: flex;
             align-items: center;
-            width: 60%;  /* Adjust width as per your preference */
+            width: 50%;  /* Adjust width as per your preference */
             padding: 0em 0em;  /* Convert 10px 30px to em units */
         }}
         .welcome-container div {{
