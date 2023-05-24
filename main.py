@@ -704,9 +704,7 @@ media_query = '''
     }
     </style>
 '''
-
-styled_introduction_text = f'<div class="introduction-text-container">{introduction_text}</div>'
-st.markdown(media_query + styled_introduction_text, unsafe_allow_html=True)
+st.markdown(media_query + introduction_text, unsafe_allow_html=True)
 
 
 
