@@ -981,6 +981,39 @@ footer2 = """
         .content-container {{
             /*padding-bottom: 100px;*/
         }}
+     @media screen and (max-width: 600px) {{
+        .footer {{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8em;  /* Adjust padding for smaller screens */
+       }}
+
+        .left-column {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            float: left;
+            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
+        }}
+        .left-column {{
+            font-size: 1.6em;
+            float: left;
+            width: 15%;
+            padding: 0.625em;
+            margin-bottom: 0.5em;
+        }}
+    
+        .middle-column {{
+            font-size: 1.6em;
+            float: left;
+            width: 85%;
+            padding: 0.625em;
+            margin-bottom: 0.5em;
+        }}
+    }}
     </style>
     
     <div class="content-container">
