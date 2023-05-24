@@ -3,7 +3,7 @@ import pandas as pd
 import pathlib
 import base64
 import os
-from apps import fontsize, manual_analysis, simulation_analysis
+from apps import manual_analysis, simulation_analysis
 
 
 st.set_page_config(page_title="Paydar", page_icon="images/favicon.png", layout="wide")
