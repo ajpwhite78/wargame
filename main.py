@@ -8,9 +8,9 @@ from apps import fontsize, manual_analysis, simulation_analysis
 st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
 
 dirpath = os.path.dirname(__file__)
-base_fontsize = int(raw_input('base fontsize (px): '))
-lineheight = float(raw_input('line-height: '))
-target_fontsize = float(raw_input('Target font-size (px): '))
+base_fontsize = int(input('base fontsize (px): '))
+lineheight = float(input('line-height: '))
+target_fontsize = float(input('Target font-size (px): '))
 
 result = fontsize(base_fontsize, target_fontsize, lineheight)
 st.write(result)
