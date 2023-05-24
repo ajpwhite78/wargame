@@ -665,7 +665,7 @@ media_query = '''
     <style>
     @media (max-width: 600px) {
         p {
-            margin-top: 5em; 
+            margin-top: 20em; 
             font-size: 2.4em;
         }
     }
