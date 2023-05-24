@@ -698,9 +698,9 @@ media_query = '''
         p {
             margin-top: 2em;
             font-size: 2.4em;
-        span {
-            border: 0.5em solid #25476A !important;
         }
+        p span {
+            border: 0.5em solid #25476A !important;
         }
     }
     </style>
