@@ -452,10 +452,16 @@ header3 = """
             justify-content: center;  /* Center align items on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
-
         .button-div {{
             width: 30%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
+        }}
+        .button {{
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            font-size: 1em;  /* Convert 16px to em units */
+            width: 8em;
+            height: 3em;
         }}
     }}
     </style>
