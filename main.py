@@ -429,7 +429,7 @@ header3 = """
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
         .left-column img {{
-            max-width: 2%;
+            width: 60%;
             display: inline-block;
             vertical-align: middle;
           }}
