@@ -3,11 +3,12 @@ import pandas as pd
 import pathlib
 import base64
 import os
-from apps import manual_analysis, simulation_analysis
+from apps import fontsize, manual_analysis, simulation_analysis
 
 st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
 
 dirpath = os.path.dirname(__file__)
+st.write(fontsize0
 
 if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.session_state or "df_field_name_mapping" not in st.session_state:
     st.session_state.df_input_file = 'TechHardware_WhatIfFields_Ccy_v2_short_test.csv'
