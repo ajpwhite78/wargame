@@ -5,18 +5,13 @@ import base64
 import os
 from apps import fontsize, manual_analysis, simulation_analysis
 
-st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="wide")
+
+st.set_page_config(page_title="Paydar", page_icon="images/favicon.png", layout="wide")
 
 dirpath = os.path.dirname(__file__)
-base_fontsize = int(input('base fontsize (px): '))
-lineheight = float(input('line-height: '))
-target_fontsize = float(input('Target font-size (px): '))
-
-result = fontsize(base_fontsize, target_fontsize, lineheight)
-st.write(result)
 
 if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.session_state or "df_field_name_mapping" not in st.session_state:
-    st.session_state.df_input_file = 'TechHardware_WhatIfFields_Ccy_v2_short_test.csv'
+    st.session_state.df_input_file = 'TechHardware_WhatIfFields_Ccy_v2.csv'
     st.session_state.df_input = pd.read_csv(st.session_state.df_input_file)
     st.session_state.df_field_name_mapping_file = 'field_name_mapping_update.csv'
     st.session_state.df_field_name_mapping = pd.read_csv(st.session_state.df_field_name_mapping_file)
@@ -81,8 +76,8 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
-line2 = '<hr style="height: 2px; border:0px; background-color: #25476A; margin-top: -30px;">'
+line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0em;">'
+line2 = '<hr style="height: 2px; border:0px; background-color: #25476A; margin-top: -1.8em;">'
 
 header = """
     <style>
@@ -209,7 +204,7 @@ header2 = """
 
 #st.markdown(header2.format(encoded_string, img_to_bytes("images/comrate_logo_small_update2.png")), unsafe_allow_html=True)
 
-header3 = """
+header3A = """
     <style>
         .header {{
             position: fixed;
@@ -240,7 +235,7 @@ header3 = """
             padding: 10px;
         }}
         .right1-column {{
-            font-size: 64px;
+            font-size: 4rem;
             text-indent: 40px;
             float: left;
             width: 90%;
@@ -321,6 +316,120 @@ header3 = """
             <button class="button">Help</button>
             <button class="button">Contact</button>
             <button class="button">Logout</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+"""
+
+header3 = """
+    <style>
+        :root {{
+            --base-font-size: 1vw;  /* Define your base font size here */
+        }}
+
+        .header {{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-image: url('data:image/png;base64,{}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: brightness(0.9) saturate(0.8);
+            opacity: 1;
+            color: #FAFAFA;
+            text-align: left;
+            padding: 0.4em;  /* Convert 10px to em units */
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }}
+        .left1-column {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;            
+            width: 15%;
+            padding: 0em;  /* Convert 10px to em units */
+        }}
+        .right1-column {{
+            font-size: 2.8em;  /* Convert 40px to em units */
+            text-indent: 1em;  /* Convert 40px to em units */
+            float: left;
+            width: 80%;
+            padding: 0em;  /* Convert 10px to em units */
+            margin-right: auto;
+        }}
+        .left1-column img {{
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle
+        }}
+        .button-div {{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 50%;
+            gap: 1em;  /* Convert 20px to em units */
+        }}
+        .button {{
+            background-color: #25476A;
+            border-color: #FAFAFA;
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            color: #FAFAFA;
+            padding: 0em 0em;  /* Adjust padding as per your preference */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.8em;  /* Convert 16px to em units */
+            margin: 0em;  /* Adjust margin as per your preference */
+            cursor: pointer;
+            width: 6em;
+            height: 2em;
+        }}
+        .button:hover {{
+            background-color: #b8d9e8;
+            border-color: #FAFAFA;
+            color: #25476A;
+        }}
+        .clear {{
+            clear: both;
+        }}
+        body {{
+            margin-top: 1px;
+            font-size: var(--base-font-size);  /* Set the base font size */
+        }}
+        .welcome-text {{
+            font-size: 1.2em;  /* Adjust font size as per your preference */
+            margin-right: auto;  /* Adjust margin as per your preference */
+            color: #FAFAFA;
+        }}
+        .welcome-container {{
+            display: flex;
+            align-items: center;
+            width: 60%;  /* Adjust width as per your preference */
+            padding: 0em 0em;  /* Convert 10px 30px to em units */
+        }}
+        .welcome-container div {{
+            color: #FAFAFA;
+        }}
+    </style>
+    <div class="header">
+        <div class="left1-column">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="100%">
+        </div>
+        <div class="right1-column">
+            WarGame Scenario Analysis
+        </div>
+        <div class="clear"></div>
+        <div class="welcome-container">
+            <div class="welcome-text">Welcome John</div>
+            <div class="button-div">
+                <button class="button">Help</button>
+                <button class="button">Contact</button>
+                <button class="button">Logout</button>
+            </div>
         </div>
         <div class="clear"></div>
     </div>
@@ -728,7 +837,7 @@ footer = """
 #st.markdown(footer, unsafe_allow_html=True)
 
 footer2 = """
-<style>
+    <style>
     .footer {{
         position: fixed;
         left: 0;
@@ -775,6 +884,66 @@ footer2 = """
         <div class="clear"></div>
     </div>
 </div>
+"""
+
+footer2 = """
+    <style>
+        :root {{
+            --base-font-size: 1vw;  /* Define your base font size here */
+        }}
+    
+        .footer {{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-image: url('data:image/png;base64,{}');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            filter: brightness(0.9) saturate(0.8);
+            opacity: 1;
+            color: #FAFAFA;
+            text-align: justify;
+            padding: 0em;
+            padding-left: 1.875em;  /* Convert 30px to em units */
+            padding-right: 1.875em;  /* Convert 30px to em units */
+        }}
+    
+        .left-column {{
+            font-size: 0.8em;
+            float: left;
+            width: 15%;
+            padding: 0.625em;  /* Convert 10px to em units */
+        }}
+    
+        .middle-column {{
+            font-size: 0.8em;
+            float: left;
+            width: 85%;
+            padding: 0.625em;  /* Convert 10px to em units */
+        }}
+    
+        .clear {{
+            clear: both;
+        }}
+    
+        .content-container {{
+            /*padding-bottom: 100px;*/
+        }}
+    </style>
+    
+    <div class="content-container">
+        <div class="footer">
+            <div class="left-column">
+                <b>&copy; 2023 Comrate<br>All rights reserved</b>
+            </div>
+            <div class="middle-column">
+                <b><strong>DISCLAIMER:</strong> All simulation and machine learning models employed in this application are based on historical financial data and are subject to uncertainties and risks. Past performance is not indicative of future results. All models may exhibit inherent limitations associated with their predictive accuracy.</b>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 """
 
 image_file_path = "images/digital_background_update2.jpg"
