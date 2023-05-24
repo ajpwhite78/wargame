@@ -426,9 +426,6 @@ header3 = """
         <div class="welcome-container">
             <div class="welcome-text">Welcome John</div>
             <div class="button-div">
-            /*margin-bottom: 100px;*/
-                /*<button class="button">Help</button>*/
-                /*<button class="button">Contact</button>*/
                 <button class="button">Logout</button>
             </div>
         </div>
