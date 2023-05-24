@@ -82,13 +82,13 @@ line_media_query = '''
     <style>
     @media (max-width: 600px) {
         .line {
-            width: 60%;
+            height: 200%;
         }
     }
 
     @media (min-width: 601px) {
         .line {
-            width: 60%;
+            height: 100%;
         }
     }
     </style>
