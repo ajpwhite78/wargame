@@ -704,7 +704,7 @@ media_query = '''
 
 introduction_text = '''
     <style>
-     @media screen and (max-width: 600px) {{
+     @media (max-width: 600px) {{
         p {
             font-size: 2.4em !important;
             margin-top: 1.25em !important;
