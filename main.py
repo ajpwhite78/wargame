@@ -447,7 +447,7 @@ header3 = """
 
         .welcome-container {{
             width: 50%;  /* Set width to 100% for full width on smaller screens */
-            font-size: 3em;
+            font-size: 2.4em;
             justify-content: center;  /* Center align items on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
