@@ -6,8 +6,4 @@ def fontsize(base_fontsize, target_fontsize, lineheight):
     target_fontsize_em = round(target_fontsize_em, 4)
     return "###################\nfont-size: %sem\nline-height: %s\nmargin-bottom: %s\n###################" % (target_fontsize_em, target_lineheight, target_lineheight)
 
-base_fontsize = int(raw_input('base fontsize (px): '))
-lineheight = float(raw_input('line-height: '))
-target_fontsize = float(raw_input('Target font-size (px): '))
 
-result = fontsize(base_fontsize, target_fontsize, lineheight)
