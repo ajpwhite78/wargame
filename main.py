@@ -430,7 +430,7 @@ header3 = """
         }}
         .left1-column img {{
             width: 50%;
-            text-align: center;
+            align-items: center;
             display: inline-block;
             vertical-align: middle;
           }}
