@@ -435,7 +435,7 @@ header3 = """
           }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
-            font-size: 8em;
+            font-size: 7em;
             text-align: center;  /* Center align text on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
