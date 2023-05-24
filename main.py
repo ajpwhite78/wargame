@@ -999,7 +999,7 @@ footer2 = """
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
         .left-column {{
-            font-size: 1.6em;
+            font-size: 2.4em;
             float: left;
             width: 15%;
             padding: 0.625em;
@@ -1007,7 +1007,7 @@ footer2 = """
         }}
     
         .middle-column {{
-            font-size: 1.6em;
+            font-size: 2.4em;
             float: left;
             width: 85%;
             padding: 0.625em;
