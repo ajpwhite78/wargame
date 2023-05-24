@@ -76,8 +76,8 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr style="height: 0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
-line2 = '<hr style="height: 0.15em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
+line = '<hr style="height: 0.24em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line2 = '<hr style="height: 0.14em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
 
 header = """
     <style>
