@@ -945,7 +945,7 @@ footer2 = """
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0em;  /* Adjust padding for smaller screens */
+            padding: 0.8em;  /* Adjust padding for smaller screens */
        }}
 
         .left-column {{
@@ -955,7 +955,7 @@ footer2 = """
             display: flex;
             align-items: center;
             float: left;
-            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
+            margin-bottom: 0em;  /* Adjust margin for smaller screens */
         }}
         .left-column {{
             font-size: 2.4em;
@@ -970,7 +970,7 @@ footer2 = """
             float: left;
             width: 85%;
             padding: 0.625em;
-            margin-bottom: 0.5em;
+            margin-bottom: 0em;
         }}
     }}
     </style>
