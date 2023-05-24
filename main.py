@@ -361,7 +361,7 @@ header3 = """
             margin-right: auto;
         }}
         .left1-column img {{
-            max-width: 80%;
+            max-width: 100%;
             display: inline-block;
             vertical-align: middle
         }}
@@ -428,14 +428,11 @@ header3 = """
             text-align: center;
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
-        .left-column img {{
+        .left1-column img {{
             width: 60%;
             display: inline-block;
             vertical-align: middle;
           }}
-          .logo-wrapper {{
-            max-width: 80%;  /* Adjust the logo width as per your preference */
-        }}
         .right1-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             font-size: 7em;
