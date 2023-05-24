@@ -699,7 +699,7 @@ media_query = '''
     @media (max-width: 600px) {
         p {
             font-size: 2.4em;
-            margin-top: 1.25em;
+            margin-top: 20em;
             border-width: 0.5em;
         }
     }
