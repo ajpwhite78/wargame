@@ -353,7 +353,7 @@ header3 = """
             padding: 0em;  /* Convert 10px to em units */
         }}
         .right1-column {{
-            font-size: 3em;  /* Convert 40px to em units */
+            font-size: 3.6em;  /* Convert 40px to em units */
             text-indent: 1em;  /* Convert 40px to em units */
             float: left;
             width: 80%;
@@ -401,7 +401,7 @@ header3 = """
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
         .welcome-text {{
-            font-size: 1.4em;  /* Adjust font size as per your preference */
+            font-size: 2em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         }}
