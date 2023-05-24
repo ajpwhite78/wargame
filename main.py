@@ -414,6 +414,37 @@ header3 = """
         .welcome-container div {{
             color: #FAFAFA;
         }}
+        @media screen and (max-width: 600px) {{
+        .header {{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8em;  /* Adjust padding for smaller screens */
+       } }
+
+        .left1-column {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: flex-start;
+            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
+        }}
+
+        .right1-column {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            text-align: center;  /* Center align text on smaller screens */
+            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
+        }}
+
+        .welcome-container {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: center;  /* Center align items on smaller screens */
+            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
+        }}
+
+        .button-div {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: center;  /* Center align items on smaller screens */
+        }}
+    }
     </style>
     <div class="header">
         <div class="left1-column">
