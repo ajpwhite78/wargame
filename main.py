@@ -88,7 +88,7 @@ line_media_query = '''
 
     @media (min-width: 601px) {
         .line {
-            height: 0.24em;
+            height: 0.84em;
         }
     }
     </style>
