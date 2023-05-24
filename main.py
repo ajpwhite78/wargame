@@ -699,9 +699,9 @@ media_query = '''
             margin-top: 2em;
             font-size: 2.4em;
         }
-        span {
+        span {{
             border: 0.5em solid #25476A !important;
-        }
+        }}
     }
     </style>
 '''
