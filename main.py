@@ -697,11 +697,9 @@ introduction_text = '''
 media_query = '''
     <style>
     @media (max-width: 600px) {
-        .introduction-text {
         p {
             font-size: 2.4em;
             border: 0.5em solid #25476A !important;
-        }
         }
     }
     </style>
