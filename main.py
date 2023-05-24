@@ -360,11 +360,7 @@ header3 = """
             padding: 0em;  /* Convert 10px to em units */
             margin-right: auto;
         }}
-        .left1-column img {{
-            max-width: 100%;
-            display: inline-block;
-            vertical-align: middle
-        }}
+
         .logo-wrapper {{
         max-width: 100%;
     }}
