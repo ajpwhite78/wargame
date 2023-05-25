@@ -687,6 +687,14 @@ div[data-baseweb="select"] > div:hover,
 input[type=number]:hover {
   background-color: rgba(111, 114, 222, 0.4);
 }
+/* Media query for small screens */
+@media (max-width: 600px) {
+  div[data-baseweb="select"] > div,
+  input[type=number] {
+    font-size: 2.4em;
+    height: 3em;
+  }
+  }
 </style>
 """, unsafe_allow_html=True)
 
