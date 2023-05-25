@@ -775,15 +775,15 @@ if st.session_state.submit1_confirm == True:
         st.text("")
         information_text = st.empty()
         text1 = '''
-    <p style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>
+    <p class="text1" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>
 '''
         text2 = '''
-    <p style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
+    <p class="text1" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
 '''
         text_media_query2 = '''
             <style>
             @media (max-width: 600px) {
-                p {
+                p.text1 {
                     font-size: 3em;
                     border-width: 0.5em;
                     position: relative;
