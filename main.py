@@ -521,7 +521,7 @@ spinner_css = """
             display: inline-block;
             width: 10em;
             height: 10em;
-            border: 1em solid #6f72de;
+            border: 0.6em solid #6f72de;
             border-left-color: rgba(0, 0, 0, 0);
             border-radius: 50%;
             animation: spin 1s ease-in-out infinite;
