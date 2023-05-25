@@ -516,62 +516,33 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 spinner_css = """
-<style>
-    #custom-spinner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 150px;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }
-
-    #spinner-border {
-        border: 8px solid #6f72de;
-        border-left-color: rgba(0, 0, 0, 0);
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        animation: spin 1s linear infinite;
-    }
-
-    #spinner-image {
-        width: 80px;
-        height: 80px;
-        background-image: url(data:image/png;base64,{});
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    #spinner-text {
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 22px;
-        font-weight: bold;
-        color: #6f72de;
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
+    <style>
+        #custom-spinner {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            border: 8px solid #6f72de;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+            position: fixed;
+            left: 50%;
+            margin-left: -50px; /* half of the width of the spinner */
+            top: 50%;
+            margin-top: -50px; /* half of the height of the spinner */
+            z-index: 9999; /* ensures that the spinner is on top of other elements */  
         }
-        100% {
-            transform: rotate(360deg);
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
         }
-    }
-</style>
-<div id="custom-spinner">
-    <div id="spinner-border"></div>
-    <div id="spinner-image"></div>
-    <div id="spinner-text">Please wait</div>
-</div>
+    </style>
+    <div id="custom-spinner">
+    </div>
 """
 
-st.markdown(spinner_css.format(img_to_bytes("images/Favicon.png")), unsafe_allow_html=True)
+st.markdown(spinner_css, unsafe_allow_html=True)
 
 
 
