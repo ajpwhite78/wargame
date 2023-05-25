@@ -724,7 +724,7 @@ st.markdown(media_query + introduction_text, unsafe_allow_html=True)
 
 
 
-subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 4em;">Company Details</span></p>'
+subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
 st.markdown(line_media_query + line, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
