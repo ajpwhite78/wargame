@@ -773,7 +773,7 @@ if st.session_state.submit1_confirm == True:
     subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Analysis Details</span></p>'
     st.markdown(subtext1A, unsafe_allow_html=True)
     st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-    instructions_text = '<p style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menu to select the type of analysis you want to perform. Click "Run" once you have made your selection or click "Cancel" to reset.</span></p>'
+    instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menu to select the type of analysis you want to perform. Click "Run" once you have made your selection or click "Cancel" to reset.</span></p>'
     st.markdown(text_media_query2 + instructions_text, unsafe_allow_html=True)
     col1, col2, col3, col4, col5, col6 = st.columns([1, 0.1, 3.8, 0.1, 0.5, 0.5])
     with col1:
