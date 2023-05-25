@@ -527,9 +527,9 @@ spinner_css = """
             animation: spin 1s ease-in-out infinite;
             position: fixed;
             left: 50%;
-            margin-left: -50%; /* half of the width of the spinner */
+            margin-left: -50px; /* half of the width of the spinner */
             top: 50%;
-            margin-top: -50%; /* half of the height of the spinner */
+            margin-top: -50px; /* half of the height of the spinner */
             z-index: 9999; /* ensures that the spinner is on top of other elements */  
         }
 
