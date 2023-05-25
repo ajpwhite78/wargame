@@ -703,7 +703,7 @@ text_media_query1 = '''
             border-width: 0.5em;
             position: relative;
             top: 1.25em;
-            bottom 1.25em;
+            bottom 2.25em;
         }
     }
     </style>
