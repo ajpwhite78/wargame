@@ -724,7 +724,7 @@ st.markdown(media_query + introduction_text, unsafe_allow_html=True)
 
 
 
-subtext1A = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Company Details</span></p>'
+subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 4em;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
 st.markdown(line_media_query + line, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
@@ -735,31 +735,20 @@ with col1:
     text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     sector_options = [""] + sorted(st.session_state.df_input['sector'].apply(str).unique())
-#    user_sector_field = st.empty()
-#    st.session_state.user_sector = user_sector_field.selectbox(label="", label_visibility="collapsed", options=sector_options,
-#                 format_func=lambda x: "Select Sector" if x == "" else x,  key="main1")
     st.selectbox(label="", label_visibility="collapsed", options=sector_options,
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
 
 with col2:
-    text = '<p style="margin-bottom: 2px;"> <span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Entity Name</span></p>'
+    text = '<p style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique())
-    #    user_entity_name = st.text_input(label="Entity Name", placeholder="Please enter entity name")
-#    user_entity_name_field = st.empty()
-#    st.session_state.user_entity_name = user_entity_name_field.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
-#                 format_func=lambda x: "Select Entity Name" if x == "" else x,  key="main2")
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col3:
-    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Reporting Period</span></p>'
+    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     reporting_period_options = [""] + sorted(
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
-#    user_reporting_period = st.text_input(label="Reporting Period", placeholder="Please enter reporting period")
-#    user_reporting_period_field = st.empty()
-#    st.session_state.user_reporting_period = user_reporting_period_field.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
-#                   format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="main3")
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 with col5:
@@ -795,7 +784,7 @@ if st.session_state.submit1_confirm == True:
     st.markdown(instructions_text, unsafe_allow_html=True)
     col1, col2, col3, col4, col5, col6 = st.columns([1, 0.1, 3.8, 0.1, 0.5, 0.5])
     with col1:
-        text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Analysis Type</span></p>'
+        text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1emx; font-weight: bold;">Analysis Type</span></p>'
         st.markdown(text, unsafe_allow_html=True)
         st.selectbox(label="", label_visibility="collapsed", options=analysis_options,
                    format_func=lambda x: "Select Analysis Type" if x == "" else x,  key="user_whatif")
