@@ -521,7 +521,7 @@ spinner_css = """
             display: inline-block;
             width: 150px;
             height: 150px;
-            border: 0.6em solid #6f72de;
+            border: 8px solid #6f72de;
             border-left-color: rgba(0, 0, 0, 0);
             border-radius: 50%;
             animation: spin 1s ease-in-out infinite;
@@ -532,7 +532,6 @@ spinner_css = """
             margin-top: -50px; /* half of the height of the spinner */
             z-index: 9999; /* ensures that the spinner is on top of other elements */  
         }
-
         @keyframes spin {
             to {
                 transform: rotate(360deg);
