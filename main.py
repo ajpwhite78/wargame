@@ -546,7 +546,7 @@ st.markdown(spinner_css, unsafe_allow_html=True)
 
 image_center = """
 <style>
-    .image-container {
+    .image-container {{
         width: 30%;
         text-align: center;
         position: fixed;
@@ -554,7 +554,7 @@ image_center = """
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9999;
-    }
+    }}
 </style>
 <div class="image-container">
     <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
