@@ -699,7 +699,7 @@ text_media_query1 = '''
     <style>
     @media (max-width: 600px) {
         p.introduction_text {
-            font-size: 4em;
+            font-size: 3.4em;
             border-width: 0.5em;
             position: relative;
             top: 0.5em;
