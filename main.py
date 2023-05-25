@@ -369,7 +369,7 @@ header3 = """
             filter: brightness(0.9) saturate(0.8);
             opacity: 1;
             color: #FAFAFA;
-            text-align: center;
+            text-align: left;
             padding: 0.4em;  /* Convert 10px to em units */
             z-index: 1;
             display: flex;
@@ -473,6 +473,7 @@ header3 = """
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             font-size: 7em;
             display: flex;
+            text-indent: 0em;
             align-items: center;
             justify-content: center;
             text-align: center;  /* Center align text on smaller screens */
