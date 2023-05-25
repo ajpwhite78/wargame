@@ -519,8 +519,8 @@ spinner_css = """
     <style>
         #custom-spinner {
             display: inline-block;
-            width: 150px;
-            height: 150px;
+            width: 20vmin;
+            height: 20vmin;
             border: 8px solid #6f72de;
             border-left-color: rgba(0, 0, 0, 0);
             border-radius: 50%;
