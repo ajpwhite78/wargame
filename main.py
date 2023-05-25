@@ -816,7 +816,7 @@ if st.session_state.submit1_confirm == True:
                     font-size: 3.2em;
                     border-width: 0.5em;
                     position: relative;
-                    top: -3.6em;
+                    top: -3em;
                 }
             }
             </style>
