@@ -82,7 +82,7 @@ line_media_query = '''
     <style>
     @media (max-width: 600px) {
         .line {
-            width: 50%;
+            height: 10px;
             border-top: 0.6em solid #03A9F4;
         }
     }
