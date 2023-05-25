@@ -76,13 +76,13 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr class="line" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
 line2 = '<hr class="line2" style="height:0.2em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
 line_media_query1 = '''
     <style>
     @media (max-width: 600px) {
-        .line {
-            padding: 0.5;
+        .line1 {
+            padding: 0.5em;
         }
     }
     </style>
@@ -91,12 +91,12 @@ line_media_query2 = '''
     <style>
     @media (max-width: 600px) {
         .line2 {
-            padding: 0.5;
+            padding: 0.5em;
         }
     }
     </style>
 '''
-st.markdown(line_media_query1 + line, unsafe_allow_html=True)
+st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
 
 
