@@ -725,8 +725,17 @@ text_media_query2 = '''
 st.markdown(text_media_query2 + instructions_text, unsafe_allow_html=True)
 col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 1, 0.5, 0.5])
 with col1:
-    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
-    st.markdown(text, unsafe_allow_html=True)
+    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
+    text_media_query3 = '''
+    <style>
+    @media (max-width: 600px) {
+        p.heading_text {
+            font-size: 3em;
+        }
+    }
+    </style>
+'''
+    st.markdown(text_media_query3 + text, unsafe_allow_html=True)
     sector_options = [""] + sorted(st.session_state.df_input['sector'].apply(str).unique())
     st.selectbox(label="", label_visibility="collapsed", options=sector_options,
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
@@ -791,7 +800,7 @@ if st.session_state.submit1_confirm == True:
         text2 = '''
     <p class="text1" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
 '''
-        text_media_query3 = '''
+        text_media_query4 = '''
             <style>
             @media (max-width: 600px) {
                 p.text1 {
@@ -808,10 +817,10 @@ if st.session_state.submit1_confirm == True:
             information_text.empty()
         if st.session_state.user_whatif == "Run Manual Analysis":
             information_text.empty()
-            information_text.markdown(text_media_query3 + text1, unsafe_allow_html=True)
+            information_text.markdown(text_media_query4 + text1, unsafe_allow_html=True)
         if st.session_state.user_whatif == "Run Simulation Analysis":
             information_text.empty()
-            information_text.markdown(text_media_query3 + text2, unsafe_allow_html=True)
+            information_text.markdown(text_media_query4 + text2, unsafe_allow_html=True)
     with col5:
         st.text("")
         st.text("")
