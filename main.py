@@ -561,7 +561,7 @@ image_center = """
 </div>
 """
 
-st.markdown(image_center.format(img_to_bytes("images/Paydar-logo-black-transparent.png")), unsafe_allow_html=True)
+st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
 
 image_center = """
