@@ -562,7 +562,7 @@ spinner_css = """
     </div>
 </div>
 """
-
+st.markdown(spinner_css, unsafe_allow_html=True)
 
 
 
