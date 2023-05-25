@@ -96,9 +96,6 @@ line_media_query2 = '''
     }
     </style>
 '''
-st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
-st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-
 
 header = """
     <style>
@@ -701,7 +698,7 @@ media_query = '''
     <style>
     @media (max-width: 600px) {
         p {
-            font-size: 3em;
+            font-size: 12em;
             border-width: 0.5em;
         }
     }
