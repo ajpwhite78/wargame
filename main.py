@@ -518,7 +518,9 @@ st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-whit
 spinner_css = """
 <style>
     #custom-spinner {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 150px;
         height: 150px;
         position: fixed;
@@ -528,59 +530,41 @@ spinner_css = """
         z-index: 9999;
     }
 
-    #custom-spinner svg {
-        animation: spin 1s ease-in-out infinite;
+    #spinner-border {
+        border: 8px solid #6f72de;
+        border-left-color: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        animation: spin 1s linear infinite;
     }
 
-    #custom-spinner circle {
-        stroke: url(#border-gradient);
-        stroke-width: 16;
-        fill: none;
+    #spinner-image {
+        width: 80px; /* adjust the width of the image as needed */
+        height: 80px; /* adjust the height of the image as needed */
+        background-image: url('path/to/image.png'); /* specify the path to your image */
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     @keyframes spin {
-        to {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
             transform: rotate(360deg);
         }
     }
-
-    @keyframes fade-out {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-    }
-
-    /* Apply fade-out animation to the spinner */
-    #custom-spinner.fade-out {
-        animation: fade-out 0.5s ease-in-out forwards;
-    }
-
-    /* Define the border gradient */
-    #border-gradient stop:first-child {
-        stop-color: #6f72de;
-        stop-opacity: 1;
-    }
-
-    #border-gradient stop:last-child {
-        stop-color: #6f72de;
-        stop-opacity: 0;
-    }
 </style>
 <div id="custom-spinner">
-    <svg width="150" height="150">
-        <circle cx="75" cy="75" r="67"></circle>
-        <defs>
-            <linearGradient id="border-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"></stop>
-                <stop offset="70%"></stop>
-            </linearGradient>
-        </defs>
-    </svg>
+    <div id="spinner-border">
+        <div id="spinner-image"></div>
+    </div>
 </div>
 """
+
+
+
 
 if "user_sector" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
