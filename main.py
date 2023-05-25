@@ -709,11 +709,20 @@ text_media_query1 = '''
 '''
 st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
 
-subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
-st.markdown(subtext1A, unsafe_allow_html=True)
+subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
+text_media_query2 = '''
+    <style>
+    @media (max-width: 600px) {
+        p.introduction_text {
+            font-size: 4em;
+        }
+    }
+    </style>
+'''
+st.markdown(text_media_query2 + subtext1A, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
 instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menus to select the sector, company name and reporting period of the company you want to analyze. Click "Run" once you have made your selections or click "Cancel" to reset.</span></p>'
-text_media_query2 = '''
+text_media_query3 = '''
     <style>
     @media (max-width: 600px) {
         p.instructions_text {
@@ -722,11 +731,11 @@ text_media_query2 = '''
     }
     </style>
 '''
-st.markdown(text_media_query2 + instructions_text, unsafe_allow_html=True)
+st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
 col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 1, 0.5, 0.5])
 with col1:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
-    text_media_query3 = '''
+    text_media_query4 = '''
     <style>
     @media (max-width: 600px) {
         p.heading_text {
@@ -735,20 +744,20 @@ with col1:
     }
     </style>
 '''
-    st.markdown(text_media_query3 + text, unsafe_allow_html=True)
+    st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     sector_options = [""] + sorted(st.session_state.df_input['sector'].apply(str).unique())
     st.selectbox(label="", label_visibility="collapsed", options=sector_options,
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
 
 with col2:
     text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
-    st.markdown(text_media_query3 + text, unsafe_allow_html=True)
+    st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique())
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col3:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
-    st.markdown(text_media_query3 + text, unsafe_allow_html=True)
+    st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     reporting_period_options = [""] + sorted(
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
@@ -778,15 +787,15 @@ if submit1_button:
 if st.session_state.submit1_confirm == True:
     st.text("")
     st.text("")
-    subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Analysis Details</span></p>'
-    st.markdown(subtext1A, unsafe_allow_html=True)
+    subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Analysis Details</span></p>'
+    st.markdown(text_media_query2 + subtext1A, unsafe_allow_html=True)
     st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
     instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menu to select the type of analysis you want to perform. Click "Run" once you have made your selection or click "Cancel" to reset.</span></p>'
-    st.markdown(text_media_query2 + instructions_text, unsafe_allow_html=True)
+    st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
     col1, col2, col3, col4, col5, col6 = st.columns([1, 0.1, 3.8, 0.1, 0.5, 0.5])
     with col1:
         text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Analysis Type</span></p>'
-        st.markdown(text_media_query3 + text, unsafe_allow_html=True)
+        st.markdown(text_media_query4 + text, unsafe_allow_html=True)
         st.selectbox(label="", label_visibility="collapsed", options=analysis_options,
                    format_func=lambda x: "Select Analysis Type" if x == "" else x,  key="user_whatif")
     with col3:
@@ -800,7 +809,7 @@ if st.session_state.submit1_confirm == True:
         text2 = '''
     <p class="text1" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
 '''
-        text_media_query4 = '''
+        text_media_query5 = '''
             <style>
             @media (max-width: 600px) {
                 p.text1 {
@@ -817,10 +826,10 @@ if st.session_state.submit1_confirm == True:
             information_text.empty()
         if st.session_state.user_whatif == "Run Manual Analysis":
             information_text.empty()
-            information_text.markdown(text_media_query4 + text1, unsafe_allow_html=True)
+            information_text.markdown(text_media_query5 + text1, unsafe_allow_html=True)
         if st.session_state.user_whatif == "Run Simulation Analysis":
             information_text.empty()
-            information_text.markdown(text_media_query4 + text2, unsafe_allow_html=True)
+            information_text.markdown(text_media_query5 + text2, unsafe_allow_html=True)
     with col5:
         st.text("")
         st.text("")
