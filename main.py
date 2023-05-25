@@ -810,7 +810,7 @@ if st.session_state.submit1_confirm == True:
             information_text.markdown(text_media_query2 + text1, unsafe_allow_html=True)
         if st.session_state.user_whatif == "Run Simulation Analysis":
             information_text.empty()
-            information_text.markdown(text_media_query3 + text2A, unsafe_allow_html=True)
+            information_text.markdown(text_media_query2 + text2, unsafe_allow_html=True)
     with col5:
         st.text("")
         st.text("")
