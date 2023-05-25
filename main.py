@@ -542,7 +542,7 @@ spinner_css = """
     #spinner-image {
         width: 80px; /* adjust the width of the image as needed */
         height: 80px; /* adjust the height of the image as needed */
-        background-image: url('images/Favicon.png'); /* specify the path to your image */
+        background-image: url('images/Paydar-logo-black-transparent-update.png'); /* specify the path to your image */
         background-repeat: no-repeat;
         background-position: center;
     }
