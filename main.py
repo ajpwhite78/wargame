@@ -780,12 +780,24 @@ if st.session_state.submit1_confirm == True:
         text2 = '''
     <p class="textABC" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
 '''
+        text2A = '''
+    <div class="textABC" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><p style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</p></div>
+'''
         text_media_query2 = '''
             <style>
             @media (max-width: 600px) {
                 p.textABC {
                     font-size: 3em;
                     border-width: 0.5em;
+                    margin-top: 500%;
+                }
+            }
+            </style>
+        '''     
+        text_media_query3 = '''
+            <style>
+            @media (max-width: 600px) {
+                .textABC {
                     margin-top: 500%;
                 }
             }
@@ -798,7 +810,7 @@ if st.session_state.submit1_confirm == True:
             information_text.markdown(text_media_query2 + text1, unsafe_allow_html=True)
         if st.session_state.user_whatif == "Run Simulation Analysis":
             information_text.empty()
-            information_text.markdown(text_media_query2 + text2, unsafe_allow_html=True)
+            information_text.markdown(text_media_query3 + text2A, unsafe_allow_html=True)
     with col5:
         st.text("")
         st.text("")
