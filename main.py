@@ -76,19 +76,13 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line = '<hr class="line" style="height:0.24em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
-line2 = '<hr class="line" style="border:0em; background-color: #25476A; margin-top: -1.8em;">'
-line_media_query = '''
+line1 = '<hr class="line1" style="height:0.24em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line2 = '<hr class="line2" style="height:0.12em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
+line_media_query1 = '''
     <style>
     @media (max-width: 600px) {
-        .line {
-            padding: 50%;
-        }
-    }
-
-    @media (min-width: 601px) {
-        .line {
-            border-top: 0em solid #03A9F4;
+        .line1 {
+            padding: 0.24;
         }
     }
     </style>
@@ -96,14 +90,8 @@ line_media_query = '''
 line_media_query2 = '''
     <style>
     @media (max-width: 600px) {
-        .line {
-            height: 0.34em;
-        }
-    }
-
-    @media (min-width: 601px) {
-        .line {
-            height: 0.14em;
+        .line2 {
+            padding: 0.12;
         }
     }
     </style>
@@ -730,7 +718,7 @@ st.markdown(media_query + introduction_text, unsafe_allow_html=True)
 
 subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
-st.markdown(line_media_query + line, unsafe_allow_html=True)
+st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
 instructions_text = '<p style="margin-top: -2.2em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1.125em;">Use the dropdown menus to select the sector, company name and reporting period of the company you want to analyze. Click "Run" once you have made your selections or click "Cancel" to reset.</span></p>'
 st.markdown(instructions_text, unsafe_allow_html=True)
