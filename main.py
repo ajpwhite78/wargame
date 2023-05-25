@@ -77,7 +77,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
-line2 = '<hr class="line2" style="height:0.2em; border:0em; background-color: #25476A; margin-top: 0em;">'
+line2 = '<hr class="line2" style="height:0.2em; border:0em; background-color: #25476A; margin-top: 2em;">'
 line_media_query1 = '''
     <style>
     @media (max-width: 600px) {
@@ -671,7 +671,7 @@ input[type=number] {
   color: #25476A;
   background-color: rgba(3, 169, 244, 0.2);
   border: 0.1875em solid #25476A;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: bold;
 }
 
@@ -730,13 +730,13 @@ with col1:
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
 
 with col2:
-    text = '<p style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1.125em; font-weight: bold;">Entity Name</span></p>'
+    text = '<p style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique())
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col3:
-    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1.125em; font-weight: bold;">Reporting Period</span></p>'
+    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 15em; font-weight: bold;">Reporting Period</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     reporting_period_options = [""] + sorted(
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
