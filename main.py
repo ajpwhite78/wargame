@@ -530,6 +530,11 @@ spinner_css = """
         z-index: 9999;
     }
 
+    #spinner-image {
+        width: 80px;
+        height: 80px;
+    }
+
     #spinner-border {
         border: 8px solid #6f72de;
         border-left-color: rgba(0, 0, 0, 0);
@@ -537,14 +542,6 @@ spinner_css = """
         width: 150px;
         height: 150px;
         animation: spin 1s linear infinite;
-    }
-
-    #spinner-image {
-        width: 80px; /* adjust the width of the image as needed */
-        height: 80px; /* adjust the height of the image as needed */
-        background-image: url('images/Paydar-logo-black-transparent-update.png'); /* specify the path to your image */
-        background-repeat: no-repeat;
-        background-position: center;
     }
 
     @keyframes spin {
@@ -557,12 +554,13 @@ spinner_css = """
     }
 </style>
 <div id="custom-spinner">
-    <div id="spinner-border">
-        <div id="spinner-image"></div>
-    </div>
+    <img id="spinner-image" src="data:image/png;base64,{}" alt="spinner_image">
+    <div id="spinner-border"></div>
 </div>
 """
-st.markdown(spinner_css, unsafe_allow_html=True)
+
+st.markdown(spinner_css.format(img_to_bytes("images/Favicon.png")), unsafe_allow_html=True)
+
 
 
 
