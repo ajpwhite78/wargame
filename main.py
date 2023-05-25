@@ -561,7 +561,58 @@ image_center = """
 </div>
 """
 
+
+spinner_css = """
+<style>
+    #custom-spinner {
+        display: inline-block;
+        width: 20vmin;
+        height: 20vmin;
+        border: 8px solid #6f72de;
+        border-left-color: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        animation: spin 1s ease-in-out infinite;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; /* ensures that the spinner is on top of other elements */  
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div id="custom-spinner"></div>
+"""
+
+st.markdown(spinner_css, unsafe_allow_html=True)
+
+image_center = """
+<style>
+    .image-container {{
+        width: 30vmin;
+        height: 30vmin;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000; /* sets the image on top of the spinner */
+    }}
+</style>
+<div class="image-container">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="100%">
+</div>
+"""
+
 st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+
+
+
+
+#st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
 if "user_sector" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
