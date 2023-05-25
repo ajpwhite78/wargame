@@ -786,6 +786,7 @@ if st.session_state.submit1_confirm == True:
                 p {
                     font-size: 3em;
                     border-width: 0.5em;
+                    margin-top: -3em;
                 }
             }
             </style>
