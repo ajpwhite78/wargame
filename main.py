@@ -76,7 +76,7 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line1 = '<hr class="line" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+line = '<hr class="line" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
 line2 = '<hr class="line2" style="height:0.2em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
 line_media_query1 = '''
     <style>
@@ -96,6 +96,8 @@ line_media_query2 = '''
     }
     </style>
 '''
+st.markdown(line_media_query1 + line, unsafe_allow_html=True)
+st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
 
 
 header = """
