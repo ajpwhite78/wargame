@@ -719,7 +719,7 @@ st.markdown(media_query + introduction_text, unsafe_allow_html=True)
 subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-instructions_text = '<p style="margin-top: -2.2em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menus to select the sector, company name and reporting period of the company you want to analyze. Click "Run" once you have made your selections or click "Cancel" to reset.</span></p>'
+instructions_text = '<p style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menus to select the sector, company name and reporting period of the company you want to analyze. Click "Run" once you have made your selections or click "Cancel" to reset.</span></p>'
 st.markdown(instructions_text, unsafe_allow_html=True)
 col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 1, 0.5, 0.5])
 with col1:
@@ -736,7 +736,7 @@ with col2:
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col3:
-    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 15em; font-weight: bold;">Reporting Period</span></p>'
+    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     reporting_period_options = [""] + sorted(
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
