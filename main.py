@@ -544,7 +544,31 @@ spinner_css = """
 
 st.markdown(spinner_css, unsafe_allow_html=True)
 
+st.markdown(
+        f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+        background-size: cover
+    }}
+    </style>
+    """,
+        unsafe_allow_html=True
+    )
 
+image_center = """
+    <style>
+    .image-container {{
+      width: 20%;
+      text-align: center;
+    }}
+</style>
+    <div class="image_center">
+        <div class="image-container">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="20%">
+        </div>
+        """
+st.markdown(image_center.format(img_to_bytes("images/Paydar-logo-black-transparent.png")), unsafe_allow_html=True)
 
 
 if "user_sector" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
