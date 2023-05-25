@@ -82,7 +82,7 @@ line_media_query1 = '''
     <style>
     @media (max-width: 600px) {
         .line1 {
-            padding: 0.4;
+            padding: 0.5;
         }
     }
     </style>
@@ -91,7 +91,7 @@ line_media_query2 = '''
     <style>
     @media (max-width: 600px) {
         .line2 {
-            padding: 0.2;
+            padding: 0.5;
         }
     }
     </style>
