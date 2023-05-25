@@ -783,7 +783,7 @@ if st.session_state.submit1_confirm == True:
         text_media_query2 = '''
             <style>
             @media (max-width: 600px) {
-                .textABC {
+                p.textABC {
                     font-size: 3em;
                     border-width: 0.5em;
                     margin-top: -100em;
