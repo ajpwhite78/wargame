@@ -532,10 +532,7 @@ spinner_css = """
             margin-top: -50px; /* half of the height of the spinner */
             z-index: 9999; /* ensures that the spinner is on top of other elements */  
         }
-        #spinner-image {{
-            max-width: 120%;
-            display: inline-block;
-            vertical-align: middle;
+
         @keyframes spin {
             to {
                 transform: rotate(360deg);
