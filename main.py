@@ -545,17 +545,17 @@ spinner_css = """
 st.markdown(spinner_css, unsafe_allow_html=True)
 
 image_center = """
-    <style>
-    .image-container {{
+<style>
+    .image-container {
       width: 20%;
       text-align: center;
-    }}
+    }
 </style>
-    <div class="image_center">
-        <div class="image-container">
-            <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="20%">
-        </div>
-        """
+<div class="image-container">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="20%">
+</div>
+"""
+
 st.markdown(image_center.format(img_to_bytes("images/Paydar-logo-black-transparent.png")), unsafe_allow_html=True)
 
 
