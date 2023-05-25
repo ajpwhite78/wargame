@@ -798,7 +798,7 @@ if st.session_state.submit1_confirm == True:
             <style>
             @media (max-width: 600px) {
                 .textABC {
-                    margin-top: 500%;
+                    margin-top: -50em;
                 }
             }
             </style>
