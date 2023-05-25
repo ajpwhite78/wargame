@@ -718,7 +718,6 @@ text_media_query2 = '''
     @media (max-width: 600px) {
         p.instructions_text {
             font-size: 3em;
-            border-width: 0.5em;
         }
     }
     </style>
