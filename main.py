@@ -77,7 +77,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
-line2 = '<hr class="line2" style="height:0.2em; border:0em; background-color: #25476A; margin-top: -1.8em;">'
+line2 = '<hr class="line2" style="height:0.2em; border:0em; background-color: #25476A; margin-top: 0em;">'
 line_media_query1 = '''
     <style>
     @media (max-width: 600px) {
@@ -671,7 +671,7 @@ input[type=number] {
   color: #25476A;
   background-color: rgba(3, 169, 244, 0.2);
   border: 0.1875em solid #25476A;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
 }
 
