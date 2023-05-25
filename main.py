@@ -707,15 +707,6 @@ text_media_query1 = '''
 '''
 st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
 
-
-
-
-
-
-
-
-
-
 subtext1A = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 st.markdown(subtext1A, unsafe_allow_html=True)
 st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
@@ -798,22 +789,15 @@ if st.session_state.submit1_confirm == True:
                 }
             }
             </style>
-        '''
-        st.markdown(text_media_query2 + text1, unsafe_allow_html=True)
-
-        
-        
-        
-        text1 = '<p style="margin-top: -30px; margin-bottom: 20px; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:4px; padding-bottom:4px; font-family:sans-serif; font-size: 18px; display: block; width: 100%; border: 3px solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>'
-        text2 = '<p style="margin-top: -30px; margin-bottom: 20px; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:4px; padding-bottom:4px; font-family:sans-serif; font-size: 18px; display: block; width: 100%; border: 3px solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>'
+        '''     
         if st.session_state.user_whatif == "":
             information_text.empty()
         if st.session_state.user_whatif == "Run Manual Analysis":
             information_text.empty()
-            information_text.markdown(text1, unsafe_allow_html=True)
+            information_text.markdown(text_media_query2 + text1, unsafe_allow_html=True)
         if st.session_state.user_whatif == "Run Simulation Analysis":
             information_text.empty()
-            information_text.markdown(text2, unsafe_allow_html=True)
+            information_text.markdown(text_media_query2 + text2, unsafe_allow_html=True)
     with col5:
         st.text("")
         st.text("")
