@@ -695,7 +695,7 @@ introduction_text = '''
     <p style="margin-top: 0em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.65em; padding-bottom: 0.65em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Welcome to Comrate&apos;s wargame scenario analysis application, empowering you to make informed decisions regarding the current and future financial performance of target companies based on manual and scenario-based financial statement and credit rating analyses.</span></p>
 '''
 
-media_query = '''
+text_media_query1 = '''
     <style>
     @media (max-width: 600px) {
         p {
@@ -705,7 +705,7 @@ media_query = '''
     }
     </style>
 '''
-st.markdown(media_query + introduction_text, unsafe_allow_html=True)
+st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
 
 
 
@@ -783,6 +783,27 @@ if st.session_state.submit1_confirm == True:
         st.text("")
         st.text("")
         information_text = st.empty()
+        text1 = '''
+    <p style="margin-top: 0em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.65em; padding-bottom: 0.65em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>
+'''
+        text2 = '''
+    <p style="margin-top: 0em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.65em; padding-bottom: 0.65em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
+'''
+        text_media_query2 = '''
+            <style>
+            @media (max-width: 600px) {
+                p {
+                    font-size: 3em;
+                    border-width: 0.5em;
+                }
+            }
+            </style>
+        '''
+        st.markdown(text_media_query2 + text1, unsafe_allow_html=True)
+
+        
+        
+        
         text1 = '<p style="margin-top: -30px; margin-bottom: 20px; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:4px; padding-bottom:4px; font-family:sans-serif; font-size: 18px; display: block; width: 100%; border: 3px solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>'
         text2 = '<p style="margin-top: -30px; margin-bottom: 20px; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:4px; padding-bottom:4px; font-family:sans-serif; font-size: 18px; display: block; width: 100%; border: 3px solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>'
         if st.session_state.user_whatif == "":
