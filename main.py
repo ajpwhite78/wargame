@@ -699,7 +699,7 @@ text_media_query1 = '''
     <style>
     @media (max-width: 600px) {
         p.introduction_text {
-            font-size: 3.4em;
+            font-size: 3.2em;
             border-width: 0.5em;
             position: relative;
             top: 0.5em;
@@ -717,7 +717,7 @@ text_media_query2 = '''
     <style>
     @media (max-width: 600px) {
         p.instructions_text {
-            font-size: 3em;
+            font-size: 3.2em;
         }
     }
     </style>
@@ -730,7 +730,7 @@ with col1:
     <style>
     @media (max-width: 600px) {
         p.heading_text {
-            font-size: 3em;
+            font-size: 3.2em;
         }
     }
     </style>
@@ -742,13 +742,13 @@ with col1:
 
 with col2:
     text = '<p style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
-    st.markdown(text, unsafe_allow_html=True)
+    st.markdown(text_media_query3 + text, unsafe_allow_html=True)
     entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique())
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col3:
     text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
-    st.markdown(text, unsafe_allow_html=True)
+    st.markdown(text_media_query3 + text, unsafe_allow_html=True)
     reporting_period_options = [""] + sorted(
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
@@ -786,7 +786,7 @@ if st.session_state.submit1_confirm == True:
     col1, col2, col3, col4, col5, col6 = st.columns([1, 0.1, 3.8, 0.1, 0.5, 0.5])
     with col1:
         text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Analysis Type</span></p>'
-        st.markdown(text, unsafe_allow_html=True)
+        st.markdown(text_media_query3 + text, unsafe_allow_html=True)
         st.selectbox(label="", label_visibility="collapsed", options=analysis_options,
                    format_func=lambda x: "Select Analysis Type" if x == "" else x,  key="user_whatif")
     with col3:
@@ -804,7 +804,7 @@ if st.session_state.submit1_confirm == True:
             <style>
             @media (max-width: 600px) {
                 p.text1 {
-                    font-size: 3em;
+                    font-size: 3.2em;
                     border-width: 0.5em;
                     position: relative;
                     top: -3.6em;
