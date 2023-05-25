@@ -369,7 +369,7 @@ header3 = """
             filter: brightness(0.9) saturate(0.8);
             opacity: 1;
             color: #FAFAFA;
-            text-align: left;
+            text-align: center;
             padding: 0.4em;  /* Convert 10px to em units */
             z-index: 1;
             display: flex;
