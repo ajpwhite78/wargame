@@ -544,18 +544,6 @@ spinner_css = """
 
 st.markdown(spinner_css, unsafe_allow_html=True)
 
-st.markdown(
-        f"""
-    <style>
-    .stApp {{
-        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
-        background-size: cover
-    }}
-    </style>
-    """,
-        unsafe_allow_html=True
-    )
-
 image_center = """
     <style>
     .image-container {{
