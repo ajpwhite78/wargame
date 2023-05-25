@@ -732,7 +732,7 @@ instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-alig
 st.markdown(instructions_text, unsafe_allow_html=True)
 col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 1, 0.5, 0.5])
 with col1:
-    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Sector</span></p>'
+    text = '<p style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
     st.markdown(text, unsafe_allow_html=True)
     sector_options = [""] + sorted(st.session_state.df_input['sector'].apply(str).unique())
 #    user_sector_field = st.empty()
