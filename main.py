@@ -671,7 +671,7 @@ input[type=number] {
   color: #25476A;
   background-color: rgba(3, 169, 244, 0.2);
   border: 0.1875em solid #25476A;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: bold;
 }
 
