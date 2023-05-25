@@ -713,7 +713,7 @@ subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-fa
 text_media_query2 = '''
     <style>
     @media (max-width: 600px) {
-        p.introduction_text {
+        p.subtext {
             font-size: 4em;
         }
     }
