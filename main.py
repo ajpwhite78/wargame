@@ -548,6 +548,7 @@ st.markdown(spinner_css, unsafe_allow_html=True)
 image_center = """
 <style>
     .image-container {{
+        display: inline-block;
         width: 30%;
         text-align: center;
         position: fixed;
