@@ -463,7 +463,7 @@ header3 = """
             margin-bottom: -1em;  /* Adjust margin for smaller screens */
         }}
         .left1-column img {{
-            width: 40%;
+            width: 30%;
             display: flex;
             align-items: center;
             justify-content: center;
