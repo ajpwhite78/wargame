@@ -519,8 +519,8 @@ spinner_css = """
     <style>
         #custom-spinner {
             display: inline-block;
-            width: 150px;
-            height: 150px;
+            width: 150em;
+            height: 150em;
             border: 8px solid #6f72de;
             border-left-color: rgba(0, 0, 0, 0);
             border-radius: 50%;
@@ -532,6 +532,10 @@ spinner_css = """
             margin-top: -50px; /* half of the height of the spinner */
             z-index: 9999; /* ensures that the spinner is on top of other elements */  
         }
+        #spinner-image {{
+            max-width: 120%;
+            display: inline-block;
+            vertical-align: middle;
         @keyframes spin {
             to {
                 transform: rotate(360deg);
