@@ -702,7 +702,8 @@ text_media_query1 = '''
             font-size: 3em;
             border-width: 0.5em;
             position: relative;
-            top: 2em;
+            top: 1.25em;
+            bottom 1.25em;
         }
     }
     </style>
