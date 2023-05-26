@@ -773,6 +773,13 @@ with col3:
     with col4:
         button_css = """
         <style>
+            .button-div {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 40%;
+                gap: 1em;  /* Convert 20px to em units */
+            }
             div.stButton > button:first-child {
             display: inline-block;
             background-color:#25476A;
@@ -781,12 +788,12 @@ with col3:
             border-width: 0.1875em;
             border-radius: 0.1875em;
             width:5em;
-            height:2em
+            height:2em;
             }
             div.stButton > button:hover {
             background-color: rgba(111, 114, 222, 0.6);
             color: #25476A;
-            border-color: #25476A
+            border-color: #25476A;
             }
         </style>
         """
