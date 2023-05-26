@@ -566,11 +566,11 @@ image_center = """
         z-index: 9999;
     }}
 
-    @media (max-width: 600px) {{
-        .image-container {{
+    @media (max-width: 600px) {
+        .image-container {
             width: 60%;
-        }}
-    }}
+        }
+    }
 </style>
 <div class="image-container">
     <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
