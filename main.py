@@ -830,8 +830,8 @@ with col5:
     st.text("")
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-    submit1_button = st.button("Run", key="1", on_click=reset2)
-    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
+#    submit1_button = st.button("Run", key="1", on_click=reset2)
+#    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
         
          
