@@ -824,8 +824,8 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <button type="submit" class="button2" name="submit1_button" value="submit1_button" on_click="reset2()">Run</button>
-        <button type="submit" class="button2" name="cancel1_button" value="cancel1_button" on_click="reset1()">Cancel</button>
+        <button type="submit" class="button2" name="submit1_button" value="submit1_button" on_click=reset2>Run</button>
+        <button type="submit" class="button2" name="cancel1_button" value="cancel1_button" on_click=reset1>Cancel</button>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
@@ -863,15 +863,15 @@ with col5:
         
         
         
-if submit1_button:
-    if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
-        col1, col2, col3 = st.columns([1, 4, 1])
-        st.text("")
-        st.text("")
-        with col2:
-            st.error("**Error**: please complete selection.")
-    else:
-        st.session_state.submit1_confirm = True
+#if submit1_button:
+#    if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
+#        col1, col2, col3 = st.columns([1, 4, 1])
+#        st.text("")
+#        st.text("")
+#        with col2:
+#            st.error("**Error**: please complete selection.")
+#    else:
+#        st.session_state.submit1_confirm = True
 
 if st.session_state.submit1_confirm == True:
     st.text("")
