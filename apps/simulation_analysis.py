@@ -9,80 +9,6 @@ import matplotlib.pyplot as plt
 import kaleido
 from apps.functions import get_default_fields, run_whatif, run_simulation, FileDownloader, MultiFileDownloader
 
-spinner_css = """
-    <style>
-        #custom-spinner {
-            display: inline-block;
-            width: 150px;
-            height: 150px;
-            border: 8px solid #6f72de;
-            border-left-color: rgba(0, 0, 0, 0);
-            border-radius: 50%;
-            animation: spin 1s ease-in-out infinite;
-            position: fixed;
-            left: 50%;
-            margin-left: -50px; /* half of the width of the spinner */
-            top: 50%;
-            margin-top: -50px; /* half of the height of the spinner */
-            z-index: 9999; /* ensures that the spinner is on top of other elements */  
-        }
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <div id="custom-spinner">
-    </div>
-"""
-spinner_css = """
-<style>
-    #custom-spinner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 150px;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }
-
-    #spinner-border {
-        border: 8px solid #6f72de;
-        border-left-color: rgba(0, 0, 0, 0);
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        animation: spin 1s linear infinite;
-    }
-
-    #spinner-text {
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 22px;
-        font-weight: bold;
-        color: #6f72de;
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
-<div id="custom-spinner">
-    <div id="spinner-border"></div>
-    <div id="spinner-text">Please wait</div>
-</div>
-"""
-
-
 def get_financials(datafame, user_entity_name, user_period):
     entity_financials = datafame.loc[
         (datafame['entity_name'] == user_entity_name) & (datafame['period'] == user_period)]
@@ -153,11 +79,13 @@ def app():
     line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
     line2 = '<hr style="height: 3x; border:0px; background-color: #25476A; margin-top: -30px;">'
     spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
     st.session_state.simulation_analysis_confirm = True
     st.session_state.manual_analysis_confirm = False
     st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out = get_default_fields(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period)
     default_fields = [st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out]
     spinner.empty()
+    spinner_image.empty()
 
     styles = """
                 <style>
