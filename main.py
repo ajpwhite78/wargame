@@ -471,7 +471,7 @@ header3 = """
         }}
 
         .welcome-container {{
-            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            width: 90%;  /* Set width to 100% for full width on smaller screens */
             font-size: 2.4em;
             text-align: center;
             justify-content: center;  /* Center align items on smaller screens */
