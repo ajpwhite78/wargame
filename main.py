@@ -795,23 +795,23 @@ with col3:
             color: #25476A;
             border-color: #25476A;
             }
-        </style>
-        """
-        button_media_query = '''
-            <style>
             @media (max-width: 600px) {
+            .button-div {
+                width: 100%;
+            }
                 div.stButton > button:first-child {
                 font-size: 4em;
                 }
             }
             </style>
         '''
-        st.markdown(button_media_query + button_css, unsafe_allow_html=True)  
+        st.markdown(button_css, unsafe_allow_html=True)  
 
         st.text("")
-        analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-        submit1A_button = st.button("Run", key="1A", on_click=reset2)
-        submit1B_button = st.button("Run", key="1B", on_click=reset2)
+        with st.container() as button_div:
+            analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+            submit1A_button = st.button("Run", key="1A", on_click=reset2)
+            submit1B_button = st.button("Run", key="1B", on_click=reset2)
     
     with col5:
         inner_cols = st.columns(2)
