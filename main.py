@@ -615,7 +615,7 @@ spinner_css = """
     </div>
 """
 
-st.markdown(spinner_css, unsafe_allow_html=True)
+#st.markdown(spinner_css, unsafe_allow_html=True)
 
 image_center = """
 <style>
@@ -634,7 +634,7 @@ image_center = """
     <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
 </div>
 """
-st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+#st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
 if "user_sector" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
