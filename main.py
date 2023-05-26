@@ -812,6 +812,7 @@ with col5:
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
             gap: 50em;
+            margin-top: 0em;  /* Add top margin */
         }
         .button2 {
             border-width: 0.1875em;  /* Convert 3px to em units */
@@ -819,10 +820,6 @@ with col5:
             font-size: 4em;  /* Convert 16px to em units */
             width: 5em;
             height: 2em;
-        }
-        .button-div2::before, .button-div2::after {
-            content: "";  /* Add empty content */
-            flex: 1;  /* Distribute available space */
         }
         }
     </style>
