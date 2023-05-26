@@ -557,7 +557,7 @@ image_center = """
 <style>
     .image-container {{
         display: inline-block;
-        width: 30%;
+        width: 40%;
         text-align: center;
         position: fixed;
         top: 50%;
