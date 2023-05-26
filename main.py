@@ -784,6 +784,7 @@ with col5:
             align-items: center;
             width: 200%;
             gap: 2em;  /* Convert 20px to em units */
+            margin-top: 20em;  /* Add top margin */
         }
         .button2 {
             background-color: #25476A;
@@ -819,8 +820,9 @@ with col5:
             width: 5em;
             height: 2em;
         }
-        .button-div2 + * {
-            display: none;  /* Hide the following sibling elements */
+        .button-div2::before, .button-div2::after {
+            content: "";  /* Add empty content */
+            flex: 1;  /* Distribute available space */
         }
         }
     </style>
@@ -829,8 +831,6 @@ with col5:
         <button class="button2">Cancel</button>
     </div>
     """        
-    st.text("")
-    st.text("")
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
