@@ -542,7 +542,13 @@ spinner_css = """
 
     @media (max-width: 600px) {
         #custom-spinner {
+            display: inline-block;
+            width: 20vmin;
+            height: 20vmin;
             border: 6px solid #6f72de;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
         }
     }
 
