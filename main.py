@@ -794,7 +794,7 @@ with col5:
             <style>
             @media (max-width: 600px) {
                 div.stButton > button:first-child {
-                font-size: 4.6em;
+                font-size: 4em;
                 }
             }
             </style>
