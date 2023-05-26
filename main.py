@@ -809,6 +809,33 @@ with col4:
     
 with col5:  
     
+    def st_css_button(
+        label: str,
+        css_properties: css_properties,
+        hover_properties: css_properties = None,
+        focus_properties: css_properties = None,
+        active_properties: css_properties = None,
+        disabled_properties: css_properties = None,
+        key=None,
+    ):
+        """Create a button. Pimp with CSS.
+
+        Behaves like Streamlit's native button. Click on it, it returns True.
+        """
+        if label == "submit1_button" and st.button(label):
+            return True
+        else:
+            return _st_css_button(
+                label=label,
+                style=__asdict(css_properties),
+                hover_style=__asdict(hover_properties),
+                focus_style=__asdict(focus_properties),
+                active_style=__asdict(active_properties),
+                disabled_style=__asdict(disabled_properties),
+                key=label if key is None else key,
+                default=False,
+            )
+    
     
     button_css2 = """
     <style>
