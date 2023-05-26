@@ -772,38 +772,35 @@ with col3:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 
-with col5:
-    def resetme():
-        # Your Streamlit function logic goes here
-        st.write("Button clicked!")
-    
-    
-    
-  
-    st.markdown(
-        """
-        <style>
+def resetme():
+    # Your Streamlit function logic goes here
+    st.write("Button clicked!")
+
+st.markdown(
+    """
+    <style>
+    .button-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+
+    @media (max-width: 600px) {
         .button-container {
-            display: flex;
-            justify-content: flex-start;
-            gap: 1em;
+            flex-wrap: nowrap;
+            overflow-x: auto;
         }
 
-        @media (max-width: 600px) {
-            .button-container {
-                flex-wrap: nowrap;
-                overflow-x: auto;
-            }
-
-            .button-container button {
-                flex-shrink: 0;
-            }
+        .button-container button {
+            flex-shrink: 0;
         }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
+with col5:
     st.markdown('<div class="button-container">', unsafe_allow_html=True)
 
     if st.button("Button 1"):
@@ -815,8 +812,6 @@ with col5:
         st.write("Button 2 clicked!")
 
     st.markdown('</div>', unsafe_allow_html=True)
-
-
 
     
     
