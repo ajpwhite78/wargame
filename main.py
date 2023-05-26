@@ -411,7 +411,7 @@ header3 = """
         }}
         .button:hover {{
             background-color: #b8d9e8;
-            border-color: #FAFAFA;
+            border-color: #25476A;
             color: #25476A;
         }}
         .clear {{
