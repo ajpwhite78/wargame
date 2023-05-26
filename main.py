@@ -470,7 +470,7 @@ header3 = """
             margin-bottom: 0.2em;  /* Adjust margin for smaller screens */
         }}
         .welcome-text {{
-            font-size: 1.2em;  /* Adjust font size as per your preference */
+            font-size: 2.4em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         .welcome-container {{
