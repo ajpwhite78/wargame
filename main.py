@@ -880,7 +880,39 @@ with col5:
 
         
          
-        
+st.markdown(
+    """
+    <style>
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .button-container > * {
+        width: calc(33.3333% - 1rem);
+        flex: 1 1 calc(33.3333% - 1rem);
+        min-width: calc(33.3333% - 1rem);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+col1, col2, col3 = st.beta_columns(3)
+
+with col1:
+    if st.button("Button 1"):
+        st.write("Button 1 clicked!")
+
+with col2:
+    if st.button("Button 2"):
+        st.write("Button 2 clicked!")
+
+with col3:
+    if st.button("Button 3"):
+        st.write("Button 3 clicked!")        
         
         
         
