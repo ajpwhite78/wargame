@@ -781,9 +781,10 @@ with col4:
         """
         <style>
         .button-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            grid-gap: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1em;
         }
         </style>
         """,
