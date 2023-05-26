@@ -774,59 +774,59 @@ with col3:
 
 with col4:
     button_css2 = """
-<style>
-    :root {
-        --base-font-size: 1vw;  /* Define your base font size here */
-    }  
-    .button-div2 {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 200%;
-        gap: 5em;  /* Convert 20px to em units */
-    }
-    .button2 {
-        background-color: #25476A;
-        border-color: #FAFAFA;
-        border-width: 0.1875em;  /* Convert 3px to em units */
-        border-radius: 0.1875em;  /* Convert 3px to em units */
-        color: #FAFAFA;
-        padding: 0em 0em;  /* Adjust padding as per your preference */
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 0.8em;  /* Convert 16px to em units */
-        margin: 0em;  /* Adjust margin as per your preference */
-        cursor: pointer;
-        width: 5em;
-        height: 2em;
-    }
-    .button2:hover {
-        background-color: #b8d9e8;
-        border-color: pink;
-        color: #25476A;
-     }
-    @media screen and (max-width: 600px) {
-    .button-div2 {
-        width: 100%;  /* Set width to 100% for full width on smaller screens */
-        justify-content: center;  /* Center align items on smaller screens */
-    }
-    .button2 {
-        border-width: 0.1875em;  /* Convert 3px to em units */
-        border-radius: 0.1875em;  /* Convert 3px to em units */
-        font-size: 4em;  /* Convert 16px to em units */
-        width: 5em;
-        height: 2em;
-    }
-    }
-</style>
-<div class="button-div2">
-    <button class="button2">Run</button>
-    <button class="button2">Cancel</button>
-</div>
-"""        
+        <style>
+            :root {
+                --base-font-size: 1vw;  /* Define your base font size here */
+            }  
+            .button-div2 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 200%;
+                gap: 5em;  /* Convert 20px to em units */
+            }
+            .button2 {
+                background-color: #25476A;
+                border-color: #FAFAFA;
+                border-width: 0.1875em;  /* Convert 3px to em units */
+                border-radius: 0.1875em;  /* Convert 3px to em units */
+                color: #FAFAFA;
+                padding: 0em 0em;  /* Adjust padding as per your preference */
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 0.8em;  /* Convert 16px to em units */
+                margin: 0em;  /* Adjust margin as per your preference */
+                cursor: pointer;
+                width: 5em;
+                height: 2em;
+            }
+            .button2:hover {
+                background-color: #b8d9e8;
+                border-color: pink;
+                color: #25476A;
+             }
+            @media screen and (max-width: 600px) {
+            .button-div2 {
+                width: 100%;  /* Set width to 100% for full width on smaller screens */
+                justify-content: center;  /* Center align items on smaller screens */
+            }
+            .button2 {
+                border-width: 0.1875em;  /* Convert 3px to em units */
+                border-radius: 0.1875em;  /* Convert 3px to em units */
+                font-size: 4em;  /* Convert 16px to em units */
+                width: 5em;
+                height: 2em;
+            }
+            }
+        </style>
+        <div class="button-div2">
+            <button class="button2">Run</button>
+            <button class="button2">Cancel</button>
+        </div>
+        """        
 
-st.markdown(button_css2, unsafe_allow_html=True)
+        st.markdown(button_css2, unsafe_allow_html=True)
     
 with col5:
     inner_cols = st.columns(2)
