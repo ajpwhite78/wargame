@@ -540,17 +540,19 @@ spinner_css = """
         animation: spin 1s ease-in-out infinite;
     }
 
+    @media (max-width: 600px) {
+        #custom-spinner {
+            border: 6px solid #6f72de;
+        }
+    }
+
     @keyframes spin {
         to {
             transform: rotate(360deg);
         }
     }
 
-    @media (max-width: 600px) {
-        #custom-spinner {
-            border: 6px solid #6f72de;
-        }
-    }
+
 </style>
 <div id="spinner-container">
     <div id="custom-spinner"></div>
