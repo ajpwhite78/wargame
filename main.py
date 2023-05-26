@@ -390,7 +390,7 @@ header3 = """
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 30%;
+            width: 40%;
             gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
