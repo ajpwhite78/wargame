@@ -348,7 +348,7 @@ header3 = """
         }}
 
         .header {{
-
+            font-family:sans-serif; 
             position: fixed;
             top: 0;
             left: 0;
@@ -403,7 +403,7 @@ header3 = """
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 0.95em;  /* Convert 16px to em units */
+            font-size: 0.9em;  /* Convert 16px to em units */
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
@@ -422,7 +422,7 @@ header3 = """
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
         .welcome-text {{
-            font-size: 1.6em;  /* Adjust font size as per your preference */
+            font-size: 1.4em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         }}
