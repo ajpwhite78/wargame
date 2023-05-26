@@ -469,16 +469,18 @@ header3 = """
             text-align: center;  /* Center align text on smaller screens */
             margin-bottom: 0.2em;  /* Adjust margin for smaller screens */
         }}
-
+        .welcome-text {{
+            font-size: 1.2em;  /* Adjust font size as per your preference */
+            margin-right: auto;  /* Adjust margin as per your preference */
+            color: #FAFAFA;
         .welcome-container {{
             width: 90%;  /* Set width to 100% for full width on smaller screens */
-            font-size: 2.4em;
             text-align: center;
             justify-content: center;  /* Center align items on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
         .button-div {{
-            width: 80%;  /* Set width to 100% for full width on smaller screens */
+            width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
             gap: 2em;  /* Convert 20px to em units */
         }}
