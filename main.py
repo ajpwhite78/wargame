@@ -810,6 +810,7 @@ with col5:
         .button-div2 {
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
+            gap: 2em;
         }
         .button2 {
             border-width: 0.1875em;  /* Convert 3px to em units */
