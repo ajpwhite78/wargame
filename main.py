@@ -772,9 +772,8 @@ with col3:
 with col5:
     inner_cols = st.columns(2)
     with inner_cols[0]:   
-        button_css =
-            """
-            <style>
+        button_css = """
+        <style>
             div.stButton > 
             button:first-child {
             background-color:#25476A;
@@ -792,8 +791,8 @@ with col5:
             color: #25476A;
             border-color: #25476A
             }
-            </style>
-            """
+        </style>
+        """
         st.markdown(button_css, unsafe_allow_html=True)
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
