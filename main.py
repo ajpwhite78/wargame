@@ -880,13 +880,13 @@ with col5:
 
         
          
-import streamlit as st
 
 st.markdown(
     """
     <style>
     .button-container {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 1rem;
@@ -898,9 +898,13 @@ st.markdown(
     }
 
     @media (max-width: 600px) {
+        .button-container {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
         .button-container > * {
-            flex-basis: 100%;
-            min-width: 100%;
+            flex-shrink: 0;
         }
     }
     </style>
@@ -908,15 +912,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-col1, col2 = st.beta_columns(2)
+st.markdown('<div class="button-container">', unsafe_allow_html=True)
 
-with col1:
-    if st.button("Button 1", key="button1"):
-        st.write("Button 1 clicked!")
+if st.button("Button 1", key="button1"):
+    st.write("Button 1 clicked!")
 
-with col2:
-    if st.button("Button 2", key="button2"):
-        st.write("Button 2 clicked!")
+if st.button("Button 2", key="button2"):
+    st.write("Button 2 clicked!")
+
+st.markdown('</div>', unsafe_allow_html=True)
+
 
 
         
