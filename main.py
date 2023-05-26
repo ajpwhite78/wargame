@@ -816,7 +816,7 @@ with col4:
             height: 2em;
         }}
         }}
-        </style>
+    </style>
     <div class="button-div">
         <button class="button">Run</button>
         <button class="button">Cancel</button>
