@@ -769,50 +769,7 @@ with col3:
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
-
-with col4:
-    button_css = """
-    <style>
-        .button-div {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 40%;
-            gap: 1em;  /* Convert 20px to em units */
-        }
-        div.stButton > button:first-child {
-            display: inline-block;
-            background-color: #25476A;
-            color: #FAFAFA;
-            border-color: #FAFAFA;
-            border-width: 0.1875em;
-            border-radius: 0.1875em;
-            width: 5em;
-            height: 2em;
-        }
-        div.stButton > button:hover {
-            background-color: rgba(111, 114, 222, 0.6);
-            color: #25476A;
-            border-color: #25476A;
-        }
-        @media (max-width: 600px) {
-            div.stButton > button:first-child {
-                font-size: 4em;
-            }
-        }
-    </style>
-    """
-
-    st.markdown(button_css, unsafe_allow_html=True)
-
-    st.text("")
-    with st.container():
-        with st.container():
-            analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-            submit1_button = st.button("Run", key="1", on_click=reset2)
-        with st.container():
-            cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
-    
+   
 with col5:
     inner_cols = st.columns(2)
     with inner_cols[0]:   
@@ -854,6 +811,78 @@ with col5:
         st.text("")
         cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
+        
+button_css2 = """
+    <style>
+        :root {{
+            --base-font-size: 1vw;  /* Define your base font size here */
+        }}  
+        .button-div {{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 40%;
+            gap: 1em;  /* Convert 20px to em units */
+        }}
+        .button {{
+            background-color: #25476A;
+            border-color: #FAFAFA;
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            color: #FAFAFA;
+            padding: 0em 0em;  /* Adjust padding as per your preference */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.95em;  /* Convert 16px to em units */
+            margin: 0em;  /* Adjust margin as per your preference */
+            cursor: pointer;
+            width: 5em;
+            height: 2em;
+        }}
+        .button:hover {{
+            background-color: #b8d9e8;
+            border-color: #FAFAFA;
+            color: #25476A;
+        @media screen and (max-width: 600px) {{
+        .button-div {{
+            width: 30%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: center;  /* Center align items on smaller screens */
+        }}
+        .button {{
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            font-size: 1.6em;  /* Convert 16px to em units */
+            width: 5em;
+            height: 2em;
+        }}
+    }}
+    </style>
+    <div class="button-div">
+                <!--<button class="button">Help</button>
+                <button class="button">Contact</button>-->
+                <button class="button">Logout</button>
+    </div>
+"""        
+        
+st.markdown(button_css2, unsafe_allow_html=True)         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 if submit1_button:
     if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
         col1, col2, col3 = st.columns([1, 4, 1])
