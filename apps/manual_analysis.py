@@ -74,6 +74,11 @@ image_center = """
 </div>
 """
 
+def img_to_bytes(img_path):
+    img_bytes = pathlib.Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+
 def get_financials(datafame, user_entity_name, user_period):
     entity_financials = datafame.loc[
         (datafame['entity_name'] == user_entity_name) & (datafame['period'] == user_period)]
