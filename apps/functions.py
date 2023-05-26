@@ -90,6 +90,11 @@ image_center = """
 </div>
 """
 
+def img_to_bytes(img_path):
+    img_bytes = pathlib.Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+
 def highlight_diff_by_row(row, color1, color2):
     numeric_row = pd.to_numeric(row, errors='coerce')
     is_diff_list = []
