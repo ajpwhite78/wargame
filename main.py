@@ -806,12 +806,10 @@ with col4:
     st.markdown(button_css, unsafe_allow_html=True)
 
     st.text("")
-    with st.container() as button_div:
-        st.markdown('<div class="button-div">')
+    with st.columns(2):
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
         submit1A_button = st.button("Run", key="1A", on_click=reset2)
         submit1B_button = st.button("Run", key="1B", on_click=reset2)
-        st.markdown('</div>')
     
 with col5:
     inner_cols = st.columns(2)
