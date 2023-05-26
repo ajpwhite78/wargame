@@ -861,8 +861,6 @@ with col5:
         button_value = st.session_state.button_click["buttonValue"]
         handle_button_click(button_value)
 
-    if submit1_button:
-        st.write("Success")
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
 #    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
