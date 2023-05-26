@@ -783,7 +783,7 @@ with col4:
             justify-content: flex-start;
             align-items: center;
             width: 200%;
-            gap: 2em;  /* Convert 20px to em units */
+            gap: 5em;  /* Convert 20px to em units */
         }}
         .button {{
             background-color: #25476A;
