@@ -779,6 +779,7 @@ with col5:
     
     
     
+  
     st.markdown(
         """
         <style>
@@ -786,25 +787,16 @@ with col5:
             display: flex;
             justify-content: flex-start;
             gap: 1em;
-            flex-wrap: wrap;
-        }
-
-        .button-container button {
-            flex: 1 0 auto;
-            width: 45%;  /* Adjust the width of the buttons as per your preference */
-            max-width: 10em;  /* Adjust the maximum width of the buttons as per your preference */
         }
 
         @media (max-width: 600px) {
             .button-container {
-                flex-direction: row;
-                justify-content: center;
-                align-items: flex-start;
+                flex-wrap: nowrap;
+                overflow-x: auto;
             }
 
             .button-container button {
-                width: auto;
-                max-width: 100%;
+                flex-shrink: 0;
             }
         }
         </style>
@@ -823,6 +815,7 @@ with col5:
         st.write("Button 2 clicked!")
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
     
