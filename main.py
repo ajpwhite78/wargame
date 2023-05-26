@@ -429,7 +429,7 @@ header3 = """
         .welcome-container {{
             display: flex;
             align-items: center;
-            width: 80%;  /* Adjust width as per your preference */
+            width: 50%;  /* Adjust width as per your preference */
             padding: 0em 0em;  /* Convert 10px 30px to em units */
         }}
         .welcome-container div {{
@@ -470,7 +470,7 @@ header3 = """
             margin-bottom: 0.2em;  /* Adjust margin for smaller screens */
         }}
         .welcome-container {{
-            width: 50%;  /* Set width to 100% for full width on smaller screens */
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
             display: flex;
             text-align: center;
             font-size: 2.4em;
