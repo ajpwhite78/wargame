@@ -469,10 +469,6 @@ header3 = """
             text-align: center;  /* Center align text on smaller screens */
             margin-bottom: 0.2em;  /* Adjust margin for smaller screens */
         }}
-        .welcome-text {{
-            font-size: 2.4em;  /* Adjust font size as per your preference */
-            margin-right: auto;  /* Adjust margin as per your preference */
-            color: #FAFAFA;
         .welcome-container {{
             width: 90%;  /* Set width to 100% for full width on smaller screens */
             text-align: center;
