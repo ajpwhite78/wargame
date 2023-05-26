@@ -374,7 +374,7 @@ header3 = """
             padding: 0em;  /* Convert 10px to em units */
         }}
         .right1-column {{
-            font-size: 3.6em;  /* Convert 40px to em units */
+            font-size: 3.2em;  /* Convert 40px to em units */
             text-indent: 1em;  /* Convert 40px to em units */
             float: left;
             width: 80%;
@@ -403,7 +403,7 @@ header3 = """
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 0.9em;  /* Convert 16px to em units */
+            font-size: 0.8em;  /* Convert 16px to em units */
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
@@ -422,7 +422,7 @@ header3 = """
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
         .welcome-text {{
-            font-size: 1em;  /* Adjust font size as per your preference */
+            font-size: 1.4em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         }}
