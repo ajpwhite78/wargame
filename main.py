@@ -772,48 +772,28 @@ with col3:
 with col5:
     inner_cols = st.columns(2)
     with inner_cols[0]:   
-        button_css = """
-        <style>
-        .button-div {{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 40%;
-            gap: 1em;  /* Convert 20px to em units */
-        }}
-        .button {{
-            background-color: #25476A;
-            border-color: #FAFAFA;
-            border-width: 0.1875em;  /* Convert 3px to em units */
-            border-radius: 0.1875em;  /* Convert 3px to em units */
+        button_css =
+            """
+            <style>
+            div.stButton > 
+            button:first-child {
+            background-color:#25476A;
             color: #FAFAFA;
-            padding: 0em 0em;  /* Adjust padding as per your preference */
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;  /* Convert 16px to em units */
-            margin: 0em;  /* Adjust margin as per your preference */
-            cursor: pointer;
-            width: 5em;
-            height: 2em;
-        }}
-        .button:hover {{
-            background-color: #b8d9e8;
             border-color: #FAFAFA;
+            font-size: 1em;
+            border-width: 0.1875em;
+            border-radius: 0.1875em;
+            width:5em;
+            height:2em
+            }
+            div.stButton > 
+            button:hover {
+            background-color: rgba(111, 114, 222, 0.6);
             color: #25476A;
-        }}
-        
-             @media (max-width: 600px) {{
-                border-width: 0.1875em;  /* Convert 3px to em units */
-                border-radius: 0.1875em;  /* Convert 3px to em units */
-                font-size: 1.4em;  /* Convert 16px to em units */
-                width: 8em;
-                height: 2em;
-                }}
-            }}
-        </style>
-        """
-
+            border-color: #25476A
+            }
+            </style>
+            """
         st.markdown(button_css, unsafe_allow_html=True)
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
