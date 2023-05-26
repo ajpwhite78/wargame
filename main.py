@@ -775,6 +775,13 @@ with col3:
  
     
 with col5:
+    
+    def handle_button_click(button_value):
+        if button_value == "submit1_button":
+            st.write("Success")
+        elif button_value == "cancel1_button":
+            st.write("Cancel")
+    
     button_css2 = """
     <style>
         :root {
@@ -832,6 +839,27 @@ with col5:
     """
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+    
+    st.markdown(
+        """
+    <script>
+    function handleButtonClick(buttonValue) {
+        const payload = {
+            event: 'button_click',
+            buttonValue: buttonValue
+        };
+        // Send the payload to the Streamlit backend
+        Streamlit.connection.sendMessage(payload);
+    }
+    </script>
+    """,
+        unsafe_allow_html=True
+    )
+
+    # Handle the button click event
+    if "button_click" in st.session_state:
+        button_value = st.session_state.button_click["buttonValue"]
+        handle_button_click(button_value)
 
     if submit1_button:
         st.write("Success")
