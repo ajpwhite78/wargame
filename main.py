@@ -822,7 +822,7 @@ button_css2 = """
             justify-content: flex-start;
             align-items: center;
             width: 40%;
-            gap: 1em;  /* Convert 20px to em units */
+            gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
             background-color: #25476A;
@@ -852,16 +852,15 @@ button_css2 = """
         .button {{
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
-            font-size: 1.6em;  /* Convert 16px to em units */
+            font-size: 4em;  /* Convert 16px to em units */
             width: 5em;
             height: 2em;
         }}
     }}
     </style>
     <div class="button-div">
-                <button class="button">Help</button>
-                <button class="button">Contact</button>
-                <button class="button">Logout</button>
+        <button class="button">Run</button>
+        <button class="button">Cancel</button>
     </div>
 """        
         
