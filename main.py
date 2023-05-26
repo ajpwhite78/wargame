@@ -773,6 +773,11 @@ with col3:
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 
 with col5:
+    def resetme():
+        # Your Streamlit function logic goes here
+        st.write("Button clicked!")
+    
+    
     button_css2 = """
     <style>
         :root {
@@ -827,7 +832,7 @@ with col5:
         <button type="submit" class="button2" name="submit1_button" value="submit1_button" onclick="document.getElementById('submit_form').submit()">Run</button>
         <button type="submit" class="button2" name="cancel1_button" value="cancel1_button">Cancel</button>
     </div>
-    <form id="submit_form" method="post" action="" onsubmit="event.preventDefault(); reset2();">
+    <form id="submit_form" method="post" action="" onsubmit="event.preventDefault(); resetme();">
     </form>
     """
 
