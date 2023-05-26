@@ -772,40 +772,7 @@ with col3:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 
-def resetme():
-    # Your Streamlit function logic goes here
-    st.write("Button clicked!")
-
-with col4:
-    st.markdown(
-        """
-        <style>
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            gap: 1em;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-    with st.beta_container():
-        st.markdown('<div class="button-container">', unsafe_allow_html=True)
-
-        if st.button("Button 1"):
-            # Code to execute when Button 1 is clicked
-            st.write("Button 1 clicked!")
-
-        if st.button("Button 2"):
-            # Code to execute when Button 2 is clicked
-            st.write("Button 2 clicked!")
-
-        st.markdown('</div>', unsafe_allow_html=True)
-
-
-    
+ 
     
 with col5:  
     
