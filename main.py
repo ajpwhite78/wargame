@@ -837,8 +837,8 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <button class="button2" type="button" name="submit1_button" value="Run"></button>
-        <button class="button2" type="button" name="cancel1_button" value="Cancel"></button>
+        <button class="button2" type="button" value="submit1_button" onclick="jsfunction();return true;">Run</button>
+        <button class="button2" type="button" name="cancel1_button" onclick="jsfunction();return true;">Cancel</button>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
