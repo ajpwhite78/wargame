@@ -483,7 +483,7 @@ header3 = """
         .button {{
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
-            font-size: 1.6em;  /* Convert 16px to em units */
+            font-size: 1em;  /* Convert 16px to em units */
             width: 5em;
             height: 2em;
         }}
