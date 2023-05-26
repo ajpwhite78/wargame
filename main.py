@@ -774,18 +774,7 @@ with col3:
 
  
     
-with col5:  
-    
-    def st_css_button(
-        label: str,
-        key=None,
-    ):
-        if label == "submit1_button":
-            return True
-        else:
-            return False
-    
-    
+with col5:
     button_css2 = """
     <style>
         :root {
@@ -838,13 +827,13 @@ with col5:
     </style>
     <div class="button-div2">
         <button class="button2" type="button" value="submit1_button" onclick="jsfunction();return true;">Run</button>
-        <button class="button2" type="button" name="cancel1_button" onclick="jsfunction();return true;">Cancel</button>
+        <button class="button2" type="button" value="cancel1_button" onclick="jsfunction();return true;">Cancel</button>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 
-    if st_css_button:
+    if submit1_button:
         st.write("Success")
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
 #    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
