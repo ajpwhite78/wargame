@@ -805,7 +805,7 @@ with col5:
             }
             </style>
         '''
-        st.markdown(button_css, unsafe_allow_html=True)  
+        st.markdown(button_media_query + button_css, unsafe_allow_html=True)  
        
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
