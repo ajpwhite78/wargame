@@ -778,22 +778,38 @@ with col5:
         st.write("Button clicked!")
     
     
-    st.markdown(
-    """
-    <style>
-    .button-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 1em;
-    }
     
-    .button-container button {
-        flex: 1 0 45%;  /* Adjust the width of the buttons as per your preference */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+    st.markdown(
+        """
+        <style>
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .button-container button {
+            flex: 1 0 auto;
+            width: 45%;  /* Adjust the width of the buttons as per your preference */
+            max-width: 10em;  /* Adjust the maximum width of the buttons as per your preference */
+        }
+
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            .button-container button {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
     )
 
     st.markdown('<div class="button-container">', unsafe_allow_html=True)
