@@ -402,7 +402,7 @@ header3 = """
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 0.8em;  /* Convert 16px to em units */
+            font-size: 0.9em;  /* Convert 16px to em units */
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
