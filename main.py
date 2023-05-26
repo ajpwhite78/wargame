@@ -813,17 +813,10 @@ with col5:
         label: str,
         key=None,
     ):
-        """Create a button. Pimp with CSS.
-
-        Behaves like Streamlit's native button. Click on it, it returns True.
-        """
-        if label == "submit1_button" and st.button(label):
+        if label == "submit1_button":
             return True
         else:
-            return _st_css_button(
-                label=label,
-                key=label if key is None else key,
-                default=False,
+            return False
             )
     
     
@@ -882,61 +875,15 @@ with col5:
         <button class="button2" type="submit" name="cancel1_button" value="cancel1_button">Cancel</button>
     </div>
     """
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     st.markdown(button_css2, unsafe_allow_html=True)
+    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 
     if st_css_button:
         st.write("Success")
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
 #    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
-        
-         
-
-st.markdown(
-    """
-    <style>
-    .button-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
-
-    .button-container > * {
-        flex: 1 1 50%;
-        min-width: 50%;
-    }
-
-    @media (max-width: 600px) {
-        .button-container {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        }
-
-        .button-container > * {
-            flex-shrink: 0;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown('<div class="button-container">', unsafe_allow_html=True)
-
-if st.button("Button 1", key="button1"):
-    st.write("Button 1 clicked!")
-
-if st.button("Button 2", key="button2"):
-    st.write("Button 2 clicked!")
-
-st.markdown('</div>', unsafe_allow_html=True)
-
-
-
-        
+  
         
         
         
