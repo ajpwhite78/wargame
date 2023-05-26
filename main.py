@@ -882,14 +882,11 @@ with col5:
         <button class="button2" type="submit" name="cancel1_button" value="cancel1_button">Cancel</button>
     </div>
     """
+    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     st.markdown(button_css2, unsafe_allow_html=True)
 
-    if st.button("Run", key="submit1_button"):
-        resetme()
-    st.markdown(button_css2, unsafe_allow_html=True)
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-#    st.markdown(button_css2, unsafe_allow_html=True)
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+    if st_css_button:
+        st.write("Success")
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
 #    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
