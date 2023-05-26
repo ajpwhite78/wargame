@@ -778,14 +778,14 @@ with col4:
         :root {{
             --base-font-size: 1vw;  /* Define your base font size here */
         }}  
-        .button-div {{
+        .button-div2 {{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             width: 200%;
             gap: 5em;  /* Convert 20px to em units */
         }}
-        .button {{
+        .button2 {{
             background-color: #25476A;
             border-color: #FAFAFA;
             border-width: 0.1875em;  /* Convert 3px to em units */
@@ -801,17 +801,17 @@ with col4:
             width: 5em;
             height: 2em;
         }}
-        .button:hover {{
+        .button2:hover {{
             background-color: #b8d9e8;
-            border-color: #25476A;
+            border-color: pink;
             color: #25476A;
          }}
         @media screen and (max-width: 600px) {{
-        .button-div {{
+        .button-div2 {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
         }}
-        .button {{
+        .button2 {{
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
             font-size: 4em;  /* Convert 16px to em units */
@@ -820,9 +820,9 @@ with col4:
         }}
         }}
     </style>
-    <div class="button-div">
-        <button class="button">Run</button>
-        <button class="button">Cancel</button>
+    <div class="button-div2">
+        <button class="button2">Run</button>
+        <button class="button2">Cancel</button>
     </div>
     """        
         
