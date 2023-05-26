@@ -800,7 +800,7 @@ with col5:
                 border-width: 0.1875em;  /* Convert 3px to em units */
                 border-radius: 0.1875em;  /* Convert 3px to em units */
                 font-size: 1.4em;  /* Convert 16px to em units */
-                width: 7.5em;
+                width: 20em;
                 height: 2em;
                 }
             }
