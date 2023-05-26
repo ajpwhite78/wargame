@@ -1010,6 +1010,7 @@ def app():
                 with col5:
                     if statement_out_download == "Yes":
                         spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+                        spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                         st.text("")
                         st.text("")
                         statements_out = [(st.session_state.df_ratings_sim_out.reset_index(
@@ -1022,6 +1023,7 @@ def app():
                         downloader = MultiFileDownloader()
                         downloader.download_simulation_figures(statements_out, st.session_state.user_entity_name)
                         spinner.empty()
+                        spinner_image.empty()
 
                 st.markdown(line, unsafe_allow_html=True)
                 st.markdown(line2, unsafe_allow_html=True)
