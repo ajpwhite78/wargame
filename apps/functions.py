@@ -18,54 +18,6 @@ from scipy.interpolate import UnivariateSpline
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 
-#7983FF
-spinner_css = """
-<style>
-    #custom-spinner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 150px;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }
-
-    #spinner-border {
-        border: 8px solid #6f72de;
-        border-left-color: rgba(0, 0, 0, 0);
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        animation: spin 1s linear infinite;
-    }
-
-    #spinner-text {
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 22px;
-        font-weight: bold;
-        color: #6f72de;
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
-<div id="custom-spinner">
-    <div id="spinner-border"></div>
-    <div id="spinner-text">Please wait</div>
-</div>
-"""
-
 def highlight_diff_by_row(row, color1, color2):
     numeric_row = pd.to_numeric(row, errors='coerce')
     is_diff_list = []
@@ -952,6 +904,7 @@ def run_simulation(select_user_seed_value, select_user_sector, select_user_field
 #    setup_text = st.markdown("<span class='animate-text' style='font-family:sans-serif; color:#7983FF; font-size: 40px;'>... Preparing Simulation ...</span>", unsafe_allow_html=True)
 
     spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
     def get_financials(datafame, user_entity_name, user_period):
         entity_financials = datafame.loc[
             (datafame['entity_name'] == user_entity_name) & (datafame['period'] == user_period)]
@@ -1072,6 +1025,7 @@ def run_simulation(select_user_seed_value, select_user_sector, select_user_field
                 unsafe_allow_html=True)
     progress.progress(0)
     spinner.empty()
+    spinner_image.empty()
 
 #    defaults = {
 #        "Sales Growth %": select_user_whatif_sim_sales_revenue_growth,
