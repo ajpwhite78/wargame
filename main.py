@@ -18,8 +18,6 @@ from streamlit_css_button import st_button_style_focus
 from streamlit_css_button import st_button_style_hover
 from streamlit_css_button import st_css_button
 
-st.title("Pimp my button!")
-st.markdown("Here are 3 style examples, build your own in the sidebar!")
 
 c1, c2, c3, c4 = st.beta_columns(4)
 
