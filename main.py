@@ -859,8 +859,8 @@ button_css2 = """
     }}
     </style>
     <div class="button-div">
-                <!--<button class="button">Help</button>
-                <button class="button">Contact</button>-->
+                <button class="button">Help</button>
+                <button class="button">Contact</button>
                 <button class="button">Logout</button>
     </div>
 """        
