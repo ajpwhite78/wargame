@@ -769,44 +769,45 @@ with col3:
         st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
-inner_cols = st.columns(2)
-with inner_cols[0]:   
-    button_css = """
-    <style>
-        div.stButton > button:first-child {
-        background-color:#25476A;
-        color: #FAFAFA;
-        border-color: #FAFAFA;
-        border-width: 0.1875em;
-        border-radius: 0.1875em;
-        width:5em;
-        height:2em
-        }
-        div.stButton > button:hover {
-        background-color: rgba(111, 114, 222, 0.6);
-        color: #25476A;
-        border-color: #25476A
-        }
-    </style>
-    """
-    button_media_query = '''
+with col5:
+    inner_cols = st.columns(2)
+    with inner_cols[0]:   
+        button_css = """
         <style>
-        @media (max-width: 600px) {
             div.stButton > button:first-child {
-            font-size: 4em;
+            background-color:#25476A;
+            color: #FAFAFA;
+            border-color: #FAFAFA;
+            border-width: 0.1875em;
+            border-radius: 0.1875em;
+            width:5em;
+            height:2em
             }
-        }
+            div.stButton > button:hover {
+            background-color: rgba(111, 114, 222, 0.6);
+            color: #25476A;
+            border-color: #25476A
+            }
         </style>
-    '''
-    st.markdown(button_media_query + button_css, unsafe_allow_html=True)  
+        """
+        button_media_query = '''
+            <style>
+            @media (max-width: 600px) {
+                div.stButton > button:first-child {
+                font-size: 4em;
+                }
+            }
+            </style>
+        '''
+        st.markdown(button_media_query + button_css, unsafe_allow_html=True)  
 
-    st.text("")
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-    submit1_button = st.button("Run", key="1", on_click=reset2)
-with inner_cols[1]:
-    st.text("")
-    st.text("")
-    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
+        st.text("")
+        analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+        submit1_button = st.button("Run", key="1", on_click=reset2)
+    with inner_cols[1]:
+        st.text("")
+        st.text("")
+        cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
 if submit1_button:
     if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
