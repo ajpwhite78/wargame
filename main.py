@@ -817,10 +817,10 @@ with col4:
         }}
         }}
         </style>
-        <div class="button-div">
-            <button class="button">Run</button>
-            <button class="button">Cancel</button>
-        </div>
+    <div class="button-div">
+        <button class="button">Run</button>
+        <button class="button">Cancel</button>
+    </div>
     """        
         
     st.markdown(button_css2, unsafe_allow_html=True)
