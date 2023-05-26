@@ -891,9 +891,9 @@ st.markdown(
     }
 
     .button-container > * {
-        width: calc(33.3333% - 1rem);
-        flex: 1 1 calc(33.3333% - 1rem);
-        min-width: calc(33.3333% - 1rem);
+        width: calc(50% - 1rem);
+        flex: 1 1 calc(50% - 1rem);
+        min-width: calc(50% - 1rem);
     }
     </style>
     """,
@@ -908,11 +908,7 @@ with col1:
 
 with col2:
     if st.button("Button 2", key="AAA2"):
-        st.write("Button 2 clicked!")
-
-with col3:
-    if st.button("Button 3", key="AAA3"):
-        st.write("Button 3 clicked!")        
+        st.write("Button 2 clicked!")    
         
         
         
