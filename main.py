@@ -903,15 +903,15 @@ st.markdown(
 col1, col2, col3 = st.beta_columns(3)
 
 with col1:
-    if st.button("Button 1"):
+    if st.button("Button 1", key="AAA1"):
         st.write("Button 1 clicked!")
 
 with col2:
-    if st.button("Button 2"):
+    if st.button("Button 2", key="AAA2"):
         st.write("Button 2 clicked!")
 
 with col3:
-    if st.button("Button 3"):
+    if st.button("Button 3", key="AAA2"):
         st.write("Button 3 clicked!")        
         
         
