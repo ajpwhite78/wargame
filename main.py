@@ -806,10 +806,7 @@ with col4:
 
     
     
-    
-    
-    
-  with col5:  
+with col5:  
     
     
     button_css2 = """
