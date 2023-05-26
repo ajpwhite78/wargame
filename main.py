@@ -502,9 +502,9 @@ header3 = """
         <div class="welcome-container">
             <div class="welcome-text">Welcome John</div>
             <div class="button1-div">
-                <button1 class="button1">Help</button>
-                <!--<button1 class="button1">Contact</button>-->
-                <button1 class="button1">Logout</button>
+                <button class="button1">Help</button>
+                <!--<button class="button1">Contact</button>-->
+                <button class="button1">Logout</button>
             </div>
         </div>
         <div class="clear"></div>
