@@ -829,13 +829,11 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <button type="submit" class="button2" name="submit1_button" value="submit1_button" onclick="document.getElementById('submit_form').submit()">Run</button>
+        <button type="submit" class="button2" name="submit1_button" value="submit1_button" onclick="resetme()">Run</button>
         <button type="submit" class="button2" name="cancel1_button" value="cancel1_button">Cancel</button>
     </div>
-    <form id="submit_form" method="post" action="" onsubmit="event.preventDefault(); resetme();">
-    </form>
     """
-
+    
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 #    st.markdown(button_css2, unsafe_allow_html=True)
