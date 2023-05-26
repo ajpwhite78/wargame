@@ -774,7 +774,7 @@ with col5:
     with inner_cols[0]:   
         button_css = """
         <style>
-            .button {
+            .button {{
                 background-color: #25476A;
                 border-color: #FAFAFA;
                 border-width: 0.1875em;  /* Convert 3px to em units */
@@ -789,22 +789,22 @@ with col5:
                 cursor: pointer;
                 width: 5em;
                 height: 2em;
-            }
+            }}
 
-            .button:hover {
+            .button:hover {{
             background-color: #b8d9e8;
             border-color: #FAFAFA;
             color: #25476A;
-            }
+            }}
 
-            @media (max-width: 600px) {
+            @media (max-width: 600px) {{
                 border-width: 0.1875em;  /* Convert 3px to em units */
                 border-radius: 0.1875em;  /* Convert 3px to em units */
                 font-size: 1.4em;  /* Convert 16px to em units */
                 width: 8em;
                 height: 2em;
-                }
-            }
+                }}
+            }}
         </style>
         """
 
