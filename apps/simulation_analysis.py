@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import random
+import pathlib
+import base64
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.figure_factory as ff
