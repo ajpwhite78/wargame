@@ -794,11 +794,7 @@ with col5:
             <style>
             @media (max-width: 600px) {
                 div.stButton > button:first-child {
-                border-width: 0.1875em;  /* Convert 3px to em units */
-                border-radius: 0.1875em;  /* Convert 3px to em units */
                 font-size: 4.6em;
-                width: 16em;
-                height: 2em;
                 }
             }
             </style>
