@@ -784,7 +784,6 @@ with col5:
             return True
         else:
             return False
-            )
     
     
     button_css2 = """
