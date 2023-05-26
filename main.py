@@ -824,13 +824,21 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <button type="submit" class="button2" name="submit1_button" value="submit1_button" on_click="reset2()">Run</button>
-        <button type="submit" class="button2" name="cancel1_button" value="cancel1_button" on_click="reset1()">Cancel</button>
+        <form method="post">
+            <button type="submit" class="button2" name="submit1_button" value="submit1_button">Run</button>
+            <button type="submit" class="button2" name="cancel1_button" value="cancel1_button">Cancel</button>
+        </form>
     </div>
     """
+
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 
+    if st.form_submit_button('Run'):
+        reset2()
+
+    if st.form_submit_button('Cancel'):
+        reset1()
 #    st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
