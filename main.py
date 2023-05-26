@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_nested_layout
 import pandas as pd
 import pathlib
 import base64
@@ -738,7 +739,7 @@ text_media_query3 = '''
     </style>
 '''
 st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
-col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 1, 0.5, 0.5])
+col1, col2, col3, col4, col5 = st.columns([1, 2, 1, 1, 1])
 with col1:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
     text_media_query4 = '''
@@ -769,16 +770,18 @@ with col3:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 with col5:
-    st.markdown(
-        """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 3px; width:6em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
-        unsafe_allow_html=True)
-    st.text("")
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-    submit1_button = st.button("Run", key="1", on_click=reset2)
-with col6:
-    st.text("")
-    st.text("")
-    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
+    inner_cols = st.columns(2)
+    with inner_cols[0]:
+        st.markdown(
+            """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 3px; width:6em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
+            unsafe_allow_html=True)
+        st.text("")
+        analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+        submit1_button = st.button("Run", key="1", on_click=reset2)
+    with inner_cols[1]:
+        st.text("")
+        st.text("")
+        cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
 if submit1_button:
     if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
