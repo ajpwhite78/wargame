@@ -784,7 +784,7 @@ with col5:
             align-items: center;
             width: 200%;
             gap: 2em;  /* Convert 20px to em units */
-            margin-top: 1em;  /* Add top margin */
+            margin-top: 1.6em;  /* Add top margin */
         }
         .button2 {
             background-color: #25476A;
