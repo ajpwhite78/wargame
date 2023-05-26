@@ -796,9 +796,6 @@ with col4:
             border-color: #25476A;
         }
         @media (max-width: 600px) {
-            .button-div {
-                width: 100%;
-            }
             div.stButton > button:first-child {
                 font-size: 4em;
             }
