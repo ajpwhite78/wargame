@@ -18,6 +18,78 @@ from scipy.interpolate import UnivariateSpline
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 
+spinner_css = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    #custom-spinner {
+        display: inline-block;
+        width: 20vmin;
+        height: 20vmin;
+        border: 8px solid #6f72de;
+        border-left-color: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media (max-width: 600px) {
+        #custom-spinner {
+            display: inline-block;
+            width: 20vmin;
+            height: 20vmin;
+            border: 6px solid #6f72de;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+        }
+    }
+
+</style>
+<div id="spinner-container">
+    <div id="custom-spinner"></div>
+</div>
+"""
+
+image_center = """
+<style>
+    .image-container {{
+        display: inline-block;
+        width: 36%;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }}
+
+    @media (max-width: 600px) {{
+        .image-container {{
+            width: 50%;
+        }}
+    }}
+</style>
+<div class="image-container">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
+</div>
+"""
+
 def highlight_diff_by_row(row, color1, color2):
     numeric_row = pd.to_numeric(row, errors='coerce')
     is_diff_list = []
