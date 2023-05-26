@@ -770,16 +770,55 @@ with col3:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 
-    with col4:
+with col4:
+    button_css = """
+    <style>
+        .button-div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 40%;
+            gap: 1em;  /* Convert 20px to em units */
+        }
+        div.stButton > button:first-child {
+            display: inline-block;
+            background-color: #25476A;
+            color: #FAFAFA;
+            border-color: #FAFAFA;
+            border-width: 0.1875em;
+            border-radius: 0.1875em;
+            width: 5em;
+            height: 2em;
+        }
+        div.stButton > button:hover {
+            background-color: rgba(111, 114, 222, 0.6);
+            color: #25476A;
+            border-color: #25476A;
+        }
+        @media (max-width: 600px) {
+            .button-div {
+                width: 100%;
+            }
+            div.stButton > button:first-child {
+                font-size: 4em;
+            }
+        }
+    </style>
+    """
+
+    st.markdown(button_css, unsafe_allow_html=True)
+
+    st.text("")
+    with st.container() as button_div:
+        analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+        submit1A_button = st.button("Run", key="1A", on_click=reset2)
+        submit1B_button = st.button("Run", key="1B", on_click=reset2)
+    
+with col5:
+    inner_cols = st.columns(2)
+    with inner_cols[0]:   
         button_css = """
         <style>
-            .button-div {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                width: 40%;
-                gap: 1em;  /* Convert 20px to em units */
-            }
             div.stButton > button:first-child {
             display: inline-block;
             background-color:#25476A;
@@ -788,71 +827,33 @@ with col3:
             border-width: 0.1875em;
             border-radius: 0.1875em;
             width:5em;
-            height:2em;
+            height:2em
             }
             div.stButton > button:hover {
             background-color: rgba(111, 114, 222, 0.6);
             color: #25476A;
-            border-color: #25476A;
+            border-color: #25476A
             }
+        </style>
+        """
+        button_media_query = '''
+            <style>
             @media (max-width: 600px) {
-            .button-div {
-                width: 100%;
-            }
                 div.stButton > button:first-child {
                 font-size: 4em;
                 }
             }
             </style>
         '''
-        st.markdown(button_css, unsafe_allow_html=True)  
+        st.markdown(button_media_query + button_css, unsafe_allow_html=True)  
 
         st.text("")
-        with st.container() as button_div:
-            analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-            submit1A_button = st.button("Run", key="1A", on_click=reset2)
-            submit1B_button = st.button("Run", key="1B", on_click=reset2)
-    
-    with col5:
-        inner_cols = st.columns(2)
-        with inner_cols[0]:   
-            button_css = """
-            <style>
-                div.stButton > button:first-child {
-                display: inline-block;
-                background-color:#25476A;
-                color: #FAFAFA;
-                border-color: #FAFAFA;
-                border-width: 0.1875em;
-                border-radius: 0.1875em;
-                width:5em;
-                height:2em
-                }
-                div.stButton > button:hover {
-                background-color: rgba(111, 114, 222, 0.6);
-                color: #25476A;
-                border-color: #25476A
-                }
-            </style>
-            """
-            button_media_query = '''
-                <style>
-                @media (max-width: 600px) {
-                    div.stButton > button:first-child {
-                    font-size: 4em;
-                    }
-                }
-                </style>
-            '''
-            st.markdown(button_media_query + button_css, unsafe_allow_html=True)  
-
-            st.text("")
-            analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-            submit1_button = st.button("Run", key="1", on_click=reset2)
-        with inner_cols[1]:
-            st.text("")
-            st.text("")
-            cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
+        analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+        submit1_button = st.button("Run", key="1", on_click=reset2)
+    with inner_cols[1]:
+        st.text("")
+        st.text("")
+        cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
 if submit1_button:
     if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
