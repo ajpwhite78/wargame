@@ -391,7 +391,7 @@ header3 = """
             justify-content: flex-start;
             align-items: center;
             width: 50%;
-            gap: 2em;  /* Convert 20px to em units */
+            gap: 5em;  /* Convert 20px to em units */
         }}
         .button {{
             background-color: #25476A;
