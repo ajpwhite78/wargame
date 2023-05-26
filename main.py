@@ -568,7 +568,7 @@ image_center = """
 
     @media (max-width: 600px) {{
         .image-container {{
-            width: 60%;
+            width: 50%;
         }}
     }}
 </style>
