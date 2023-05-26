@@ -393,7 +393,7 @@ header3 = """
             width: 100%;
             gap: 2em;  /* Convert 20px to em units */
         }}
-        .button1 {{
+        .button {{
             background-color: #25476A;
             border-color: #FAFAFA;
             border-width: 0.1875em;  /* Convert 3px to em units */
@@ -482,7 +482,7 @@ header3 = """
             justify-content: center;  /* Center align items on smaller screens */
             gap: 2em;  /* Convert 20px to em units */
         }}
-        .button1 {{
+        .button {{
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
             font-size: 1.6em;  /* Convert 16px to em units */
