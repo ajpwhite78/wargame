@@ -5,6 +5,7 @@ from numpy import nanpercentile
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from matplotlib import font_manager
 import urllib
+import pathlib
 import base64
 import time
 import os
