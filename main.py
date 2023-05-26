@@ -545,6 +545,13 @@ spinner_css = """
             transform: rotate(360deg);
         }
     }
+
+    @media (max-width: 600px) {
+        #custom-spinner {
+            width: 15vmin;
+            height: 15vmin;
+        }
+    }
 </style>
 <div id="spinner-container">
     <div id="custom-spinner"></div>
@@ -552,6 +559,7 @@ spinner_css = """
 """
 
 st.markdown(spinner_css, unsafe_allow_html=True)
+
 
 image_center = """
 <style>
