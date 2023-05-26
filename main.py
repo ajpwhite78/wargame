@@ -348,7 +348,7 @@ header3 = """
         }}
 
         .header {{
-            font-family:sans-serif; 
+
             position: fixed;
             top: 0;
             left: 0;
