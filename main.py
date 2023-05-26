@@ -819,8 +819,8 @@ with col5:
             width: 5em;
             height: 2em;
         }
-        .button-div2 ~ p {
-        display: none;  /* Hide the adjacent paragraphs */
+        .button-div2 + * {
+            display: none;  /* Hide the following sibling elements */
         }
         }
     </style>
