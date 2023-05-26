@@ -803,6 +803,7 @@ with col4:
             background-color: #b8d9e8;
             border-color: #25476A;
             color: #25476A;
+         }}
         @media screen and (max-width: 600px) {{
         .button-div {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
