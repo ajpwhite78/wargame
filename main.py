@@ -805,6 +805,7 @@ with col5:
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
         submit1_button = st.button("Run", key="1", on_click=reset2)
+        cancel1A_button = st.button("Cancel", key="cancel1A", on_click=reset1)
     with inner_cols[1]:
         st.text("")
         st.text("")
