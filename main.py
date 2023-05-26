@@ -779,7 +779,7 @@ with col5:
             background-color:#25476A;
             color: #FAFAFA;
             border-color: #FAFAFA;
-            font-size: 1em;
+            font-size: 2em;
             border-width: 0.1875em;
             border-radius: 0.1875em;
             width:5em;
@@ -793,7 +793,8 @@ with col5:
             }
         </style>
         """
-        st.markdown(button_css, unsafe_allow_html=True)
+        st.markdown(button_css, unsafe_allow_html=True)  
+       
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
         submit1_button = st.button("Run", key="1", on_click=reset2)
