@@ -471,7 +471,7 @@ header3 = """
         }}
 
         .welcome-container {{
-            width: 70%;  /* Set width to 100% for full width on smaller screens */
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
             font-size: 2.4em;
             text-align: center;
             justify-content: center;  /* Center align items on smaller screens */
@@ -480,7 +480,7 @@ header3 = """
         .button-div {{
             width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
-            gap: 3em;  /* Convert 20px to em units */
+            gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
             border-width: 0.1875em;  /* Convert 3px to em units */
