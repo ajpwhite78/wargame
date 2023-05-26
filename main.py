@@ -821,7 +821,7 @@ button_css2 = """
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 40%;
+            width: 100%;
             gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
@@ -843,7 +843,7 @@ button_css2 = """
         .button:hover {{
             background-color: #b8d9e8;
             border-color: #FAFAFA;
-            color: #25476A;
+            color: rgba(111, 114, 222, 0.6);
         @media screen and (max-width: 600px) {{
         .button-div {{
             width: 30%;  /* Set width to 100% for full width on smaller screens */
