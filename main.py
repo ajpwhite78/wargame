@@ -386,14 +386,14 @@ header3 = """
             display: inline-block;
             vertical-align: middle
         }}
-        .button-div {{
+        .button1-div {{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             width: 100%;
             gap: 2em;  /* Convert 20px to em units */
         }}
-        .button {{
+        .button1 {{
             background-color: #25476A;
             border-color: #FAFAFA;
             border-width: 0.1875em;  /* Convert 3px to em units */
@@ -409,7 +409,7 @@ header3 = """
             width: 5em;
             height: 2em;
         }}
-        .button:hover {{
+        .button1:hover {{
             background-color: #b8d9e8;
             border-color: #25476A;
             color: #25476A;
@@ -477,12 +477,12 @@ header3 = """
             justify-content: center;  /* Center align items on smaller screens */
             margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
         }}
-        .button-div {{
+        .button1-div {{
             width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
             gap: 2em;  /* Convert 20px to em units */
         }}
-        .button {{
+        .button1 {{
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
             font-size: 1.6em;  /* Convert 16px to em units */
@@ -501,10 +501,10 @@ header3 = """
         <div class="clear"></div>
         <div class="welcome-container">
             <div class="welcome-text">Welcome John</div>
-            <div class="button-div">
-                <button class="button">Help</button>
-                <!--<button class="button">Contact</button>-->
-                <button class="button">Logout</button>
+            <div class="button1-div">
+                <button1 class="button1">Help</button>
+                <!--<button1 class="button1">Contact</button>-->
+                <button1 class="button1">Logout</button>
             </div>
         </div>
         <div class="clear"></div>
