@@ -555,7 +555,7 @@ st.markdown(spinner_css, unsafe_allow_html=True)
 
 image_center = """
 <style>
-    .image-container {}
+    .image-container {{
         display: inline-block;
         width: 36%;
         text-align: center;
@@ -566,11 +566,11 @@ image_center = """
         z-index: 9999;
     }}
 
-    @media (max-width: 600px) {
-        .image-container {
+    @media (max-width: 600px) {{
+        .image-container {{
             width: 60%;
-        }
-    }
+        }}
+    }}
 </style>
 <div class="image-container">
     <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
