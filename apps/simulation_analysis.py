@@ -1539,12 +1539,14 @@ def app():
                     with col2:
                         if statement_out_download == "Yes":
                             spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+                            spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                             st.text("")
                             st.text("")
                             ratings_plots_out = [(rating_stats_table.set_properties(**{'width': '130px'}), "simulation_analysis_rating_statistics", "png", 90, "table", "Credit Rating", st.session_state.user_entity_name), (ratings_line_fig.update_layout({"paper_bgcolor": "rgba(255,255, 255, 1)"}).to_image(format="png"), "simulation_analysis_rating_values", "png", 150, "figure", "", st.session_state.user_entity_name), (ratings_hist_fig.update_layout({"paper_bgcolor": "rgba(255,255, 255, 1)"}).to_image(format="png"), "simulation_analysis_rating_histogram", "png", 150, "figure", "", st.session_state.user_entity_name)]
                             downloader = MultiFileDownloader()
                             downloader.export_tables_figures(ratings_plots_out, st.session_state.user_entity_name)
                             spinner.empty()
+                            spinner_image.empty()
                     st.text("")
                     st.text("")
                     text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 24px;">Financial Variables</span></p>'
@@ -1899,6 +1901,7 @@ def app():
                             with col2:
                                 if statement_out_download == "Yes":
                                     spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+                                    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                                     st.text("")
                                     st.text("")
                                     variable_plots_out = [(stats_table.set_properties(**{'width': '120px'}),
@@ -1912,6 +1915,7 @@ def app():
                                     downloader = MultiFileDownloader()
                                     downloader.export_tables_figures(variable_plots_out, st.session_state.user_entity_name)
                                     spinner.empty()
+                                    spinner_image.empty()
                         else:
                             text = '<p style="margin-top: 0px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Data visualizations are not shown because the selected variable exhibits zero variation during the simulation analysis.</span></p>'.format(
                                 result)
