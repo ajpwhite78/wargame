@@ -771,9 +771,9 @@ with col3:
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 with col5:
     inner_cols = st.columns(2)
-    with inner_cols[0]:
+    with inner_cols[0]:       
         st.markdown(
-            """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 3px; width:6em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
+            """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; font-size: 1em; border-width: 0.1875em; border-radius: 0.1875em; width:6em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
             unsafe_allow_html=True)
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
