@@ -515,6 +515,78 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
+
+spinner_css = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    #custom-spinner {
+        display: inline-block;
+        width: 20vmin;
+        height: 20vmin;
+        border: 8px solid #6f72de;
+        border-left-color: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div id="spinner-container">
+    <div id="custom-spinner"></div>
+</div>
+"""
+
+st.markdown(spinner_css, unsafe_allow_html=True)
+
+image_center = """
+<style>
+    .image-container {
+        display: inline-block;
+        width: 30%;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+</style>
+<div class="image-container">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
+</div>
+"""
+
+st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 spinner_css = """
     <style>
         #custom-spinner {
