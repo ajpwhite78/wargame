@@ -548,8 +548,7 @@ spinner_css = """
 
     @media (max-width: 600px) {
         #custom-spinner {
-            width: 15vmin;
-            height: 15vmin;
+            border: 6px solid #6f72de;
         }
     }
 </style>
