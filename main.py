@@ -819,6 +819,9 @@ with col5:
             width: 5em;
             height: 2em;
         }
+        .button-div2 ~ p {
+        display: none;  /* Hide the adjacent paragraphs */
+        }
         }
     </style>
     <div class="button-div2">
