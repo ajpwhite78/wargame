@@ -861,10 +861,8 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <form method="post" action="" onsubmit="event.preventDefault();">
-            <button class="button2" type="submit" name="submit1_button" onclick="resetme()">Run</button>
-        </form>
-        <button class="button2" name="cancel1_button" value="cancel1_button">Cancel</button>
+        <button class="button2" type="submit" name="submit1_button" value="submit1_button">Run</button>
+        <button class="button2" type="submit" name="cancel1_button" value="cancel1_button">Cancel</button>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
