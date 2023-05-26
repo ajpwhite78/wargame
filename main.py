@@ -911,7 +911,7 @@ with col2:
         st.write("Button 2 clicked!")
 
 with col3:
-    if st.button("Button 3", key="AAA2"):
+    if st.button("Button 3", key="AAA3"):
         st.write("Button 3 clicked!")        
         
         
