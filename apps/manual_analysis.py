@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import pathlib
+import base64
 from apps.functions import get_default_fields, run_whatif, highlight_diff_by_row, FileDownloader, MultiFileDownloader
 
 spinner_css = """
