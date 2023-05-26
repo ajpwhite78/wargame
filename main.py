@@ -593,69 +593,6 @@ image_center = """
 
 st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-spinner_css = """
-    <style>
-        #custom-spinner {
-            display: inline-block;
-            text-align: center;
-            width: 20vmin;
-            height: 20vmin;
-            border: 8px solid #6f72de;
-            border-left-color: rgba(0, 0, 0, 0);
-            border-radius: 50%;
-            animation: spin 1s ease-in-out infinite;
-            position: fixed;
-            left: 50%;
-            margin-left: -50px; /* half of the width of the spinner */
-            top: 50%;
-            margin-top: -50px; /* half of the height of the spinner */
-            z-index: 9999; /* ensures that the spinner is on top of other elements */  
-        }
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <div id="custom-spinner">
-    </div>
-"""
-
-#st.markdown(spinner_css, unsafe_allow_html=True)
-
-image_center = """
-<style>
-    .image-container {{
-        display: inline-block;
-        width: 30%;
-        text-align: center;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }}
-</style>
-<div class="image-container">
-    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
-</div>
-"""
-#st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
-
 if "user_sector" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
     st.session_state["user_entity_name"] = ""
@@ -766,7 +703,7 @@ input[type=number]:hover {
 """, unsafe_allow_html=True)
 
 introduction_text = '''
-    <p class="introduction_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Welcome to Comrate&apos;s wargame scenario analysis application, empowering you to make informed decisions regarding the current and future financial performance of target companies based on manual and scenario-based financial statement and credit rating analyses.</span></p>
+    <p class="introduction_text" style="margin-top: -2.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Welcome to Comrate&apos;s wargame scenario analysis application, empowering you to make informed decisions regarding the current and future financial performance of target companies based on manual and scenario-based financial statement and credit rating analyses.</span></p>
 '''
 
 text_media_query1 = '''
