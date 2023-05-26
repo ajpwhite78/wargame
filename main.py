@@ -771,10 +771,36 @@ with col3:
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 with col5:
     inner_cols = st.columns(2)
-    with inner_cols[0]:       
-        st.markdown(
-            """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; font-size: 1em; border-width: 0.1875em; border-radius: 0.1875em; width:5em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
-            unsafe_allow_html=True)
+    with inner_cols[0]:   
+        button_css = """
+        <style>
+            .button {
+                border-width: 0.1875em;
+                border-radius: 0.1875em;
+                font-size: 1.4em;
+                width: 8em;
+                height: 2em;
+                background-color: #25476A;
+                color: #FAFAFA;
+                border-color: #FAFAFA;
+            }
+
+            .button:hover {
+                background-color: rgba(111, 114, 222, 0.6);
+                color: #25476A;
+                border-color: #25476A;
+            }
+
+            @media (max-width: 600px) {
+                .button {
+                    width: 6em;
+                    height: 1.5em;
+                }
+            }
+        </style>
+        """
+
+        st.markdown(button_css, unsafe_allow_html=True)
         st.text("")
         analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
         submit1_button = st.button("Run", key="1", on_click=reset2)
