@@ -480,7 +480,7 @@ header3 = """
         .button-div {{
             width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
-            gap: 1em;  /* Convert 20px to em units */
+            gap: 3em;  /* Convert 20px to em units */
         }}
         .button {{
             border-width: 0.1875em;  /* Convert 3px to em units */
