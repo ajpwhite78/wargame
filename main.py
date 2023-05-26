@@ -402,7 +402,7 @@ header3 = """
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 1em;  /* Convert 16px to em units */
+            font-size: 0.8em;  /* Convert 16px to em units */
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
@@ -779,7 +779,6 @@ with col5:
             background-color:#25476A;
             color: #FAFAFA;
             border-color: #FAFAFA;
-            font-size: 2em;
             border-width: 0.1875em;
             border-radius: 0.1875em;
             width:5em;
