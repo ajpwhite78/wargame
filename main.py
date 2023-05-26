@@ -422,7 +422,7 @@ header3 = """
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
         .welcome-text {{
-            font-size: 1.4em;  /* Adjust font size as per your preference */
+            font-size: 1em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         }}
