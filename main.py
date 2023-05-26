@@ -775,26 +775,34 @@ with col5:
         button_css = """
         <style>
             .button {
-                border-width: 0.1875em;
-                border-radius: 0.1875em;
-                font-size: 1.4em;
-                width: 8em;
-                height: 2em;
                 background-color: #25476A;
-                color: #FAFAFA;
                 border-color: #FAFAFA;
+                border-width: 0.1875em;  /* Convert 3px to em units */
+                border-radius: 0.1875em;  /* Convert 3px to em units */
+                color: #FAFAFA;
+                padding: 0em 0em;  /* Adjust padding as per your preference */
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 1em;  /* Convert 16px to em units */
+                margin: 0em;  /* Adjust margin as per your preference */
+                cursor: pointer;
+                width: 5em;
+                height: 2em;
             }
 
             .button:hover {
-                background-color: rgba(111, 114, 222, 0.6);
-                color: #25476A;
-                border-color: #25476A;
+            background-color: #b8d9e8;
+            border-color: #FAFAFA;
+            color: #25476A;
             }
 
             @media (max-width: 600px) {
-                .button {
-                    width: 6em;
-                    height: 1.5em;
+                border-width: 0.1875em;  /* Convert 3px to em units */
+                border-radius: 0.1875em;  /* Convert 3px to em units */
+                font-size: 1.4em;  /* Convert 16px to em units */
+                width: 8em;
+                height: 2em;
                 }
             }
         </style>
