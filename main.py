@@ -406,7 +406,7 @@ header3 = """
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
-            height: 1.8em;
+            height: 2em;
         }}
         .button:hover {{
             background-color: #b8d9e8;
@@ -799,7 +799,7 @@ with col5:
                 button:first-child {
                 border-width: 0.1875em;  /* Convert 3px to em units */
                 border-radius: 0.1875em;  /* Convert 3px to em units */
-                font-size: 1.4em;  /* Convert 16px to em units */
+                font-size: 8em;  /* Convert 16px to em units */
                 width: 20em;
                 height: 2em;
                 }
