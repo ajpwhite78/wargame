@@ -406,7 +406,7 @@ header3 = """
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
-            height: 2em;
+            height: 1.8em;
         }}
         .button:hover {{
             background-color: #b8d9e8;
