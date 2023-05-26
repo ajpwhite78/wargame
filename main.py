@@ -774,8 +774,7 @@ with col5:
     with inner_cols[0]:   
         button_css = """
         <style>
-            div.stButton > 
-            button:first-child {
+            div.stButton > button:first-child {
             background-color:#25476A;
             color: #FAFAFA;
             border-color: #FAFAFA;
@@ -784,8 +783,7 @@ with col5:
             width:5em;
             height:2em
             }
-            div.stButton > 
-            button:hover {
+            div.stButton > button:hover {
             background-color: rgba(111, 114, 222, 0.6);
             color: #25476A;
             border-color: #25476A
