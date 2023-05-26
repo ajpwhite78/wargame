@@ -778,6 +778,57 @@ with col5:
         st.write("Button clicked!")
     
     
+    button_css = """
+    <style>
+        .button-div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+        .button {
+            background-color: #25476A;
+            border-color: #FAFAFA;
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            color: #FAFAFA;
+            padding: 0em 0em;  /* Adjust padding as per your preference */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.8em;  /* Convert 16px to em units */
+            margin: 0em;  /* Adjust margin as per your preference */
+            cursor: pointer;
+            width: 5em;
+            height: 2em;
+        }
+        .button:hover {
+            background-color: #b8d9e8;
+            border-color: #25476A;
+            color: #25476A;
+        }
+    </style>
+    """
+
+    st.markdown(button_css, unsafe_allow_html=True)
+
+    st.markdown('<div class="button-div">'
+                '<button class="button" onclick="resetme()">Button 1</button>'
+                '<button class="button" onclick="resetme()">Button 2</button>'
+                '</div>', unsafe_allow_html=True)
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
     button_css2 = """
     <style>
         :root {
