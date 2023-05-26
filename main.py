@@ -835,7 +835,7 @@ with col5:
         <button class="button2" name="cancel1_button" value="cancel1_button">Cancel</button>
     </div>
     """
-    st.markdown(button_css, unsafe_allow_html=True)
+    st.markdown(button_css2, unsafe_allow_html=True)
 
     if st.button("Run", key="submit1_button"):
         resetme()
