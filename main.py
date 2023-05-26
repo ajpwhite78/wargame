@@ -806,10 +806,12 @@ with col4:
     st.markdown(button_css, unsafe_allow_html=True)
 
     st.text("")
-    with st.columns(2):
-        analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-        submit1A_button = st.button("Run", key="1A", on_click=reset2)
-        submit1B_button = st.button("Run", key="1B", on_click=reset2)
+    with st.container():
+        with st.container():
+            analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+            submit1_button = st.button("Run", key="1", on_click=reset2)
+        with st.container():
+            cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
     
 with col5:
     inner_cols = st.columns(2)
