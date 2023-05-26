@@ -799,8 +799,8 @@ with col5:
                 button:first-child {
                 border-width: 0.1875em;  /* Convert 3px to em units */
                 border-radius: 0.1875em;  /* Convert 3px to em units */
-                font-size: 3.4em;  /* Convert 16px to em units */
-                width: 10em;
+                font-size: 3em;  /* Convert 16px to em units */
+                width: 12em;
                 height: 2em;
                 }
             }
