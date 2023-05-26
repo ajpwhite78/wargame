@@ -880,6 +880,8 @@ with col5:
 
         
          
+import streamlit as st
+
 st.markdown(
     """
     <style>
@@ -891,9 +893,22 @@ st.markdown(
     }
 
     .button-container > * {
-        width: calc(50% - 1rem);
-        flex: 1 1 calc(50% - 1rem);
-        min-width: calc(50% - 1rem);
+        width: calc(33.3333% - 1rem);
+        flex: 1 1 calc(33.3333% - 1rem);
+        min-width: calc(33.3333% - 1rem);
+    }
+
+    @media (max-width: 600px) {
+        .button-container {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .button-container > * {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
     }
     </style>
     """,
@@ -903,12 +918,17 @@ st.markdown(
 col1, col2, col3 = st.beta_columns(3)
 
 with col1:
-    if st.button("Button 1", key="AAA1"):
+    if st.button("Button 1"):
         st.write("Button 1 clicked!")
 
 with col2:
-    if st.button("Button 2", key="AAA2"):
-        st.write("Button 2 clicked!")    
+    if st.button("Button 2"):
+        st.write("Button 2 clicked!")
+
+with col3:
+    if st.button("Button 3"):
+        st.write("Button 3 clicked!")
+ 
         
         
         
