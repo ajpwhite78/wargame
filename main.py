@@ -775,6 +775,7 @@ with col5:
         button_css = """
         <style>
             div.stButton > button:first-child {
+            display: inline-block;
             background-color:#25476A;
             color: #FAFAFA;
             border-color: #FAFAFA;
