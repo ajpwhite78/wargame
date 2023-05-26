@@ -409,7 +409,7 @@ header3 = """
             height: 2em;
         }}
         .button:hover {{
-            background-color: #b8d9e8;
+            background-color: rgba(111, 114, 222, 0.6);
             border-color: #FAFAFA;
             color: #25476A;
         }}
