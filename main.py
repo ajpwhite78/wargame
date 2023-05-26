@@ -776,49 +776,40 @@ def resetme():
     # Your Streamlit function logic goes here
     st.write("Button clicked!")
 
-st.markdown(
-    """
-    <style>
-    .button-container {
-        display: flex;
-        justify-content: flex-start;
-        gap: 1em;
-    }
-
-    @media (max-width: 600px) {
+with col4:
+    st.markdown(
+        """
+        <style>
         .button-container {
-            flex-wrap: nowrap;
-            overflow-x: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 1em;
         }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-        .button-container button {
-            flex-shrink: 0;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+    with st.beta_container():
+        st.markdown('<div class="button-container">', unsafe_allow_html=True)
 
-with col5:
-    st.markdown('<div class="button-container">', unsafe_allow_html=True)
+        if st.button("Button 1"):
+            # Code to execute when Button 1 is clicked
+            st.write("Button 1 clicked!")
 
-    if st.button("Button 1"):
-        # Code to execute when Button 1 is clicked
-        st.write("Button 1 clicked!")
+        if st.button("Button 2"):
+            # Code to execute when Button 2 is clicked
+            st.write("Button 2 clicked!")
 
-    if st.button("Button 2"):
-        # Code to execute when Button 2 is clicked
-        st.write("Button 2 clicked!")
+        st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown('</div>', unsafe_allow_html=True)
 
     
     
     
     
     
-    
+  with col5:  
     
     
     button_css2 = """
