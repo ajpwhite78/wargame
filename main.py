@@ -422,7 +422,7 @@ header3 = """
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
         .welcome-text {{
-            font-size: 1.4em;  /* Adjust font size as per your preference */
+            font-size: 1.2em;  /* Adjust font size as per your preference */
             margin-right: auto;  /* Adjust margin as per your preference */
             color: #FAFAFA;
         }}
@@ -781,7 +781,7 @@ with col4:
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 50%;
+            width: 200%;
             gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
@@ -794,7 +794,7 @@ with col4:
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 0.95em;  /* Convert 16px to em units */
+            font-size: 0.8em;  /* Convert 16px to em units */
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
             width: 5em;
