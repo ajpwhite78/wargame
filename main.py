@@ -780,7 +780,7 @@ with col4:
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 100%;
+            width: 50%;
             gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
@@ -805,7 +805,7 @@ with col4:
             color: #25476A;
         @media screen and (max-width: 600px) {{
         .button-div {{
-            width: 30%;  /* Set width to 100% for full width on smaller screens */
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
         }}
         .button {{
