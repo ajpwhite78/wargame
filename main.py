@@ -893,21 +893,14 @@ st.markdown(
     }
 
     .button-container > * {
-        width: calc(33.3333% - 1rem);
-        flex: 1 1 calc(33.3333% - 1rem);
-        min-width: calc(33.3333% - 1rem);
+        flex: 1 1 50%;
+        min-width: 50%;
     }
 
     @media (max-width: 600px) {
-        .button-container {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-        }
-
         .button-container > * {
-            flex-shrink: 0;
-            white-space: nowrap;
+            flex-basis: 100%;
+            min-width: 100%;
         }
     }
     </style>
@@ -915,7 +908,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-col1, col2, col3 = st.beta_columns(3)
+col1, col2 = st.beta_columns(2)
 
 with col1:
     if st.button("Button 1", key="AAA1"):
@@ -925,10 +918,6 @@ with col2:
     if st.button("Button 2", key="AAA2"):
         st.write("Button 2 clicked!")
 
-with col3:
-    if st.button("Button 3", key="AAA3"):
-        st.write("Button 3 clicked!")
- 
         
         
         
