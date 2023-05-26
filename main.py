@@ -831,13 +831,10 @@ with col5:
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 
-    form_submit1_button = st.form(key='submit1_form').submit_button(label='Run')
-    form_cancel1_button = st.form(key='cancel1_form').submit_button(label='Cancel')
-
-    if form_submit1_button:
+    if st.form_submit_button('Run'):
         reset2()
 
-    if form_cancel1_button:
+    if st.form_submit_button('Cancel'):
         reset1()
  
 
