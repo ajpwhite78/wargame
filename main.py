@@ -841,9 +841,9 @@ button_css2 = """
             height: 2em;
         }}
         .button:hover {{
-            background-color: #b8d9e8;
-            border-color: #FAFAFA;
-            color: rgba(111, 114, 222, 0.6);
+            background-color: rgba(111, 114, 222, 0.6);
+            border-color: #25476A;
+            color: #25476A;
         @media screen and (max-width: 600px) {{
         .button-div {{
             width: 30%;  /* Set width to 100% for full width on smaller screens */
