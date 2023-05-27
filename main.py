@@ -559,19 +559,6 @@ spinner_css3 = """
             transform: rotate(360deg);
         }
     }
-
-    @media (max-width: 600px) {
-        #custom-spinner {
-            display: inline-block;
-            width: 20vmin;
-            height: 20vmin;
-            background: #00eeff;
-            border-radius: 8px;
-            transform-origin: 16px 50%;
-            animation: spin 1s ease-in-out infinite;
-        }
-    }
-
 </style>
 <div id="spinner-container">
     <div id="custom-spinner"></div>
