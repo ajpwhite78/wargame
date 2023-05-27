@@ -530,7 +530,7 @@ st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-whit
 
 
 
-spinner_css_update = """
+spinner_css_update2 = """
 <style>
     .container {
         position: relative;
@@ -557,16 +557,7 @@ spinner_css_update = """
         }
     }
 
-    @keyframes animateBlink {
-        0% {
-            background: #00eeff;
-        }
-        25% {
-            background: #2c4766;
-        }
-    }
-
-</style>
+  </style>
 <div class="container">
     <span style="--i:0;"></span>
     <span style="--i:1;"></span>
@@ -620,7 +611,7 @@ spinner_css_update = """
     <span style="--i:49;"></span>
 </div>
 """
-st.markdown(spinner_css_update, unsafe_allow_html=True)
+st.markdown(spinner_css_update2, unsafe_allow_html=True)
 
 
 
