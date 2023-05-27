@@ -60,37 +60,32 @@ spinner_css_update = """
         z-index: 9999;
     }
 
-    #custom-spinner {
+    #custom-spinner span {
         display: inline-block;
         width: 20vmin;
         height: 20vmin;
-        border: 8px solid #6f72de;
-        border-left-color: rgba(0, 0, 0, 0);
-        border-radius: 50%;
-        animation: spin 1s ease-in-out infinite;
+        background: #2c4766;
+        border-radius: 8px;
+        transform-origin: 128px
+        transform: scale(2.2) rotate(calc(var(--i) * (360deg/ 50)));
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(var(--i) * (3s / 50));
     }
 
-    @keyframes spin {
-        to {
-            transform: rotate(360deg);
+    @keyframes animateBlink {
+        0% {
+            background: #00eeff;
         }
-    }
-
-    @media (max-width: 600px) {
-        #custom-spinner {
-            display: inline-block;
-            width: 20vmin;
-            height: 20vmin;
-            border: 6px solid #6f72de;
-            border-left-color: rgba(0, 0, 0, 0);
-            border-radius: 50%;
-            animation: spin 1s ease-in-out infinite;
+        25% {
+            background: #2c4766;
         }
     }
 
 </style>
 <div id="spinner-container">
     <div id="custom-spinner"></div>
+    <span style="--i:0;"></span>
+    
 </div>
 """
 st.markdown(spinner_css_update, unsafe_allow_html=True)
