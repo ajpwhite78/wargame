@@ -529,7 +529,7 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
-spinner_css3 = """
+spinner_css = """
 <style>
     #spinner-container {
         display: flex;
@@ -577,7 +577,7 @@ spinner_css3 = """
 </div>
 """
 
-st.markdown(spinner_html3, unsafe_allow_html=True)
+st.markdown(spinner_css3, unsafe_allow_html=True)
 
 import streamlit as st
 
