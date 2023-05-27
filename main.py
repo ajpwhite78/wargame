@@ -527,7 +527,6 @@ with open(image_file_path, "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
-
 spinner_css_update = """
 <style>
     .container {
@@ -548,11 +547,7 @@ spinner_css_update = """
         transform-origin: 128px;
         animation: animateBlink 3s linear infinite;
     }
-    {% for i in range(50) %}
-    .container span:nth-child({{ i + 1 }}) {
-        animation-delay: calc({{ i }} * (3s / 50));
-    }
-    {% endfor %}
+    %s
     @keyframes animateBlink {
         0% {
             background: #00eeff;
@@ -563,13 +558,15 @@ spinner_css_update = """
     }
 </style>
 <div class="container">
-    {% for _ in range(50) %}
-    <span></span>
-    {% endfor %}
+    %s
 </div>
 """
 
-st.markdown(spinner_css_update, unsafe_allow_html=True)
+span_elements = '\n'.join(f'<span style="animation-delay: calc({i} * (3s / 50));"></span>' for i in range(50))
+spinner_css = spinner_css_update % ('', span_elements)
+
+st.markdown(spinner_css, unsafe_allow_html=True)
+
 
 
 
