@@ -549,29 +549,74 @@ spinner_css_update2 = """
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
-        animation: spin 3s linear infinite;
+        transform: scale(2.2) rotate(calc(--i * (360deg / 50)));
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(--i * (3s / 50));
+    }
+    @keyframes animateBlink {
+        0% {
+            background: #00eeff;
+        }
+        25% {
+            background: #2c4766;
+        }
     }
 </style>
-"""
-
-spinner_html = """
 <div class="container">
-    {spinner_bars}
+    <span style="--i:0;"></span>
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:6;"></span>
+    <span style="--i:7;"></span>
+    <span style="--i:8;"></span>
+    <span style="--i:9;"></span>
+    <span style="--i:10;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:16;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:19;"></span>
+    <span style="--i:20;"></span>
+    <span style="--i:21;"></span>
+    <span style="--i:22;"></span>
+    <span style="--i:23;"></span>
+    <span style="--i:24;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:26;"></span>
+    <span style="--i:27;"></span>
+    <span style="--i:28;"></span>
+    <span style="--i:29;"></span>
+    <span style="--i:30;"></span>
+    <span style="--i:31;"></span>
+    <span style="--i:32;"></span>
+    <span style="--i:33;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:35;"></span>
+    <span style="--i:36;"></span>
+    <span style="--i:37;"></span>
+    <span style="--i:38;"></span>
+    <span style="--i:39;"></span>
+    <span style="--i:40;"></span>
+    <span style="--i:41;"></span>
+    <span style="--i:42;"></span>
+    <span style="--i:43;"></span>
+    <span style="--i:44;"></span>
+    <span style="--i:45;"></span>
+    <span style="--i:46;"></span>
+    <span style="--i:47;"></span>
+    <span style="--i:48;"></span>
+    <span style="--i:49;"></span>
 </div>
 """
 
-spinner_bar = """
-<span style="--i:{i}; animation-delay: calc(var(--i) * (3s / 50));"></span>
-"""
-
-spinner_bars = ''.join([spinner_bar.format(i=i) for i in range(50)])
-
-final_spinner_html = spinner_html.format(spinner_bars=spinner_bars)
-final_spinner_css = spinner_css_update2
-
-st.markdown(final_spinner_css, unsafe_allow_html=True)
-st.markdown(final_spinner_html, unsafe_allow_html=True)
-
+st.markdown(spinner_css_update2, unsafe_allow_html=True)
 
 
 
