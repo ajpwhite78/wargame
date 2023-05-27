@@ -544,12 +544,16 @@ spinner_css3 = """
     }
 
     #custom-spinner {
-        display: inline-block;
-        width: 20vmin;
-        height: 20vmin;
-        background: #00eeff;
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
+        transform: scale(2.2) rotate(calc(--i * (360deg / 50)));
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(--i * (3s / 50));
         animation: spin 1s ease-in-out infinite;
     }
 
