@@ -528,6 +528,53 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
+import streamlit as st
+
+spinner_css_update = """
+<style>
+    .container {
+        position: relative;
+        width: 256px;
+        height: 256px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container span {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform-origin: 128px;
+        animation: animateBlink 3s linear infinite;
+    }
+    @keyframes animateBlink {
+        0% {
+            background: #00eeff;
+            transform: scale(2.2) rotate(0deg);
+        }
+        100% {
+            background: #2c4766;
+            transform: scale(2.2) rotate(360deg);
+        }
+    }
+
+</style>
+<div class="container">
+    {% for i in range(50) %}
+    <span style="animation-delay: calc({{ i }} * (3s / 50));"></span>
+    {% endfor %}
+</div>
+"""
+
+st.markdown(spinner_css_update, unsafe_allow_html=True)
+
+
+
+
+
 spinner_css_update = """
 <style>
     .container {
