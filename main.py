@@ -529,7 +529,7 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
-spinner_css = """
+spinner_css3 = """
 <style>
     #spinner-container {
         display: flex;
