@@ -33,11 +33,11 @@ def add_bg_from_local(image_file):
         animation: animateBg 5s linear infinite;
         
     }}
-    @keyframes animateBg {
-        100% {
+    @keyframes animateBg {{
+        100% {{
             filter: hue-rotate(360deg);
-        }
-    }
+        }}
+    }}
     </style>
     """,
         unsafe_allow_html=True
