@@ -535,15 +535,11 @@ spinner_css_update = """
         width: 256px;
         height: 256px;
         display: flex;
-        align-items: center;
         justify-content: center;
-        z-index: 9999;
+        align-items: center;
     }
     .container span {
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
+        position: absolute;
         left: 0;
         width: 32px;
         height: 6px;
@@ -553,7 +549,6 @@ spinner_css_update = """
         transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(var(--i) * (3s / 50));
-        z-index: 9999;
     }
     @keyframes animateBlink {
         0% {
