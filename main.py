@@ -528,98 +528,101 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
-
 import streamlit as st
 
-spinner_css_update2 = """
-<style>
-    .container {
-        position: relative;
-        width: 256px;
-        height: 256px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .container span {
-        position: absolute;
-        left: 0;
-        width: 32px;
-        height: 6px;
-        background: #2c4766;
-        border-radius: 8px;
-        transform-origin: 128px;
-        transform: rotate(calc(var(--i) * (360deg / 50))) scale(2.2);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(var(--i) * (3s / 50));
-    }
-    @keyframes animateBlink {
-        0% {
-            background: #00eeff;
-        }
-        25% {
+spinner_html2 = """
+<div style="position: relative; width: 256px; height: 256px; display: flex; justify-content: center; align-items: center;">
+    <style>
+        .spinner-bar {
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 6px;
             background: #2c4766;
+            border-radius: 8px;
+            transform-origin: 16px 50%;
+            animation: animateBlink 3s linear infinite;
         }
-        100% {
-            background: #2c4766;
+
+        @keyframes animateBlink {
+            0% {
+                background: #00eeff;
+                transform: rotate(0deg) scale(2.2);
+            }
+            25% {
+                background: #2c4766;
+                transform: rotate(0deg) scale(2.2);
+            }
+            50% {
+                background: #2c4766;
+                transform: rotate(180deg) scale(2.2);
+            }
+            75% {
+                background: #2c4766;
+                transform: rotate(180deg) scale(2.2);
+            }
+            100% {
+                background: #2c4766;
+                transform: rotate(360deg) scale(2.2);
+            }
         }
-    }
-</style>
-<div class="container">
-    <span style="--i:0;"></span>
-    <span style="--i:1;"></span>
-    <span style="--i:2;"></span>
-    <span style="--i:3;"></span>
-    <span style="--i:4;"></span>
-    <span style="--i:5;"></span>
-    <span style="--i:6;"></span>
-    <span style="--i:7;"></span>
-    <span style="--i:8;"></span>
-    <span style="--i:9;"></span>
-    <span style="--i:10;"></span>
-    <span style="--i:11;"></span>
-    <span style="--i:12;"></span>
-    <span style="--i:13;"></span>
-    <span style="--i:14;"></span>
-    <span style="--i:15;"></span>
-    <span style="--i:16;"></span>
-    <span style="--i:17;"></span>
-    <span style="--i:18;"></span>
-    <span style="--i:19;"></span>
-    <span style="--i:20;"></span>
-    <span style="--i:21;"></span>
-    <span style="--i:22;"></span>
-    <span style="--i:23;"></span>
-    <span style="--i:24;"></span>
-    <span style="--i:25;"></span>
-    <span style="--i:26;"></span>
-    <span style="--i:27;"></span>
-    <span style="--i:28;"></span>
-    <span style="--i:29;"></span>
-    <span style="--i:30;"></span>
-    <span style="--i:31;"></span>
-    <span style="--i:32;"></span>
-    <span style="--i:33;"></span>
-    <span style="--i:34;"></span>
-    <span style="--i:35;"></span>
-    <span style="--i:36;"></span>
-    <span style="--i:37;"></span>
-    <span style="--i:38;"></span>
-    <span style="--i:39;"></span>
-    <span style="--i:40;"></span>
-    <span style="--i:41;"></span>
-    <span style="--i:42;"></span>
-    <span style="--i:43;"></span>
-    <span style="--i:44;"></span>
-    <span style="--i:45;"></span>
-    <span style="--i:46;"></span>
-    <span style="--i:47;"></span>
-    <span style="--i:48;"></span>
-    <span style="--i:49;"></span>
+    </style>
+
+    <div class="spinner-bar"></div>
+    <div class="spinner-bar" style="animation-delay: 0.06s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.12s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.18s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.24s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.3s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.36s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.42s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.48s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.54s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.6s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.66s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.72s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.78s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.84s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.9s;"></div>
+    <div class="spinner-bar" style="animation-delay: 0.96s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.02s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.08s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.14s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.2s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.26s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.32s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.38s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.44s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.5s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.56s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.62s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.68s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.74s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.8s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.86s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.92s;"></div>
+    <div class="spinner-bar" style="animation-delay: 1.98s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.04s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.1s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.16s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.22s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.28s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.34s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.4s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.46s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.52s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.58s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.64s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.7s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.76s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.82s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.88s;"></div>
+    <div class="spinner-bar" style="animation-delay: 2.94s;"></div>
+    <div class="spinner-bar" style="animation-delay: 3s;"></div>
 </div>
 """
-st.markdown(spinner_css_update2, unsafe_allow_html=True)
 
+st.markdown(spinner_html2, unsafe_allow_html=True)
 
 
 
