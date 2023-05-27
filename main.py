@@ -45,6 +45,7 @@ def img_to_bytes(img_path):
 
 def reset1():
     st.session_state.user_sector = sector_options[0]
+    st.session_state.user_country = country_options[0]
     st.session_state.user_entity_name = entity_name_options[0]
     st.session_state.user_reporting_period = reporting_period_options[0]
     st.session_state.submit1_confirm = False
@@ -591,8 +592,9 @@ image_center = """
 </div>
 """
 
-if "user_sector" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
+if "user_sector" not in st.session_state or if "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
+    st.session_state["user_country"] = ""
     st.session_state["user_entity_name"] = ""
     st.session_state["user_reporting_period"] = ""
     st.session_state["user_whatif"] = ""
@@ -741,7 +743,7 @@ text_media_query3 = '''
     </style>
 '''
 st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
-col1, col2, col3, col4, col5 = st.columns([1, 2, 1, 1, 1])
+col1, col2, col3, col4, col5 = st.columns([1, 1, 2, 1, 1])
 with col1:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
     text_media_query4 = '''
@@ -758,17 +760,24 @@ with col1:
     st.selectbox(label="", label_visibility="collapsed", options=sector_options,
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
 
-with col2:
+    with col2:
+        text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Country</span></p>'
+        st.markdown(text_media_query4 + text, unsafe_allow_html=True)
+        country_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'country'].apply(str).unique())
+        st.selectbox(label="", label_visibility="collapsed", options=country_options,
+                     format_func=lambda x: "Select Country" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
+    
+    with col3:
     text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
     st.markdown(text_media_query4 + text, unsafe_allow_html=True)
-    entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique())
+    entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['country'] == st.session_state.user_country), 'entity_name'].apply(str).unique())
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
-with col3:
+with col4:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
     st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     reporting_period_options = [""] + sorted(
-        st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
+        st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['country'] == st.session_state.user_country) & (st.session_state.df_input['entity_name'] == st.session_state.user_entity_name), 'period'].apply(str).unique(), reverse=True)
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
 
@@ -881,7 +890,7 @@ with col5:
         
         
 #if submit1_button:
-#    if st.session_state.user_sector == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
+#    if st.session_state.user_sector == "" or if st.session_state.user_country == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
 #        col1, col2, col3 = st.columns([1, 4, 1])
 #        st.text("")
 #        st.text("")
