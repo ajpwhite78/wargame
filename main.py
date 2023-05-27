@@ -93,6 +93,7 @@ spinner_css_update = """
     <div id="custom-spinner"></div>
 </div>
 """
+st.markdown(spinner_css_update, unsafe_allow_html=True)
 
 
 
