@@ -30,8 +30,8 @@ def add_bg_from_local(image_file):
     .stApp {{
         background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
         background-size: cover;
-        animation: animateBg 5s linear infinite;
-        
+        background-position: center;
+        animation: animateBg 5s linear infinite;        
     }}
     @keyframes animateBg {{
         100% {{
