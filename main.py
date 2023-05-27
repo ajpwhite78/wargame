@@ -527,6 +527,9 @@ with open(image_file_path, "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
+
+
+
 spinner_css_update = """
 <style>
     .container {
@@ -545,9 +548,7 @@ spinner_css_update = """
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
-        transform: scale(2.2) rotate(var(--rotation));
         animation: animateBlink 3s linear infinite;
-        animation-delay: calc(var(--i) * (3s / 50));
     }
     @keyframes animateBlink {
         0% {
@@ -560,15 +561,19 @@ spinner_css_update = """
 </style>
 <div class="container">
     {% for i in range(50) %}
-    <span style="--i:{{ i }}; --rotation: calc(var(--i) * (360deg / 50));"></span>
+    <span id="span{{ i }}" style="animation-delay: calc({{ i }} * (3s / 50));"></span>
     {% endfor %}
 </div>
+
+<script>
+    const spans = document.querySelectorAll('.container span');
+    spans.forEach((span, index) => {
+        span.style.transform = `scale(2.2) rotate(${index * (360 / 50)}deg)`;
+    });
+</script>
 """
 
 st.markdown(spinner_css_update, unsafe_allow_html=True)
-
-
-
 
 
 
