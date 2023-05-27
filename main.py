@@ -575,7 +575,6 @@ st.markdown(final_spinner_html, unsafe_allow_html=True)
 
 
 
-
 spinner_css_update = """
 <style>
     .container {
