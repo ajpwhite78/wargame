@@ -765,7 +765,7 @@ with col1:
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
         country_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'country'].apply(str).unique())
         st.selectbox(label="", label_visibility="collapsed", options=country_options,
-                     format_func=lambda x: "Select Country" if x == "" else x,  key="user_entity_name", on_change=change_callback1)    
+                     format_func=lambda x: "Select Country" if x == "" else x,  key="user_country", on_change=change_callback1)    
     with col3:
         text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
