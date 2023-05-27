@@ -592,7 +592,7 @@ image_center = """
 </div>
 """
 
-if "user_sector" not in st.session_state or if "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
+if "user_sector" not in st.session_state or "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
     st.session_state["user_country"] = ""
     st.session_state["user_entity_name"] = ""
