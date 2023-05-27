@@ -49,29 +49,18 @@ add_bg_from_local("images/background.jpg")
 spinner_css_update = """
 <style>
     #spinner-container span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
+        position: absolute;
         left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-    }
-
-    #custom-spinner span {
-        display: inline-block;
-        width: 20vmin;
-        height: 20vmin;
+        width: 32px;
+        height: 6px;
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px
         transform: scale(2.2) rotate(calc(var(--i) * (360deg/ 50)));
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(var(--i) * (3s / 50));
+        z-index: 9999;
     }
-
     @keyframes animateBlink {
         0% {
             background: #00eeff;
@@ -83,7 +72,6 @@ spinner_css_update = """
 
 </style>
 <div id="spinner-container">
-    <div id="custom-spinner"></div>
     <span style="--i:0;"></span>
     <span style="--i:1;"></span>
     <span style="--i:2;"></span>
