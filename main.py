@@ -546,8 +546,8 @@ spinner_css3 = """
     #custom-spinner {
         position: absolute;
         left: 0;
-        width: 32px;
-        height: 6px;
+        width: 20vmin;
+        height: 20vmin;
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
