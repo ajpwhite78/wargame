@@ -364,6 +364,7 @@ header3 = """
             background-image: url('data:image/png;base64,{}');
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
             filter: brightness(0.9) saturate(0.8);
             opacity: 1;
             color: #FAFAFA;
@@ -392,7 +393,7 @@ header3 = """
         .left1-column img {{
             max-width: 200%;
             display: inline-block;
-            vertical-align: middle
+            vertical-align: middle;
         }}
         .button-div {{
             display: flex;
