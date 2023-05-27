@@ -531,6 +531,15 @@ st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-whit
 
 spinner_css_update = """
 <style>
+    #spinner-container {
+        position: relative;
+        width: 256px;
+        height: 256px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
     #spinner-container span {
         display: inline-block;
         align-items: center;
@@ -542,7 +551,7 @@ spinner_css_update = """
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
-        transform: scale(2.2) rotate(calc(var(--i) * (360deg/ 50)));
+        transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(var(--i) * (3s / 50));
         z-index: 9999;
