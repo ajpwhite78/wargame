@@ -528,18 +528,17 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
-
 spinner_css_update = """
 <style>
-    .container {{
+    .container {
         position: relative;
         width: 256px;
         height: 256px;
         display: flex;
         justify-content: center;
         align-items: center;
-    }}
-    .container span {{
+    }
+    .container span {
         position: absolute;
         left: 0;
         width: 32px;
@@ -548,26 +547,25 @@ spinner_css_update = """
         border-radius: 8px;
         transform-origin: 128px;
         animation: animateBlink 3s linear infinite;
-    }}
-    {0}
-    @keyframes animateBlink {{
-        0% {{
+    }
+    @keyframes animateBlink {
+        0% {
             background: #00eeff;
-        }}
-        25% {{
+        }
+        25% {
             background: #2c4766;
-        }}
-    }}
+        }
+    }
 </style>
 <div class="container">
-    {1}
+    {% for i in range(50) %}
+    <span style="animation-delay: calc({{ i }} * (3s / 50));"></span>
+    {% endfor %}
 </div>
 """
 
-span_elements = '\n'.join(f'<span style="animation-delay: calc({i} * (3s / 50));"></span>' for i in range(50))
-spinner_css = spinner_css_update.format('', span_elements)
+st.markdown(spinner_css_update, unsafe_allow_html=True)
 
-st.markdown(spinner_css, unsafe_allow_html=True)
 
 
 
