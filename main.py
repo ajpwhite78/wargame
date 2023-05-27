@@ -549,7 +549,6 @@ spinner_css_update = """
         border-radius: 8px;
         transform-origin: 128px;
         animation: spin 3s linear infinite;
-        animation: animateBlink 3s linear infinite;
     }
     
     @keyframes spin {
