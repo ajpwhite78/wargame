@@ -554,7 +554,7 @@ spinner_css3 = """
         transform: scale(2.2) rotate(calc(--i * (360deg / 50)));
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(--i * (3s / 50));
-        animation: spin 1s ease-in-out infinite;
+        animation: spin 3s ease-in-out infinite;
     }
 
     @keyframes spin {
