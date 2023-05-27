@@ -48,7 +48,7 @@ add_bg_from_local("images/background.jpg")
 
 spinner_css_update = """
 <style>
-    #spinner-container {
+    #spinner-container span {
         display: flex;
         align-items: center;
         justify-content: center;
