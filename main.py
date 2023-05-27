@@ -530,7 +530,7 @@ st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-whit
 
 spinner_css_update = """
 <style>
-    #spinner-container {
+    .container {
         position: relative;
         width: 256px;
         height: 256px;
@@ -539,7 +539,7 @@ spinner_css_update = """
         justify-content: center;
         z-index: 9999;
     }
-    #spinner-container span {
+    .container span {
         display: inline-block;
         align-items: center;
         justify-content: center;
@@ -565,7 +565,7 @@ spinner_css_update = """
     }
 
 </style>
-<div id="spinner-container">
+<div class="container">
     <span style="--i:0;"></span>
     <span style="--i:1;"></span>
     <span style="--i:2;"></span>
