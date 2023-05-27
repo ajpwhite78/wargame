@@ -528,6 +528,57 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
+
+spinner_css3 = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    #custom-spinner {
+        display: inline-block;
+        width: 20vmin;
+        height: 20vmin;
+        border: 8px solid #6f72de;
+        border-left-color: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media (max-width: 600px) {
+        #custom-spinner {
+            display: inline-block;
+            width: 20vmin;
+            height: 20vmin;
+            border: 6px solid #6f72de;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-radius: 50%;
+            animation: spin 1s ease-in-out infinite;
+        }
+    }
+
+</style>
+<div id="spinner-container">
+    <div id="custom-spinner"></div>
+</div>
+"""
+
+st.markdown(spinner_html3, unsafe_allow_html=True)
+
 import streamlit as st
 
 spinner_html2 = """
