@@ -530,6 +530,56 @@ st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-whit
 
 
 
+spinner_css_update2 = """
+<style>
+    .container {
+        position: relative;
+        width: 256px;
+        height: 256px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container span {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform-origin: 128px;
+        animation: spin 3s linear infinite;
+    }
+
+    {% for i in range(50) %}
+    .container span:nth-child({{ i + 1 }}) {
+        --i: {{ i }};
+        animation-delay: calc(var(--i) * (3s / 50));
+    }
+    {% endfor %}
+
+    @keyframes spin {
+        0% {
+            transform: scale(2.2) rotate(0deg);
+            background: #00eeff;
+        }
+        25% {
+            background: #2c4766;
+        }
+        100% {
+            transform: scale(2.2) rotate(360deg);
+            background: #2c4766;
+        }
+    }
+</style>
+<div class="container">
+    {% for i in range(50) %}
+    <span></span>
+    {% endfor %}
+</div>
+"""
+
+st.markdown(spinner_css_update2, unsafe_allow_html=True)
 
 
 
