@@ -43,7 +43,7 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 
-add_bg_from_local("images/background.jpg")
+add_bg_from_local("images/background_image3.jpg")
 
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
