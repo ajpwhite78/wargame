@@ -618,7 +618,6 @@ spinner_css_update2 = """
     <span style="--i:49;"></span>
 </div>
 """
-
 st.markdown(spinner_css_update2, unsafe_allow_html=True)
 
 
