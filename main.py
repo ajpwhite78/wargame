@@ -552,8 +552,16 @@ spinner_css_update2 = """
     }
     
     @keyframes spin {
-        to {
-            transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+        0% {
+            transform: scale(2.2) rotate(0deg);
+            background: #00eeff;
+        }
+        25% {
+            background: #2c4766;
+        }
+        100% {
+            transform: scale(2.2) rotate(360deg);
+            background: #2c4766;
         }
     }
 
