@@ -555,7 +555,28 @@ spinner_css3 = """
     }
 
     @keyframes spin {
-        to {
+        0% {
+            transform: rotate(0deg);
+        }
+        10% {
+            transform: rotate(60deg);
+        }
+        20% {
+            transform: rotate(120deg);
+        }
+        30% {
+            transform: rotate(180deg);
+        }
+        40% {
+            transform: rotate(240deg);
+        }
+        50% {
+            transform: rotate(300deg);
+        }
+        60% {
+            transform: rotate(360deg);
+        }
+        100% {
             transform: rotate(360deg);
         }
     }
