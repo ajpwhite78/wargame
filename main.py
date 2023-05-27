@@ -529,6 +529,7 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
+import streamlit as st
 
 spinner_css_update2 = """
 <style>
@@ -550,36 +551,28 @@ spinner_css_update2 = """
         transform-origin: 128px;
         animation: spin 3s linear infinite;
     }
-
-    {% for i in range(50) %}
-    .container span:nth-child({{ i + 1 }}) {
-        --i: {{ i }};
-        animation-delay: calc(var(--i) * (3s / 50));
-    }
-    {% endfor %}
-
-    @keyframes spin {
-        0% {
-            transform: scale(2.2) rotate(0deg);
-            background: #00eeff;
-        }
-        25% {
-            background: #2c4766;
-        }
-        100% {
-            transform: scale(2.2) rotate(360deg);
-            background: #2c4766;
-        }
-    }
 </style>
+"""
+
+spinner_html = """
 <div class="container">
-    {% for i in range(50) %}
-    <span></span>
-    {% endfor %}
+    {spinner_bars}
 </div>
 """
 
-st.markdown(spinner_css_update2, unsafe_allow_html=True)
+spinner_bar = """
+<span style="--i:{i}; animation-delay: calc(var(--i) * (3s / 50));"></span>
+"""
+
+spinner_bars = ''.join([spinner_bar.format(i=i) for i in range(50)])
+
+final_spinner_html = spinner_html.format(spinner_bars=spinner_bars)
+final_spinner_css = spinner_css_update2
+
+st.markdown(final_spinner_css, unsafe_allow_html=True)
+st.markdown(final_spinner_html, unsafe_allow_html=True)
+
+
 
 
 
