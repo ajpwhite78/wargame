@@ -552,8 +552,6 @@ spinner_css3 = """
         border-radius: 8px;
         transform-origin: 128px;
         transform: scale(2.2) rotate(calc(--i * (360deg / 50)));
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(--i * (3s / 50));
         animation: spin 3s ease-in-out infinite;
     }
 
