@@ -538,6 +538,7 @@ spinner_css5 = """
         position: fixed;
         top: 50%;
         left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
         z-index: 9999;
@@ -552,6 +553,7 @@ spinner_css5 = """
         border-radius: 8px;
         transform: translate(-50%, -50%);
     }
+    
     #custom-spinner {
         position: absolute;
         left:50%;
