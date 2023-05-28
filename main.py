@@ -552,32 +552,41 @@ spinner_css3 = """
         border-radius: 8px;
         transform-origin: 128px;
         animation: spin 3s ease-in-out infinite;
+        opacity: 0; /* Initially hidden */
     }
 
     @keyframes spin {
         0% {
             transform: rotate(0deg);
+            opacity: 0;
         }
         10% {
             transform: rotate(60deg);
+            opacity: 1; /* Reappear */
         }
         20% {
             transform: rotate(120deg);
+            opacity: 0;
         }
         30% {
             transform: rotate(180deg);
+            opacity: 1;
         }
         40% {
             transform: rotate(240deg);
+            opacity: 0;
         }
         50% {
             transform: rotate(300deg);
+            opacity: 1;
         }
         60% {
             transform: rotate(360deg);
+            opacity: 0;
         }
         100% {
             transform: rotate(360deg);
+            opacity: 0;
         }
     }
 </style>
