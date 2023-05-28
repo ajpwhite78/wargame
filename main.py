@@ -921,7 +921,6 @@ dial_spinner_css = """
 """
 
 #st.markdown(dial_spinner_css, unsafe_allow_html=True)
-st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
 
 spinner_css = """
@@ -996,7 +995,7 @@ image_center = """
 </div>
 """
 
-st.markdown(image_center, unsafe_allow_html=True)
+st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
 if "user_sector" not in st.session_state or "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
