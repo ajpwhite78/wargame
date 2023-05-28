@@ -632,7 +632,7 @@ dial_spinner_css = """
         height: 6px;
         background: #2c4766;
         border-radius: 8px;
-        transform-origin: 118px;
+        transform-origin: 115px;
         transform: rotate(90deg);
         animation: spin 5s ease-in-out infinite;
         opacity: 0; /* Initially hidden */
