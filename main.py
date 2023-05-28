@@ -529,6 +529,124 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
+
+spinner_css3 = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        transform: translate(55%, 0%);
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    .marker {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #008080;
+        border-radius: 8px;
+        animation: color-change 4s infinite;
+    }
+
+    .marker:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .marker:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    @keyframes color-change {
+        0%, 100% {
+            background-color: #008080;
+        }
+        50% {
+            background-color: #00eeff;
+        }
+    }
+</style>
+
+<div id="spinner-container">
+    <div class="marker" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 0 / 50))), calc(100px * sin(2 * 3.14159 * 0 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 1 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 1 / 50))), calc(100px * sin(2 * 3.14159 * 1 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 2 / 50))), calc(100px * sin(2 * 3.14159 * 2 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 3 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 3 / 50))), calc(100px * sin(2 * 3.14159 * 3 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 4 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 4 / 50))), calc(100px * sin(2 * 3.14159 * 4 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 5 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 5 / 50))), calc(100px * sin(2 * 3.14159 * 5 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 6 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 6 / 50))), calc(100px * sin(2 * 3.14159 * 6 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 7 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 7 / 50))), calc(100px * sin(2 * 3.14159 * 7 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 8 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 8 / 50))), calc(100px * sin(2 * 3.14159 * 8 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 9 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 9 / 50))), calc(100px * sin(2 * 3.14159 * 9 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 10 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 10 / 50))), calc(100px * sin(2 * 3.14159 * 10 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 11 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 11 / 50))), calc(100px * sin(2 * 3.14159 * 11 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 12 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 12 / 50))), calc(100px * sin(2 * 3.14159 * 12 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 13 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 13 / 50))), calc(100px * sin(2 * 3.14159 * 13 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 14 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 14 / 50))), calc(100px * sin(2 * 3.14159 * 14 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 15 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 15 / 50))), calc(100px * sin(2 * 3.14159 * 15 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 16 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 16 / 50))), calc(100px * sin(2 * 3.14159 * 16 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 17 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 17 / 50))), calc(100px * sin(2 * 3.14159 * 17 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 18 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 18 / 50))), calc(100px * sin(2 * 3.14159 * 18 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 19 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 19 / 50))), calc(100px * sin(2 * 3.14159 * 19 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 20 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 20 / 50))), calc(100px * sin(2 * 3.14159 * 20 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 21 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 21 / 50))), calc(100px * sin(2 * 3.14159 * 21 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 22 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 22 / 50))), calc(100px * sin(2 * 3.14159 * 22 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 23 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 23 / 50))), calc(100px * sin(2 * 3.14159 * 23 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 24 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 24 / 50))), calc(100px * sin(2 * 3.14159 * 24 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 25 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 25 / 50))), calc(100px * sin(2 * 3.14159 * 25 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 26 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 26 / 50))), calc(100px * sin(2 * 3.14159 * 26 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 27 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 27 / 50))), calc(100px * sin(2 * 3.14159 * 27 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 28 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 28 / 50))), calc(100px * sin(2 * 3.14159 * 28 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 29 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 29 / 50))), calc(100px * sin(2 * 3.14159 * 29 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 30 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 30 / 50))), calc(100px * sin(2 * 3.14159 * 30 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 31 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 31 / 50))), calc(100px * sin(2 * 3.14159 * 31 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 32 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 32 / 50))), calc(100px * sin(2 * 3.14159 * 32 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 33 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 33 / 50))), calc(100px * sin(2 * 3.14159 * 33 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 34 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 34 / 50))), calc(100px * sin(2 * 3.14159 * 34 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 35 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 35 / 50))), calc(100px * sin(2 * 3.14159 * 35 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 36 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 36 / 50))), calc(100px * sin(2 * 3.14159 * 36 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 37 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 37 / 50))), calc(100px * sin(2 * 3.14159 * 37 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 38 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 38 / 50))), calc(100px * sin(2 * 3.14159 * 38 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 39 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 39 / 50))), calc(100px * sin(2 * 3.14159 * 39 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 40 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 40 / 50))), calc(100px * sin(2 * 3.14159 * 40 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 41 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 41 / 50))), calc(100px * sin(2 * 3.14159 * 41 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 42 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 42 / 50))), calc(100px * sin(2 * 3.14159 * 42 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 43 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 43 / 50))), calc(100px * sin(2 * 3.14159 * 43 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 44 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 44 / 50))), calc(100px * sin(2 * 3.14159 * 44 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 45 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 45 / 50))), calc(100px * sin(2 * 3.14159 * 45 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 46 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 46 / 50))), calc(100px * sin(2 * 3.14159 * 46 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 47 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 47 / 50))), calc(100px * sin(2 * 3.14159 * 47 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 48 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 48 / 50))), calc(100px * sin(2 * 3.14159 * 48 / 50)));"></div>
+    <div class="marker" style="transform: rotate(calc(360deg * 49 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 49 / 50))), calc(100px * sin(2 * 3.14159 * 49 / 50)));"></div>
+</div>
+"""
+
+st.markdown(spinner_css3, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 spinner_css5 = """
 <style>
     #spinner-container {        
