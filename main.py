@@ -667,7 +667,7 @@ spinner_css5 = """
     }
 </style>
 <div id="spinner-container">
- <div id="custom-spinner"></div>
+    <div id="custom-spinner"></div>
     <div id="marker" style="transform: rotate(90deg) translate(0, 0);"></div>
     <div id="marker" style="transform: rotate(90deg) translate(-128px, 0);"></div>
 </div>
