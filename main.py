@@ -538,7 +538,7 @@ marker_spinner_css = """
         position: fixed;
         top: 0%;
         left: 0%;
-        transform: translate(55.12%, 0%);
+        transform: translate(55.14%, 0%);
         width: 100%;
         height: 100%;
         z-index: 9999;
