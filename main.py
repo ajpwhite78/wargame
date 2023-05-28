@@ -587,7 +587,7 @@ spinner_css4 = """
         height: 6px;
         background: #2c4766;
         border-radius: 8px;
-        transform-origin: 128px;
+        transform-origin: 300px;
         transform: rotate(90deg);
     }
 
