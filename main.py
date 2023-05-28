@@ -736,7 +736,7 @@ dial_spinner_css = """
         35% {
             transform: rotate(126deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         36.6667% {
             transform: rotate(132deg);
@@ -745,7 +745,7 @@ dial_spinner_css = """
         38.3333% {
             transform: rotate(138deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         40% {
             transform: rotate(144deg);
@@ -754,7 +754,7 @@ dial_spinner_css = """
         41.6667% {
             transform: rotate(150deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         43.3333% {
             transform: rotate(156deg);
@@ -763,7 +763,7 @@ dial_spinner_css = """
         45% {
             transform: rotate(162deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         46.6667% {
             transform: rotate(168deg);
@@ -772,7 +772,7 @@ dial_spinner_css = """
         48.3333% {
             transform: rotate(174deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         50% {
             transform: rotate(180deg);
@@ -781,7 +781,7 @@ dial_spinner_css = """
         51.6667% {
             transform: rotate(186deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         53.3333% {
             transform: rotate(192deg);
@@ -790,7 +790,7 @@ dial_spinner_css = """
         55% {
             transform: rotate(198deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         56.6667% {
             transform: rotate(204deg);
@@ -799,7 +799,7 @@ dial_spinner_css = """
         58.3333% {
             transform: rotate(210deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         60% {
             transform: rotate(216deg);
@@ -808,7 +808,7 @@ dial_spinner_css = """
         61.6667% {
             transform: rotate(222deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         63.3333% {
             transform: rotate(228deg);
@@ -817,7 +817,7 @@ dial_spinner_css = """
         65% {
             transform: rotate(234deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         66.6667% {
             transform: rotate(240deg);
@@ -826,7 +826,7 @@ dial_spinner_css = """
         68.3333% {
             transform: rotate(246deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         70% {
             transform: rotate(252deg);
@@ -835,7 +835,7 @@ dial_spinner_css = """
         71.6667% {
             transform: rotate(258deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         73.3333% {
             transform: rotate(264deg);
@@ -844,7 +844,7 @@ dial_spinner_css = """
         75% {
             transform: rotate(270deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         76.6667% {
             transform: rotate(276deg);
@@ -853,7 +853,7 @@ dial_spinner_css = """
         78.3333% {
             transform: rotate(282deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         80% {
             transform: rotate(288deg);
@@ -862,7 +862,7 @@ dial_spinner_css = """
         81.6667% {
             transform: rotate(294deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         83.3333% {
             transform: rotate(300deg);
@@ -871,7 +871,7 @@ dial_spinner_css = """
         85% {
             transform: rotate(306deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         86.6667% {
             transform: rotate(312deg);
@@ -880,7 +880,7 @@ dial_spinner_css = """
         88.3333% {
             transform: rotate(318deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         90% {
             transform: rotate(324deg);
@@ -889,7 +889,7 @@ dial_spinner_css = """
         91.6667% {
             transform: rotate(330deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         93.3333% {
             transform: rotate(336deg);
@@ -898,7 +898,7 @@ dial_spinner_css = """
         95% {
             transform: rotate(342deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         96.6667% {
             transform: rotate(348deg);
@@ -907,7 +907,7 @@ dial_spinner_css = """
         98.3333% {
             transform: rotate(354deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         100% {
             transform: rotate(360deg);
