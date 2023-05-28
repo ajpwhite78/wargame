@@ -552,7 +552,7 @@ spinner_css5 = """
         border-radius: 8px;
         transform: translate(-50%, -50%);
     }
-        #custom-spinner {
+    #custom-spinner {
         position: absolute;
         left: 0;
         width: 32px;
