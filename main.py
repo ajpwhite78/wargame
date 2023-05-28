@@ -548,7 +548,7 @@ spinner_css3 = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #2c4766;
+        background: #00eeff;
         border-radius: 8px;
         transform-origin: 128px;
         animation: spin 3s ease-in-out infinite;
