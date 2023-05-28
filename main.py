@@ -560,121 +560,271 @@ spinner_css3 = """
             transform: rotate(0deg);
             opacity: 0;
         }
-        3.33% {
-            transform: rotate(12deg);
+        1.6667% {
+            transform: rotate(6deg);
             opacity: 1;
+            background: #00eeff;
         }
-        6.67% {
+        3.3333% {
+            transform: rotate(12deg);
+            opacity: 0;
+        }
+        5% {
+            transform: rotate(18deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        6.6667% {
             transform: rotate(24deg);
             opacity: 0;
         }
+        8.3333% {
+            transform: rotate(30deg);
+            opacity: 1;
+            background: #00eeff;
+        }
         10% {
             transform: rotate(36deg);
-            opacity: 1;
+            opacity: 0;
         }
-        13.33% {
+        11.6667% {
+            transform: rotate(42deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        13.3333% {
             transform: rotate(48deg);
             opacity: 0;
         }
-        16.67% {
-            transform: rotate(60deg);
+        15% {
+            transform: rotate(54deg);
             opacity: 1;
+            background: #00eeff;
+        }
+        16.6667% {
+            transform: rotate(60deg);
+            opacity: 0;
+        }
+        18.3333% {
+            transform: rotate(66deg);
+            opacity: 1;
+            background: #00eeff;
         }
         20% {
             transform: rotate(72deg);
             opacity: 0;
         }
-        23.33% {
-            transform: rotate(84deg);
+        21.6667% {
+            transform: rotate(78deg);
             opacity: 1;
+            background: #00eeff;
         }
-        26.67% {
+        23.3333% {
+            transform: rotate(84deg);
+            opacity: 0;
+        }
+        25% {
+            transform: rotate(90deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        26.6667% {
             transform: rotate(96deg);
             opacity: 0;
         }
+        28.3333% {
+            transform: rotate(102deg);
+            opacity: 1;
+            background: #00eeff;
+        }
         30% {
             transform: rotate(108deg);
-            opacity: 1;
+            opacity: 0;
         }
-        33.33% {
+        31.6667% {
+            transform: rotate(114deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        33.3333% {
             transform: rotate(120deg);
             opacity: 0;
         }
-        36.67% {
-            transform: rotate(132deg);
+        35% {
+            transform: rotate(126deg);
             opacity: 1;
+            background: #00eeff;
+        }
+        36.6667% {
+            transform: rotate(132deg);
+            opacity: 0;
+        }
+        38.3333% {
+            transform: rotate(138deg);
+            opacity: 1;
+            background: #00eeff;
         }
         40% {
             transform: rotate(144deg);
             opacity: 0;
         }
-        43.33% {
-            transform: rotate(156deg);
+        41.6667% {
+            transform: rotate(150deg);
             opacity: 1;
+            background: #00eeff;
         }
-        46.67% {
+        43.3333% {
+            transform: rotate(156deg);
+            opacity: 0;
+        }
+        45% {
+            transform: rotate(162deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        46.6667% {
             transform: rotate(168deg);
             opacity: 0;
         }
+        48.3333% {
+            transform: rotate(174deg);
+            opacity: 1;
+            background: #00eeff;
+        }
         50% {
             transform: rotate(180deg);
-            opacity: 1;
+            opacity: 0;
         }
-        53.33% {
+        51.6667% {
+            transform: rotate(186deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        53.3333% {
             transform: rotate(192deg);
             opacity: 0;
         }
-        56.67% {
-            transform: rotate(204deg);
+        55% {
+            transform: rotate(198deg);
             opacity: 1;
+            background: #00eeff;
+        }
+        56.6667% {
+            transform: rotate(204deg);
+            opacity: 0;
+        }
+        58.3333% {
+            transform: rotate(210deg);
+            opacity: 1;
+            background: #00eeff;
         }
         60% {
             transform: rotate(216deg);
             opacity: 0;
         }
-        63.33% {
-            transform: rotate(228deg);
+        61.6667% {
+            transform: rotate(222deg);
             opacity: 1;
+            background: #00eeff;
         }
-        66.67% {
+        63.3333% {
+            transform: rotate(228deg);
+            opacity: 0;
+        }
+        65% {
+            transform: rotate(234deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        66.6667% {
             transform: rotate(240deg);
             opacity: 0;
         }
+        68.3333% {
+            transform: rotate(246deg);
+            opacity: 1;
+            background: #00eeff;
+        }
         70% {
             transform: rotate(252deg);
-            opacity: 1;
+            opacity: 0;
         }
-        73.33% {
+        71.6667% {
+            transform: rotate(258deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        73.3333% {
             transform: rotate(264deg);
             opacity: 0;
         }
-        76.67% {
-            transform: rotate(276deg);
+        75% {
+            transform: rotate(270deg);
             opacity: 1;
+            background: #00eeff;
+        }
+        76.6667% {
+            transform: rotate(276deg);
+            opacity: 0;
+        }
+        78.3333% {
+            transform: rotate(282deg);
+            opacity: 1;
+            background: #00eeff;
         }
         80% {
             transform: rotate(288deg);
             opacity: 0;
         }
-        83.33% {
-            transform: rotate(300deg);
+        81.6667% {
+            transform: rotate(294deg);
             opacity: 1;
+            background: #00eeff;
         }
-        86.67% {
+        83.3333% {
+            transform: rotate(300deg);
+            opacity: 0;
+        }
+        85% {
+            transform: rotate(306deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        86.6667% {
             transform: rotate(312deg);
             opacity: 0;
         }
+        88.3333% {
+            transform: rotate(318deg);
+            opacity: 1;
+            background: #00eeff;
+        }
         90% {
             transform: rotate(324deg);
-            opacity: 1;
+            opacity: 0;
         }
-        93.33% {
+        91.6667% {
+            transform: rotate(330deg);
+            opacity: 1;
+            background: #00eeff;
+        }
+        93.3333% {
             transform: rotate(336deg);
             opacity: 0;
         }
-        96.67% {
-            transform: rotate(348deg);
+        95% {
+            transform: rotate(342deg);
             opacity: 1;
+            background: #00eeff;
+        }
+        96.6667% {
+            transform: rotate(348deg);
+            opacity: 0;
+        }
+        98.3333% {
+            transform: rotate(354deg);
+            opacity: 1;
+            background: #00eeff;
         }
         100% {
             transform: rotate(360deg);
@@ -688,8 +838,6 @@ spinner_css3 = """
 """
 
 st.markdown(spinner_css3, unsafe_allow_html=True)
-
-import streamlit as st
 
 spinner_html2 = """
 <div style="position: relative; width: 256px; height: 256px; display: flex; justify-content: center; align-items: center;">
