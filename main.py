@@ -543,31 +543,17 @@ spinner_css5 = """
         z-index: 9999;
     }
 
-    #custom-spinner {
+    #marker {
         position: absolute;
         left: 0;
         width: 32px;
         height: 6px;
         background: #2c4766;
         border-radius: 8px;
-        transform-origin: 128px;
-        transform: rotate(90deg);
-        opacity: 1;
-    }
-
-    #marker {
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background: #ff0000;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
     }
 </style>
 <div id="spinner-container">
-    <div id="custom-spinner"></div>
     <div id="marker"></div>
 </div>
 """
