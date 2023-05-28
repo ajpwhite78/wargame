@@ -529,8 +529,6 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
-
-
 spinner_css5 = """
 <style>
     #spinner-container {
@@ -556,11 +554,24 @@ spinner_css5 = """
         transform: rotate(90deg);
         opacity: 1;
     }
+
+    #marker {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #ff0000;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 <div id="spinner-container">
     <div id="custom-spinner"></div>
+    <div id="marker"></div>
 </div>
 """
+
 
 st.markdown(spinner_css5, unsafe_allow_html=True)
 
