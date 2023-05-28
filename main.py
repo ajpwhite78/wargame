@@ -549,7 +549,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: #C5C6C7;
         border-radius: 8px;
     }
 </style>
