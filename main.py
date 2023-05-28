@@ -547,7 +547,7 @@ spinner_css5 = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #2c4766;
+        background: pink;
         border-radius: 8px;
         transform-origin: 128px;
         transform: rotate(90deg);
