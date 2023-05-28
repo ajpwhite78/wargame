@@ -550,7 +550,7 @@ spinner_css5 = """
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
-        animation: spin 3s ease-in-out infinite;
+        transform: rotate(90deg);
     }
 </style>
 <div id="spinner-container">
