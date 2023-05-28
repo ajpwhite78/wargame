@@ -838,6 +838,299 @@ spinner_css3 = """
 
 st.markdown(spinner_css3, unsafe_allow_html=True)
 
+
+
+
+spinner_css3 = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    #custom-spinner {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform-origin: 128px;
+        animation: spin 3s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+            background: #00eeff;
+        }
+        1.6667% {
+            transform: rotate(6deg);
+            background: #00e8e9;
+        }
+        3.3333% {
+            transform: rotate(12deg);
+            background: #00e3f2;
+        }
+        5% {
+            transform: rotate(18deg);
+            background: #00ddf6;
+        }
+        6.6667% {
+            transform: rotate(24deg);
+            background: #00d8fb;
+        }
+        8.3333% {
+            transform: rotate(30deg);
+            background: #00d4ff;
+        }
+        10% {
+            transform: rotate(36deg);
+            background: #00d0ff;
+        }
+        11.6667% {
+            transform: rotate(42deg);
+            background: #00ccff;
+        }
+        13.3333% {
+            transform: rotate(48deg);
+            background: #00c8ff;
+        }
+        15% {
+            transform: rotate(54deg);
+            background: #00c5ff;
+        }
+        16.6667% {
+            transform: rotate(60deg);
+            background: #00c2ff;
+        }
+        18.3333% {
+            transform: rotate(66deg);
+            background: #00bfff;
+        }
+        20% {
+            transform: rotate(72deg);
+            background: #00bcff;
+        }
+        21.6667% {
+            transform: rotate(78deg);
+            background: #00baff;
+        }
+        23.3333% {
+            transform: rotate(84deg);
+            background: #00b8ff;
+        }
+        25% {
+            transform: rotate(90deg);
+            background: #00b6ff;
+        }
+        26.6667% {
+            transform: rotate(96deg);
+            background: #00b5ff;
+        }
+        28.3333% {
+            transform: rotate(102deg);
+            background: #00b4ff;
+        }
+        30% {
+            transform: rotate(108deg);
+            background: #00b3ff;
+        }
+        31.6667% {
+            transform: rotate(114deg);
+            background: #00b3ff;
+        }
+        33.3333% {
+            transform: rotate(120deg);
+            background: #00b3ff;
+        }
+        35% {
+            transform: rotate(126deg);
+            background: #00b3ff;
+        }
+        36.6667% {
+            transform: rotate(132deg);
+            background: #00b3ff;
+        }
+        38.3333% {
+            transform: rotate(138deg);
+            background: #00b4ff;
+        }
+        40% {
+            transform: rotate(144deg);
+            background: #00b5ff;
+        }
+        41.6667% {
+            transform: rotate(150deg);
+            background: #00b6ff;
+        }
+        43.3333% {
+            transform: rotate(156deg);
+            background: #00b8ff;
+        }
+        45% {
+            transform: rotate(162deg);
+            background: #00baff;
+        }
+        46.6667% {
+            transform: rotate(168deg);
+            background: #00bcff;
+        }
+        48.3333% {
+            transform: rotate(174deg);
+            background: #00bfff;
+        }
+        50% {
+            transform: rotate(180deg);
+            background: #00c2ff;
+        }
+        51.6667% {
+            transform: rotate(186deg);
+            background: #00c5ff;
+        }
+        53.3333% {
+            transform: rotate(192deg);
+            background: #00c8ff;
+        }
+        55% {
+            transform: rotate(198deg);
+            background: #00ccff;
+        }
+        56.6667% {
+            transform: rotate(204deg);
+            background: #00d0ff;
+        }
+        58.3333% {
+            transform: rotate(210deg);
+            background: #00d4ff;
+        }
+        60% {
+            transform: rotate(216deg);
+            background: #00d8fb;
+        }
+        61.6667% {
+            transform: rotate(222deg);
+            background: #00ddf6;
+        }
+        63.3333% {
+            transform: rotate(228deg);
+            background: #00e3f2;
+        }
+        65% {
+            transform: rotate(234deg);
+            background: #00e8e9;
+        }
+        66.6667% {
+            transform: rotate(240deg);
+            background: #00eeff;
+        }
+        68.3333% {
+            transform: rotate(246deg);
+            background: #00e8e9;
+        }
+        70% {
+            transform: rotate(252deg);
+            background: #00e3f2;
+        }
+        71.6667% {
+            transform: rotate(258deg);
+            background: #00ddf6;
+        }
+        73.3333% {
+            transform: rotate(264deg);
+            background: #00d8fb;
+        }
+        75% {
+            transform: rotate(270deg);
+            background: #00d4ff;
+        }
+        76.6667% {
+            transform: rotate(276deg);
+            background: #00d0ff;
+        }
+        78.3333% {
+            transform: rotate(282deg);
+            background: #00ccff;
+        }
+        80% {
+            transform: rotate(288deg);
+            background: #00c8ff;
+        }
+        81.6667% {
+            transform: rotate(294deg);
+            background: #00c5ff;
+        }
+        83.3333% {
+            transform: rotate(300deg);
+            background: #00c2ff;
+        }
+        85% {
+            transform: rotate(306deg);
+            background: #00bfff;
+        }
+        86.6667% {
+            transform: rotate(312deg);
+            background: #00bcff;
+        }
+        88.3333% {
+            transform: rotate(318deg);
+            background: #00baff;
+        }
+        90% {
+            transform: rotate(324deg);
+            background: #00b8ff;
+        }
+        91.6667% {
+            transform: rotate(330deg);
+            background: #00b6ff;
+        }
+        93.3333% {
+            transform: rotate(336deg);
+            background: #00b5ff;
+        }
+        95% {
+            transform: rotate(342deg);
+            background: #00b4ff;
+        }
+        96.6667% {
+            transform: rotate(348deg);
+            background: #00b3ff;
+        }
+        98.3333% {
+            transform: rotate(354deg);
+            background: #00b3ff;
+        }
+        100% {
+            transform: rotate(360deg);
+            background: #00b3ff;
+        }
+    }
+</style>
+<div id="spinner-container">
+    <div id="custom-spinner"></div>
+</div>
+"""
+
+st.markdown(spinner_css3, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
 spinner_html2 = """
 <div style="position: relative; width: 256px; height: 256px; display: flex; justify-content: center; align-items: center;">
     <style>
