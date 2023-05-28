@@ -583,7 +583,7 @@ spinner_css4 = """
     #custom-spinner {
         position: absolute;
         left: 0;
-        width: 60px;
+        width: 32px;
         height: 6px;
         background: #2c4766;
         border-radius: 8px;
