@@ -528,7 +528,37 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
+spinner_css5 = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
 
+    #custom-spinner {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform-origin: 128px;
+        animation: spin 3s ease-in-out infinite;
+    }
+</style>
+<div id="spinner-container">
+    <div id="custom-spinner"></div>
+</div>
+"""
+
+st.markdown(spinner_css5, unsafe_allow_html=True)
 
 
 spinner_css4 = """
@@ -553,7 +583,7 @@ spinner_css4 = """
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
-        animation: spin 3s ease-in-out infinite;
+        transform: rotate(90deg);
     }
 
     @keyframes spin {
