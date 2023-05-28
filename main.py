@@ -544,7 +544,7 @@ spinner_css5 = """
         z-index: 9999;
     }
 
-    #marker {
+    .marker {
         position: absolute;
         left: 50%;
         width: 32px;
