@@ -585,18 +585,7 @@ spinner_css5 = """
 </style>
 <div id="spinner-container">
     <div class="marker" style="transform: rotate(0deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(7.2deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(14.4deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(21.6deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(28.8deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(36deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(43.2deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(50.4deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(57.6deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(64.8deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(72deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(79.2deg) translate(0, -128px);"></div>
-    <div class="marker" style="transform: rotate(86.4deg) translate(0, -128px);"></div>
+
     <div class="marker" style="transform: rotate(93.6deg) translate(0, -128px);"></div>
     <div class="marker" style="transform: rotate(100.8deg) translate(0, -128px);"></div>
     <div class="marker" style="transform: rotate(108deg) translate(0, -128px);"></div>
