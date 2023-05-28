@@ -532,12 +532,14 @@ st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-whit
 spinner_css5 = """
 <style>
     #spinner-container {
+
+        
         display: flex;
         align-items: center;
         justify-content: center;
         position: fixed;
-        top: 50%;
-        left: 50%;
+        top: 0;
+        left: 0;
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
