@@ -529,6 +529,157 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
+
+
+spinner_css4 = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    #custom-spinner {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform-origin: 128px;
+        animation: spin 3s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        3.3333% {
+            transform: rotate(12deg);
+        }
+        6.6667% {
+            transform: rotate(24deg);
+        }
+        10% {
+            transform: rotate(36deg);
+        }
+        13.3333% {
+            transform: rotate(48deg);
+        }
+        16.6667% {
+            transform: rotate(60deg);
+        }
+        20% {
+            transform: rotate(72deg);
+        }
+        23.3333% {
+            transform: rotate(84deg);
+        }
+        26.6667% {
+            transform: rotate(96deg);
+        }
+        30% {
+            transform: rotate(108deg);
+        }
+        33.3333% {
+            transform: rotate(120deg);
+        }
+        36.6667% {
+            transform: rotate(132deg);
+        }
+        40% {
+            transform: rotate(144deg);
+        }
+        43.3333% {
+            transform: rotate(156deg);
+        }
+        46.6667% {
+            transform: rotate(168deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        53.3333% {
+            transform: rotate(192deg);
+        }
+        56.6667% {
+            transform: rotate(204deg);
+        }
+        60% {
+            transform: rotate(216deg);
+        }
+        63.3333% {
+            transform: rotate(228deg);
+        }
+        66.6667% {
+            transform: rotate(240deg);
+        }
+        70% {
+            transform: rotate(252deg);
+        }
+        73.3333% {
+            transform: rotate(264deg);
+        }
+        76.6667% {
+            transform: rotate(276deg);
+        }
+        80% {
+            transform: rotate(288deg);
+        }
+        83.3333% {
+            transform: rotate(300deg);
+        }
+        86.6667% {
+            transform: rotate(312deg);
+        }
+        90% {
+            transform: rotate(324deg);
+        }
+        93.3333% {
+            transform: rotate(336deg);
+        }
+        96.6667% {
+            transform: rotate(348deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<div id="spinner-container">
+    <div id="custom-spinner"></div>
+</div>
+"""
+
+st.markdown(spinner_css4, unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 spinner_css3 = """
 <style>
     #spinner-container {
