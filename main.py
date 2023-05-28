@@ -559,24 +559,31 @@ spinner_css4 = """
     @keyframes spin {
         0% {
             transform: rotate(0deg);
+            background: #00eeff;
         }
         3.3333% {
             transform: rotate(12deg);
+            background: #00eeff;
         }
         6.6667% {
             transform: rotate(24deg);
+            background: #00eeff;
         }
         10% {
             transform: rotate(36deg);
+            background: #00eeff;
         }
         13.3333% {
             transform: rotate(48deg);
+            background: #00eeff;
         }
         16.6667% {
             transform: rotate(60deg);
+            background: #00eeff;
         }
         20% {
             transform: rotate(72deg);
+            background: #00eeff;
         }
         23.3333% {
             transform: rotate(84deg);
