@@ -608,7 +608,7 @@ marker_spinner_css = """
 </div>
 """
 
-#st.markdown(marker_spinner_css, unsafe_allow_html=True)
+st.markdown(marker_spinner_css, unsafe_allow_html=True)
 
 dial_spinner_css = """
 <style>
@@ -920,7 +920,7 @@ dial_spinner_css = """
 </div>
 """
 
-#st.markdown(dial_spinner_css, unsafe_allow_html=True)
+st.markdown(dial_spinner_css, unsafe_allow_html=True)
 
 
 spinner_css = """
