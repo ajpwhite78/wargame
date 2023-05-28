@@ -559,6 +559,86 @@ spinner_css5 = """
 """
 
 
+spinner_css5 = """
+<style>
+    #spinner-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    .marker {
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<div id="spinner-container">
+    <div class="marker" style="transform: rotate(0deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(7.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(14.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(21.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(28.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(36deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(43.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(50.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(57.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(64.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(72deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(79.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(86.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(93.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(100.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(108deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(115.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(122.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(129.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(136.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(144deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(151.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(158.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(165.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(172.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(180deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(187.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(194.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(201.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(208.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(216deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(223.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(230.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(237.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(244.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(252deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(259.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(266.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(273.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(280.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(288deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(295.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(302.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(309.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(316.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(324deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(331.2deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(338.4deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(345.6deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(352.8deg) translate(0, -128px);"></div>
+    <div class="marker" style="transform: rotate(360deg) translate(0, -128px);"></div>
+</div>
+"""
+
+
 st.markdown(spinner_css5, unsafe_allow_html=True)
 
 
