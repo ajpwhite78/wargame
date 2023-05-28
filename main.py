@@ -550,7 +550,6 @@ spinner_css5 = """
         background: #2c4766;
         border-radius: 8px;
         transform-origin: 128px;
-        transform: rotate(90deg);
     }
 </style>
 <div id="spinner-container">
