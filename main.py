@@ -693,7 +693,15 @@ spinner_css4 = """
         height: 100%;
         z-index: 9999;
     }
-
+    #marker {
+        position: absolute;
+        left: 50%;
+        width: 32px;
+        height: 6px;
+        background: #2c4766;
+        border-radius: 8px;
+        transform: translate(-50%, -50%);
+    }
     #custom-spinner {
         position: absolute;
         left: 0;
@@ -810,6 +818,8 @@ spinner_css4 = """
 </style>
 <div id="spinner-container">
     <div id="custom-spinner"></div>
+    <div id="marker""style="transform: rotate(90deg) translate(0, 0);"></div>
+    <div id="marker""style="transform: rotate(90deg) translate(-128px, 0);"></div>
 </div>
 """
 
