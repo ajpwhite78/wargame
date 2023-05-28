@@ -552,17 +552,6 @@ spinner_css5 = """
         border-radius: 8px;
         transform: translate(-50%, -50%);
     }
-    
-    #custom-spinner {
-        position: absolute;
-        left: 0;
-        width: 32px;
-        height: 6px;
-        background: #2c4766;
-        border-radius: 8px;
-        transform-origin: 128px;
-        transform: rotate(90deg);
-    }
 </style>
 <div id="spinner-container">
     <div id="marker""style="transform: rotate(90deg) translate(0, 0);"></div>
