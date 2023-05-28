@@ -529,10 +529,9 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
 
-
-spinner_css3 = """
+marker_spinner_css = """
 <style>
-    #spinner-container {
+    #spinner-container1 {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -550,30 +549,12 @@ spinner_css3 = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #008080;
+        background: #3C3F41;
         border-radius: 8px;
-        animation: color-change 4s infinite;
-    }
-
-    .marker:nth-child(1) {
-        animation-delay: 0s;
-    }
-
-    .marker:nth-child(2) {
-        animation-delay: 2s;
-    }
-
-    @keyframes color-change {
-        0%, 100% {
-            background-color: #008080;
-        }
-        50% {
-            background-color: #00eeff;
-        }
     }
 </style>
 
-<div id="spinner-container">
+<div id="spinner-container1">
     <div class="marker" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 0 / 50))), calc(100px * sin(2 * 3.14159 * 0 / 50)));"></div>
     <div class="marker" style="transform: rotate(calc(360deg * 1 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 1 / 50))), calc(100px * sin(2 * 3.14159 * 1 / 50)));"></div>
     <div class="marker" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(100px * (1 - cos(2 * 3.14159 * 2 / 50))), calc(100px * sin(2 * 3.14159 * 2 / 50)));"></div>
@@ -627,199 +608,33 @@ spinner_css3 = """
 </div>
 """
 
-st.markdown(spinner_css3, unsafe_allow_html=True)
+st.markdown(marker_spinner_css, unsafe_allow_html=True)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-spinner_css4 = """
+dial_spinner_css = """
 <style>
-    #spinner-container {
+    #spinner-container2 {
         display: flex;
         align-items: center;
         justify-content: center;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 0%;
+        left: 0%;
+        transform: translate(43.8%, 0%);
         width: 100%;
         height: 100%;
         z-index: 9999;
     }
-    #custom-spinner {
+
+    #custom-spinner2 {
         position: absolute;
         left: 0;
         width: 32px;
         height: 6px;
         background: #2c4766;
         border-radius: 8px;
-        transform-origin: 128px;
+        transform-origin: 118px;
         transform: rotate(90deg);
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-            background: #00eeff;
-        }
-        3.3333% {
-            transform: rotate(12deg);
-            background: #00eeff;
-        }
-        6.6667% {
-            transform: rotate(24deg);
-            background: #00eeff;
-        }
-        10% {
-            transform: rotate(36deg);
-            background: #00eeff;
-        }
-        13.3333% {
-            transform: rotate(48deg);
-            background: #00eeff;
-        }
-        16.6667% {
-            transform: rotate(60deg);
-            background: #00eeff;
-        }
-        20% {
-            transform: rotate(72deg);
-            background: #00eeff;
-        }
-        23.3333% {
-            transform: rotate(84deg);
-        }
-        26.6667% {
-            transform: rotate(96deg);
-        }
-        30% {
-            transform: rotate(108deg);
-        }
-        33.3333% {
-            transform: rotate(120deg);
-        }
-        36.6667% {
-            transform: rotate(132deg);
-        }
-        40% {
-            transform: rotate(144deg);
-        }
-        43.3333% {
-            transform: rotate(156deg);
-        }
-        46.6667% {
-            transform: rotate(168deg);
-        }
-        50% {
-            transform: rotate(180deg);
-        }
-        53.3333% {
-            transform: rotate(192deg);
-        }
-        56.6667% {
-            transform: rotate(204deg);
-        }
-        60% {
-            transform: rotate(216deg);
-        }
-        63.3333% {
-            transform: rotate(228deg);
-        }
-        66.6667% {
-            transform: rotate(240deg);
-        }
-        70% {
-            transform: rotate(252deg);
-        }
-        73.3333% {
-            transform: rotate(264deg);
-        }
-        76.6667% {
-            transform: rotate(276deg);
-        }
-        80% {
-            transform: rotate(288deg);
-        }
-        83.3333% {
-            transform: rotate(300deg);
-        }
-        86.6667% {
-            transform: rotate(312deg);
-        }
-        90% {
-            transform: rotate(324deg);
-        }
-        93.3333% {
-            transform: rotate(336deg);
-        }
-        96.6667% {
-            transform: rotate(348deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
-<div id="spinner-container">
-    <div id="custom-spinner"></div>
-</div>
-"""
-
-st.markdown(spinner_css4, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-spinner_css3A = """
-<style>
-    #spinner-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-    }
-
-    #custom-spinner {
-        position: absolute;
-        left: 0;
-        width: 32px;
-        height: 6px;
-        background: #2c4766;
-        border-radius: 8px;
-        transform-origin: 128px;
-        transform: rotate(90deg);
-        animation: spin 3s ease-in-out infinite;
+        animation: spin 5s ease-in-out infinite;
         opacity: 0; /* Initially hidden */
     }
 
@@ -1100,15 +915,12 @@ spinner_css3A = """
         }
     }
 </style>
-<div id="spinner-container">
-    <div id="custom-spinner"></div>
+<div id="spinner-container2">
+    <div id="custom-spinner2"></div>
 </div>
 """
 
-st.markdown(spinner_css3A, unsafe_allow_html=True)
-
-
-
+st.markdown(dial_spinner_css, unsafe_allow_html=True)
 
 
 
