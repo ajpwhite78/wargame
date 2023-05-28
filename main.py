@@ -646,7 +646,7 @@ dial_spinner_css = """
         1.6667% {
             transform: rotate(6deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         3.3333% {
             transform: rotate(12deg);
@@ -655,7 +655,7 @@ dial_spinner_css = """
         5% {
             transform: rotate(18deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         6.6667% {
             transform: rotate(24deg);
@@ -664,7 +664,7 @@ dial_spinner_css = """
         8.3333% {
             transform: rotate(30deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         10% {
             transform: rotate(36deg);
@@ -673,7 +673,7 @@ dial_spinner_css = """
         11.6667% {
             transform: rotate(42deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         13.3333% {
             transform: rotate(48deg);
@@ -682,7 +682,7 @@ dial_spinner_css = """
         15% {
             transform: rotate(54deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         16.6667% {
             transform: rotate(60deg);
@@ -691,7 +691,7 @@ dial_spinner_css = """
         18.3333% {
             transform: rotate(66deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         20% {
             transform: rotate(72deg);
@@ -700,7 +700,7 @@ dial_spinner_css = """
         21.6667% {
             transform: rotate(78deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         23.3333% {
             transform: rotate(84deg);
@@ -709,7 +709,7 @@ dial_spinner_css = """
         25% {
             transform: rotate(90deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         26.6667% {
             transform: rotate(96deg);
@@ -718,7 +718,7 @@ dial_spinner_css = """
         28.3333% {
             transform: rotate(102deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         30% {
             transform: rotate(108deg);
@@ -727,7 +727,7 @@ dial_spinner_css = """
         31.6667% {
             transform: rotate(114deg);
             opacity: 1;
-            background: #00eeff;
+            background: #6f72de;
         }
         33.3333% {
             transform: rotate(120deg);
