@@ -1199,7 +1199,8 @@ with col4:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
    
-with col5:      
+with col5:
+    
     button_css2 = """
     <style>
         :root {
@@ -1268,7 +1269,14 @@ with col5:
     </script>
     """
 
+    import streamlit.components.v1 as components
+
     components.html(button_css2 + button_js2)
+
+
+    
+    
+    
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
     # Handle the button click event
