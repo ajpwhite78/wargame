@@ -1256,17 +1256,9 @@ with col5:
         }
         }
     </style>
-    const handleRun = () => {
-        alert('Hello Run')
-    }
-
-    const handleCancel = () => {
-        alert('Hello Cancel')
-    }
     <div class="button-div2">
-        <button class="button" name="submit1_button" value="Run"></button>
-        <input type="button2" name="submit1_button" value="Run"></input>
-        <input type="button2" name="cancel1_button" value="Cancel"></input>
+        <button class="button2" name="submit1_button" value="Run"></button>
+        <button class="button2" name="cancel1_button" value="Cancel"></button>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
