@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import streamlit_nested_layout
 import pandas as pd
 import pathlib
@@ -1249,20 +1250,11 @@ with col5:
         }
         }
     </style>
-    <div class="button-div">
-        <button class="button" id="run-button">Run</button>
-        <button class="button" id="cancel-button">Cancel</button>
+    <div class="button-div2">
+        <button class="button2" id="run-button">Run</button>
+        <button class="button2" id="cancel-button">Cancel</button>
     </div>
     """
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-    
-    button_div = """
-    <div class="button-div">
-        <button class="button" id="run-button">Run</button>
-        <button class="button" id="cancel-button">Cancel</button>
-    </div>
-    """
-
     button_js = """
     <script>
         document.getElementById('run-button').addEventListener('click', function() {
@@ -1273,12 +1265,10 @@ with col5:
             alert('Hello Cancel');
         });
     </script>
-    """
-
-    import streamlit.components.v1 as components
+    """ 
 
     components.html(button_css2 + button_js)
-
+    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
     # Handle the button click event
     if "button_click" in st.session_state:
