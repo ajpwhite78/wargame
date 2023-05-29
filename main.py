@@ -1249,6 +1249,10 @@ with col5:
         }
         }
     </style>
+    <div class="button-div">
+        <button class="button" id="run-button">Run</button>
+        <button class="button" id="cancel-button">Cancel</button>
+    </div>
     """
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
@@ -1273,7 +1277,7 @@ with col5:
 
     import streamlit.components.v1 as components
 
-    components.html(button_css2 + button_div + button_js)
+    components.html(button_css2 + button_js)
 
     
     # Handle the button click event
