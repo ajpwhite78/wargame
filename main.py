@@ -1252,7 +1252,7 @@ with col5:
     """
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
-   button_div = """
+    button_div = """
     <div class="button-div">
         <button class="button" id="run-button">Run</button>
         <button class="button" id="cancel-button">Cancel</button>
