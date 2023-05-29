@@ -608,8 +608,6 @@ marker_spinner_css = """
 </div>
 """
 
-st.markdown(marker_spinner_css, unsafe_allow_html=True)
-
 dial_spinner_css = """
 <style>
     #spinner-container2 {
