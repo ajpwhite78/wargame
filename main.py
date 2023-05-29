@@ -1252,39 +1252,28 @@ with col5:
     """
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
-    def handle_run():
-        st.write("Hello Run")
+   button_div = """
+<div class="button-div">
+    <button class="button" id="run-button">Run</button>
+    <button class="button" id="cancel-button">Cancel</button>
+</div>
+"""
 
-    def handle_cancel():
-        st.write("Hello Cancel")
-    
-    button_div2 = """
-    <div class="button-div2">
-        <button type="button" class="button2" name="submit1_button" onClick="handleRun()">Run</button>
-        <button type="button" class="button2" name="cancel1_button" onClick="handleCancel()">Cancel</button>
-    </div>
-    """
+button_js = """
+<script>
+    document.getElementById('run-button').addEventListener('click', function() {
+        alert('Hello Run');
+    });
 
-    button_js2 = """
-    <script>
-        function handleRun() {
-            const runButton = document.querySelector('.button');
-            runButton.addEventListener('click', function() {
-                alert('Hello Run');
-            });
-        }
+    document.getElementById('cancel-button').addEventListener('click', function() {
+        alert('Hello Cancel');
+    });
+</script>
+"""
 
-        function handleCancel() {
-            const cancelButton = document.querySelectorAll('.button')[1];
-            cancelButton.addEventListener('click', function() {
-                alert('Hello Cancel');
-            });
-        }
-    </script>
-    """
+import streamlit.components.v1 as components
 
-    st.markdown(button_css2 + button_div2 + button_js2, unsafe_allow_html=True)
-
+components.html(button_css2 + button_div + button_js)
     
     
     # Handle the button click event
