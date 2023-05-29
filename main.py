@@ -1256,18 +1256,14 @@ with col5:
         }
         }
     </style>
-    <div class="button-div2">
-        <button class="button2" name="submit1_button">Run</button>
-        <button class="button2" name="cancel1_button">Cancel</button>
-    </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
     button_div2 = """
     <div class="button-div2">
-        <input type="button" class="button2" name="submit1_button" value="Run" onClick="handleRun()"></input>
-        <input type="button" class="button2" name="cancel1_button" value="Cancel" onClick="handleCancel()"></input>
+        <button type="button" class="button2" name="submit1_button" onClick="handleRun()">Run</button>
+        <button type="button" class="button2" name="cancel1_button" onClick="handleCancel()">Cancel</button>
     </div>
     """
 
