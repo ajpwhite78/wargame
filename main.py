@@ -1198,14 +1198,7 @@ with col4:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
    
-with col5:
-    
-    def handle_button_click(button_value):
-        if button_value == "submit1_button":
-            st.write("Success")
-        elif button_value == "cancel1_button":
-            st.write("Cancel")
-    
+with col5:   
     button_css2 = """
     <style>
         :root {
@@ -1257,7 +1250,6 @@ with col5:
         }
     </style>
     """
-    st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
     button_div2 = """
@@ -1279,8 +1271,8 @@ with col5:
     </script>
     """
 
-    html_code = button_css2 + button_div2 + button_js2
-    st.components.v1.html(html_code)
+    st.markdown(button_css2 + button_div2 + button_js2, unsafe_allow_html=True)
+
     
     
     # Handle the button click event
