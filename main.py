@@ -634,7 +634,7 @@ dial_spinner_css = """
         border-radius: 8px;
         transform-origin: 115px;
         transform: rotate(90deg);
-        animation: spin 5s ease-in-out infinite;
+        animation: spin 3s ease-in-out infinite;
         opacity: 0; /* Initially hidden */
     }
 
