@@ -1257,29 +1257,22 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <button class="button2" type="button" value="submit1_button" onclick="handleButtonClick('submit1_button')">Run</button>
-        <button class="button2" type="button" value="cancel1_button" onclick="handleButtonClick('cancel1_button')">Cancel</button>
+        <input type="button" name="submit1_button" value="Run" onClick={(e) => handleRun()}></input>
+        <input type="button" name="cancel1_button" value="Cancel" onClick={(e) => handleCancel()}></input>
     </div>
+
+    const handleRun = () => {
+            alert('Hello Run')
+        }
+
+        const handleCancel = () => {
+            alert('Hello Cancel')
+        }
+
     """
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
-    st.markdown(
-        """
-    <script>
-    function handleButtonClick(buttonValue) {
-        const payload = {
-            event: 'button_click',
-            buttonValue: buttonValue
-        };
-        // Send the payload to the Streamlit backend
-        Streamlit.connection.sendMessage(payload);
-    }
-    </script>
-    """,
-        unsafe_allow_html=True
-    )
-
     # Handle the button click event
     if "button_click" in st.session_state:
         button_value = st.session_state.button_click["buttonValue"]
