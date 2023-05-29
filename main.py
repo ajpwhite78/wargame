@@ -1172,7 +1172,7 @@ with col1:
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
         if st.session_state.user_country == "All Countries":
             if st.session_state.user_sector == "All Sectors":
-                entity_name_options = [""] + sorted(st.session_state.df_input.apply(str).unique())
+                entity_name_options = [""] + sorted(st.session_state.df_input['entity_name'].apply(str).unique())
             else:
                 entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique()) 
         elif st.session_state.user_sector == "All Sectors":
