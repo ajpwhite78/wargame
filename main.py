@@ -1264,6 +1264,7 @@ with col5:
         alert('Hello Cancel')
     }
     <div class="button-div2">
+        <button class="button" name="submit1_button" value="Run"></button>
         <input type="button2" name="submit1_button" value="Run"></input>
         <input type="button2" name="cancel1_button" value="Cancel"></input>
     </div>
