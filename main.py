@@ -1252,6 +1252,12 @@ with col5:
     """
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
+    def handle_run():
+        st.write("Hello Run")
+
+    def handle_cancel():
+        st.write("Hello Cancel")
+    
     button_div2 = """
     <div class="button-div2">
         <button type="button" class="button2" name="submit1_button" onClick="handleRun()">Run</button>
