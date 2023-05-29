@@ -1256,19 +1256,17 @@ with col5:
         }
         }
     </style>
-    <div class="button-div2">
-        <input type="button" name="submit1_button" value="Run" onClick={(e) => handleRun()}></input>
-        <input type="button" name="cancel1_button" value="Cancel" onClick={(e) => handleCancel()}></input>
-    </div>
-
     const handleRun = () => {
-            alert('Hello Run')
-        }
+        alert('Hello Run')
+    }
 
-        const handleCancel = () => {
-            alert('Hello Cancel')
-        }
-
+    const handleCancel = () => {
+        alert('Hello Cancel')
+    }
+    <div class="button-div2">
+        <input type="button2" name="submit1_button" value="Run" onClick={(e) => handleRun()}></input>
+        <input type="button2" name="cancel1_button" value="Cancel" onClick={(e) => handleCancel()}></input>
+    </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
