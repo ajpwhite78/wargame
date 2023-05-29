@@ -1259,7 +1259,7 @@ with col5:
     </div>
     """
 
-    button_js = """
+    button_js2 = """
     <script>
         function handleRun() {
             const runButton = document.querySelector('.button');
