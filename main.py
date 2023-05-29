@@ -1199,90 +1199,82 @@ with col4:
     st.selectbox(label="", label_visibility="collapsed", options=reporting_period_options,
                    format_func=lambda x: "Select Reporting Period" if x == "" else x,  key="user_reporting_period", on_change=change_callback1)
    
-with col5:
-    
-    button_css2 = """
-    <style>
-        :root {
-            --base-font-size: 1vw;  /* Define your base font size here */
-        }  
-        .button-div2 {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 200%;
-            gap: 2em;  /* Convert 20px to em units */
-            margin-top: 1.6em;  /* Add top margin */
-        }
-        .button2 {
-            background-color: #25476A;
-            border-color: #FAFAFA;
-            border-width: 0.1875em;  /* Convert 3px to em units */
-            border-radius: 0.1875em;  /* Convert 3px to em units */
-            color: #FAFAFA;
-            padding: 0em 0em;  /* Adjust padding as per your preference */
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 0.8em;  /* Convert 16px to em units */
-            margin: 0em;  /* Adjust margin as per your preference */
-            cursor: pointer;
-            width: 5em;
-            height: 2em;
-        }
-        .button2:hover {
-            background-color: #b8d9e8;
-            border-color: #25476A;
-            color: #25476A;
-         }
-        @media screen and (max-width: 600px) {
-        .button-div2 {
-            width: 100%;  /* Set width to 100% for full width on smaller screens */
-            justify-content: center;  /* Center align items on smaller screens */
-            gap: 50em;
-            margin-top: 0em;  /* Add top margin */
-        }
-        .button2 {
-            border-width: 0.1875em;  /* Convert 3px to em units */
-            border-radius: 0.1875em;  /* Convert 3px to em units */
-            font-size: 4em;  /* Convert 16px to em units */
-            width: 5em;
-            height: 2em;
-        }
-        }
-    </style>
-    <div class="button-div2">
-        <button class="button2" id="run-button">Run</button>
-        <button class="button2" id="cancel-button">Cancel</button>
-    </div>
-    """
+   
+button_css2 = """
+<style>
+    :root {
+        --base-font-size: 1vw;  /* Define your base font size here */
+    }  
+    .button-div2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 200%;
+        gap: 2em;  /* Convert 20px to em units */
+        margin-top: 1.6em;  /* Add top margin */
+    }
+    .button2 {
+        background-color: #25476A;
+        border-color: #FAFAFA;
+        border-width: 0.1875em;  /* Convert 3px to em units */
+        border-radius: 0.1875em;  /* Convert 3px to em units */
+        color: #FAFAFA;
+        padding: 0em 0em;  /* Adjust padding as per your preference */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.8em;  /* Convert 16px to em units */
+        margin: 0em;  /* Adjust margin as per your preference */
+        cursor: pointer;
+        width: 5em;
+        height: 2em;
+    }
+    .button2:hover {
+        background-color: #b8d9e8;
+        border-color: #25476A;
+        color: #25476A;
+     }
+    @media screen and (max-width: 600px) {
+    .button-div2 {
+        width: 100%;  /* Set width to 100% for full width on smaller screens */
+        justify-content: center;  /* Center align items on smaller screens */
+        gap: 50em;
+        margin-top: 0em;  /* Add top margin */
+    }
+    .button2 {
+        border-width: 0.1875em;  /* Convert 3px to em units */
+        border-radius: 0.1875em;  /* Convert 3px to em units */
+        font-size: 4em;  /* Convert 16px to em units */
+        width: 5em;
+        height: 2em;
+    }
+    }
+</style>
+<div class="button-div2">
+    <button class="button2" id="run-button">Run</button>
+    <button class="button2" id="cancel-button">Cancel</button>
+</div>
+"""
 
-    button_js2 = """
-    <script>
-        document.getElementById('run-button').addEventListener('click', function() {
-            alert('Hello Run');
-        });
+button_js2 = """
+<script>
+    document.getElementById('run-button').addEventListener('click', function() {
+        alert('Hello Run');
+    });
 
-        document.getElementById('cancel-button').addEventListener('click', function() {
-            alert('Hello Cancel');
-        });
-    </script>
-    """
+    document.getElementById('cancel-button').addEventListener('click', function() {
+        alert('Hello Cancel');
+    });
+</script>
+"""
 
-    import streamlit.components.v1 as components
-
-    components.html(button_css2 + button_js2)
+components.html(button_css2 + button_js2)
 
 
     
     
-    
-    analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-    
-    # Handle the button click event
-    if "button_click" in st.session_state:
-        button_value = st.session_state.button_click["buttonValue"]
-        handle_button_click(button_value)
+analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
+
 
 #    submit1_button = st.button("Run", key="1", on_click=reset2)
 #    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
@@ -1355,8 +1347,6 @@ button_js2 = """
     });
 </script>
 """
-
-import streamlit.components.v1 as components
 
 components.html(button_css2 + button_js2)
         
