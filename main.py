@@ -1257,8 +1257,8 @@ with col5:
         }
     </style>
     <div class="button-div2">
-        <button class="button2" name="submit1_button" value="Run"></button>
-        <button class="button2" name="cancel1_button" value="Cancel"></button>
+        <button class="button2" name="submit1_button">Run</button>
+        <button class="button2" name="cancel1_button">Cancel</button>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
