@@ -1259,14 +1259,20 @@ with col5:
     </div>
     """
 
-    button_js2 = """
+    button_js = """
     <script>
         function handleRun() {
-            alert('Hello Run');
+            const runButton = document.querySelector('.button');
+            runButton.addEventListener('click', function() {
+                alert('Hello Run');
+            });
         }
 
         function handleCancel() {
-            alert('Hello Cancel');
+            const cancelButton = document.querySelectorAll('.button')[1];
+            cancelButton.addEventListener('click', function() {
+                alert('Hello Cancel');
+            });
         }
     </script>
     """
