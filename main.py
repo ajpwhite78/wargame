@@ -1264,6 +1264,29 @@ with col5:
     st.markdown(button_css2, unsafe_allow_html=True)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
+    button_div2 = """
+    <div class="button-div2">
+        <input type="button" class="button2" name="submit1_button" value="Run" onClick="handleRun()"></input>
+        <input type="button" class="button2" name="cancel1_button" value="Cancel" onClick="handleCancel()"></input>
+    </div>
+    """
+
+    button_js2 = """
+    <script>
+        function handleRun() {
+            alert('Hello Run');
+        }
+
+        function handleCancel() {
+            alert('Hello Cancel');
+        }
+    </script>
+    """
+
+    html_code = button_css2 + button_div2 + button_js2
+    st.components.v1.html(html_code)
+    
+    
     # Handle the button click event
     if "button_click" in st.session_state:
         button_value = st.session_state.button_click["buttonValue"]
