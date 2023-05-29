@@ -1253,28 +1253,28 @@ with col5:
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     
    button_div = """
-<div class="button-div">
-    <button class="button" id="run-button">Run</button>
-    <button class="button" id="cancel-button">Cancel</button>
-</div>
-"""
+    <div class="button-div">
+        <button class="button" id="run-button">Run</button>
+        <button class="button" id="cancel-button">Cancel</button>
+    </div>
+    """
 
-button_js = """
-<script>
-    document.getElementById('run-button').addEventListener('click', function() {
-        alert('Hello Run');
-    });
+    button_js = """
+    <script>
+        document.getElementById('run-button').addEventListener('click', function() {
+            alert('Hello Run');
+        });
 
-    document.getElementById('cancel-button').addEventListener('click', function() {
-        alert('Hello Cancel');
-    });
-</script>
-"""
+        document.getElementById('cancel-button').addEventListener('click', function() {
+            alert('Hello Cancel');
+        });
+    </script>
+    """
 
-import streamlit.components.v1 as components
+    import streamlit.components.v1 as components
 
-components.html(button_css2 + button_div + button_js)
-    
+    components.html(button_css2 + button_div + button_js)
+
     
     # Handle the button click event
     if "button_click" in st.session_state:
