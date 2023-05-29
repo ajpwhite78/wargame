@@ -1264,8 +1264,8 @@ with col5:
         alert('Hello Cancel')
     }
     <div class="button-div2">
-        <input type="button2" name="submit1_button" value="Run" onClick={(e) => handleRun()}></input>
-        <input type="button2" name="cancel1_button" value="Cancel" onClick={(e) => handleCancel()}></input>
+        <input type="button2" name="submit1_button" value="Run"></input>
+        <input type="button2" name="cancel1_button" value="Cancel"></input>
     </div>
     """
     st.markdown(button_css2, unsafe_allow_html=True)
