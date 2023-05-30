@@ -1100,22 +1100,7 @@ marker_spinner_css = """
     }
     25% {
         background: rgba(0, 0, 0, 0);
-    }
-    
-    @media (max-width: 600px) {
-        #spinner-container-marker {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            top: 0%;
-            left: 0%;
-            transform: translate(50%, 0%);
-            width: 10vmin;
-            height: 10vmin;
-            z-index: 9999;
-        }
-    }        
+    }     
 </style>
 
 <div id="spinner-container-marker">
