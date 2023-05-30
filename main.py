@@ -582,7 +582,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 3 / 50);
         border-radius: 8px;
@@ -681,7 +681,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 12 / 50);
         border-radius: 8px;
@@ -692,7 +692,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 13 / 50);
         border-radius: 8px;
@@ -703,7 +703,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 14 / 50);
         border-radius: 8px;
@@ -714,7 +714,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 15 / 50);
         border-radius: 8px;
@@ -725,7 +725,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 16 / 50);
         border-radius: 8px;
@@ -736,7 +736,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 17 / 50);
         border-radius: 8px;
@@ -747,7 +747,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 18 / 50);
         border-radius: 8px;
@@ -758,7 +758,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 19 / 50);
         border-radius: 8px;
@@ -769,7 +769,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 20 / 50);
         border-radius: 8px;
@@ -780,7 +780,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 21 / 50);
         border-radius: 8px;
@@ -791,7 +791,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 22 / 50);
         border-radius: 8px;
@@ -802,7 +802,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 23 / 50);
         border-radius: 8px;
@@ -813,7 +813,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 24 / 50);
         border-radius: 8px;
@@ -824,7 +824,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 25 / 50);
         border-radius: 8px;
@@ -835,7 +835,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 26 / 50);
         border-radius: 8px;
@@ -846,7 +846,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 27 / 50);
         border-radius: 8px;
@@ -857,7 +857,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 28 / 50);
         border-radius: 8px;
@@ -868,7 +868,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 29 / 50);
         border-radius: 8px;
@@ -879,7 +879,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 30 / 50);
         border-radius: 8px;
@@ -890,7 +890,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 31 / 50);
         border-radius: 8px;
@@ -901,7 +901,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 32 / 50);
         border-radius: 8px;
@@ -912,7 +912,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 33 / 50);
         border-radius: 8px;
@@ -923,7 +923,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 34 / 50);
         border-radius: 8px;
@@ -934,7 +934,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 35 / 50);
         border-radius: 8px;
@@ -945,7 +945,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 36 / 50);
         border-radius: 8px;
@@ -956,7 +956,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 37 / 50);
         border-radius: 8px;
@@ -967,7 +967,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 38 / 50);
         border-radius: 8px;
@@ -978,7 +978,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 39 / 50);
         border-radius: 8px;
@@ -989,7 +989,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 40 / 50);
         border-radius: 8px;
@@ -1000,7 +1000,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 41 / 50);
         border-radius: 8px;
@@ -1011,7 +1011,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 42 / 50);
         border-radius: 8px;
@@ -1022,7 +1022,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 43 / 50);
         border-radius: 8px;
@@ -1033,7 +1033,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 44 / 50);
         border-radius: 8px;
@@ -1044,7 +1044,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 45 / 50);
         border-radius: 8px;
@@ -1055,7 +1055,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 46 / 50);
         border-radius: 8px;
@@ -1066,7 +1066,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 47 / 50);
         border-radius: 8px;
@@ -1077,7 +1077,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 48 / 50);
         border-radius: 8px;
@@ -1088,7 +1088,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 49 / 50);
         border-radius: 8px;
