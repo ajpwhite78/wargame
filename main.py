@@ -1109,9 +1109,9 @@ marker_spinner_css = """
         position: fixed;
         top: 0%;
         left: 0%;
-        transform: translate(54.17%, 0%);
-        width: 50%;
-        height: 50%;
+        transform: translate(50%, 0%);
+        width: 20vmin;
+        height: 20vmin;
         z-index: 9999;
     }
     }        
