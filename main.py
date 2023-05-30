@@ -547,12 +547,12 @@ marker_spinner_css = """
     .marker0 {
         position: absolute;
         left: 0;
-        width: 32px;
-        height: 6px;
+        width: 2em;
+        height: 0.375em;
         background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 0 / 50);
-        border-radius: 8px;
+        border-radius: 0.5em;
     }
     
     .marker1 {
@@ -1100,7 +1100,15 @@ marker_spinner_css = """
     }
     25% {
         background: rgba(0, 0, 0, 0);
-        
+    
+    @media (max-width: 600px) {
+    p.introduction_text {
+        font-size: 3.2em;
+        border-width: 0.5em;
+        position: relative;
+        top: 0.5em;
+    }
+    }        
 </style>
 
 <div id="spinner-container-marker">
