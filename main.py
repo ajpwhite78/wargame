@@ -1118,43 +1118,43 @@ marker_spinner_css = """
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 0 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(50em * sin(2 * 3.14159 * 0 / 50)));
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(10em * sin(2 * 3.14159 * 0 / 50)));
     }
     .marker1 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 1 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(50em * sin(2 * 3.14159 * 1 / 50)));
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(10em * sin(2 * 3.14159 * 1 / 50)));
     }
     .marker2 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 2 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(50em * sin(2 * 3.14159 * 2 / 50)));
+        transform: rotate(calc(360deg * 2 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(10em * sin(2 * 3.14159 * 2 / 50)));
     }
     .marker3 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 3 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(50em * sin(2 * 3.14159 * 3 / 50)));
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(10em * sin(2 * 3.14159 * 3 / 50)));
     }
     .marker4 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 4 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(50em * sin(2 * 3.14159 * 4 / 50)));
+        transform: rotate(calc(360deg * 4 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(10em * sin(2 * 3.14159 * 4 / 50)));
     }
     .marker5 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 5 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(50em * sin(2 * 3.14159 * 5 / 50)));
+        transform: rotate(calc(360deg * 5 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(10em * sin(2 * 3.14159 * 5 / 50)));
     }
     .marker6 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 6 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(50em * sin(2 * 3.14159 * 6 / 50)));
+        transform: rotate(calc(360deg * 6 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(10em * sin(2 * 3.14159 * 6 / 50)));
     }
     
     
