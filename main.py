@@ -1157,19 +1157,19 @@ marker_spinner_css = """
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 0 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(10em * sin(2 * 3.14159 * 0 / 50)));
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(15em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(15em * sin(2 * 3.14159 * 0 / 50)));
     }
     .marker1 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 1 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(10em * sin(2 * 3.14159 * 1 / 50)));
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(15em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(15em * sin(2 * 3.14159 * 1 / 50)));
     }
     .marker2 {
         width: 3em;
         height: 0.5em;
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 2 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(10em * sin(2 * 3.14159 * 2 / 50)));
+        transform: rotate(calc(360deg * 2 / 50)) translate(calc(15em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(15em * sin(2 * 3.14159 * 2 / 50)));
     }
     .marker3 {
         width: 3em;
