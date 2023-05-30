@@ -1102,11 +1102,17 @@ marker_spinner_css = """
         background: rgba(0, 0, 0, 0);
     
     @media (max-width: 600px) {
-    p.introduction_text {
-        font-size: 3.2em;
-        border-width: 0.5em;
-        position: relative;
-        top: 0.5em;
+    #spinner-container-marker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        transform: translate(54.17%, 0%);
+        width: 50%;
+        height: 50%;
+        z-index: 9999;
     }
     }        
 </style>
