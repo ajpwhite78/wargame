@@ -551,7 +551,7 @@ marker_spinner_css = """
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 1 / 50);
+        animation-delay: calc(3s * 0 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));        
     }
