@@ -542,7 +542,6 @@ marker_spinner_css = """
         width: 100%;
         height: 100%;
         z-index: 9999;
-        transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));
     }
 
     .marker0 {
@@ -554,7 +553,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 1 / 50);
         border-radius: 0.5em;
-        transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));        
     }
     
     .marker1 {
@@ -566,6 +565,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 1 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));
     }
     
     .marker2 {
