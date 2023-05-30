@@ -1212,7 +1212,7 @@ spinner_image_css = """
 <style>
     .image-container {{
         display: inline-block;
-        width: 25%;
+        width: 27%;
         text-align: center;
         position: fixed;
         top: 50%;
