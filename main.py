@@ -1106,6 +1106,9 @@ marker_spinner_css = """
 }
 @media (max-width: 600px) {
     .marker0 {
+        width: 5em;
+        height: 1em;
+        border-radius: 1em;
         transform: rotate(calc(360deg * 0 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(10em * sin(2 * 3.14159 * 0 / 50)));
     }
     .marker1 {
