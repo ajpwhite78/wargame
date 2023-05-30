@@ -547,12 +547,12 @@ marker_spinner_css = """
     .marker0 {
         position: absolute;
         left: 0;
-        width: 10px;
-        height: 14px;
+        width: 2em;
+        height: 0.375em;
         background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 0 / 50);
-        border-radius: 08px;
+        animation-delay: calc(3s * 1 / 50);
+        border-radius: 0.5em;
     }
     
     .marker1 {
