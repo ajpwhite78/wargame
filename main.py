@@ -1110,8 +1110,8 @@ marker_spinner_css = """
             top: 0%;
             left: 0%;
             transform: translate(50%, 0%);
-            width: 20vmin;
-            height: 20vmin;
+            width: 10vmin;
+            height: 10vmin;
             z-index: 9999;
         }
     }        
