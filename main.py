@@ -1147,27 +1147,27 @@ marker_spinner_css = """
     <div class="marker26" style="transform: rotate(calc(360deg * 26 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 26 / 50))), calc(5em * sin(2 * 3.14159 * 26 / 50)));"></div>
     <div class="marker27" style="transform: rotate(calc(360deg * 27 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 27 / 50))), calc(5em * sin(2 * 3.14159 * 27 / 50)));"></div>
     <div class="marker28" style="transform: rotate(calc(360deg * 28 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 28 / 50))), calc(5em * sin(2 * 3.14159 * 28 / 50)));"></div>
-    <div class="marker29" style="transform: rotate(calc(360deg * 29 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 29 / 50))), calc(6.25em * sin(2 * 3.14159 * 29 / 50)));"></div>
-    <div class="marker30" style="transform: rotate(calc(360deg * 30 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 30 / 50))), calc(6.25em * sin(2 * 3.14159 * 30 / 50)));"></div>
-    <div class="marker31" style="transform: rotate(calc(360deg * 31 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 31 / 50))), calc(6.25em * sin(2 * 3.14159 * 31 / 50)));"></div>
-    <div class="marker32" style="transform: rotate(calc(360deg * 32 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 32 / 50))), calc(6.25em * sin(2 * 3.14159 * 32 / 50)));"></div>
-    <div class="marker33" style="transform: rotate(calc(360deg * 33 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 33 / 50))), calc(6.25em * sin(2 * 3.14159 * 33 / 50)));"></div>
-    <div class="marker34" style="transform: rotate(calc(360deg * 34 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 34 / 50))), calc(6.25em * sin(2 * 3.14159 * 34 / 50)));"></div>
-    <div class="marker35" style="transform: rotate(calc(360deg * 35 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 35 / 50))), calc(6.25em * sin(2 * 3.14159 * 35 / 50)));"></div>
-    <div class="marker36" style="transform: rotate(calc(360deg * 36 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 36 / 50))), calc(6.25em * sin(2 * 3.14159 * 36 / 50)));"></div>
-    <div class="marker37" style="transform: rotate(calc(360deg * 37 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 37 / 50))), calc(6.25em * sin(2 * 3.14159 * 37 / 50)));"></div>
-    <div class="marker38" style="transform: rotate(calc(360deg * 38 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 38 / 50))), calc(6.25em * sin(2 * 3.14159 * 38 / 50)));"></div>
-    <div class="marker39" style="transform: rotate(calc(360deg * 39 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 39 / 50))), calc(6.25em * sin(2 * 3.14159 * 39 / 50)));"></div>
-    <div class="marker40" style="transform: rotate(calc(360deg * 40 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 40 / 50))), calc(6.25em * sin(2 * 3.14159 * 40 / 50)));"></div>
-    <div class="marker41" style="transform: rotate(calc(360deg * 41 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 41 / 50))), calc(6.25em * sin(2 * 3.14159 * 41 / 50)));"></div>
-    <div class="marker42" style="transform: rotate(calc(360deg * 42 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 42 / 50))), calc(6.25em * sin(2 * 3.14159 * 42 / 50)));"></div>
-    <div class="marker43" style="transform: rotate(calc(360deg * 43 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 43 / 50))), calc(6.25em * sin(2 * 3.14159 * 43 / 50)));"></div>
-    <div class="marker44" style="transform: rotate(calc(360deg * 44 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 44 / 50))), calc(6.25em * sin(2 * 3.14159 * 44 / 50)));"></div>
-    <div class="marker45" style="transform: rotate(calc(360deg * 45 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 45 / 50))), calc(6.25em * sin(2 * 3.14159 * 45 / 50)));"></div>
-    <div class="marker46" style="transform: rotate(calc(360deg * 46 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 46 / 50))), calc(6.25em * sin(2 * 3.14159 * 46 / 50)));"></div>
-    <div class="marker47" style="transform: rotate(calc(360deg * 47 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 47 / 50))), calc(6.25em * sin(2 * 3.14159 * 47 / 50)));"></div>
-    <div class="marker48" style="transform: rotate(calc(360deg * 48 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 48 / 50))), calc(6.25em * sin(2 * 3.14159 * 48 / 50)));"></div>
-    <div class="marker49" style="transform: rotate(calc(360deg * 49 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 49 / 50))), calc(6.25em * sin(2 * 3.14159 * 49 / 50)));"></div>
+    <div class="marker29" style="transform: rotate(calc(360deg * 29 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 29 / 50))), calc(5em * sin(2 * 3.14159 * 29 / 50)));"></div>
+    <div class="marker30" style="transform: rotate(calc(360deg * 30 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 30 / 50))), calc(5em * sin(2 * 3.14159 * 30 / 50)));"></div>
+    <div class="marker31" style="transform: rotate(calc(360deg * 31 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 31 / 50))), calc(5em * sin(2 * 3.14159 * 31 / 50)));"></div>
+    <div class="marker32" style="transform: rotate(calc(360deg * 32 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 32 / 50))), calc(5em * sin(2 * 3.14159 * 32 / 50)));"></div>
+    <div class="marker33" style="transform: rotate(calc(360deg * 33 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 33 / 50))), calc(5em * sin(2 * 3.14159 * 33 / 50)));"></div>
+    <div class="marker34" style="transform: rotate(calc(360deg * 34 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 34 / 50))), calc(5em * sin(2 * 3.14159 * 34 / 50)));"></div>
+    <div class="marker35" style="transform: rotate(calc(360deg * 35 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 35 / 50))), calc(5em * sin(2 * 3.14159 * 35 / 50)));"></div>
+    <div class="marker36" style="transform: rotate(calc(360deg * 36 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 36 / 50))), calc(5em * sin(2 * 3.14159 * 36 / 50)));"></div>
+    <div class="marker37" style="transform: rotate(calc(360deg * 37 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 37 / 50))), calc(5em * sin(2 * 3.14159 * 37 / 50)));"></div>
+    <div class="marker38" style="transform: rotate(calc(360deg * 38 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 38 / 50))), calc(5em * sin(2 * 3.14159 * 38 / 50)));"></div>
+    <div class="marker39" style="transform: rotate(calc(360deg * 39 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 39 / 50))), calc(5em * sin(2 * 3.14159 * 39 / 50)));"></div>
+    <div class="marker40" style="transform: rotate(calc(360deg * 40 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 40 / 50))), calc(5em * sin(2 * 3.14159 * 40 / 50)));"></div>
+    <div class="marker41" style="transform: rotate(calc(360deg * 41 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 41 / 50))), calc(5em * sin(2 * 3.14159 * 41 / 50)));"></div>
+    <div class="marker42" style="transform: rotate(calc(360deg * 42 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 42 / 50))), calc(5em * sin(2 * 3.14159 * 42 / 50)));"></div>
+    <div class="marker43" style="transform: rotate(calc(360deg * 43 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 43 / 50))), calc(5em * sin(2 * 3.14159 * 43 / 50)));"></div>
+    <div class="marker44" style="transform: rotate(calc(360deg * 44 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 44 / 50))), calc(5em * sin(2 * 3.14159 * 44 / 50)));"></div>
+    <div class="marker45" style="transform: rotate(calc(360deg * 45 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 45 / 50))), calc(5em * sin(2 * 3.14159 * 45 / 50)));"></div>
+    <div class="marker46" style="transform: rotate(calc(360deg * 46 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 46 / 50))), calc(5em * sin(2 * 3.14159 * 46 / 50)));"></div>
+    <div class="marker47" style="transform: rotate(calc(360deg * 47 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 47 / 50))), calc(5em * sin(2 * 3.14159 * 47 / 50)));"></div>
+    <div class="marker48" style="transform: rotate(calc(360deg * 48 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 48 / 50))), calc(5em * sin(2 * 3.14159 * 48 / 50)));"></div>
+    <div class="marker49" style="transform: rotate(calc(360deg * 49 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 49 / 50))), calc(5em * sin(2 * 3.14159 * 49 / 50)));"></div>
 </div>
 """
 
