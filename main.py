@@ -1153,6 +1153,9 @@ marker_spinner_css = """
     }   
 }
 @media (max-width: 600px) {
+    #spinner-container-marker {
+        transform: translate(60%, 0%);
+    }
     .marker0 {
         width: 3em;
         height: 0.5em;
