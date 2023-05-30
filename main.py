@@ -1231,7 +1231,7 @@ spinner_image_css = """
     <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
 </div>
 """
-st.markdown(spinner_image_css, unsafe_allow_html=True)
+st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
 
 if "user_sector" not in st.session_state or "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
