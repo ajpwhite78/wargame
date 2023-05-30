@@ -1118,7 +1118,7 @@ marker_spinner_css = """
 </style>
 
 <div id="spinner-container-marker">
-    <div class="marker0" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(6em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(6em * sin(2 * 3.14159 * 0 / 50)));"></div>
+    <div class="marker0" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(4em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(4em * sin(2 * 3.14159 * 0 / 50)));"></div>
     <div class="marker1" style="transform: rotate(calc(360deg * 1 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(6.25em * sin(2 * 3.14159 * 1 / 50)));"></div>
     <div class="marker2" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(6.25em * sin(2 * 3.14159 * 2 / 50)));"></div>
     <div class="marker3" style="transform: rotate(calc(360deg * 3 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(6.25em * sin(2 * 3.14159 * 3 / 50)));"></div>
