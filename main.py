@@ -1118,17 +1118,17 @@ marker_spinner_css = """
 </style>
 
 <div id="spinner-container-marker">
-    <div class="marker0" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(4em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(4em * sin(2 * 3.14159 * 0 / 50)));"></div>
-    <div class="marker1" style="transform: rotate(calc(360deg * 1 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(6.25em * sin(2 * 3.14159 * 1 / 50)));"></div>
-    <div class="marker2" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(6.25em * sin(2 * 3.14159 * 2 / 50)));"></div>
-    <div class="marker3" style="transform: rotate(calc(360deg * 3 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(6.25em * sin(2 * 3.14159 * 3 / 50)));"></div>
-    <div class="marker4" style="transform: rotate(calc(360deg * 4 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(6.25em * sin(2 * 3.14159 * 4 / 50)));"></div>
-    <div class="marker5" style="transform: rotate(calc(360deg * 5 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(6.25em * sin(2 * 3.14159 * 5 / 50)));"></div>
-    <div class="marker6" style="transform: rotate(calc(360deg * 6 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(6.25em * sin(2 * 3.14159 * 6 / 50)));"></div>
-    <div class="marker7" style="transform: rotate(calc(360deg * 7 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(6.25em * sin(2 * 3.14159 * 7 / 50)));"></div>
-    <div class="marker8" style="transform: rotate(calc(360deg * 8 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(6.25em * sin(2 * 3.14159 * 8 / 50)));"></div>
-    <div class="marker9" style="transform: rotate(calc(360deg * 9 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(6.25em * sin(2 * 3.14159 * 9 / 50)));"></div>
-    <div class="marker10" style="transform: rotate(calc(360deg * 10 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(6.25em * sin(2 * 3.14159 * 10 / 50)));"></div>
+    <div class="marker0" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(2em * sin(2 * 3.14159 * 0 / 50)));"></div>
+    <div class="marker1" style="transform: rotate(calc(360deg * 1 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(2em * sin(2 * 3.14159 * 1 / 50)));"></div>
+    <div class="marker2" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(2em * sin(2 * 3.14159 * 2 / 50)));"></div>
+    <div class="marker3" style="transform: rotate(calc(360deg * 3 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(2em * sin(2 * 3.14159 * 3 / 50)));"></div>
+    <div class="marker4" style="transform: rotate(calc(360deg * 4 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(2em * sin(2 * 3.14159 * 4 / 50)));"></div>
+    <div class="marker5" style="transform: rotate(calc(360deg * 5 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(2em * sin(2 * 3.14159 * 5 / 50)));"></div>
+    <div class="marker6" style="transform: rotate(calc(360deg * 6 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(2em * sin(2 * 3.14159 * 6 / 50)));"></div>
+    <div class="marker7" style="transform: rotate(calc(360deg * 7 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(2em * sin(2 * 3.14159 * 7 / 50)));"></div>
+    <div class="marker8" style="transform: rotate(calc(360deg * 8 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(2em * sin(2 * 3.14159 * 8 / 50)));"></div>
+    <div class="marker9" style="transform: rotate(calc(360deg * 9 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(2em * sin(2 * 3.14159 * 9 / 50)));"></div>
+    <div class="marker10" style="transform: rotate(calc(360deg * 10 / 50)) translate(calc(2em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(2em * sin(2 * 3.14159 * 10 / 50)));"></div>
     <div class="marker11" style="transform: rotate(calc(360deg * 11 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 11 / 50))), calc(6.25em * sin(2 * 3.14159 * 11 / 50)));"></div>
     <div class="marker12" style="transform: rotate(calc(360deg * 12 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 12 / 50))), calc(6.25em * sin(2 * 3.14159 * 12 / 50)));"></div>
     <div class="marker13" style="transform: rotate(calc(360deg * 13 / 50)) translate(calc(6.25em * (1 - cos(2 * 3.14159 * 13 / 50))), calc(6.25em * sin(2 * 3.14159 * 13 / 50)));"></div>
