@@ -1223,7 +1223,7 @@ spinner_image_css = """
 
     @media (max-width: 600px) {{
         .image-container {{
-            width: 40%;
+            width: 50%;
         }}
     }}
 </style>
