@@ -1105,8 +1105,13 @@ marker_spinner_css = """
         #spinner-container-marker {
             transform: translate(0%, 0%);
         }
-    }
-    
+        .marker0 {
+            position: absolute;
+            left: 0;
+            width: 2em;
+            height: 0.375em;
+        }
+}    
     
 </style>
 
