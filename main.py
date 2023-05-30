@@ -529,10 +529,6 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")), unsafe_allow_html=True)
 
-
-import streamlit as st
-import math
-
 marker_spinner_css = """
 <style>
     #spinner-container-marker {
@@ -553,7 +549,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 0 / 50);
         border-radius: 8px;
@@ -564,7 +560,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 1 / 50);
         border-radius: 8px;
@@ -575,7 +571,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 2 / 50);
         border-radius: 8px;
@@ -597,7 +593,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 4 / 50);
         border-radius: 8px;
@@ -608,7 +604,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 5 / 50);
         border-radius: 8px;
@@ -619,7 +615,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 6 / 50);
         border-radius: 8px;
@@ -630,7 +626,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 7 / 50);
         border-radius: 8px;
@@ -641,7 +637,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 8 / 50);
         border-radius: 8px;
@@ -652,7 +648,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 9 / 50);
         border-radius: 8px;
@@ -663,7 +659,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 10 / 50);
         border-radius: 8px;
@@ -674,7 +670,7 @@ marker_spinner_css = """
         left: 0;
         width: 32px;
         height: 6px;
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 11 / 50);
         border-radius: 8px;
@@ -1103,7 +1099,7 @@ marker_spinner_css = """
         background: #6f72de;
     }
     25% {
-        background: #3C3F41;
+        background: rgba(0, 0, 0, 0);
         
 </style>
 
