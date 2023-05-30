@@ -577,6 +577,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 2 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 2 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(5em * sin(2 * 3.14159 * 2 / 50)));
     }
     
     .marker3 {
@@ -588,6 +589,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 3 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));
     }
     
     .marker4 {
@@ -599,6 +601,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 4 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 4 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(5em * sin(2 * 3.14159 * 4 / 50)));
     }
     
     .marker5 {
@@ -610,6 +613,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 5 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 5 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(5em * sin(2 * 3.14159 * 5 / 50)));
     }
     
     .marker6 {
@@ -621,6 +625,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 6 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 6 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(5em * sin(2 * 3.14159 * 6 / 50)));
     }
     
     .marker7 {
@@ -632,6 +637,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 7 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 7 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(5em * sin(2 * 3.14159 * 7 / 50)));
     }
     
     .marker8 {
@@ -643,6 +649,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 8 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 8 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(5em * sin(2 * 3.14159 * 8 / 50)));
     }
     
     .marker9 {
@@ -654,6 +661,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 9 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));
     }
     
     .marker10 {
@@ -665,6 +673,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 10 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));
     }
     
     .marker11 {
@@ -1117,19 +1126,50 @@ marker_spinner_css = """
         border-radius: 1em;
         transform: rotate(calc(360deg * 1 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(50em * sin(2 * 3.14159 * 1 / 50)));
     }
+    .marker2 {
+        width: 5em;
+        height: 1em;
+        border-radius: 1em;
+        transform: rotate(calc(360deg * 2 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(50em * sin(2 * 3.14159 * 2 / 50)));
+    }
+    .marker3 {
+        width: 5em;
+        height: 1em;
+        border-radius: 1em;
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(50em * sin(2 * 3.14159 * 3 / 50)));
+    }
+    .marker4 {
+        width: 5em;
+        height: 1em;
+        border-radius: 1em;
+        transform: rotate(calc(360deg * 4 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(50em * sin(2 * 3.14159 * 4 / 50)));
+    }
+    .marker5 {
+        width: 5em;
+        height: 1em;
+        border-radius: 1em;
+        transform: rotate(calc(360deg * 5 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(50em * sin(2 * 3.14159 * 5 / 50)));
+    }
+    .marker6 {
+        width: 5em;
+        height: 1em;
+        border-radius: 1em;
+        transform: rotate(calc(360deg * 6 / 50)) translate(calc(50em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(50em * sin(2 * 3.14159 * 6 / 50)));
+    }
+    
     
 </style>
 
 <div id="spinner-container-marker">
     <div class="marker0"></div>
     <div class="marker1"></div>
-    <div class="marker2" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(5em * sin(2 * 3.14159 * 2 / 50)));"></div>
-    <div class="marker3" style="transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));"></div>
-    <div class="marker4" style="transform: rotate(calc(360deg * 4 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(5em * sin(2 * 3.14159 * 4 / 50)));"></div>
-    <div class="marker5" style="transform: rotate(calc(360deg * 5 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(5em * sin(2 * 3.14159 * 5 / 50)));"></div>
-    <div class="marker6" style="transform: rotate(calc(360deg * 6 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(5em * sin(2 * 3.14159 * 6 / 50)));"></div>
-    <div class="marker7" style="transform: rotate(calc(360deg * 7 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(5em * sin(2 * 3.14159 * 7 / 50)));"></div>
-    <div class="marker8" style="transform: rotate(calc(360deg * 8 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(5em * sin(2 * 3.14159 * 8 / 50)));"></div>
+    <div class="marker2"></div>
+    <div class="marker3"></div>
+    <div class="marker4"></div>
+    <div class="marker5"></div>
+    <div class="marker6"></div>
+    <div class="marker7"></div>
+    <div class="marker8"></div>
     <div class="marker9" style="transform: rotate(calc(360deg * 9 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(5em * sin(2 * 3.14159 * 9 / 50)));"></div>
     <div class="marker10" style="transform: rotate(calc(360deg * 10 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(5em * sin(2 * 3.14159 * 10 / 50)));"></div>
     <div class="marker11" style="transform: rotate(calc(360deg * 11 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 11 / 50))), calc(5em * sin(2 * 3.14159 * 11 / 50)));"></div>
