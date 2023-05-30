@@ -1101,13 +1101,6 @@ marker_spinner_css = """
     25% {
         background: rgba(0, 0, 0, 0);
     }   
-    @media (max-width: 600px) {
-        .marker0 {
-            position: absolute;
-            left: 0;
-            width: 5em;
-            height: 4em;
-        }
 }    
     
 </style>
