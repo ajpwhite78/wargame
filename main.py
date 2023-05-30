@@ -542,6 +542,7 @@ marker_spinner_css = """
         width: 100%;
         height: 100%;
         z-index: 9999;
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));
     }
 
     .marker0 {
@@ -553,6 +554,7 @@ marker_spinner_css = """
         animation: animateBlink 3s linear infinite;
         animation-delay: calc(3s * 1 / 50);
         border-radius: 0.5em;
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));
     }
     
     .marker1 {
@@ -1101,13 +1103,20 @@ marker_spinner_css = """
     25% {
         background: rgba(0, 0, 0, 0);
     }   
-}    
+}
+@media (max-width: 600px) {
+    .marker0 {
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(10em * sin(2 * 3.14159 * 0 / 50)));
+    }
+    .marker1 {
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(10em * sin(2 * 3.14159 * 1 / 50)));
+    }
     
 </style>
 
 <div id="spinner-container-marker">
-    <div class="marker0" style="transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));"></div>
-    <div class="marker1" style="transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));"></div>
+    <div class="marker0"></div>
+    <div class="marker1"></div>
     <div class="marker2" style="transform: rotate(calc(360deg * 2 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(5em * sin(2 * 3.14159 * 2 / 50)));"></div>
     <div class="marker3" style="transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));"></div>
     <div class="marker4" style="transform: rotate(calc(360deg * 4 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(5em * sin(2 * 3.14159 * 4 / 50)));"></div>
