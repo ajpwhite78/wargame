@@ -1100,7 +1100,14 @@ marker_spinner_css = """
     }
     25% {
         background: rgba(0, 0, 0, 0);
-    }     
+    }   
+    @media (max-width: 600px) {
+        #spinner-container-marker {
+            transform: translate(0%, 0%);
+        }
+    }
+    
+    
 </style>
 
 <div id="spinner-container-marker">
