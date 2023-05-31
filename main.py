@@ -1800,6 +1800,14 @@ button_css2 = """
     :root {
         --base-font-size: 1vw;  /* Define your base font size here */
     }
+    @media (max-width: 600px) {
+    .button-div2 {
+        justify-content: center;  /* Center align items on smaller screens */
+    }
+    .button-container2 {
+        display: flex;
+        gap: 14em;  /* Adjust the gap value as per your preference */
+    }
     .button-div2 {
         display: flex;
         justify-content: center;
@@ -1831,14 +1839,6 @@ button_css2 = """
         border-color: #25476A;
         color: #25476A;
      }
-    @media (max-width: 600px) {
-    .button-div2 {
-        justify-content: center;  /* Center align items on smaller screens */
-    }
-    .button-container2 {
-        display: flex;
-        gap: 14em !important;  /* Adjust the gap value as per your preference */
-    }
     }
 </style>
 <div class="button-div2">
