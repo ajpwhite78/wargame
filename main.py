@@ -1831,17 +1831,10 @@ button_css2 = """
         border-color: #25476A;
         color: #25476A;
      }
-     @media (max-width: 600px) {
-    .button-div2 {
-        justify-content: center;  /* Center align items on smaller screens */
-    }
-    .button-container2 {
-        margin-top: 0em;
-    }
     }
 </style>
 <div class="button-div2">
-    <div class="button-container2">
+    <div class="button-container2 style=" @media screen and (max-width: 600px) { gap: 8em; }"">
         <button class="button2" id="run-button">Run</button>
         <button class="button2" id="cancel-button">Cancel</button>
     </div>
