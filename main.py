@@ -1848,6 +1848,57 @@ button_css2 = """
 </div>
 """
 
+button_css2 = """
+<style>
+    .streamlit-components-col.col5 .button-div2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .streamlit-components-col.col5 .button-container2 {
+        display: flex;
+        margin-top: 1.5em;
+        gap: 5em;  /* Adjust the gap value as per your preference */
+    }
+    .streamlit-components-col.col5 .button2 {
+        background-color: #25476A;
+        border-color: #FAFAFA;
+        border-width: 0.1875em;  /* Convert 3px to em units */
+        border-radius: 0.1875em;  /* Convert 3px to em units */
+        color: #FAFAFA;
+        padding: 0em 0em;  /* Adjust padding as per your preference */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.95em;  /* Convert 16px to em units */
+        cursor: pointer;
+        width: 5em;
+        height: 2em;
+    }
+    .streamlit-components-col.col5 .button2:hover {
+        background-color: #b8d9e8;
+        border-color: #25476A;
+        color: #25476A;
+     }
+    @media (max-width: 600px) {
+        .streamlit-components-col.col5 .button-div2 {
+            justify-content: center;  /* Center align items on smaller screens */
+        }
+        .streamlit-components-col.col5 .button-container2 {
+            display: flex;
+            gap: 14em;  /* Adjust the gap value as per your preference */
+        }
+    }
+</style>
+<div class="button-div2">
+    <div class="button-container2">
+        <button class="button2" id="run-button">Run</button>
+        <button class="button2" id="cancel-button">Cancel</button>
+    </div>
+</div>
+"""
+
 button_js2 = """
 <script>
     document.getElementById('run-button').addEventListener('click', function() {
@@ -1861,7 +1912,6 @@ button_js2 = """
 """
 with col5:
     components.html(button_css2 + button_js2)
-
 
     
     
