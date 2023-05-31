@@ -1862,7 +1862,8 @@ button_js2 = """
 </script>
 """
 
-components.html(button_css2 + button_js2)
+with col5:
+    components.html(button_css2 + button_js2)
 
 
     
