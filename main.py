@@ -1833,7 +1833,6 @@ button_css2 = """
     @media screen and (max-width: 600px) {
         .button-div2 {
             justify-content: center;  /* Center align items on smaller screens */
-            margin-top: 0em;  /* Add top margin */
         }
         .button-container2 {
             display: flex;
