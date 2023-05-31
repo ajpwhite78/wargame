@@ -1803,7 +1803,7 @@ button_css2 = """
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
+        width: 100%;
         gap: -1em;  /* Convert 20px to em units */
         margin-top: 1.6em;  /* Add top margin */
     }
@@ -1818,7 +1818,7 @@ button_css2 = """
         text-decoration: none;
         display: inline-block;
         font-size: 0.8em;  /* Convert 16px to em units */
-        margin: 0em;  /* Adjust margin as per your preference */
+        margin: 0em 0.5em;  /* Adjust margin as per your preference */
         cursor: pointer;
         width: 5em;
         height: 2em;
