@@ -1840,8 +1840,8 @@ button_css2 = """
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
             font-size: 0.8em;  /* Convert 16px to em units */
-            width: 5.2em;
-            height: 2.2em;
+            width: 5em;
+            height: 2em;
         }
     } 
 </style>
