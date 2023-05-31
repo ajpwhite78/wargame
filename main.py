@@ -1834,7 +1834,6 @@ button_css2 = """
         .button-div2 {
             justify-content: center;  /* Center align items on smaller screens */
             margin-top: 0em;  /* Add top margin */
-            gap: 5em;
         }
         .button2 {
             border-width: 0.1875em;  /* Convert 3px to em units */
