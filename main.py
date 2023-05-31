@@ -1212,7 +1212,7 @@ marker_spinner_css = """
     }
     .marker9 {
         width: 3em;
-         height: 1em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 9 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(10em * sin(2 * 3.14159 * 9 / 50)));
     }
