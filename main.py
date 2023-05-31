@@ -1837,7 +1837,6 @@ button_css2 = """
         }
         .button-container2 {
             display: flex;
-            margin-top: 1.5em;
             gap: 5em;  /* Adjust the gap value as per your preference */
         }
     }
