@@ -1796,6 +1796,9 @@ with col4:
    
 button_css2 = """
 <style>
+    :root {
+        --base-font-size: 1vw;  /* Define your base font size here */
+    }
     .button-div2 {
         display: flex;
         justify-content: center;
@@ -1828,6 +1831,9 @@ button_css2 = """
         color: #25476A;
      }
     @media (max-width: 600px) {
+    .grid {
+        grid-template-columns: none;
+    }
     .button-div2 {
         justify-content: center;  /* Center align items on smaller screens */
     }
