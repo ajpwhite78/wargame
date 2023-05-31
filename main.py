@@ -1831,7 +1831,7 @@ button_css2 = """
     .button-div2 {
         width: 100%;  /* Set width to 100% for full width on smaller screens */
         justify-content: center;  /* Center align items on smaller screens */
-        gap: 18em;
+        gap: 12em;
         margin-top: 0em;  /* Add top margin */
     }
     .button2 {
