@@ -14,7 +14,8 @@ dirpath = os.path.dirname(__file__)
 
 if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.session_state or "df_field_name_mapping" not in st.session_state:
     st.session_state.df_input_file = 'TechHardware_WhatIfFields_Ccy_v2_short_test.csv'
-    st.session_state.df_input = pd.read_csv(st.session_state.df_input_file)
+    st.session_state.df_input = pd.read_csv(st.session_state.df_input_file)button-div2
+    
     st.session_state.df_field_name_mapping_file = 'field_name_mapping_update.csv'
     st.session_state.df_field_name_mapping = pd.read_csv(st.session_state.df_field_name_mapping_file)
 
@@ -1800,7 +1801,6 @@ button_css2 = """
         --base-font-size: 1vw;  /* Define your base font size here */
     }
     .button-div2 {
-        display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -1830,7 +1830,7 @@ button_css2 = """
         border-color: #25476A;
         color: #25476A;
      }
-    @media only screen and (max-width: 600px) {
+    @media (max-width: 600px) {
     .button-div2 {
         justify-content: center;  /* Center align items on smaller screens */
     }
