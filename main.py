@@ -1818,7 +1818,6 @@ button_css2 = """
         text-decoration: none;
         display: inline-block;
         font-size: 0.8em;  /* Convert 16px to em units */
-        margin: 0em;  /* Adjust margin as per your preference */
         cursor: pointer;
         width: 5em;
         height: 2em;
