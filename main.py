@@ -1809,7 +1809,7 @@ button_css2 = """
     .button-container2 {
         display: flex;
         margin-top: 1.5em;
-        gap: 5em;  /* Adjust the gap value as per your preference */
+        gap: 5em !important;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         background-color: #25476A;
@@ -1821,10 +1821,10 @@ button_css2 = """
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 0.95em;  /* Convert 16px to em units */
+        font-size: 0.95em !important;  /* Convert 16px to em units */
         cursor: pointer;
-        width: 5em;
-        height: 2em;
+        width: 5em !important;
+        height: 2em !important;
     }
     .button2:hover {
         background-color: #b8d9e8;
