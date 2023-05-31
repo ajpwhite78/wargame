@@ -1796,9 +1796,6 @@ with col4:
    
 button_css2 = """
 <style>
-    :root {
-        --base-font-size: 1vw;  /* Define your base font size here */
-    }
     .button-div2 {
         display: flex;
         justify-content: center;
