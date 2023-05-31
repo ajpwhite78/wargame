@@ -1806,6 +1806,10 @@ button_css2 = """
         width: 100%;
         margin-top: 0em;  /* Add top margin */
     }
+    .button-container2 {
+        display: flex;
+        gap: 1em;  /* Adjust the gap value as per your preference */
+    }
     .button2 {
         background-color: #25476A;
         border-color: #FAFAFA;
@@ -1843,8 +1847,10 @@ button_css2 = """
     } 
 </style>
 <div class="button-div2">
-    <button class="button2" id="run-button">Run</button>
-    <button class="button2" id="cancel-button">Cancel</button>
+    <div class="button-container2">
+        <button class="button2" id="run-button">Run</button>
+        <button class="button2" id="cancel-button">Cancel</button>
+    </div>
 </div>
 """
 
