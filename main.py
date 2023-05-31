@@ -1852,6 +1852,18 @@ button_js2 = """
     });
 </script>
 """
+
+button_js2 = """
+<script>
+    document.getElementById('run-button').addEventListener('click', function() {
+        reset2();
+    });
+
+    document.getElementById('cancel-button').addEventListener('click', function() {
+        reset1();
+    });
+</script>
+"""
 with col5:
     components.html(button_css2 + button_js2)
 
