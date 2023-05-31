@@ -1796,22 +1796,22 @@ with col4:
    
 button_css2 = """
 <style>
-    :root {{
+    :root {
         --base-font-size: 1vw;  /* Define your base font size here */
-    }}
-    .button-div2 {{
+    }
+    .button-div2 {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         margin-top: 0em;  /* Add top margin */
-    }}
-    .button-container2 {{
+    }
+    .button-container2 {
         display: flex;
         margin-top: 1.5em;
         gap: 5em;  /* Adjust the gap value as per your preference */
-    }}
-    .button2 {{
+    }
+    .button2 {
         background-color: #25476A;
         border-color: #FAFAFA;
         border-width: 0.1875em;  /* Convert 3px to em units */
@@ -1825,25 +1825,25 @@ button_css2 = """
         cursor: pointer;
         width: 4em;
         height: 1em;
-    }}
-    .button2:hover {{
+    }
+    .button2:hover {
         background-color: #b8d9e8;
         border-color: #25476A;
         color: #25476A;
-     }}
-    @media screen and (max-width: 600px) {{
-        .button-div2 {{
+     }
+    @media screen and (max-width: 600px) {
+        .button-div2 {
             justify-content: center;  /* Center align items on smaller screens */
             margin-top: 0em;  /* Add top margin */
-        }}
-        .button2 {{
+        }
+        .button2 {
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
             font-size: 0.9em;  /* Convert 16px to em units */
             width: 5em;
             height: 2em;
-        }}
-    }}
+        }
+    }
 </style>
 <div class="button-div2">
     <div class="button-container2">
