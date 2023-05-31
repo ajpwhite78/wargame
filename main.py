@@ -1799,18 +1799,18 @@ button_css2 = """
     :root {
         --base-font-size: 1vw;  /* Define your base font size here */
     }
-    .button-div2 {
+    #col5 .button-div2 {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
-    .button-container2 {
+    #col5 .button-container2 {
         display: flex;
         margin-top: 1.5em;
         gap: 5em;  /* Adjust the gap value as per your preference */
     }
-    .button2 {
+    #col5 .button2 {
         background-color: #25476A;
         border-color: #FAFAFA;
         border-width: 0.1875em;  /* Convert 3px to em units */
@@ -1825,16 +1825,16 @@ button_css2 = """
         width: 5em;
         height: 2em;
     }
-    .button2:hover {
+    #col5 .button2:hover {
         background-color: #b8d9e8;
         border-color: #25476A;
         color: #25476A;
      }
     @media (max-width: 600px) {
-    .button-div2 {
+    #col5 .button-div2 {
         justify-content: center;  /* Center align items on smaller screens */
     }
-    .button-container2 {
+    #col5 .button-container2 {
         display: flex;
         gap: 14em;  /* Adjust the gap value as per your preference */
     }
