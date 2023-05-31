@@ -1860,9 +1860,7 @@ button_js2 = """
     });
 </script>
 """
-
-with col5:
-    components.html(button_css2 + button_js2)
+components.html(button_css2 + button_js2)
 
 
     
