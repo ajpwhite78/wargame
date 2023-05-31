@@ -1808,7 +1808,7 @@ button_css2 = """
     }
     .button-container2 {
         display: flex;
-        gap: 4em;  /* Adjust the gap value as per your preference */
+        gap: 5em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         background-color: #25476A;
@@ -1823,7 +1823,7 @@ button_css2 = """
         font-size: 0.6em;  /* Convert 16px to em units */
         cursor: pointer;
         width: 4em;
-        height: 2em;
+        height: 1em;
     }
     .button2:hover {
         background-color: #b8d9e8;
