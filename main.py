@@ -1832,7 +1832,7 @@ button_css2 = """
         width: 100%;  /* Set width to 100% for full width on smaller screens */
         justify-content: center;  /* Center align items on smaller screens */
         gap: 12.43em;
-        margin-top: 0em;  /* Add top margin */
+        margin-top: -2em;  /* Add top margin */
     }
     .button2 {
         border-width: 0.1875em;  /* Convert 3px to em units */
