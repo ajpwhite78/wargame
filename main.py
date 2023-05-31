@@ -1820,9 +1820,9 @@ button_css2 = """
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 0.8em;  /* Convert 16px to em units */
+        font-size: 0.7em;  /* Convert 16px to em units */
         cursor: pointer;
-        width: 5em;
+        width: 4.8em;
         height: 2em;
     }
     .button2:hover {
