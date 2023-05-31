@@ -1830,14 +1830,14 @@ button_css2 = """
         border-color: #25476A;
         color: #25476A;
      }
-    @media screen and (max-width: 600px) {
-        .button-div2 {
-            justify-content: center;  /* Center align items on smaller screens */
-        }
-        .button-container2 {
-            display: flex;
-            gap: 8em;  /* Adjust the gap value as per your preference */
-        }
+    @media (max-width: 600px) {
+    .button-div2 {
+        justify-content: center;  /* Center align items on smaller screens */
+    }
+    .button-container2 {
+        display: flex;
+        gap: 8em;  /* Adjust the gap value as per your preference */
+    }
     }
 </style>
 <div class="button-div2">
