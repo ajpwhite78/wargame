@@ -1809,7 +1809,7 @@ button_css2 = """
     .button-container2 {
         display: flex;
         margin-top: 1.5em;
-        gap: 3em !important;  /* Adjust the gap value as per your preference */
+        gap: 3em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         background-color: #25476A;
