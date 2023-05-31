@@ -1964,8 +1964,8 @@ def run_simulation(select_user_seed_value, select_user_sector, select_user_field
 
 #    setup_text = st.markdown("<span class='animate-text' style='font-family:sans-serif; color:#7983FF; font-size: 40px;'>... Preparing Simulation ...</span>", unsafe_allow_html=True)
 
-    spinner = st.markdown(spinner_css, unsafe_allow_html=True)
-    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+    spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+    spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
     def get_financials(datafame, user_entity_name, user_period):
         entity_financials = datafame.loc[
             (datafame['entity_name'] == user_entity_name) & (datafame['period'] == user_period)]
