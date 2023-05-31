@@ -1808,7 +1808,8 @@ button_css2 = """
     }
     .button-container2 {
         display: flex;
-        gap: 3em;  /* Adjust the gap value as per your preference */
+        margin-top: 3em;
+        gap: 5em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         background-color: #25476A;
