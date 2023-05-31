@@ -1801,6 +1801,7 @@ button_css2 = """
         --base-font-size: 1vw;  /* Define your base font size here */
     }
     .button-div2 {
+        display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
