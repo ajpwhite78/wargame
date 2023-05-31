@@ -1808,7 +1808,7 @@ button_css2 = """
     }
     .button-container2 {
         display: flex;
-        gap: 2em;  /* Adjust the gap value as per your preference */
+        gap: 4em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         background-color: #25476A;
@@ -1837,7 +1837,7 @@ button_css2 = """
     }
     .button-container {
         flex-direction: column;
-        gap: 0.5em;  /* Adjust the gap value as per your preference */
+        gap: 5em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         border-width: 0.1875em;  /* Convert 3px to em units */
