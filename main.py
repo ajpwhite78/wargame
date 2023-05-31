@@ -1804,7 +1804,7 @@ button_css2 = """
         justify-content: flex-start;
         align-items: center;
         width: 200%;
-        gap: 2em;  /* Convert 20px to em units */
+        gap: 1em;  /* Convert 20px to em units */
         margin-top: 1.6em;  /* Add top margin */
     }
     .button2 {
