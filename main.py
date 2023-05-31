@@ -1830,10 +1830,7 @@ button_css2 = """
         border-color: #25476A;
         color: #25476A;
      }
-    @media (max-width: 600px) {
-    .grid {
-        grid-template-columns: none;
-    }
+    @media only screen and (max-width: 600px) {
     .button-div2 {
         justify-content: center;  /* Center align items on smaller screens */
     }
