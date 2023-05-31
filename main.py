@@ -1154,7 +1154,7 @@ marker_spinner_css = """
 }
 @media (max-width: 600px) {
     #spinner-container-marker {
-        transform: translate(58%, 0%);
+        transform: translate(57.5%, 0%);
     }
     .marker0 {
         width: 5em;
