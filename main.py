@@ -1801,7 +1801,6 @@ button_css2 = """
     }  
     .button-div2 {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         gap: -1em;  /* Convert 20px to em units */
         margin-top: 0em;  /* Add top margin */
