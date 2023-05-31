@@ -4,6 +4,989 @@ import pathlib
 import base64
 from apps.functions import get_default_fields, run_whatif, highlight_diff_by_row, FileDownloader, MultiFileDownloader
 
+marker_spinner_css = """
+<style>
+    #spinner-container-marker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        transform: translate(54%, 0%);
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    .marker0 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 0 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));        
+    }
+    
+    .marker1 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 1 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));
+    }
+    
+    .marker2 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 2 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 2 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(5em * sin(2 * 3.14159 * 2 / 50)));
+    }
+    
+    .marker3 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 3 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));
+    }
+    
+    .marker4 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 4 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 4 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(5em * sin(2 * 3.14159 * 4 / 50)));
+    }
+    
+    .marker5 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 5 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 5 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(5em * sin(2 * 3.14159 * 5 / 50)));
+    }
+    
+    .marker6 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 6 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 6 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(5em * sin(2 * 3.14159 * 6 / 50)));
+    }
+    
+    .marker7 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 7 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 7 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(5em * sin(2 * 3.14159 * 7 / 50)));
+    }
+    
+    .marker8 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 8 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 8 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(5em * sin(2 * 3.14159 * 8 / 50)));
+    }
+    
+    .marker9 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 9 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 9 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(5em * sin(2 * 3.14159 * 9 / 50)));
+    }
+    
+    .marker10 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 10 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 10 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(5em * sin(2 * 3.14159 * 10 / 50)));
+    }
+    
+    .marker11 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 11 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 11 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 11 / 50))), calc(5em * sin(2 * 3.14159 * 11 / 50)));
+    }
+    
+    .marker12 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 12 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 12 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 12 / 50))), calc(5em * sin(2 * 3.14159 * 12 / 50)));
+    }
+    
+    .marker13 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 13 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 13 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 13 / 50))), calc(5em * sin(2 * 3.14159 * 13 / 50)));
+    }
+    
+    .marker14 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 14 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 14 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 14 / 50))), calc(5em * sin(2 * 3.14159 * 14 / 50)));
+    }
+    
+    .marker15 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 15 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 15 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 15 / 50))), calc(5em * sin(2 * 3.14159 * 15 / 50)));
+    }
+    
+    .marker16 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 16 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 16 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 16 / 50))), calc(5em * sin(2 * 3.14159 * 16 / 50)));
+    }
+    
+    .marker17 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 17 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 17 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 17 / 50))), calc(5em * sin(2 * 3.14159 * 17 / 50)));
+    }
+    
+    .marker18 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 18 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 18 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 18 / 50))), calc(5em * sin(2 * 3.14159 * 18 / 50)));
+    }
+    
+    .marker19 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 19 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 19 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 19 / 50))), calc(5em * sin(2 * 3.14159 * 19 / 50)));
+    }
+    
+    .marker20 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 20 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 20 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 20 / 50))), calc(5em * sin(2 * 3.14159 * 20 / 50)));
+    }
+    
+    .marker21 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 21 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 21 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 21 / 50))), calc(5em * sin(2 * 3.14159 * 21 / 50)));
+    }
+    
+    .marker22 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 22 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 22 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 22 / 50))), calc(5em * sin(2 * 3.14159 * 22 / 50)));
+    }
+    
+    .marker23 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 23 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 23 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 23 / 50))), calc(5em * sin(2 * 3.14159 * 23 / 50)));
+    }
+    
+    .marker24 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 24 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 24 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 24 / 50))), calc(5em * sin(2 * 3.14159 * 24 / 50)));
+    }
+    
+    .marker25 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 25 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 25 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 25 / 50))), calc(5em * sin(2 * 3.14159 * 25 / 50)));
+    }
+    
+    .marker26 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 26 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 26 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 26 / 50))), calc(5em * sin(2 * 3.14159 * 26 / 50)));
+    }
+    
+    .marker27 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 27 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 27 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 27 / 50))), calc(5em * sin(2 * 3.14159 * 27 / 50)));
+    }
+    
+    .marker28 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 28 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 28 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 28 / 50))), calc(5em * sin(2 * 3.14159 * 28 / 50)));
+    }
+    
+    .marker29 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 29 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 29 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 29 / 50))), calc(5em * sin(2 * 3.14159 * 29 / 50)));
+    }
+    
+    .marker30 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 30 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 30 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 30 / 50))), calc(5em * sin(2 * 3.14159 * 30 / 50)));
+    }
+    
+    .marker31 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 31 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 31 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 31 / 50))), calc(5em * sin(2 * 3.14159 * 31 / 50)));
+    }
+    
+    .marker32 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 32 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 32 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 32 / 50))), calc(5em * sin(2 * 3.14159 * 32 / 50)));
+    }
+    
+    .marker33 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 33 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 33 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 33 / 50))), calc(5em * sin(2 * 3.14159 * 33 / 50)));
+    }
+    
+    .marker34 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 34 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 34 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 34 / 50))), calc(5em * sin(2 * 3.14159 * 34 / 50)));
+    }
+    
+    .marker35 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 35 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 35 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 35 / 50))), calc(5em * sin(2 * 3.14159 * 35 / 50)));
+    }
+    
+    .marker36 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 36 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 36 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 36 / 50))), calc(5em * sin(2 * 3.14159 * 36 / 50)));
+    }
+    
+    .marker37 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 37 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 37 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 37 / 50))), calc(5em * sin(2 * 3.14159 * 37 / 50)));
+    }
+    
+    .marker38 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 38 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 38 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 38 / 50))), calc(5em * sin(2 * 3.14159 * 38 / 50)));
+    }
+    
+    .marker39 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 39 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 39 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 39 / 50))), calc(5em * sin(2 * 3.14159 * 39 / 50)));
+    }
+    
+    .marker40 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 40 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 40 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 40 / 50))), calc(5em * sin(2 * 3.14159 * 40 / 50)));
+    }
+    
+    .marker41 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 41 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 41 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 41 / 50))), calc(5em * sin(2 * 3.14159 * 41 / 50)));
+    }
+    
+    .marker42 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 42 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 42 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 42 / 50))), calc(5em * sin(2 * 3.14159 * 42 / 50)));
+    }
+    
+    .marker43 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 43 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 43 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 43 / 50))), calc(5em * sin(2 * 3.14159 * 43 / 50)));
+    }
+    
+    .marker44 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 44 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 44 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 44 / 50))), calc(5em * sin(2 * 3.14159 * 44 / 50)));
+    }
+    
+    .marker45 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 45 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 45 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 45 / 50))), calc(5em * sin(2 * 3.14159 * 45 / 50)));
+    }
+    
+    .marker46 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 46 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 46 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 46 / 50))), calc(5em * sin(2 * 3.14159 * 46 / 50)));
+    }
+    
+    .marker47 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 47 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 47 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 47 / 50))), calc(5em * sin(2 * 3.14159 * 47 / 50)));
+    }
+    
+    .marker48 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 48 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 48 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 48 / 50))), calc(5em * sin(2 * 3.14159 * 48 / 50)));
+    }
+    
+    .marker49 {
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 0.375em;
+        background: rgba(0, 0, 0, 0);
+        animation: animateBlink 3s linear infinite;
+        animation-delay: calc(3s * 49 / 50);
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 49 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 49 / 50))), calc(5em * sin(2 * 3.14159 * 49 / 50)));
+    }
+
+    @keyframes animateBlink {
+    0% {
+        background: #6f72de;
+    }
+    25% {
+        background: rgba(0, 0, 0, 0);
+    }   
+}
+@media (max-width: 600px) {
+    #spinner-container-marker {
+        transform: translate(57.4%, 0%);
+    }
+    .marker0 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 0 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(10em * sin(2 * 3.14159 * 0 / 50)));
+    }
+    .marker1 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 1 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(10em * sin(2 * 3.14159 * 1 / 50)));
+    }
+    .marker2 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 2 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(10em * sin(2 * 3.14159 * 2 / 50)));
+    }
+    .marker3 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 3 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(10em * sin(2 * 3.14159 * 3 / 50)));
+    }
+    .marker4 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 4 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(10em * sin(2 * 3.14159 * 4 / 50)));
+    }
+    .marker5 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 5 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(10em * sin(2 * 3.14159 * 5 / 50)));
+    }
+    .marker6 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 6 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(10em * sin(2 * 3.14159 * 6 / 50)));
+    }
+    .marker7 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 7 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(10em * sin(2 * 3.14159 * 7 / 50)));
+    }
+    .marker8 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 8 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(10em * sin(2 * 3.14159 * 8 / 50)));
+    }
+    .marker9 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 9 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(10em * sin(2 * 3.14159 * 9 / 50)));
+    }
+    .marker10 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 10 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(10em * sin(2 * 3.14159 * 10 / 50)));
+    }
+    .marker11 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 11 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 11 / 50))), calc(10em * sin(2 * 3.14159 * 11 / 50)));
+    }
+    .marker12 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 12 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 12 / 50))), calc(10em * sin(2 * 3.14159 * 12 / 50)));
+    }
+    .marker13 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 13 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 13 / 50))), calc(10em * sin(2 * 3.14159 * 13 / 50)));
+    }
+    .marker14 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 14 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 14 / 50))), calc(10em * sin(2 * 3.14159 * 14 / 50)));
+    }
+    .marker15 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 15 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 15 / 50))), calc(10em * sin(2 * 3.14159 * 15 / 50)));
+    }
+    .marker16 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 16 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 16 / 50))), calc(10em * sin(2 * 3.14159 * 16 / 50)));
+    }
+    .marker17 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 17 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 17 / 50))), calc(10em * sin(2 * 3.14159 * 17 / 50)));
+    }
+    .marker18 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 18 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 18 / 50))), calc(10em * sin(2 * 3.14159 * 18 / 50)));
+    }
+    .marker19 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 19 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 19 / 50))), calc(10em * sin(2 * 3.14159 * 19 / 50)));
+    }
+    .marker20 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 20 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 20 / 50))), calc(10em * sin(2 * 3.14159 * 20 / 50)));
+    }    
+    .marker21 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 21 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 21 / 50))), calc(10em * sin(2 * 3.14159 * 21 / 50)));
+    }
+    .marker22 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 22 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 22 / 50))), calc(10em * sin(2 * 3.14159 * 22 / 50)));
+    }
+    .marker23 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 23 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 23 / 50))), calc(10em * sin(2 * 3.14159 * 23 / 50)));
+    }
+    .marker24 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 24 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 24 / 50))), calc(10em * sin(2 * 3.14159 * 24 / 50)));
+    }
+    .marker25 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 25 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 25 / 50))), calc(10em * sin(2 * 3.14159 * 25 / 50)));
+    }
+    .marker26 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 26 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 26 / 50))), calc(10em * sin(2 * 3.14159 * 26 / 50)));
+    }
+    .marker27 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 27 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 27 / 50))), calc(10em * sin(2 * 3.14159 * 27 / 50)));
+    }
+    .marker28 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 28 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 28 / 50))), calc(10em * sin(2 * 3.14159 * 28 / 50)));
+    }
+    .marker29 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 29 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 29 / 50))), calc(10em * sin(2 * 3.14159 * 29 / 50)));
+    }
+    .marker30 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 30 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 30 / 50))), calc(10em * sin(2 * 3.14159 * 30 / 50)));
+    }
+    .marker31 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 31 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 31 / 50))), calc(10em * sin(2 * 3.14159 * 31 / 50)));
+    }
+    .marker32 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 32 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 32 / 50))), calc(10em * sin(2 * 3.14159 * 32 / 50)));
+    }
+    .marker33 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 33 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 33 / 50))), calc(10em * sin(2 * 3.14159 * 33 / 50)));
+    }
+    .marker34 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 34 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 34 / 50))), calc(10em * sin(2 * 3.14159 * 34 / 50)));
+    }
+    .marker35 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 35 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 35 / 50))), calc(10em * sin(2 * 3.14159 * 35 / 50)));
+    }
+    .marker36 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 36 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 36 / 50))), calc(10em * sin(2 * 3.14159 * 36 / 50)));
+    }
+    .marker37 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 37 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 37 / 50))), calc(10em * sin(2 * 3.14159 * 37 / 50)));
+    }
+    .marker38 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 38 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 38 / 50))), calc(10em * sin(2 * 3.14159 * 38 / 50)));
+    }
+    .marker39 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 39 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 39 / 50))), calc(10em * sin(2 * 3.14159 * 39 / 50)));
+    }
+    .marker40 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 40 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 40 / 50))), calc(10em * sin(2 * 3.14159 * 40 / 50)));
+    }
+    .marker41 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 41 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 41 / 50))), calc(10em * sin(2 * 3.14159 * 41 / 50)));
+    }
+    .marker42 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 42 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 42 / 50))), calc(10em * sin(2 * 3.14159 * 42 / 50)));
+    }
+    .marker43 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 43 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 43 / 50))), calc(10em * sin(2 * 3.14159 * 43 / 50)));
+    }
+    .marker44 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 44 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 44 / 50))), calc(10em * sin(2 * 3.14159 * 44 / 50)));
+    }
+    .marker45 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 45 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 45 / 50))), calc(10em * sin(2 * 3.14159 * 45 / 50)));
+    }
+    .marker46 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 46 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 46 / 50))), calc(10em * sin(2 * 3.14159 * 46 / 50)));
+    }
+    .marker47 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 47 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 47 / 50))), calc(10em * sin(2 * 3.14159 * 47 / 50)));
+    }
+    .marker48 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 48 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 48 / 50))), calc(10em * sin(2 * 3.14159 * 48 / 50)));
+    }
+    .marker49 {
+        width: 5em;
+        height: 1em;
+        border-radius: 0.5em;
+        transform: rotate(calc(360deg * 49 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 49 / 50))), calc(10em * sin(2 * 3.14159 * 49 / 50)));
+    }
+</style>
+
+<div id="spinner-container-marker">
+    <div class="marker0"></div>
+    <div class="marker1"></div>
+    <div class="marker2"></div>
+    <div class="marker3"></div>
+    <div class="marker4"></div>
+    <div class="marker5"></div>
+    <div class="marker6"></div>
+    <div class="marker7"></div>
+    <div class="marker8"></div>
+    <div class="marker9"></div>
+    <div class="marker10"></div>
+    <div class="marker11"></div>
+    <div class="marker12"></div>
+    <div class="marker13"></div>
+    <div class="marker14"></div>
+    <div class="marker15"></div>
+    <div class="marker16"></div>
+    <div class="marker17"></div>
+    <div class="marker18"></div>
+    <div class="marker19"></div>
+    <div class="marker20"></div>
+    <div class="marker21"></div>
+    <div class="marker22"></div>
+    <div class="marker23"></div>
+    <div class="marker24"></div>
+    <div class="marker25"></div>
+    <div class="marker26"></div>
+    <div class="marker27"></div>
+    <div class="marker28"></div>
+    <div class="marker29"></div>
+    <div class="marker30"></div>
+    <div class="marker31"></div>
+    <div class="marker32"></div>
+    <div class="marker33"></div>
+    <div class="marker34"></div>
+    <div class="marker35"></div>
+    <div class="marker36"></div>
+    <div class="marker37"></div>
+    <div class="marker38"></div>
+    <div class="marker39"></div>
+    <div class="marker40"></div>
+    <div class="marker41"></div>
+    <div class="marker42"></div>
+    <div class="marker43"></div>
+    <div class="marker44"></div>
+    <div class="marker45"></div>
+    <div class="marker46"></div>
+    <div class="marker47"></div>
+    <div class="marker48"></div>
+    <div class="marker49"></div>
+</div>
+"""
+
 spinner_css = """
 <style>
     #spinner-container {
@@ -52,11 +1035,11 @@ spinner_css = """
 </div>
 """
 
-image_center = """
+spinner_image_css = """
 <style>
     .image-container {{
         display: inline-block;
-        width: 36%;
+        width: 25%;
         text-align: center;
         position: fixed;
         top: 50%;
@@ -90,8 +1073,8 @@ def app():
     line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
     line2 = '<hr style="height: 2.5px; border:0px; background-color: #25476A; margin-top: -30px;">'
     line3 = '<hr style="height: 4px; border:0px; background-color: #03A9F4; margin-top: -5px; margin-bottom: -20px;">'
-    spinner = st.markdown(spinner_css, unsafe_allow_html=True)
-    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+    spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+    spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
     st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out = get_default_fields(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period)
     st.session_state.df_income_statement_out, st.session_state.df_cash_flow_statement_out, st.session_state.df_balance_sheet_statement_out = run_whatif(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period, select_user_whatif_sales_revenue_growth=st.session_state.default_whatif_sales_revenue_growth_user_out,
 select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, select_user_whatif_sales_general_and_admin_expenses=st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, select_user_whatif_research_and_development_expenses=st.session_state.default_whatif_research_and_development_expenses_user_out, select_user_whatif_depreciation_and_amortization_expenses_sales=st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, select_user_whatif_depreciation_and_amortization_split=st.session_state.default_whatif_depreciation_and_amortization_split_user_out, select_user_whatif_interest_rate=st.session_state.default_whatif_interest_rate_user_out, select_user_whatif_tax_rate=st.session_state.default_whatif_tax_rate_user_out, select_user_whatif_dividend_payout_ratio=st.session_state.default_whatif_dividend_payout_ratio_user_out,select_user_whatif_accounts_receivable_days=st.session_state.default_whatif_accounts_receivable_days_user_out, select_user_whatif_inventory_days=st.session_state.default_whatif_inventory_days_user_out, select_user_whatif_capital_expenditure_sales=st.session_state.default_whatif_capital_expenditure_sales_user_out, select_user_whatif_capital_expenditure=st.session_state.default_whatif_capital_expenditure_user_out, select_user_whatif_capital_expenditure_indicator=st.session_state.default_whatif_capital_expenditure_indicator_user_out, select_user_whatif_tangible_intangible_split=st.session_state.default_whatif_tangible_intangible_split_user_out, select_user_whatif_accounts_payable_days=st.session_state.default_whatif_accounts_payable_days_user_out, select_user_whatif_sale_of_equity=st.session_state.default_whatif_sale_of_equity_user_out, select_user_whatif_repurchase_of_equity=st.session_state.default_whatif_repurchase_of_equity_user_out, select_user_whatif_proceeds_from_issuance_of_debt=st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, select_user_whatif_repayments_of_long_term_debt=st.session_state.default_whatif_repayments_of_long_term_debt_user_out, select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
@@ -982,21 +1965,25 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                            key="manual_download2")
         with col5:
              if statement_out_download_type == "CSV":
-                spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+                spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+                spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                 st.text("")
                 st.text("")
                 statements_out = [(st.session_state.df_income_statement_out.reset_index(drop=True).to_csv().encode(), "manual_analysis_income_statement", "csv"), (st.session_state.df_cash_flow_statement_out.reset_index(drop=True).to_csv().encode(), "manual_analysis_cashflow_statement", "csv"), (st.session_state.df_balance_sheet_statement_out.reset_index(drop=True).to_csv().encode(), "manual_analysis_balance_sheet", "csv")]
                 downloader = MultiFileDownloader()
                 downloader.download_manual_figures(statements_out, st.session_state.user_entity_name)
                 spinner.empty()
+                spinner_image.empty()
              if statement_out_download_type == "PNG":
-                spinner = st.markdown(spinner_css, unsafe_allow_html=True)
+                spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+                spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                 st.text("")
                 st.text("")
                 statements_out = ([df_income_statement_out_png, "manual_analysis_income_statement.to_html()", "png", "Income Statement", 36], [df_cash_flow_statement_out_png.to_html(), "manual_analysis_cash_flow_statement", "png", "Cash Flow Statement", 36], [df_balance_sheet_out_png.to_html(), "manual_analysis_balance_sheet", "png", "Balance Sheet", 36])
                 downloader = MultiFileDownloader()
                 downloader.export_tables(statements_out, st.session_state.user_entity_name)
                 spinner.empty()
+                spinner_image.empty()
         st.markdown(line, unsafe_allow_html=True)
         st.markdown(line2, unsafe_allow_html=True)
         instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Company financial statements for the reporting period and the expected scenario are shown below. The financial statements may be downloaded for your records.</span></p>'
