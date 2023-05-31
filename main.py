@@ -1841,11 +1841,6 @@ button_css2 = """
             margin-top: 1.5em;
             gap: 5em;  /* Adjust the gap value as per your preference */
         }
-        .button2 {
-            font-size: 3em;
-            width: 5em;
-            height: 2em;
-        }
     }
 </style>
 <div class="button-div2">
