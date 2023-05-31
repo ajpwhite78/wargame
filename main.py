@@ -1835,6 +1835,10 @@ button_css2 = """
         justify-content: center;  /* Center align items on smaller screens */
         margin-top: 0em;  /* Add top margin */
     }
+    .button-container2 {
+        display: flex;
+        gap: 10em;  /* Adjust the gap value as per your preference */
+    }
 
     .button2 {
         border-width: 0.1875em;  /* Convert 3px to em units */
