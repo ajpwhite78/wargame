@@ -1804,7 +1804,6 @@ button_css2 = """
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 0em;  /* Add top margin */
     }
     .button-container2 {
         display: flex;
