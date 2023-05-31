@@ -1854,9 +1854,8 @@ button_js2 = """
 """
 
 with col5:
-   # components.html(button_css2 + button_js2)
-    st.markdown(button_css2 + button_js2, unsafe_allow_html=True)
-
+    components.html(button_css2 + button_js2)
+   
     
     
 analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
