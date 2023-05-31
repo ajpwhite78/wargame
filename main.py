@@ -1194,91 +1194,91 @@ marker_spinner_css = """
     }
     .marker6 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 6 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(10em * sin(2 * 3.14159 * 6 / 50)));
     }
     .marker7 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 7 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(10em * sin(2 * 3.14159 * 7 / 50)));
     }
     .marker8 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 8 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(10em * sin(2 * 3.14159 * 8 / 50)));
     }
     .marker9 {
         width: 3em;
-        height: 0.5em;
+         height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 9 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(10em * sin(2 * 3.14159 * 9 / 50)));
     }
     .marker10 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 10 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(10em * sin(2 * 3.14159 * 10 / 50)));
     }
     .marker11 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 11 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 11 / 50))), calc(10em * sin(2 * 3.14159 * 11 / 50)));
     }
     .marker12 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 12 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 12 / 50))), calc(10em * sin(2 * 3.14159 * 12 / 50)));
     }
     .marker13 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 13 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 13 / 50))), calc(10em * sin(2 * 3.14159 * 13 / 50)));
     }
     .marker14 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 14 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 14 / 50))), calc(10em * sin(2 * 3.14159 * 14 / 50)));
     }
     .marker15 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 15 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 15 / 50))), calc(10em * sin(2 * 3.14159 * 15 / 50)));
     }
     .marker16 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 16 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 16 / 50))), calc(10em * sin(2 * 3.14159 * 16 / 50)));
     }
     .marker17 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 17 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 17 / 50))), calc(10em * sin(2 * 3.14159 * 17 / 50)));
     }
     .marker18 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 18 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 18 / 50))), calc(10em * sin(2 * 3.14159 * 18 / 50)));
     }
     .marker19 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 19 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 19 / 50))), calc(10em * sin(2 * 3.14159 * 19 / 50)));
     }
     .marker20 {
         width: 3em;
-        height: 0.5em;
+        height: 1em;
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 20 / 50)) translate(calc(10em * (1 - cos(2 * 3.14159 * 20 / 50))), calc(10em * sin(2 * 3.14159 * 20 / 50)));
     }    
