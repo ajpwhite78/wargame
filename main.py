@@ -14,7 +14,7 @@ dirpath = os.path.dirname(__file__)
 
 if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.session_state or "df_field_name_mapping" not in st.session_state:
     st.session_state.df_input_file = 'TechHardware_WhatIfFields_Ccy_v2_short_test.csv'
-    st.session_state.df_input = pd.read_csv(st.session_state.df_input_file)button-div2
+    st.session_state.df_input = pd.read_csv(st.session_state.df_input_file)
     
     st.session_state.df_field_name_mapping_file = 'field_name_mapping_update.csv'
     st.session_state.df_field_name_mapping = pd.read_csv(st.session_state.df_field_name_mapping_file)
