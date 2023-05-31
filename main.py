@@ -1832,7 +1832,7 @@ button_css2 = """
         font-size: 0.95em !important;  /* Convert 16px to em units */
         cursor: pointer;
         width: 5em !important;
-        height: 2em !important;
+        height: 2.2em !important;
     }
     .button2:hover {
         background-color: #b8d9e8;
