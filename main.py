@@ -1808,7 +1808,7 @@ button_css2 = """
     }
     .button-container2 {
         display: flex;
-        gap: 1em;  /* Adjust the gap value as per your preference */
+        gap: 2em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         background-color: #25476A;
@@ -1832,10 +1832,12 @@ button_css2 = """
      }
     @media screen and (max-width: 600px) {
     .button-div2 {
-        width: 100%;  /* Set width to 100% for full width on smaller screens */
         justify-content: center;  /* Center align items on smaller screens */
-        gap: 12.43em;
         margin-top: 0em;  /* Add top margin */
+    }
+    .button-container {
+        flex-direction: column;
+        gap: 0.5em;  /* Adjust the gap value as per your preference */
     }
     .button2 {
         border-width: 0.1875em;  /* Convert 3px to em units */
