@@ -492,6 +492,7 @@ header3 = """
             width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
             gap: 2em;  /* Convert 20px to em units */
+            margin-top: 0em;  /* Add top margin */
         }}
         .button {{
             border-width: 0.1875em;  /* Convert 3px to em units */
