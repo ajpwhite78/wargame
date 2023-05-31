@@ -1834,7 +1834,7 @@ button_css2 = """
     }
 </style>
 <div class="button-div2">
-    <div class="button-container2" <span style="@media (max-width: 600px) {gap: 20em;}"</span>>
+    <div class="button-container2">
         <button class="button2" id="run-button">Run</button>
         <button class="button2" id="cancel-button">Cancel</button>
     </div>
