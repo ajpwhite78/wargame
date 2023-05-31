@@ -1831,20 +1831,20 @@ button_css2 = """
         color: #25476A;
      }
     @media screen and (max-width: 600px) {
-    .button-div2 {
-        justify-content: center;  /* Center align items on smaller screens */
-        margin-top: 0em;  /* Add top margin */
-    }
-    .button-container2 {
-        gap: 10em;  /* Adjust the gap value as per your preference */
-    }
-    .button2 {
-        border-width: 0.1875em;  /* Convert 3px to em units */
-        border-radius: 0.1875em;  /* Convert 3px to em units */
-        font-size: 1em;  /* Convert 16px to em units */
-        width: 5.2em;
-        height: 2.2em;
-    }
+        .button-div2 {
+            justify-content: center;  /* Center align items on smaller screens */
+            margin-top: 0em;  /* Add top margin */
+        }
+        .button-container2 {
+            gap: 10em;  /* Adjust the gap value as per your preference */
+        }
+        .button2 {
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            font-size: 1em;  /* Convert 16px to em units */
+            width: 5.2em;
+            height: 2.2em;
+        }
     } 
 </style>
 <div class="button-div2">
