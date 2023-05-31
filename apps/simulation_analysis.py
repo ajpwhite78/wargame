@@ -157,8 +157,8 @@ def change_callback6():
 def app():
     line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
     line2 = '<hr style="height: 3x; border:0px; background-color: #25476A; margin-top: -30px;">'
-    spinner = st.markdown(spinner_css, unsafe_allow_html=True)
-    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+    spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+    spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
     st.session_state.simulation_analysis_confirm = True
     st.session_state.manual_analysis_confirm = False
     st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out = get_default_fields(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period)
@@ -1088,8 +1088,8 @@ def app():
                                                                                              key="sim_download1")
                 with col5:
                     if statement_out_download == "Yes":
-                        spinner = st.markdown(spinner_css, unsafe_allow_html=True)
-                        spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+                        spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+                        spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                         st.text("")
                         st.text("")
                         statements_out = [(st.session_state.df_ratings_sim_out.reset_index(
@@ -1617,8 +1617,8 @@ def app():
                                                                                                  key="sim_download2")
                     with col2:
                         if statement_out_download == "Yes":
-                            spinner = st.markdown(spinner_css, unsafe_allow_html=True)
-                            spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+                            spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+                            spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                             st.text("")
                             st.text("")
                             ratings_plots_out = [(rating_stats_table.set_properties(**{'width': '130px'}), "simulation_analysis_rating_statistics", "png", 90, "table", "Credit Rating", st.session_state.user_entity_name), (ratings_line_fig.update_layout({"paper_bgcolor": "rgba(255,255, 255, 1)"}).to_image(format="png"), "simulation_analysis_rating_values", "png", 150, "figure", "", st.session_state.user_entity_name), (ratings_hist_fig.update_layout({"paper_bgcolor": "rgba(255,255, 255, 1)"}).to_image(format="png"), "simulation_analysis_rating_histogram", "png", 150, "figure", "", st.session_state.user_entity_name)]
@@ -1979,8 +1979,8 @@ def app():
                                                                                                 key="sim_download3")
                             with col2:
                                 if statement_out_download == "Yes":
-                                    spinner = st.markdown(spinner_css, unsafe_allow_html=True)
-                                    spinner_image = st.markdown(image_center.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+                                    spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+                                    spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
                                     st.text("")
                                     st.text("")
                                     variable_plots_out = [(stats_table.set_properties(**{'width': '120px'}),
