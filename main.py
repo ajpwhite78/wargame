@@ -1841,7 +1841,7 @@ button_css2 = """
         width: 5em;
         height: 2em;
     }
-    }
+    } 
 </style>
 <div class="button-div2">
     <button class="button2" id="run-button">Run</button>
