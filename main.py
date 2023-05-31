@@ -1831,7 +1831,7 @@ button_css2 = """
         border-color: #25476A;
         color: #25476A;
      }
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
         .button-div2 {
             justify-content: center;  /* Center align items on smaller screens */
             margin-top: 0em;  /* Add top margin */
