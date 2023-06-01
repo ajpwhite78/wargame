@@ -1242,8 +1242,29 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.markdown(
                 '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
                 unsafe_allow_html=True)
-
-        
+                        st.markdown(
+                """
+                <div class="tooltip">
+                    <i class="fas fa-info-circle fa-2x""></i>
+                    <span class="tooltiptext">
+                        <ul>
+                        Understanding financial metrics and ratios is essential for assessing a company&apos;s financial health and making informed investment decisions.                               
+                            <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
+                            <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
+                            <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities and marketing costs.</li>
+                            <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company&apos;s commitment to innovation and growth.</li>
+                            <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
+                            <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
+                            <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
+                            <li>Tax Rate: The percentage of a company&apos;s income that is paid in taxes. It indicates how much income a company able to retain.</li>
+                            <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
+                        These financial metrics and ratios can help provide a valuable insight into a company&apos;s financial position and performance.
+                        </ul>
+                    </span>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )       
 
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
         instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Enter values for the income statement financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
