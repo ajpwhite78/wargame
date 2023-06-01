@@ -50,12 +50,13 @@ add_bg_from_local("images/background.jpg")
 st.markdown(
     """
     <style>
-    div.stButton > div {
+    .button-div {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
-    div.stButton > button:first-child {
+     div.stButton > button:first-child {
         background-color: #25476A;
         color: #FAFAFA;
         border-color: #FAFAFA;
