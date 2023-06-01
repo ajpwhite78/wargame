@@ -1195,7 +1195,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             background-color: rgba(3, 169, 244, 0.2);
             color:#25476A;
             text-align: justify;
-            font-size: 1em;
+            font-size: 5em;
             border-radius: 0.375em;
             padding-left: 0.75em;
             padding-right: 0.75em;
