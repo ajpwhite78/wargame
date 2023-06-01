@@ -1857,8 +1857,25 @@ with col5:
     #components.html(button_css2 + button_js2)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
     st.markdown(
-        """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 3px; width:5em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
-        unsafe_allow_html=True)
+        """
+        <style>
+        div.stButton > button:first-child {
+            background-color: #25476A;
+            color: #FAFAFA;
+            border-color: #FAFAFA;
+            border-width: 3px;
+            width: 5em;
+            height: 2em;
+        }
+        div.stButton > button:hover {
+            background-color: rgba(111, 114, 222, 0.6);
+            color: #25476A;
+            border-color: #25476A;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     st.text("")
     submit1_button = st.button("Run", key="1", on_click=reset2)
 with col6:
