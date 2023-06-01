@@ -1168,7 +1168,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
             </style>
         '''
-        st.markdown(text_media_query_manual1 + text, unsafe_allow_html=True)
+        st.markdown(text_media_query_manual1 + info_text, unsafe_allow_html=True)
         st.text("")
         st.text("")
         col1, col2 = st.columns([5.8, 0.2])
