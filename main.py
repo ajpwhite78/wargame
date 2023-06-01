@@ -1864,6 +1864,8 @@ with col5:
 with col6:
     st.text("")
     st.text("")
+    st.text("")
+    st.text("")
     cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)     
    
 if submit1_button:
