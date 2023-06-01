@@ -1880,7 +1880,7 @@ cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
         
         
 if submit1_button:
-    if st.session_state.user_sector == "" or if st.session_state.user_country == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
+    if st.session_state.user_sector == "" or st.session_state.user_country == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
         col1, col2, col3 = st.columns([1, 4, 1])
         st.text("")
         st.text("")
