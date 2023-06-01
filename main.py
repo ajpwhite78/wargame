@@ -58,6 +58,7 @@ st.markdown(
         width: 4em;
         height: 1.8em;
         margin-top: 1em;
+        margin: auto;
     }
     div.stButton > button:hover {
         background-color: rgba(111, 114, 222, 0.6);
