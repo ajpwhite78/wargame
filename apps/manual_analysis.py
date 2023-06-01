@@ -1135,8 +1135,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         """
         st.markdown(styles, unsafe_allow_html=True)
 
-        left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 44px;'>Manual Analysis</span>"
-        right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 44px;'>{}&nbsp;&nbsp;&nbsp;{}</span>".format(st.session_state.user_entity_name, st.session_state.user_reporting_period)
+        left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.75em;'>Manual Analysis</span>"
+        right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.75em;'>{}&nbsp;&nbsp;&nbsp;{}</span>".format(st.session_state.user_entity_name, st.session_state.user_reporting_period)
 
         html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
         st.markdown(html, unsafe_allow_html=True)
