@@ -1181,6 +1181,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                     position: relative;
                                     margin-bottom: 0px;
                                     display: inline-block;
+                                    margin-top: 0em;
                             #        border-bottom: 1px dotted black;
                                 }
 
