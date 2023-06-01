@@ -57,7 +57,7 @@ st.markdown(
         border-width: 3px;
         width: 4em;
         height: 1.8em;
-        margin-top: 1em;
+        margin-top: 2em;
     }
     div.stButton > button:hover {
         background-color: rgba(111, 114, 222, 0.6);
@@ -1783,29 +1783,29 @@ with col1:
     st.selectbox(label="", label_visibility="collapsed", options=sector_options,
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
 
-    with col2:
-        text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Country</span></p>'
-        st.markdown(text_media_query4 + text, unsafe_allow_html=True)
+with col2:
+    text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Country</span></p>'
+    st.markdown(text_media_query4 + text, unsafe_allow_html=True)
+    if st.session_state.user_sector == "All Sectors":
+        country_options = ["", "All Countries"] + sorted(st.session_state.df_input['country'].apply(str).unique())
+    else:
+        country_options = ["", "All Countries"] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'country'].apply(str).unique())
+    st.selectbox(label="", label_visibility="collapsed", options=country_options,
+                 format_func=lambda x: "Select Country" if x == "" else x,  key="user_country", on_change=change_callback1)    
+with col3:
+    text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
+    st.markdown(text_media_query4 + text, unsafe_allow_html=True)
+    if st.session_state.user_country == "All Countries":
         if st.session_state.user_sector == "All Sectors":
-            country_options = ["", "All Countries"] + sorted(st.session_state.df_input['country'].apply(str).unique())
+            entity_name_options = [""] + sorted(st.session_state.df_input['entity_name'].apply(str).unique())
         else:
-            country_options = ["", "All Countries"] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'country'].apply(str).unique())
-        st.selectbox(label="", label_visibility="collapsed", options=country_options,
-                     format_func=lambda x: "Select Country" if x == "" else x,  key="user_country", on_change=change_callback1)    
-    with col3:
-        text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Entity Name</span></p>'
-        st.markdown(text_media_query4 + text, unsafe_allow_html=True)
-        if st.session_state.user_country == "All Countries":
-            if st.session_state.user_sector == "All Sectors":
-                entity_name_options = [""] + sorted(st.session_state.df_input['entity_name'].apply(str).unique())
-            else:
-                entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique()) 
-        elif st.session_state.user_sector == "All Sectors":
-            entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['country'] == st.session_state.user_country), 'entity_name'].apply(str).unique())
-        else:
-            entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['country'] == st.session_state.user_country), 'entity_name'].apply(str).unique())
-        st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
-                     format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
+            entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector), 'entity_name'].apply(str).unique()) 
+    elif st.session_state.user_sector == "All Sectors":
+        entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['country'] == st.session_state.user_country), 'entity_name'].apply(str).unique())
+    else:
+        entity_name_options = [""] + sorted(st.session_state.df_input.loc[(st.session_state.df_input['sector'] == st.session_state.user_sector) & (st.session_state.df_input['country'] == st.session_state.user_country), 'entity_name'].apply(str).unique())
+    st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
+                 format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col4:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
     st.markdown(text_media_query4 + text, unsafe_allow_html=True)
