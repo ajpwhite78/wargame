@@ -1173,7 +1173,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 </style>
             '''
             st.markdown(text_media_query_manual2 + subtext1, unsafe_allow_html=True)
-         with col2:
+        with col2:
             st.markdown("""
                                 <style>
                                 /* Tooltip container */
