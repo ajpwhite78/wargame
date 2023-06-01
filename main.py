@@ -51,6 +51,9 @@ st.markdown(
     """
     <style>
     div.stButton > button:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #25476A;
         color: #FAFAFA;
         border-color: #FAFAFA;
