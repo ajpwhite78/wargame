@@ -236,7 +236,7 @@ header2 = """
         .left1-column img {{
             max-width: 120%;
             display: inline-block;
-            vertical-align: middle
+            vertical-align: middle;
 
         }}
     .clear {{
@@ -304,7 +304,7 @@ header3A = """
         .left1-column img {{
             max-width: 200%;
             display: inline-block;
-            vertical-align: middle
+            vertical-align: middle;
         }}
         .button-div {{
             display: flex;
