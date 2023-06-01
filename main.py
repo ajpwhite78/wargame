@@ -1866,6 +1866,7 @@ with col5:
             border-width: 3px;
             width: 4em;
             height: 1.8em;
+            margin-top: 20em;
         }
         div.stButton > button:hover {
             background-color: rgba(111, 114, 222, 0.6);
