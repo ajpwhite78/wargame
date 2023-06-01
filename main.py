@@ -66,7 +66,7 @@ st.markdown(
     }
     @media (max-width: 600px) {
     div.stButton > button {
-        width: 92em !important;
+        width: 91em !important;
         height: 10em !important;
         margin-top: -1em;
         }
