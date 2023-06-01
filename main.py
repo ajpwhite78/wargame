@@ -1874,7 +1874,7 @@ with col5:
         }
         @media (max-width: 600px) {
         div.stButton > button {
-            width: 10em;
+            width: 10em !important;
             height: 1.5em;
             }
         }
