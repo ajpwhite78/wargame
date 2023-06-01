@@ -1131,6 +1131,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     padding-bottom: 0px;
 #                    padding: 10px;
                 }
+                @media (max-width: 600px) {
+                    .left, .right {
+                    font-size: 1.5em;
+                    height: 50px;
+                }
+            }
             </style>
         """
         st.markdown(styles, unsafe_allow_html=True)
