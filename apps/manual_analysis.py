@@ -1067,7 +1067,7 @@ def img_to_bytes(img_path):
 def get_financials(datafame, user_entity_name, user_period):
     entity_financials = datafame.loc[
         (datafame['entity_name'] == user_entity_name) & (datafame['period'] == user_period)]
-    return entity_financial
+    return entity_financials
 
 def app():
     line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
