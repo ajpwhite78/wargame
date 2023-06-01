@@ -1242,7 +1242,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.markdown(
                 '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
                 unsafe_allow_html=True)
-                        st.markdown(
+            st.markdown(
                 """
                 <div class="tooltip">
                     <i class="fas fa-info-circle fa-2x""></i>
