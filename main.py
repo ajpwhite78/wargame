@@ -47,6 +47,34 @@ def add_bg_from_local(image_file):
 
 add_bg_from_local("images/background.jpg")
 
+st.markdown(
+    """
+    <style>
+    div.stButton > button:first-child {
+        background-color: #25476A;
+        color: #FAFAFA;
+        border-color: #FAFAFA;
+        border-width: 3px;
+        width: 4em;
+        height: 1.8em;
+        margin-top: 20em;
+    }
+    div.stButton > button:hover {
+        background-color: rgba(111, 114, 222, 0.6);
+        color: #25476A;
+        border-color: #25476A;
+    }
+    @media (max-width: 600px) {
+    div.stButton > button {
+        width: 90em !important;
+        height: 10em !important;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
@@ -1856,38 +1884,8 @@ button_js2 = """
 with col5:
     #components.html(button_css2 + button_js2)
     analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
-    st.markdown(
-        """
-        <style>
-        div.stButton > button:first-child {
-            background-color: #25476A;
-            color: #FAFAFA;
-            border-color: #FAFAFA;
-            border-width: 3px;
-            width: 4em;
-            height: 1.8em;
-            margin-top: 20em;
-        }
-        div.stButton > button:hover {
-            background-color: rgba(111, 114, 222, 0.6);
-            color: #25476A;
-            border-color: #25476A;
-        }
-        @media (max-width: 600px) {
-        div.stButton > button {
-            width: 90em !important;
-            height: 10em !important;
-            }
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-    st.text("")
     submit1_button = st.button("Run", key="1", on_click=reset2)
 with col6:
-    st.text("")
-    st.text("")
     cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)     
    
 if submit1_button:
