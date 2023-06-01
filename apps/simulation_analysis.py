@@ -1188,17 +1188,9 @@ def app():
 
     html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
     st.markdown(html, unsafe_allow_html=True)
-    text = '<div style="margin-top: 20px; margin-bottom: 0px; border: 3px solid #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:12px; padding-bottom:12px;">\
-        <p style="margin-top: 0px; margin-bottom: 0px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Simulation analysis of financial statements is a process of creating a mathematical model that mimics the financial performance of a target company to gain insights into its financial position and performance. This analysis involves the following steps:</span></p>\
-        <ul style="color:#25476A; text-align: justify;">\
-            <li style="font-family:sans-serif; font-size:18px;">Reviewing the company&apos;s income statement, balance sheet and cash flow statement to understand its financial performance over time and identify trends.</li>\
-            <li style="font-family:sans-serif; font-size:18px;">Identifying key financial drivers, such as sales growth, COGS margin and operating expenses and randomly simulating correlated values for these drivers to generate a range of potential outcomes for the company&apos;s financial performance.</li>\
-            <li style="font-family:sans-serif; font-size:18px;">Conducting ratio analysis to evaluate the company&apos;s financial health and generate a credit rating for each simulated outcome. </li>\
-        </ul>\
-        <p style="margin-top: -10px; margin-bottom: 0px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">By performing a simulation analysis of financial statements, Comrate&apos;s wargame scenario analysis application can enable the evaluation of a target company&apos;s financial performance under various scenarios and the identification of potential risks and opportunities, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>\
-    </div>'
-
-    st.markdown(text, unsafe_allow_html=True)
+    text2 = '''
+    <p class="text1" style="margin-top: 1em; margin-bottom: -3em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
+'''
 
 
     st.text("")
