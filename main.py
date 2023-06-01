@@ -1907,7 +1907,7 @@ if st.session_state.submit1_confirm == True:
     st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
     instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menu to select the type of analysis you want to perform. Click "Run" once you have made your selection or click "Cancel" to reset.</span></p>'
     st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
-    col1, col2, col3, col4, col5, col6 = st.columns([1, 0.1, 3.8, 0.1, 0.4, 0.6])
+    col1, col2, col3, col4 = st.columns([1, 4, 0.4, 0.6])
     with col1:
         text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Analysis Type</span></p>'
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
@@ -1932,14 +1932,14 @@ if st.session_state.submit1_confirm == True:
             </style>
         '''
     if st.session_state.user_whatif == "Run Manual Analysis":
-        with col3:
+        with col2:
             st.markdown(text_media_query5 + text1, unsafe_allow_html=True)
     if st.session_state.user_whatif == "Run Simulation Analysis":
-        with col3:
+        with col2:
             st.markdown(text_media_query5 + text2, unsafe_allow_html=True)
-    with col5:
+    with col3:
         submit2_button = st.button("Run", key="2")
-    with col6:
+    with col4:
         cancel2_button = st.button("Cancel", key="cancel2", on_click=reset2)
     if submit2_button:
         if "user_whatif_simulated_values" in st.session_state:
