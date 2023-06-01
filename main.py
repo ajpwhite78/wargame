@@ -1934,11 +1934,9 @@ if st.session_state.submit1_confirm == True:
             st.session_state.submit2_confirm = True
     if (st.session_state.submit2_confirm == True and submit2_button) or st.session_state.manual_analysis_confirm == True:
         if st.session_state.user_whatif == "Run Manual Analysis":
-            st.text("")
             manual_analysis.app()
     if (st.session_state.submit2_confirm == True and submit2_button) or st.session_state.simulation_analysis_confirm == True:
         if st.session_state.user_whatif == "Run Simulation Analysis":
-            st.text("")
             simulation_analysis.app()
 
 footer = """
