@@ -1913,8 +1913,6 @@ if st.session_state.submit1_confirm == True:
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
         st.selectbox(label="", label_visibility="collapsed", options=analysis_options,
                    format_func=lambda x: "Select Analysis Type" if x == "" else x,  key="user_whatif")
-    with col3:
-        information_text = st.empty()
         text1 = '''
     <p class="text1" style="margin-top: -2.2em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>
 '''
@@ -1933,13 +1931,12 @@ if st.session_state.submit1_confirm == True:
             }
             </style>
         '''
-
-        if st.session_state.user_whatif == "":
-            information_text.empty()
-        if st.session_state.user_whatif == "Run Manual Analysis":
+    if st.session_state.user_whatif == "Run Manual Analysis":
+        with col3:
             information_text.empty()
             information_text.markdown(text_media_query5 + text1, unsafe_allow_html=True)
-        if st.session_state.user_whatif == "Run Simulation Analysis":
+    if st.session_state.user_whatif == "Run Simulation Analysis":
+        with col3:
             information_text.empty()
             information_text.markdown(text_media_query5 + text2, unsafe_allow_html=True)
     with col5:
