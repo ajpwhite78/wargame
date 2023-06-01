@@ -1900,9 +1900,7 @@ if submit1_button:
         st.session_state.submit1_confirm = True
 
 if st.session_state.submit1_confirm == True:
-    st.text("")
-    st.text("")
-    subtext1A = '<p class="subtext" style="margin-top: -2em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Analysis Details</span></p>'
+    subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Analysis Details</span></p>'
     st.markdown(text_media_query2 + subtext1A, unsafe_allow_html=True)
     st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
     instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menu to select the type of analysis you want to perform. Click "Run" once you have made your selection or click "Cancel" to reset.</span></p>'
