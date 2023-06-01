@@ -1860,10 +1860,12 @@ with col5:
     
 analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
 
+st.markdown(
+    """<style>div.stButton > button:first-child {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 3px; width:6em; height:2em} div.stButton > button:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""",
+    unsafe_allow_html=True)
+submit1_button = st.button("Run", key="1", on_click=reset2)
+cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
 
-#    submit1_button = st.button("Run", key="1", on_click=reset2)
-#    cancel1_button = st.button("Cancel", key="cancel1", on_click=reset1)
-
 
 
         
@@ -1877,15 +1879,15 @@ analysis_options = ["", "Run Manual Analysis", "Run Simulation Analysis"]
         
         
         
-#if submit1_button:
-#    if st.session_state.user_sector == "" or if st.session_state.user_country == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
-#        col1, col2, col3 = st.columns([1, 4, 1])
-#        st.text("")
-#        st.text("")
-#        with col2:
-#            st.error("**Error**: please complete selection.")
-#    else:
-#        st.session_state.submit1_confirm = True
+if submit1_button:
+    if st.session_state.user_sector == "" or if st.session_state.user_country == "" or st.session_state.user_entity_name == "" or st.session_state.user_reporting_period == "":
+        col1, col2, col3 = st.columns([1, 4, 1])
+        st.text("")
+        st.text("")
+        with col2:
+            st.error("**Error**: please complete selection.")
+    else:
+        st.session_state.submit1_confirm = True
 
 if st.session_state.submit1_confirm == True:
     st.text("")
