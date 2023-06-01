@@ -1864,8 +1864,8 @@ with col5:
             color: #FAFAFA;
             border-color: #FAFAFA;
             border-width: 3px;
-            width: 5em;
-            height: 2em;
+            width: 4em;
+            height: 1.8em;
         }
         div.stButton > button:hover {
             background-color: rgba(111, 114, 222, 0.6);
