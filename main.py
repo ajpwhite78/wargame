@@ -68,7 +68,7 @@ st.markdown(
     div.stButton > button {
         width: 100% !important;
         height: 10em !important;
-        margin-top: -10em;
+        margin-top: -3em;
         }
     }
     </style>
@@ -1926,7 +1926,7 @@ if st.session_state.submit1_confirm == True:
                     font-size: 3.2em;
                     border-width: 0.5em;
                     position: relative;
-                    top: -1em;
+                    top: -2em;
                 }
             }
             </style>
