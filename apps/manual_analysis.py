@@ -1143,21 +1143,32 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
         st.markdown(html, unsafe_allow_html=True)
         st.session_state.manual_analysis_confirm = True
-        st.session_state.simulation_analysis_confirm = False
-
-        text = '<div style="margin-top: 20px; margin-bottom: 0px; border: 3px solid #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:6px; padding-left:12px; padding-right: 12px; padding-top:12px; padding-bottom:12px;">\
-            <p style="margin-top: 0px; margin-bottom: 0px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Manual analysis of financial statements involves a detailed examination of a target company&apos;s financial statements and other relevant financial data to gain insights into its financial position and performance. This analysis involves the following steps:</span></p>\
+        st.session_state.simulation_analysis_confirm = False       
+        
+        text = '<div style="margin-top: -1.25em; margin-bottom: 1.25em; border: 0.1875em solid #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em;">\
+            <p style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Manual analysis of financial statements involves a detailed examination of a target company&apos;s financial statements and other relevant financial data to gain insights into its financial position and performance. This analysis involves the following steps:</span></p>\
             <ul style="color:#25476A; text-align: justify;">\
-                <li style="font-family:sans-serif; font-size:18px;">Reviewing the company&apos;s income statement, balance sheet and cash flow statement to understand its financial performance over time and identify trends.</li>\
-                <li style="font-family:sans-serif; font-size:18px;">Identifying key financial drivers, such as sales growth, COGS margin and operating expenses and analyzing how changes in these drivers can impact the company&apos;s financial performance.</li>\
-                <li style="font-family:sans-serif; font-size:18px;">Conducting ratio analysis to evaluate the company&apos;s financial health and generate a credit rating. </li>\
-                <li style="font-family:sans-serif; font-size:18px;">Conducting &quot;what-if&quot; scenario analysis to evaluate the potential impact of various events or changes on the company&apos;s financial performance, such as changes in interest rates, tax rates or market conditions. </li>\
+                <li style="font-family:sans-serif; font-size:1em;">Reviewing the company&apos;s income statement, balance sheet and cash flow statement to understand its financial performance over time and identify trends.</li>\
+                <li style="font-family:sans-serif; font-size:1em;">Identifying key financial drivers, such as sales growth, COGS margin and operating expenses and analyzing how changes in these drivers can impact the company&apos;s financial performance.</li>\
+                <li style="font-family:sans-serif; font-size:1em;">Conducting ratio analysis to evaluate the company&apos;s financial health and generate a credit rating. </li>\
+                <li style="font-family:sans-serif; font-size:1em;">Conducting &quot;what-if&quot; scenario analysis to evaluate the potential impact of various events or changes on the company&apos;s financial performance, such as changes in interest rates, tax rates or market conditions. </li>\
             </ul>\
-            <p style="margin-top: -10px; margin-bottom: 0px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">By performing a manual analysis of financial statements, Comrate&apos;s wargame scenario analysis application can provide valuable insights into a target company&apos;s financial position and trends, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>\
+            <p style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">By performing a manual analysis of financial statements, Comrate&apos;s wargame scenario analysis application can provide valuable insights into a target company&apos;s financial position and trends, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>\
         </div>'
-
-        st.markdown(text, unsafe_allow_html=True)
-
+        
+        text_media_query1 = '''
+            <style>
+            @media (max-width: 600px) {
+                p.introduction_text {
+                    font-size: 3.2em;
+                    border-width: 0.5em;
+                    position: relative;
+                    top: 0.5em;
+                }
+            }
+            </style>
+        '''
+        st.markdown(text_media_query1 + text, unsafe_allow_html=True)
         st.text("")
         st.text("")
         col1, col2 = st.columns([5.8, 0.2])
