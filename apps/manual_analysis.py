@@ -1070,6 +1070,27 @@ def get_financials(datafame, user_entity_name, user_period):
     return entity_financials
 
 def app():
+    line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+    line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
+    line_media_query1 = '''
+        <style>
+        @media (max-width: 600px) {
+            .line1 {
+                padding: 0.5em;
+            }
+        }
+        </style>
+    '''
+    line_media_query2 = '''
+        <style>
+        @media (max-width: 600px) {
+            .line2 {
+                padding: 0.3em;
+                margin-bottom: 8em;
+            }
+        }
+        </style>
+    '''
     line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
     line2 = '<hr style="height: 2.5px; border:0px; background-color: #25476A; margin-top: -30px;">'
     line3 = '<hr style="height: 4px; border:0px; background-color: #03A9F4; margin-top: -5px; margin-bottom: -20px;">'
