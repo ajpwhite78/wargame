@@ -1103,42 +1103,42 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
     spinner_image.empty()
     if st.session_state.df_income_statement_out.empty == False:
         styles = """
-            <style>
-                .col {
-                    background-color: #25476A;
-                    padding-left: 100px;
-                    padding: 1px;
-                    border: 5px solid #03A9F4;
-                    border-radius: 10px;
-                    height: 100px;
-                    margin: 0;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                }
-                .left {
-                    text-align: left;
-                    float: left;
-                    width: 40%;
-                    padding-top: 10px;
-                    padding-bottom: 0px;
-#                    padding: 10px;
-                }
-                .right {
-                    text-align: right;
-                    float: right;
-                    width: 60%;
-                    padding-top: 10px;
-                    padding-bottom: 0px;
-#                    padding: 10px;
-                }
-                @media (max-width: 600px) {
-                    .left, .right {
+        <style>
+            .col {
+                background-color: #25476A;
+                padding-left: 6.25em;
+                padding: 0.0625em;
+                border: 0.3125em solid #03A9F4;
+                border-radius: 0.625em;
+                height: 6.25em;
+                margin: 0;
+                padding-left: 1.875em;
+                padding-right: 1.875em;
+            }
+            .left {
+                text-align: left;
+                float: left;
+                width: 40%;
+                padding-top: 0.625em;
+                padding-bottom: 0px;
+            }
+            .right {
+                text-align: right;
+                float: right;
+                width: 60%;
+                padding-top: 0.625em;
+                padding-bottom: 0px;
+            }
+
+            @media (max-width: 600px) {
+                .left, .right {
                     font-size: 1.5em;
-                    height: 50px;
+                    height: 3.125em;
                 }
             }
-            </style>
+        </style>
         """
+
         st.markdown(styles, unsafe_allow_html=True)
 
         left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>Manual Analysis</span>"
