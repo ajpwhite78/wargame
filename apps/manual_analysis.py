@@ -1173,6 +1173,76 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 </style>
             '''
             st.markdown(text_media_query_manual2 + subtext1, unsafe_allow_html=True)
+         with col2:
+            st.markdown("""
+                                <style>
+                                /* Tooltip container */
+                                .tooltip {
+                                    position: relative;
+                                    margin-bottom: 0px;
+                                    display: inline-block;
+                                    margin-top: 0em;
+                            #        border-bottom: 1px dotted black;
+                                }
+
+                                /* Tooltip text */
+                                .tooltip .tooltiptext {
+                                    visibility: hidden;
+                                    width: 1000px;
+                                    background-color: #b8d9e8;
+                                    color: #25476A;
+                                    text-align: justify;
+                                    border-radius: 6px;
+                                    padding: 10px 15px;
+                                    white-space: normal;
+                                    padding: 10px 10px 10px 10px;
+                                    border: 2px solid #25476A;
+
+                                    /* Position the tooltip text */
+                                    position: absolute;
+                                    z-index: 1;
+                                    bottom: 125%;
+                                    left: 50%;
+                                    margin-left: -950px;
+
+                                    /* Fade in tooltip */
+                                    opacity: 0;
+                                    transition: opacity 0.3s;
+                                }
+
+                                /* Tooltip arrow */
+                                .tooltip .tooltiptext::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 95%;
+                                    margin-left: -5px;
+                                    border-width: 5px;
+                                    border-style: solid;
+                                    border-color: #25476A transparent transparent transparent;
+                                }
+
+                                /* Show the tooltip text when you mouse over the tooltip container */
+                                .tooltip:hover .tooltiptext {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                                /* Change icon color on hover */
+                                .tooltip:hover i {
+                                    color: rgba(111, 114, 222, 0.8);
+                                }   
+                                /* Set initial icon color */
+                                .tooltip i {
+                                    color: #25476A;
+                                }
+                                </style>
+                                """,
+                        unsafe_allow_html=True
+                        )
+            st.markdown(
+                '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
+                unsafe_allow_html=True)
+
         
 
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
