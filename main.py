@@ -1737,7 +1737,7 @@ text_media_query3 = '''
     </style>
 '''
 st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
-col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 2, 1, 0.3, 0.7])
+col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 2, 1, 0.4, 0.6])
 with col1:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
     text_media_query4 = '''
