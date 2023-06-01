@@ -68,7 +68,7 @@ st.markdown(
     div.stButton > button {
         width: 100% !important;
         height: 10em !important;
-        margin-top: -2em;
+        margin-top: -3em;
         }
     }
     </style>
