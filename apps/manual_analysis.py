@@ -1156,11 +1156,11 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             <p style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">By performing a manual analysis of financial statements, Comrate&apos;s wargame scenario analysis application can provide valuable insights into a target company&apos;s financial position and trends, empowering you to make informed decisions regarding the current and future financial performance of target companies.</span></p>\
         </div>'
         
-        text_media_query1 = '''
+        text_media_query_manual1 = '''
             <style>
             @media (max-width: 600px) {
                 p.introduction_text {
-                    font-size: 1em;
+                    font-size: 0.5em;
                     border-width: 0.5em;
                     position: relative;
                     top: 0.5em;
@@ -1168,13 +1168,13 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
             </style>
         '''
-        st.markdown(text_media_query1 + text, unsafe_allow_html=True)
+        st.markdown(text_media_query_manual1 + text, unsafe_allow_html=True)
         st.text("")
         st.text("")
         col1, col2 = st.columns([5.8, 0.2])
         with col1:
             subtext1 = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Income Statement Manual Input Fields</span></p>'
-            text_media_query2 = '''
+            text_media_query_manual2 = '''
                 <style>
                 @media (max-width: 600px) {
                     p.subtext {
@@ -1183,7 +1183,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 }
                 </style>
             '''
-            st.markdown(text_media_query2 + subtext1, unsafe_allow_html=True)
+            st.markdown(text_media_query_manual2 + subtext1, unsafe_allow_html=True)
         with col2:
             st.markdown("""
                                 <style>
@@ -1332,7 +1332,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         col1, col2 = st.columns([5.8, 0.2])
         with col1:
             subtext2 = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Cash Flow Statement & Balance Sheet Manual Input Fields</span></p>'
-            st.markdown(text_media_query2 + subtext2, unsafe_allow_html=True)
+            st.markdown(text_media_query_manual2 + subtext2, unsafe_allow_html=True)
         with col2:
             st.markdown("""
                                 <style>
@@ -1989,7 +1989,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.text("")
             st.text("")
             text = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
-            st.markdown(text_media_query2 + text, unsafe_allow_html=True)
+            st.markdown(text_media_query_manual2 + text, unsafe_allow_html=True)
         with col4:
             text = '<p style="margin-bottom: 2px; margin-top: 20px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Download Statements</span></p>'
             st.markdown(text, unsafe_allow_html=True)
