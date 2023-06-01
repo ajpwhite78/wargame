@@ -1913,30 +1913,6 @@ if st.session_state.submit1_confirm == True:
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
         st.selectbox(label="", label_visibility="collapsed", options=analysis_options,
                    format_func=lambda x: "Select Analysis Type" if x == "" else x,  key="user_whatif")
-        text1 = '''
-    <p class="text1" style="margin-top: 1em; margin-bottom: -3em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>
-'''
-        text2 = '''
-    <p class="text1" style="margin-top: 1em; margin-bottom: -3em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
-'''
-        text_media_query5 = '''
-            <style>
-            @media (max-width: 600px) {
-                p.text1 {
-                    font-size: 3.2em;
-                    border-width: 0.5em;
-                    position: relative;
-                    top: -2em;
-                }
-            }
-            </style>
-        '''
-    if st.session_state.user_whatif == "Run Manual Analysis":
-        with col2:
-            st.markdown(text_media_query5 + text1, unsafe_allow_html=True)
-    if st.session_state.user_whatif == "Run Simulation Analysis":
-        with col2:
-            st.markdown(text_media_query5 + text2, unsafe_allow_html=True)
     with col3:
         submit2_button = st.button("Run", key="2")
     with col4:
