@@ -1091,8 +1091,6 @@ def app():
         }
         </style>
     '''
-    line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
-    line2 = '<hr style="height: 2.5px; border:0px; background-color: #25476A; margin-top: -30px;">'
     line3 = '<hr style="height: 4px; border:0px; background-color: #03A9F4; margin-top: -5px; margin-bottom: -20px;">'
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
     spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
