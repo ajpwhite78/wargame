@@ -1933,12 +1933,10 @@ if st.session_state.submit1_confirm == True:
         '''
     if st.session_state.user_whatif == "Run Manual Analysis":
         with col3:
-            information_text.empty()
-            information_text.markdown(text_media_query5 + text1, unsafe_allow_html=True)
+            st.markdown(text_media_query5 + text1, unsafe_allow_html=True)
     if st.session_state.user_whatif == "Run Simulation Analysis":
         with col3:
-            information_text.empty()
-            information_text.markdown(text_media_query5 + text2, unsafe_allow_html=True)
+            st.markdown(text_media_query5 + text2, unsafe_allow_html=True)
     with col5:
         submit2_button = st.button("Run", key="2")
     with col6:
