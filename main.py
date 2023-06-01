@@ -50,12 +50,6 @@ add_bg_from_local("images/background.jpg")
 st.markdown(
     """
     <style>
-    .button-div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
      div.stButton > button:first-child {
         background-color: #25476A;
         color: #FAFAFA;
@@ -72,7 +66,7 @@ st.markdown(
     }
     @media (max-width: 600px) {
     div.stButton > button {
-        width: 90em !important;
+        width: 95em !important;
         height: 10em !important;
         margin-top: -1em;
         }
