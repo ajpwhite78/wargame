@@ -57,7 +57,7 @@ st.markdown(
         border-width: 3px;
         width: 4em;
         height: 1.8em;
-        margin-top: 4em;
+        margin-top: 1em;
     }
     div.stButton > button:hover {
         background-color: rgba(111, 114, 222, 0.6);
@@ -68,7 +68,7 @@ st.markdown(
     div.stButton > button {
         width: 90em !important;
         height: 10em !important;
-        margin-top: 0em;
+        margin-top: -1em;
         }
     }
     </style>
