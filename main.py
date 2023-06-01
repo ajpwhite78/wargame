@@ -1748,7 +1748,7 @@ text_media_query2 = '''
     <style>
     @media (max-width: 600px) {
         p.subtext {
-            font-size: 3em;
+            font-size: 2.25em;
         }
     }
     </style>
