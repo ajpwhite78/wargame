@@ -1145,7 +1145,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.session_state.manual_analysis_confirm = True
         st.session_state.simulation_analysis_confirm = False       
         
-        info_text = '<div style="margin-top: -1.25em; margin-bottom: -1.25em; border: 0.1875em solid #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em;">\
+        info_text = '<div class="info_text" style="margin-top: -1.25em; margin-bottom: -1.25em; border: 0.1875em solid #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius:0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em;">\
             <p style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Manual analysis of financial statements involves a detailed examination of a target company&apos;s financial statements and other relevant financial data to gain insights into its financial position and performance. This analysis involves the following steps:</span></p>\
             <ul style="color:#25476A; text-align: justify;">\
                 <li style="font-family:sans-serif; font-size:1em;">Reviewing the company&apos;s income statement, balance sheet and cash flow statement to understand its financial performance over time and identify trends.</li>\
