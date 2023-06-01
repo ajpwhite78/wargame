@@ -1163,7 +1163,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     border-width: 0.5em;
                     position: relative;
                     top: -2em;
-                    bottom: -4em;
                 }
             }
             </style>
@@ -1178,6 +1177,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 @media (max-width: 600px) {
                     p.subtext {
                         font-size: 3em;
+                        margin-top: 0em;
                     }
                 }
                 </style>
