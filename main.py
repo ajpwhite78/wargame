@@ -1872,6 +1872,12 @@ with col5:
             color: #25476A;
             border-color: #25476A;
         }
+        @media (max-width: 600px) {
+        div.stButton > button {
+            width: 10em;
+            height: 1.5em;
+            }
+        }
         </style>
         """,
         unsafe_allow_html=True
