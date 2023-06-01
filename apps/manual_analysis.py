@@ -1171,47 +1171,47 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.markdown(text_media_query_manual1 + info_text, unsafe_allow_html=True)
         
         
-        import streamlit as st
 
-    info_text = '''
-    <div class="info-container">
-        <p>Manual analysis of financial statements involves a detailed examination of a target company's financial statements and other relevant financial data to gain insights into its financial position and performance. This analysis involves the following steps:</p>
-        <ul>
-            <li>Reviewing the company's income statement, balance sheet and cash flow statement to understand its financial performance over time and identify trends.</li>
-            <li>Identifying key financial drivers, such as sales growth, COGS margin and operating expenses and analyzing how changes in these drivers can impact the company's financial performance.</li>
-            <li>Conducting ratio analysis to evaluate the company's financial health and generate a credit rating.</li>
-            <li>Conducting "what-if" scenario analysis to evaluate the potential impact of various events or changes on the company's financial performance, such as changes in interest rates, tax rates or market conditions.</li>
-        </ul>
-        <p>By performing a manual analysis of financial statements, Comrate's wargame scenario analysis application can provide valuable insights into a target company's financial position and trends, empowering you to make informed decisions regarding the current and future financial performance of target companies.</p>
-    </div>
-    '''
 
-    text_media_query_manual1 = '''
-    <style>
-    .info-container {
-        margin-top: -1.25em;
-        margin-bottom: -1.25em;
-        border: 0.1875em solid #25476A;
-        background-color: rgba(3, 169, 244, 0.2);
-        border-radius: 0.375em;
-        padding-left: 0.75em;
-        padding-right: 0.75em;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
+        info_text = '''
+        <div class="info-container">
+            <p>Manual analysis of financial statements involves a detailed examination of a target company's financial statements and other relevant financial data to gain insights into its financial position and performance. This analysis involves the following steps:</p>
+            <ul>
+                <li>Reviewing the company's income statement, balance sheet and cash flow statement to understand its financial performance over time and identify trends.</li>
+                <li>Identifying key financial drivers, such as sales growth, COGS margin and operating expenses and analyzing how changes in these drivers can impact the company's financial performance.</li>
+                <li>Conducting ratio analysis to evaluate the company's financial health and generate a credit rating.</li>
+                <li>Conducting "what-if" scenario analysis to evaluate the potential impact of various events or changes on the company's financial performance, such as changes in interest rates, tax rates or market conditions.</li>
+            </ul>
+            <p>By performing a manual analysis of financial statements, Comrate's wargame scenario analysis application can provide valuable insights into a target company's financial position and trends, empowering you to make informed decisions regarding the current and future financial performance of target companies.</p>
+        </div>
+        '''
 
-    @media (max-width: 600px) {
+        text_media_query_manual1 = '''
+        <style>
         .info-container {
-            font-size: 0.1em;
-            border-width: 0.5em;
-            position: relative;
-            top: 0.5em;
+            margin-top: -1.25em;
+            margin-bottom: -1.25em;
+            border: 0.1875em solid #25476A;
+            background-color: rgba(3, 169, 244, 0.2);
+            border-radius: 0.375em;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
         }
-    }
-    </style>
-    '''
 
-    st.markdown(text_media_query_manual1 + info_text, unsafe_allow_html=True)
+        @media (max-width: 600px) {
+            .info-container {
+                font-size: 0.1em;
+                border-width: 0.5em;
+                position: relative;
+                top: 0.5em;
+            }
+        }
+        </style>
+        '''
+
+        st.markdown(text_media_query_manual1 + info_text, unsafe_allow_html=True)
 
 
 
