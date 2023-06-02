@@ -1309,7 +1309,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             <div class="right2">
                 <div class="tooltip2">
                     <i class="fas fa-info-circle fa-2x"></i>
-                    <span class="tooltiptext2" style="font-family: sans-serif; color: #25476A; font-size: 5em;>
+                    <span class="tooltiptext2" style="font-family: sans-serif; color: #25476A; font-size: 5em;">
                         <ul>
                             Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
                             <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
