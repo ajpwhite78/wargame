@@ -1188,6 +1188,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             /* Tooltip text */
             .tooltip2 .tooltiptext2 {
                 visibility: hidden;
+                width: 80em;
                 background-color: #b8d9e8;
                 color: #25476A;
                 text-align: justify;
