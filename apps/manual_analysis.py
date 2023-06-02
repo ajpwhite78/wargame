@@ -1283,7 +1283,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             """, unsafe_allow_html=True)
 
             
-        col1, col2 = st.columns([5.8, 0.2])
+        col1 = st.columns(1)
         with col1:
             st.markdown(
                 """
@@ -1348,7 +1348,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     border-radius: 6px;
                     padding: 10px 15px;
                     white-space: normal;
-                    padding: 10px 10px 10px 10px;
+                    padding: 10px 10px 10px;
                     border: 2px solid #25476A;
 
                     /* Position the tooltip text */
@@ -1406,7 +1406,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 unsafe_allow_html=True
             )
 
-       
+
 
         
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
