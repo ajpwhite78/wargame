@@ -1178,7 +1178,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
 
             /* Tooltip container */
-            .tooltip {
+            .tooltip2 {
                 position: relative;
                 margin-bottom: 0em;
                 display: inline-block;
@@ -1186,7 +1186,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
 
             /* Tooltip text */
-            .tooltip .tooltiptext {
+            .tooltip2 .tooltiptext2 {
                 visibility: hidden;
                 width: 60em;
                 background-color: #b8d9e8;
@@ -1216,7 +1216,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
 
             /* Tooltip arrow */
-            .tooltip .tooltiptext::after {
+            .tooltip2 .tooltiptext2::after {
                 content: "";
                 position: absolute;
                 top: 100%;
@@ -1229,16 +1229,16 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
 
             /* Show the tooltip text when you mouse over the tooltip container */
-            .tooltip:hover .tooltiptext {
+            .tooltip2:hover .tooltiptext2 {
                 visibility: visible;
                 opacity: 1;
             }
             /* Change icon color on hover */
-            .tooltip:hover i {
+            .tooltip2:hover i {
                 color: rgba(111, 114, 222, 0.8);
             }   
             /* Set initial icon color */
-            .tooltip i {
+            .tooltip2 i {
                 color: #25476A;
             }
 
@@ -1248,15 +1248,15 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     margin-top: -5em;
                     padding-right: -2em;
                 }
-                p.subtext_manual {
+                p.subtext_manual2 {
                     font-size: 2.5em;
                 }
-            .tooltip .tooltiptext {
+            .tooltip2 .tooltiptext2 {
             }            
-            .tooltip {
+            .tooltip2 {
                 transform: translateX(-80%);
             }
-            .tooltip i {
+            .tooltip2 i {
                 font-size: 8em;
                 margin-top: -0.2em;
             }
@@ -1302,12 +1302,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         html2 = """
         <div class="col2">
             <div class="left2">
-                <p class="subtext_manual" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Manual Input Fields</span></p>
+                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Manual Input Fields</span></p>
             </div>
             <div class="right2">
-                <div class="tooltip">
+                <div class="tooltip2">
                     <i class="fas fa-info-circle fa-2x"></i>
-                    <span class="tooltiptext">
+                    <span class="tooltiptext2">
                         <ul>
                             Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
                             <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
