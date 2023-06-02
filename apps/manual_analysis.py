@@ -1183,6 +1183,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 margin-bottom: 0em;
                 display: inline-block;
                 margin-top: 0em;
+                font-size: 0.5em;
             }
 
             /* Tooltip text */
