@@ -1166,13 +1166,13 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
             .left2 {
                 text-align: left;
-                width: 90%;
+                width: 95%;
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
             .right2 {
                 text-align: right;
-                width: 10%;
+                width: 5%;
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
