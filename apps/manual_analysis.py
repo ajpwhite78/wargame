@@ -1283,128 +1283,64 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             """, unsafe_allow_html=True)
 
             
-        col1 = st.columns(1)
-        with col1:
-            st.markdown(
-                """
-                <div class="col-container">
-                    <p class="subtext_manual">Income Statement Manual Input Fields</p>
-                    <div class="tooltip">
-                        <i class="fas fa-info-circle fa-2x"></i>
-                        <span class="tooltiptext">
-                            <ul>
-                                Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
-                                <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
-                                <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
-                                <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
-                                <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
-                                <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
-                                <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
-                                <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
-                                <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
-                                <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
-                            </ul>
-                            These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
-                        </span>
-                    </div>
+        styles = """
+        <style>
+            .col {
+                background-color: #25476A;
+                padding: 1em;
+                border: 0.3125em solid #03A9F4;
+                border-radius: 0.625em;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+            }
+            .left {
+                text-align: left;
+                width: 40%;
+                padding-top: 0em;
+                padding-bottom: 0px;
+            }
+            .right {
+                text-align: right;
+                width: 60%;
+                padding-top: 0em;
+                padding-bottom: 0px;
+            }
+        </style>
+        """
+
+        st.markdown(styles, unsafe_allow_html=True)
+
+        html = """
+        <div class="col">
+            <div class="left">
+                <p class="subtext_manual">Income Statement Manual Input Fields</p>
+            </div>
+            <div class="right">
+                <div class="tooltip">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                    <span class="tooltiptext">
+                        <ul>
+                            Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
+                            <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
+                            <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
+                            <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
+                            <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
+                            <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
+                            <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
+                            <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
+                            <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
+                            <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
+                        </ul>
+                        These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
+                    </span>
                 </div>
-                """,
-                unsafe_allow_html=True
-            )
+            </div>
+        </div>
+        """
 
-            st.markdown(
-                """
-                <style>
-                /* CSS for .col-container */
-                .col-container {
-                    display: flex;
-                    align-items: center;
-                }
-
-                /* CSS for .subtext_manual */
-                .subtext_manual {
-                    font-family: sans-serif;
-                    color: #25476A;
-                    font-size: 2em;
-                    margin-bottom: 0em;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-
-                /* CSS for .tooltip */
-                .tooltip {
-                    margin-left: 10px;
-                    position: relative;
-                }
-
-                /* CSS for .tooltiptext */
-                .tooltiptext {
-                    visibility: hidden;
-                    width: 1000px;
-                    background-color: #b8d9e8;
-                    color: #25476A;
-                    text-align: justify;
-                    border-radius: 6px;
-                    padding: 10px 15px;
-                    white-space: normal;
-                    padding: 10px 10px 10px;
-                    border: 2px solid #25476A;
-
-                    /* Position the tooltip text */
-                    position: absolute;
-                    z-index: 1;
-                    bottom: 125%;
-                    left: 50%;
-                    margin-left: -950px;
-
-                    /* Fade in tooltip */
-                    opacity: 0;
-                    transition: opacity 0.3s;
-                }
-
-                /* CSS for .tooltiptext arrow */
-                .tooltiptext::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 100%;
-                    margin-top: -5px;
-                    margin-left: 5px;
-                    border-width: 5px;
-                    border-style: solid;
-                    border-color: #25476A transparent transparent transparent;
-                }
-
-                /* CSS for .tooltip:hover .tooltiptext */
-                .tooltip:hover .tooltiptext {
-                    visibility: visible;
-                    opacity: 1;
-                }
-
-                /* CSS for .tooltip:hover i */
-                .tooltip:hover i {
-                    color: rgba(111, 114, 222, 0.8);
-                }
-
-                /* CSS for .tooltip i */
-                .tooltip i {
-                    color: #25476A;
-                }
-
-                /* Media query for small screens */
-                @media (max-width: 600px) {
-                    .subtext_manual {
-                        font-size: 2.5em;
-                        margin-top: -3em;
-                        white-space: normal;
-                        text-overflow: clip;
-                    }
-                }
-                </style>
-                """,
-                unsafe_allow_html=True
-            )
+        st.markdown(html, unsafe_allow_html=True)
 
 
 
