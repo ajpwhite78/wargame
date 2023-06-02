@@ -1888,7 +1888,9 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                                                          {'selector': 'td:hover',
                                                                                           'props': [('background-color',
                                                                                                      'rgba(111, 114, 222, 0.4)')]},
-                                                                                         ]).hide_index()
+                                                                                         ]).apply(
+                lambda row: highlight_diff_by_row(row, color1=(3, 169, 244, 0.5), color2=(0, 0, 0, 0)),
+                axis=1).hide_index()
         
         
         df_cash_flow_statement_out_png = st.session_state.df_cash_flow_statement_out.style.set_table_styles([{'selector': 'td',
