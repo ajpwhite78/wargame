@@ -1267,9 +1267,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             ul.responsive-ul {
                 font-size: 3.2em;
             }
-            ul.responsive-ul li {
-                font-size: 3.2em;
-            }
             }
         </style>
 
