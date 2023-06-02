@@ -1193,7 +1193,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 color: #25476A;
                 text-align: justify;
                 font-family: sans-serif;
-                font-size: 0.6em;
+                font-size: 0.2em;
                 display: block; 
                 border-radius: 0.375em;
                 white-space: normal;
@@ -1252,7 +1252,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     font-size: 2.5em;
                 }
             .tooltip .tooltiptext {
-                font-size: 0.1em;
+                font-size: 0.01em;
             }            
             .tooltip {
                 transform: translateX(-80%);
