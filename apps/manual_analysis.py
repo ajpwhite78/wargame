@@ -1377,6 +1377,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 p.heading_text4A {
                     font-size: 3.2em;
                     margin-top: -2em;
+                    margin-bottom: -10em;
                 }
             }
             </style>
