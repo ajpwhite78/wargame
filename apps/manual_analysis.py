@@ -1120,14 +1120,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             .left {
                 text-align: left;
                 float: left;
-                width: 30%;
+                width: 40%;
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
             .right {
                 text-align: right;
                 float: right;
-                width: 70%;
+                width: 60%;
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
@@ -2006,7 +2006,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.text("")
         st.markdown(styles, unsafe_allow_html=True)
         
-        left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}<span class='break-line'>&nbsp;{}&nbsp;{}</span>".format(str(st.session_state.user_reporting_period), "Rating:", "XXX")
+        left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}&nbsp;{}<span class='break-line'>&nbsp;{}</span>".format(str(st.session_state.user_reporting_period), "Rating:", "XXX")
         right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}<span class='break-line'>&nbsp;{}</span>".format("Scenario Rating:", "XXX")
         html4 = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
         st.markdown(html4, unsafe_allow_html=True)
