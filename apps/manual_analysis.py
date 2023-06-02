@@ -2043,7 +2043,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             </style>
         '''
         st.markdown(text_media_query_manual2 + subtext1A, unsafe_allow_html=True)
-        
+        st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
+        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Company financial statements for the reporting period and the expected scenario are shown below. The financial statements may be downloaded for your records.</span></p>'
+        st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
+       
         
         
         col1, col2, col3, col4, col5 = st.columns([2, 1, 1, 1, 1])
@@ -2080,9 +2083,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 downloader.export_tables(statements_out, st.session_state.user_entity_name)
                 spinner.empty()
                 spinner_image.empty()
-        st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-        instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Company financial statements for the reporting period and the expected scenario are shown below. The financial statements may be downloaded for your records.</span></p>'
-        st.markdown(instructions_text, unsafe_allow_html=True)
+
 
         col1, col2, col3, col4, col5, col6 = st.columns(6)
         with col1:
