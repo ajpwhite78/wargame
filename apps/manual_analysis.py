@@ -1200,7 +1200,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 padding-right: 0.75em;
                 padding-top: 0.5em;
                 padding-bottom: 0em;
-                border: 0.125em solid #25476A;
+                border: 0.1875em solid #25476A;
 
                 /* Position the tooltip text */
                 position: absolute;
