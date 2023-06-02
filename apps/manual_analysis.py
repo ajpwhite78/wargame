@@ -1251,9 +1251,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             .tooltip2 .tooltiptext2 {
                 border-width: 0.6em;
                 border-radius: 1.6em;
+                width: 100em;
+                transform: translateX(-80%);
+                
             }            
             .tooltip2 {
-                transform: translateX(-80%);
+                
             }
             .tooltip2 i {
                 font-size: 8em;
