@@ -2042,7 +2042,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
             </style>
         '''
-        st.markdown(text_media_querymanual2 + subtext1A, unsafe_allow_html=True)
+        st.markdown(text_media_query_manual2 + subtext1A, unsafe_allow_html=True)
         
         
         
