@@ -1200,19 +1200,19 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 text-align: left;
                 width: 70%;
                 padding-top: 0em;
-                padding-bottom: 0px;
+                padding-bottom: 0;
             }
             .right2 {
                 text-align: right;
                 width: 30%;
                 padding-top: 0em;
-                padding-bottom: 0px;
+                padding-bottom: 0;
             }
 
             /* Tooltip container */
             .tooltip {
                 position: relative;
-                margin-bottom: 0px;
+                margin-bottom: 0;
                 display: inline-block;
                 margin-top: 0em;
             }
@@ -1225,17 +1225,17 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 color: #25476A;
                 text-align: justify;
                 border-radius: 6px;
-                padding: 10px 15px;
+                padding: 0.625em 0.9375em;
                 white-space: normal;
-                padding: 10px 10px 10px 10px;
-                border: 2px solid #25476A;
+                padding: 0.625em 0.625em 0.625em 0.625em;
+                border: 0.125em solid #25476A;
 
                 /* Position the tooltip text */
                 position: absolute;
                 z-index: 1;
                 bottom: 125%;
                 left: 50%;
-                margin-left: -950px;
+                margin-left: -9.5em;
 
                 /* Fade in tooltip */
                 opacity: 0;
@@ -1248,8 +1248,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 position: absolute;
                 top: 100%;
                 left: 95%;
-                margin-left: -5px;
-                border-width: 5px;
+                margin-left: -0.3125em;
+                border-width: 0.3125em;
                 border-style: solid;
                 border-color: #25476A transparent transparent transparent;
             }
@@ -1268,7 +1268,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 color: #25476A;
             }
         </style>
-        
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         """
 
@@ -1277,7 +1277,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         html2 = """
         <div class="col2">
             <div class="left2">
-                <p class="subtext_manual" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Income Statement Manual Input Fields</span></p>
+                <p class="subtext_manual" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Manual Input Fields</span></p>
             </div>
             <div class="right2">
                 <div class="tooltip">
@@ -1294,8 +1294,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                             <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
                             <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
                             <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
-                        </ul>
-                        These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
+                            These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
+                        </ul>    
                     </span>
                 </div>
             </div>
@@ -1303,6 +1303,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         """
 
         st.markdown(html2, unsafe_allow_html=True)
+
 
 
         
