@@ -2049,8 +2049,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
        
         col1, col2, col3 = st.columns([1, 1, 4])
         with col1:
-            text = '<p style="margin-bottom: 2px; margin-top: 20px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Download Statements</span></p>'
-            st.markdown(text, unsafe_allow_html=True)
+            text = '<p class="heading_text4A" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Download Statements</span></p>'
+            st.markdown(text_media_query_manual4A + text, unsafe_allow_html=True)
             statement_out_download_typ_field = st.empty()
             statement_out_download_type = statement_out_download_typ_field.selectbox(label="", label_visibility="collapsed",
                                                        options=["Select Download Type", "CSV", "PNG"],
