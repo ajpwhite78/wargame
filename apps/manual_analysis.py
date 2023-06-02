@@ -1253,7 +1253,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 left: 50%;
             }
             .tooltip2 .tooltiptext2::after {
-                left: 50%;
+                border-width: 2em;
+                left: 0%;
             }
             .tooltip2 {
                 
