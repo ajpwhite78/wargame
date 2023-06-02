@@ -1830,7 +1830,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                                                               ('font-weight', 'bold'), (
                                                                                               'background-color',
                                                                                               '#6d6e73'),
-                                                                                              ('color', '#FAFAFA!important')]}, {'selector': 'tr:nth-child(12) td',
+                                                                                              ('color', '#FAFAFA!important')]}, {
+                                                                                            'selector': 'tr:nth-child(7) td:nth-child(2), tr:nth-child(7) td:nth-child(3)',
+                                                                                            'props': [('text-align', 'center')]
+                                                                                            }, {'selector': 'tr:nth-child(12) td',
                                                                                           'props': [
                                                                                               ('text-align', 'left'),
                                                                                               ('font-weight', 'bold'), (
@@ -1885,9 +1888,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                                                          {'selector': 'td:hover',
                                                                                           'props': [('background-color',
                                                                                                      'rgba(111, 114, 222, 0.4)')]},
-                                                                                         ]).apply(
-                lambda row: highlight_diff_by_row(row, color1=(3, 169, 244, 0.5), color2=(0, 0, 0, 0)),
-                axis=1).hide_index()
+                                                                                         ]).hide_index()
         
         
         df_cash_flow_statement_out_png = st.session_state.df_cash_flow_statement_out.style.set_table_styles([{'selector': 'td',
