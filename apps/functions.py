@@ -1115,7 +1115,7 @@ class MultiFileDownloader(object):
                 zf.writestr(new_filename, data)
         zip_file.seek(0)
         b64 = base64.b64encode(zip_file.getvalue()).decode()
-        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
+        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 3px; width:4em; height:1.8em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
         filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name, timestr)
         st.download_button(
             label="Download",
@@ -1123,6 +1123,37 @@ class MultiFileDownloader(object):
             file_name=f"{filename_out}.zip",
             mime="application/zip",
         )
+        
+        
+        st.markdown(
+    """
+    <style>
+     div.stButton > button:first-child {
+        background-color: #25476A;
+        color: #FAFAFA;
+        border-color: #FAFAFA;
+        border-width: 3px;
+        width: 4em;
+        height: 1.8em;
+        margin-top: 1.5em;
+    }
+    div.stButton > button:hover {
+        background-color: rgba(111, 114, 222, 0.6);
+        color: #25476A;
+        border-color: #25476A;
+    }
+    @media (max-width: 600px) {
+    div.stButton > button {
+        width: 100% !important;
+        height: 10em !important;
+        margin-top: -3em;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+        
 
     def download_simulation_figures(self, files, name):
         zip_file = io.BytesIO()
