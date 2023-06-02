@@ -1321,10 +1321,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 .col3 {
                     font-size: 3.25em;
                     margin-top: -2em;
-                    padding-bottom: -2em;
                 }
             }
-        </style>        """
+        </style>
+        """
 
         st.markdown(styles3, unsafe_allow_html=True)
 
