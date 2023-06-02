@@ -1188,7 +1188,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             /* Tooltip text */
             .tooltip2 .tooltiptext2 {
                 visibility: hidden;
-                width: 60em;
+                width: 100%;
                 background-color: #b8d9e8;
                 color: #25476A;
                 text-align: justify;
@@ -1248,7 +1248,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     font-size: 2.5em;
                 }
             .tooltip2 .tooltiptext2 {
-                border-width: 0.5em;
+                border-width: 1em;
             }            
             .tooltip2 {
                 transform: translateX(-80%);
