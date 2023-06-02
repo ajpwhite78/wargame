@@ -1361,8 +1361,17 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
         col1, col2, col3, col4, col5, col6 = st.columns(6)
         with col1:
-            text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Sales Growth %</span></p>'
-            st.markdown(text, unsafe_allow_html=True)
+                text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">sales Growth</span></p>'
+                text_media_query_manual4 = '''
+                <style>
+                @media (max-width: 600px) {
+                    p.heading_text {
+                        font-size: 3.2em;
+                    }
+                }
+                </style>
+            '''
+                st.markdown(text_media_query4 + text, unsafe_allow_html=True)
             user_whatif_sales_revenue_growth_field = st.empty()
             st.session_state.user_whatif_sales_revenue_growth = user_whatif_sales_revenue_growth_field.number_input(label="", label_visibility="collapsed", min_value=None, max_value=None, step=None, format="%.2f", value=st.session_state.default_whatif_sales_revenue_growth_user_out, key="whatif_manual_1")
             st.text("")
