@@ -1422,87 +1422,40 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             user_whatif_dividend_payout_ratio_field = st.empty()
             st.session_state.user_whatif_dividend_payout_ratio = user_whatif_dividend_payout_ratio_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=100.00, step=None, format="%.2f", value=st.session_state.default_whatif_dividend_payout_ratio_user_out, key="whatif_manual_9")
 
-        col1, col2, col3, col4 = st.columns([5.4, 0.2, 0.2, 0.2])
-        with col1:
-            subtext2 = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Cash Flow Statement & Balance Sheet Input Fields</span></p>'
-            st.markdown(text_media_query_manual2 + subtext2, unsafe_allow_html=True)
-        with col2:
-            st.markdown("""
-                                <style>
-                                /* Tooltip container */
-                                .tooltip {
-                                    position: relative;
-                                    margin-bottom: 0px;
-                                    display: inline-block;
-                            #        border-bottom: 1px dotted black;
-                                }
-    
-                                /* Tooltip text */
-                                .tooltip .tooltiptext {
-                                    visibility: hidden;
-                                    width: 1000px;
-                                    background-color: #b8d9e8;
-                                    color: #25476A;
-                                    text-align: justify;
-                                    border-radius: 6px;
-                                    padding: 10px 15px;
-                                    white-space: normal;
-                                    padding: 10px 10px 10px 10px;
-                                    border: 2px solid #25476A;
-    
-                                    /* Position the tooltip text */
-                                    position: absolute;
-                                    z-index: 1;
-                                    bottom: 125%;
-                                    left: 50%;
-                                    margin-left: -950px;
-    
-                                    /* Fade in tooltip */
-                                    opacity: 0;
-                                    transition: opacity 0.3s;
-                                }
-    
-                                /* Tooltip arrow */
-                                .tooltip .tooltiptext::after {
-                                    content: "";
-                                    position: absolute;
-                                    top: 100%;
-                                    left: 95%;
-                                    margin-left: -5px;
-                                    border-width: 5px;
-                                    border-style: solid;
-                                    border-color: #25476A transparent transparent transparent;
-                                }
-    
-                                /* Show the tooltip text when you mouse over the tooltip container */
-                                .tooltip:hover .tooltiptext {
-                                    visibility: visible;
-                                    opacity: 1;
-                                }
-                                /* Change icon color on hover */
-                                .tooltip:hover i {
-                                    color: rgba(111, 114, 222, 0.8);
-                                }   
-                                /* Set initial icon color */
-                                .tooltip i {
-                                    color: #25476A;
-                                }
-                                </style>
-                                """,
-                        unsafe_allow_html=True
-                        )
-        with col3:
-            st.markdown(
-                '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
-                unsafe_allow_html=True)
-        with col4:
-            st.markdown(
-                """
-                <div class="tooltip">
-                    <i class="fas fa-info-circle fa-2x""></i>
-                    <span class="tooltiptext">
-                        <ul>
-                        Understanding financial metrics and ratios is essential for assessing a company&apos;s financial health and making informed investment decisions.                               
+
+        html3 = """
+        <div class="col2">
+            <div class="left2">
+                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Cash Flow Statement & Balance Sheet Input Fields</span></p>
+            </div>
+            <div class="right2">
+                <div class="tooltip2">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                    <span class="tooltiptext2">
+                        <ul class="responsive-ul2">
+                            Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
+                            <li>Accounts Receivable Days: The number of days it takes for a company to collect payment for goods or services sold. A lower number of days is generally seen as a positive sign, indicating that a company is efficient in its collections process.</li>
+                            <li>Inventory Days: The number of days it takes for a company to sell its inventory. A lower number of days is generally seen as a positive sign, indicating that a company has a strong demand for its products.</li>
+                            <li>Capital Expenditure / Sales: The ratio of capital expenditures to sales. This ratio indicates how much a company is investing in long-term assets relative to its revenue. A higher ratio may suggest that a company is investing more in its long-term growth and may have higher future earnings potential.</li>
+                            <li>Capital Expenditure: The amount of money a company spends on acquiring or improving long-term assets such as property, plant and equipment. This investment is typically made to increase a company&apos;s production capacity, efficiency or competitiveness.</li>
+                            <li>Capital Expenditure Type (Ratio or Dollar): An indicator of whether capital expenditure is expressed as a ratio of sales or as a dollar amount. A ratio may be more informative in evaluating a company&apos;s investment decisions relative to its size, while a dollar amount may be more informative in evaluating the company&apos;s overall investment in long-term assets.</li>
+                            <li>CapEx Tangible / Intangible Split: The breakdown of capital expenditures between tangible assets, such as property and equipment and intangible assets, such as patents and intellectual property. This breakdown indicates how much a company is investing in different types of long-term assets.</li>
+                            <li>Accounts Payable Days: The number of days it takes for a company to pay its bills to suppliers. A higher number of days may indicate that a company is using its suppliers&apos; money to finance its operations and may be seen as a positive sign for the company&apos;s cash flow management.</li>
+                            <li>Sales of Equity: The total amount of equity sold by a company during a period. This may include common stock, preferred stock or other types of equity.</li>
+                            <li>Repurchase of Equity: The total amount of equity repurchased by a company during a period. This may include buying back common stock, preferred stock or other types of equity.</li>                                    
+                            <li>Proceeds from Issuance of Debt: The total amount of money a company receives from issuing debt. This may include bonds, notes or other forms of debt financing.</li>
+                            <li>Repayments of Long-Term Debt: The total amount of money a company pays back to lenders for long-term debt. This may include interest payments as well as principal repayments.</li>
+                            <li>Notes / Other Split: The breakdown of a company&apos;s short-term debt between notes and other types of short-term debt. Notes refer to short-term debt that is issued with a specific maturity date, while other types of short-term debt may not have a specific maturity date or may be payable on demand.</li>
+                                  
+                            These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
+                        </ul>    
+                    </span>
+                </div>
+            </div>
+        </div>
+        """
+        
+                                Understanding financial metrics and ratios is essential for assessing a company&apos;s financial health and making informed investment decisions.                               
                             <li>Accounts Receivable Days: The number of days it takes for a company to collect payment for goods or services sold. A lower number of days is generally seen as a positive sign, indicating that a company is efficient in its collections process.</li>
                             <li>Inventory Days: The number of days it takes for a company to sell its inventory. A lower number of days is generally seen as a positive sign, indicating that a company has a strong demand for its products.</li>
                             <li>Capital Expenditure / Sales: The ratio of capital expenditures to sales. This ratio indicates how much a company is investing in long-term assets relative to its revenue. A higher ratio may suggest that a company is investing more in its long-term growth and may have higher future earnings potential.</li>
@@ -1517,15 +1470,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                             <li>Notes / Other Split: The breakdown of a company&apos;s short-term debt between notes and other types of short-term debt. Notes refer to short-term debt that is issued with a specific maturity date, while other types of short-term debt may not have a specific maturity date or may be payable on demand.</li>
                         These financial metrics and ratios can help provide a valuable insight into a company&apos;s financial position and performance.
                         </ul>
-                    </span>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+        
 
+        st.markdown(html3, unsafe_allow_html=True)
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-        instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Enter values for the cash flow statement and balance sheet financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
-        st.markdown(instructions_text, unsafe_allow_html=True)
+        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Enter values for the cash flow statement and balance sheet financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
+        st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
         col1, col2, col3, col4, col5, col6 = st.columns(6)
         with col1:
             text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Accounts Receivable Days</span></p>'
