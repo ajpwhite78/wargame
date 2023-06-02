@@ -1195,24 +1195,25 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 display: flex;
                 align-items: center;
                 vertical-align: middle;
+                padding-right: 1.875em;
             }
             .left2 {
                 text-align: left;
-                width: 70%;
+                width: 90%;
                 padding-top: 0em;
-                padding-bottom: 0;
+                padding-bottom: 0em;
             }
             .right2 {
                 text-align: right;
-                width: 30%;
+                width: 10%;
                 padding-top: 0em;
-                padding-bottom: 0;
+                padding-bottom: 0em;
             }
 
             /* Tooltip container */
             .tooltip {
                 position: relative;
-                margin-bottom: 0;
+                margin-bottom: 0em;
                 display: inline-block;
                 margin-top: 0em;
             }
