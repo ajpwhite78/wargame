@@ -1096,7 +1096,7 @@ def app():
         <style>
         @media (max-width: 600px) {
             .line3 {
-                padding: 0.5em;
+                padding: 0.4em;
                 margin-bottom: 3em;
             }
         }
@@ -1320,6 +1320,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 .col3 {
                     font-size: 3.25em;
                     margin-top: -2em;
+                    margin-bottom: -2em;
                 }
             }
         </style>        """
