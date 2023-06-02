@@ -1203,7 +1203,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 border: 0.1875em solid #25476A;
 
                 /* Position the tooltip text */
-                position: absolute;
+                position: relative;
                 z-index: 1;
                 bottom: 125%;
                 transform: translateX(-95%);
@@ -1216,7 +1216,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             /* Tooltip arrow */
             .tooltip2 .tooltiptext2::after {
                 content: "";
-                position: absolute;
+                position: relative;
                 top: 100%;
                 left: 96.5%;
                 border-width: 0.3125em;
