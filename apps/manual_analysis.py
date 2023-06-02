@@ -1218,7 +1218,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 content: "";
                 position: absolute;
                 top: 100%;
-                left: 90%;
+                left: 95%;
                 transform: translateX(-95%);
                 margin-left: -0.3125em;
                 border-width: 0.3125em;
