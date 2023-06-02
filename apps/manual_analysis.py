@@ -1176,7 +1176,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 <style>
                 @media (max-width: 600px) {
                     p.subtext_manual {
-                        font-size: 2.25em;
+                        font-size: 2.5em;
                         margin-top: -3em;
                     }
                 }
