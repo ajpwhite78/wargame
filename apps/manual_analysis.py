@@ -1283,21 +1283,21 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             """, unsafe_allow_html=True)
 
             
-        styles = """
+        styles2 = """
         <style>
-            .col {
+            .col2 {
                 margin: 0;
                 display: flex;
                 align-items: center;
                 vertical-align: middle;
             }
-            .left {
+            .left2 {
                 text-align: left;
                 width: 70%;
                 padding-top: 0em;
                 padding-bottom: 0px;
             }
-            .right {
+            .right2 {
                 text-align: right;
                 width: 30%;
                 padding-top: 0em;
@@ -1306,14 +1306,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         </style>
         """
 
-        st.markdown(styles, unsafe_allow_html=True)
+        st.markdown(styles2, unsafe_allow_html=True)
 
-        html = """
-        <div class="col">
-            <div class="left">
+        html2 = """
+        <div class="col2">
+            <div class="left2">
                 <p class="subtext_manual">Income Statement Manual Input Fields</p>
             </div>
-            <div class="right">
+            <div class="right2">
                 <div class="tooltip">
                     <i class="fas fa-info-circle fa-2x"></i>
                     <span class="tooltiptext">
@@ -1336,7 +1336,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         </div>
         """
 
-        st.markdown(html, unsafe_allow_html=True)
+        st.markdown(html2, unsafe_allow_html=True)
 
 
 
