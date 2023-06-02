@@ -1201,7 +1201,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 padding-top: 0.5em;
                 padding-bottom: 0em;
                 border: 0.1875em solid #25476A;
-                font-size: 0.5em;
 
                 /* Position the tooltip text */
                 position: absolute;
@@ -1223,6 +1222,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 border-width: 0.625em;
                 border-style: solid;
                 border-color: #25476A transparent transparent transparent;
+                font-size: 0.5em;
             }
 
             /* Show the tooltip text when you mouse over the tooltip container */
