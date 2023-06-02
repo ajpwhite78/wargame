@@ -1196,6 +1196,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 align-items: center;
                 vertical-align: middle;
                 padding-right: 1.875em;
+                margin-top: 1em;
+                margin-bottom: 1em;
             }
             .left2 {
                 text-align: left;
@@ -1225,10 +1227,15 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 background-color: #b8d9e8;
                 color: #25476A;
                 text-align: justify;
-                border-radius: 6px;
+                font-family: sans-serif;
+                font-size: 1em;
+                display: block; width: 100%; border: 0.1875em solid #25476A
+                border-radius: 0.375em;
                 padding: 0.625em 0.9375em;
                 white-space: normal;
-                padding: 0.625em 0.625em 0.625em 0.625em;
+                padding-left: 0.75em;
+                padding-right: 0.75em;
+                padding-top: 0.5em;
                 border: 0.125em solid #25476A;
 
                 /* Position the tooltip text */
