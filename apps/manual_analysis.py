@@ -1314,7 +1314,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     <span class="tooltiptext2">
                         <ul style="font-size: 0.9em;">
                             Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
-                            <li style="font-size: 0.9em;">Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
+                            <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
                             <li style="font-size: 0.9em;">COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
                             <li style="font-size: 0.9em;">SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
                             <li style="font-size: 0.9em;">R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
