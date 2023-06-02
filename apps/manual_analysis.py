@@ -1248,8 +1248,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     font-size: 2.5em;
                 }
             .tooltip2 .tooltiptext2 {
-                border-width: 1em;
-                border-radius: 1em;
+                border-width: 0.8em;
+                border-radius: 2em;
             }            
             .tooltip2 {
                 transform: translateX(-80%);
