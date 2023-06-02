@@ -1888,14 +1888,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 {
                     'selector': 'td:hover',
                     'props': [('background-color', 'rgba(111, 114, 222, 0.4)')]
-                },
-                {
-                    'selector': 'td',
-                    'props': [('border', '1px solid #25476A')]
-                },
-                {
-                    'selector': '',
-                    'props': [('border', '3px solid #25476A')]
                 }
             ]).apply(lambda row: highlight_diff_by_row(row, color1=(3, 169, 244, 0.5), color2=(0, 0, 0, 0)), axis=1).set_properties(
                 subset=["%s" % st.session_state.user_reporting_period, "Scenario"],
