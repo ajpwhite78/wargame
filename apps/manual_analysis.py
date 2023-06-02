@@ -1517,7 +1517,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.text("")
         col1, col2, col3, col4 = st.columns([4, 1.05, 0.5, 0.5])
         with col1:
-            instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Click "ReRun" once you have made your selection or click "Reset" to reset to the default values.</span></p>'
+            instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Click "ReRun" once you have made your selection or click "Reset" to reset to the default values.</span></p>'
             st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
         with col3:
             resubmit_button = st.button("ReRun", key="3")
