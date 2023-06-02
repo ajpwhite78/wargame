@@ -1454,23 +1454,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             </div>
         </div>
         """
-        
-                                Understanding financial metrics and ratios is essential for assessing a company&apos;s financial health and making informed investment decisions.                               
-                            <li>Accounts Receivable Days: The number of days it takes for a company to collect payment for goods or services sold. A lower number of days is generally seen as a positive sign, indicating that a company is efficient in its collections process.</li>
-                            <li>Inventory Days: The number of days it takes for a company to sell its inventory. A lower number of days is generally seen as a positive sign, indicating that a company has a strong demand for its products.</li>
-                            <li>Capital Expenditure / Sales: The ratio of capital expenditures to sales. This ratio indicates how much a company is investing in long-term assets relative to its revenue. A higher ratio may suggest that a company is investing more in its long-term growth and may have higher future earnings potential.</li>
-                            <li>Capital Expenditure: The amount of money a company spends on acquiring or improving long-term assets such as property, plant and equipment. This investment is typically made to increase a company&apos;s production capacity, efficiency or competitiveness.</li>
-                            <li>Capital Expenditure Type (Ratio or Dollar): An indicator of whether capital expenditure is expressed as a ratio of sales or as a dollar amount. A ratio may be more informative in evaluating a company&apos;s investment decisions relative to its size, while a dollar amount may be more informative in evaluating the company&apos;s overall investment in long-term assets.</li>
-                            <li>CapEx Tangible / Intangible Split: The breakdown of capital expenditures between tangible assets, such as property and equipment and intangible assets, such as patents and intellectual property. This breakdown indicates how much a company is investing in different types of long-term assets.</li>
-                            <li>Accounts Payable Days: The number of days it takes for a company to pay its bills to suppliers. A higher number of days may indicate that a company is using its suppliers&apos; money to finance its operations and may be seen as a positive sign for the company&apos;s cash flow management.</li>
-                            <li>Sales of Equity: The total amount of equity sold by a company during a period. This may include common stock, preferred stock or other types of equity.</li>
-                            <li>Repurchase of Equity: The total amount of equity repurchased by a company during a period. This may include buying back common stock, preferred stock or other types of equity.</li>                                    
-                            <li>Proceeds from Issuance of Debt: The total amount of money a company receives from issuing debt. This may include bonds, notes or other forms of debt financing.</li>
-                            <li>Repayments of Long-Term Debt: The total amount of money a company pays back to lenders for long-term debt. This may include interest payments as well as principal repayments.</li>
-                            <li>Notes / Other Split: The breakdown of a company&apos;s short-term debt between notes and other types of short-term debt. Notes refer to short-term debt that is issued with a specific maturity date, while other types of short-term debt may not have a specific maturity date or may be payable on demand.</li>
-                        These financial metrics and ratios can help provide a valuable insight into a company&apos;s financial position and performance.
-                        </ul>
-        
 
         st.markdown(html3, unsafe_allow_html=True)
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
