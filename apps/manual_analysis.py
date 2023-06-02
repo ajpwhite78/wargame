@@ -1288,14 +1288,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         styles3 = """
         <style>
             .col3 {
-                background-color: #25476A;
-                padding-left: 6.25em;
-                padding: 1em;
-                border: 0.3125em solid #03A9F4;
-                border-radius: 0.625em;
-                margin: 0;
-                padding-left: 1.875em;
-                padding-right: 1.875em;
                 display: flex;
                 align-items: center;
                 vertical-align: middle;
@@ -1303,14 +1295,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             .left3 {
                 text-align: left;
                 float: left;
-                width: 40%;
+                width: 70%;
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
             .right3 {
                 text-align: right;
                 float: right;
-                width: 60%;
+                width: 30%;
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
