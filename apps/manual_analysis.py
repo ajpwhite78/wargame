@@ -1210,7 +1210,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
                 /* Fade in tooltip */
                 opacity: 0;
-                transition: opacity 0.3s;
+                transition: opacity 0.5s;
             }
 
             /* Tooltip arrow */
@@ -1218,7 +1218,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 content: "";
                 position: absolute;
                 top: 100%;
-                left: 96%;
+                left: 97%;
                 border-width: 0.3125em;
                 border-style: solid;
                 border-color: #25476A transparent transparent transparent;
