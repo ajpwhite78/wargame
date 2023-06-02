@@ -12,7 +12,7 @@ marker_spinner_css = """
         justify-content: center;
         position: fixed;
         top: 0%;
-        left: 0%;
+        left: 0%
         transform: translate(54%, 0%);
         width: 100%;
         height: 100%;
@@ -1179,7 +1179,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             /* Tooltip container */
             .tooltip2 {
-                position: relative;
+                position: absolute;
                 margin-bottom: 0em;
                 display: inline-block;
                 margin-top: 0em;
