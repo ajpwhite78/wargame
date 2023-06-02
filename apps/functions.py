@@ -1116,33 +1116,33 @@ class MultiFileDownloader(object):
         zip_file.seek(0)
         b64 = base64.b64encode(zip_file.getvalue()).decode()
         st.markdown("""
-    <style>
-        button.css-1n1yxpq.edgvbvh10 {
-            background-color: #25476A;
-            color: #FAFAFA;
-            border-color: #FAFAFA;
-            border-width: 3px;
-            width: 5em;
-            height: 1.8em;
-            margin-top: 1.5em;
-        }
+            <style>
+                button.css-1n1yxpq.edgvbvh10 {
+                    background-color: #25476A;
+                    color: #FAFAFA;
+                    border-color: #FAFAFA;
+                    border-width: 3px;
+                    width: 5em;
+                    height: 1.8em;
+                    margin-top: 1.5em;
+                }
 
-        button.css-1n1yxpq.edgvbvh10:hover {
-            background-color: rgba(111, 114, 222, 0.6);
-            color: #25476A;
-            border-color: #25476A;
-        }
+                button.css-1n1yxpq.edgvbvh10:hover {
+                    background-color: rgba(111, 114, 222, 0.6);
+                    color: #25476A;
+                    border-color: #25476A;
+                }
 
-        @media (max-width: 600px) {
-            button.css-1n1yxpq.edgvbvh10 {
-                width: 100% !important;
-                height: 10em !important;
-                margin-top: -3em;
-            }
-        }
-    </style>
-    """, unsafe_allow_html=True)
-filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name, timestr)
+                @media (max-width: 600px) {
+                    button.css-1n1yxpq.edgvbvh10 {
+                        width: 100% !important;
+                        height: 10em !important;
+                        margin-top: -3em;
+                    }
+                }
+            </style>
+            """, unsafe_allow_html=True)
+        filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name, timestr)
         st.download_button(
             label="Download",
             data=zip_file.getvalue(),
@@ -1158,8 +1158,34 @@ filename_out = "Comrate_{}_financial_statements_manual_analysis_{}".format(name,
                 zf.writestr(new_filename, data)
         zip_file.seek(0)
         b64 = base64.b64encode(zip_file.getvalue()).decode()
-        st.markdown("""<style>button.css-1n1yxpq.edgvbvh10 {background-color:#25476A; color: #FAFAFA; border-color: #FAFAFA; border-width: 2.2px; width:6em; height:2em} button.css-1n1yxpq.edgvbvh10:hover {background-color: rgba(111, 114, 222, 0.6); color: #25476A; border-color: #25476A}</style>""", unsafe_allow_html=True)
-        filename_out = "Comrate_{}_financial_statements_simulation_analysis_{}".format(name, timestr)
+        st.markdown("""
+            <style>
+                button.css-1n1yxpq.edgvbvh10 {
+                    background-color: #25476A;
+                    color: #FAFAFA;
+                    border-color: #FAFAFA;
+                    border-width: 3px;
+                    width: 5em;
+                    height: 1.8em;
+                    margin-top: 1.5em;
+                }
+
+                button.css-1n1yxpq.edgvbvh10:hover {
+                    background-color: rgba(111, 114, 222, 0.6);
+                    color: #25476A;
+                    border-color: #25476A;
+                }
+
+                @media (max-width: 600px) {
+                    button.css-1n1yxpq.edgvbvh10 {
+                        width: 100% !important;
+                        height: 10em !important;
+                        margin-top: -3em;
+                    }
+                }
+            </style>
+            """, unsafe_allow_html=True)
+            filename_out = "Comrate_{}_financial_statements_simulation_analysis_{}".format(name, timestr)
         st.download_button(
             label="Download",
             data=zip_file.getvalue(),
