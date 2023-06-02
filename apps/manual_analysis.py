@@ -1348,8 +1348,17 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
 
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-        instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Enter values for the income statement financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
-        st.markdown(instructions_text, unsafe_allow_html=True)
+        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Enter values for the income statement financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
+        text_media_query_manual3 = '''
+            <style>
+            @media (max-width: 600px) {
+                p.instructions_text {
+                    font-size: 3.2em;
+                }
+            }
+            </style>
+        '''
+        st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
         col1, col2, col3, col4, col5, col6 = st.columns(6)
         with col1:
             text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Sales Growth %</span></p>'
