@@ -55,7 +55,7 @@ st.markdown(
         color: #FAFAFA;
         border-color: #FAFAFA;
         border-width: 3px;
-        width: 4em;
+        width: 5.4em;
         height: 1.8em;
         margin-top: 1.5em;
     }
