@@ -1092,7 +1092,7 @@ def app():
         }
         </style>
     '''
-    line_media_query2 = '''
+    line_media_query3 = '''
         <style>
         @media (max-width: 600px) {
             .line3 {
