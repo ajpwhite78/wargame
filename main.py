@@ -447,7 +447,7 @@ header3 = """
             font-size: 0.8em;  /* Convert 16px to em units */
             margin: 0em;  /* Adjust margin as per your preference */
             cursor: pointer;
-            width: 5.4em;
+            width: 6em;
             height: 2em;
         }}
         .button:hover {{
