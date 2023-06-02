@@ -1255,7 +1255,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 content: "";
                 position: absolute;
                 top: 100%;
-                left: 50%;
+                left: 90%;
                 transform: translateX(-50%);
                 margin-left: -0.3125em;
                 border-width: 0.3125em;
@@ -1279,15 +1279,20 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             /* Responsive styles */
             @media (max-width: 600px) {
-                p.subtext_manual {
-                    font-size: 2.5em;
+               .col {
                     margin-top: -3em;
                 }
+                p.subtext_manual {
+                    font-size: 2.5em;
+                }
+            .tooltip .tooltiptext {
+                font-size: 0.6em;
+            }            
             .tooltip {
-                transform: translateX(-40%);
+                transform: translateX(-80%);
             }
             .tooltip i {
-                font-size: 3em;
+                font-size: 5em;
                 margin-top: -0.2em;
             }
             }
