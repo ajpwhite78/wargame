@@ -2005,6 +2005,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         st.text("")
         st.markdown(styles, unsafe_allow_html=True)
+        
+        left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}&nbsp;{}&nbsp;{}</span>".format(str(st.session_state.user_reporting_period), "Rating:", "XXX")
+        right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}&nbsp;{}</span>".format("Scenario Rating:", "XXX")
+
+        html2 = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
+        st.markdown(html2, unsafe_allow_html=True)
+        
+        
         left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 44px;'>{}&nbsp;{}&nbsp;{}</span>".format(str(st.session_state.user_reporting_period), "Rating:", "XXX")
         right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 44px;'>{}&nbsp;{}</span>".format("Scenario Rating:", "XXX")
 
