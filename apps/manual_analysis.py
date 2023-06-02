@@ -1280,7 +1280,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             /* Responsive styles */
             @media (max-width: 600px) {
                .col {
-                    margin-top: -3em;
+                    margin-top: -5em;
                 }
                 p.subtext_manual {
                     font-size: 2.5em;
@@ -1292,7 +1292,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 transform: translateX(-80%);
             }
             .tooltip i {
-                font-size: 5em;
+                font-size: 8em;
                 margin-top: -0.2em;
             }
             }
