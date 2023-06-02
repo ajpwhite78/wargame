@@ -1124,7 +1124,7 @@ class MultiFileDownloader(object):
                     border-width: 3px;
                     width: 5.4em;
                     height: 1.8em;
-                    margin-top: 1.2em;
+                    margin-top: 0.8em;
                 }
 
                 button.css-1n1yxpq.edgvbvh10:hover {
@@ -1167,7 +1167,7 @@ class MultiFileDownloader(object):
                     border-width: 3px;
                     width: 5.4em;
                     height: 1.8em;
-                    margin-top: 1.2em;
+                    margin-top: 0.8em;
                 }
 
                 button.css-1n1yxpq.edgvbvh10:hover {
