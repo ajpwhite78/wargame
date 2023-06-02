@@ -1519,7 +1519,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             text_media_query_manual3A = '''
             <style>
             @media (max-width: 600px) {
-                p.instructions_text_update {
+                .instructions_text_update {
                     margin-top: -10em; 
                     font-size: 3.2em;
                 }
