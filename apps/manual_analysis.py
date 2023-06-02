@@ -1098,6 +1098,7 @@ def app():
             .line3 {
                 padding: 0.3em;
                 margin-bottom: 8em;
+                margin-top: 0.2em;
             }
         }
         </style>
