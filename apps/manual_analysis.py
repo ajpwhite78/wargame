@@ -2130,7 +2130,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 spinner_image.empty()
 
 
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        col1, col2, col3 = st.columns(6)
         with col1:
             left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2em;'>Income Statement</span>"
             right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 1em;'>(blue fields indicate change)</span></span>"
@@ -2141,21 +2141,20 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
             
         with col2:
-            subtext3A = '<p style="margin-bottom: 2px; margin-top: 7px; text-align: right"><span style="font-family:sans-serif; color:#25476A; font-size: 16px;">(blue fields indicate change)&nbsp;&nbsp;&nbsp;&nbsp;</span></p>'
-            st.markdown(subtext3A, unsafe_allow_html=True)
-        with col3:
-            subtext4 = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 24px;">Cash Flow Statement</span></p>'
-            st.markdown(subtext4, unsafe_allow_html=True)
-        with col4:
-            st.markdown(subtext3A, unsafe_allow_html=True)
-        with col5:
-            subtext5 = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 24px;">Balance Sheet</span></p>'
-            st.markdown(subtext5, unsafe_allow_html=True)
-        with col6:
-            st.markdown(subtext3A, unsafe_allow_html=True)
-        col1, col2, col3 = st.columns(3)
-        with col2:
+            left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2em;'>Cash Flow Statement</span>"
+            right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 1em;'>(blue fields indicate change)</span></span>"
 
+            html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
+            st.markdown(html5, unsafe_allow_html=True)
+            st.markdown(line_media_query2 + line3, unsafe_allow_html=True)
             st.markdown('<div style="margin-top: -11px">' + df_cash_flow_statement_out_png.to_html(), unsafe_allow_html=True)
         with col3:
+            left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2em;'>Balance Sheet</span>"
+            right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 1em;'>(blue fields indicate change)</span></span>"
+
+            html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
+            st.markdown(html5, unsafe_allow_html=True)
+            st.markdown(line_media_query2 + line3, unsafe_allow_html=True)
             st.markdown('<div style="margin-top: -11px">' + df_balance_sheet_out_png.to_html(), unsafe_allow_html=True)
+
+            
