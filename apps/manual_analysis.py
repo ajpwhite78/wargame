@@ -2130,7 +2130,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 spinner_image.empty()
 
 
-        col1, col2, col3 = st.columns(6)
+        col1, col2, col3 = st.columns(3)
         with col1:
             left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2em;'>Income Statement</span>"
             right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 1em;'>(blue fields indicate change)</span></span>"
