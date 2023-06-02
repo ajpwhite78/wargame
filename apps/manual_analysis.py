@@ -1515,7 +1515,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.session_state.user_whatif_notes_other_split = user_whatif_notes_other_split_field.number_input(label="", label_visibility="collapsed", min_value=0, max_value=100, step=None, format="%i", value=st.session_state.default_whatif_notes_other_split_user_out, key="whatif_manual_21")
         col1, col2, col3, col4 = st.columns([4, 1.05, 0.5, 0.5])
         with col1:
-            instructions_text = '<p class="instructions_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Click "ReRun" once you have made your selection or click "Reset" to reset to the default values.</span></p>'
+            instructions_text = '<p class="instructions_text" style="margin-top: 1.5em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Click "ReRun" once you have made your selection or click "Reset" to reset to the default values.</span></p>'
             text_media_query_manual3A = '''
             <style>
             @media (max-width: 600px) {
