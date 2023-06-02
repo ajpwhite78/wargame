@@ -2154,8 +2154,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         with col6:
             st.markdown(subtext3A, unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
-        with col1:
-
         with col2:
 
             st.markdown('<div style="margin-top: -11px">' + df_cash_flow_statement_out_png.to_html(), unsafe_allow_html=True)
