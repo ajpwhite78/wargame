@@ -1183,7 +1183,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 margin-bottom: 0em;
                 display: inline-block;
                 margin-top: 0em;
-                font-size: 0.5em;
             }
 
             /* Tooltip text */
@@ -1202,6 +1201,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 padding-top: 0.5em;
                 padding-bottom: 0em;
                 border: 0.1875em solid #25476A;
+                font-size: 0.5em;
 
                 /* Position the tooltip text */
                 position: absolute;
