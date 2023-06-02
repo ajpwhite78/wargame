@@ -1726,7 +1726,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                                                                        '#FAFAFA'), ('font-size', '1em')]}, {
                                                                                                 'selector': 'th:last-child',
                                                                                                 'props': [('text-align', 'center')]
-                                                                                            }
+                                                                                            },
                                                                                          {'selector': 'tr:nth-child(7) td',
                                                                                           'props': [
                                                                                               ('text-align', 'left'),
