@@ -1768,12 +1768,12 @@ text_media_query3 = '''
 st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
 col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 2, 1, 0.4, 0.6])
 with col1:
-    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Sector</span></p>'
+    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Sector</span></p>'
     text_media_query4 = '''
     <style>
     @media (max-width: 600px) {
         p.heading_text {
-            font-size: 3.2em;
+            font-size: 3.5em;
         }
     }
     </style>
@@ -1784,7 +1784,7 @@ with col1:
                                 format_func=lambda x: "Select Sector" if x == "" else x, key="user_sector", on_change=change_callback1)
 
 with col2:
-    text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Country</span></p>'
+    text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Country</span></p>'
     st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     if st.session_state.user_sector == "":
         country_options = [""]
@@ -1795,7 +1795,7 @@ with col2:
     st.selectbox(label="", label_visibility="collapsed", options=country_options,
                  format_func=lambda x: "Select Country" if x == "" else x,  key="user_country", on_change=change_callback1)    
 with col3:
-    text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Company Name</span></p>'
+    text = '<p class="heading_text" style="margin-bottom: 0em;"> <span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Company Name</span></p>'
     st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     if st.session_state.user_country == "All Countries":
         if st.session_state.user_sector == "All Sectors":
@@ -1809,7 +1809,7 @@ with col3:
     st.selectbox(label="", label_visibility="collapsed", options=entity_name_options,
                  format_func=lambda x: "Select Entity Name" if x == "" else x,  key="user_entity_name", on_change=change_callback1)
 with col4:
-    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Reporting Period</span></p>'
+    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Reporting Period</span></p>'
     st.markdown(text_media_query4 + text, unsafe_allow_html=True)
     if st.session_state.user_country == "All Countries":
         if st.session_state.user_sector == "All Sectors":
@@ -1909,7 +1909,7 @@ if st.session_state.submit1_confirm == True:
     st.markdown(text_media_query3 + instructions_text, unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns([1, 4, 0.4, 0.6])
     with col1:
-        text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Analysis Type</span></p>'
+        text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Analysis Type</span></p>'
         st.markdown(text_media_query4 + text, unsafe_allow_html=True)
         st.selectbox(label="", label_visibility="collapsed", options=analysis_options,
                    format_func=lambda x: "Select Analysis Type" if x == "" else x,  key="user_whatif")
