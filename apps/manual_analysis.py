@@ -2012,12 +2012,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         predict_rating_value = rating_dict.get(predict_rating)
         difference = predict_rating_value - current_rating_value
 
-        if difference > 0:
+        if difference < 0:
             text1 = '''
         <p class="text1" style="margin-top: 1em; margin-bottom: 1em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Paydar calculates a {} rating for {} at {} and predicts a {} rating, indicating a rating increase of {} grade(s) based on the scenario provided.</span></p>
         '''.format(current_rating, st.session_state.user_entity_name, st.session_state.user_reporting_period, predict_rating, abs(difference))
             result = "increase"
-        elif difference < 0:
+        elif difference > 0:
             text1 = '''
         <p class="text1" style="margin-top: 1em; margin-bottom: 1em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Paydar calculates a {} rating for {} at {} and predicts a {} rating, indicating a rating decrease of {} grade(s) based on the scenario provided.</span></p>
         '''.format(current_rating, st.session_state.user_entity_name, st.session_state.user_reporting_period, predict_rating, abs(difference))
