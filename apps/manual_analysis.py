@@ -1315,14 +1315,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                         <ul style="font-size: 0.9em;">
                             Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
                             <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
-                            <li style="font-size: 0.9em;">COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
-                            <li style="font-size: 0.9em;">SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
-                            <li style="font-size: 0.9em;">R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
-                            <li style="font-size: 0.9em;">D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
-                            <li style="font-size: 0.9em;">D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
-                            <li style="font-size: 0.9em;">Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
-                            <li style="font-size: 0.9em;">Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
-                            <li style="font-size: 0.9em;">Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
+                            <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
+                            <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
+                            <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
+                            <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
+                            <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
+                            <<li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
+                            <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
+                            <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
                             These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
                         </ul>    
                     </span>
