@@ -1302,7 +1302,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         html2 = """
         <div class="col2">
             <div class="left2">
-                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Manual Input Fields</span></p>
+                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
             </div>
             <div class="right2">
                 <div class="tooltip2">
@@ -1386,7 +1386,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         col1, col2, col3, col4 = st.columns([5.4, 0.2, 0.2, 0.2])
         with col1:
-            subtext2 = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Cash Flow Statement & Balance Sheet Manual Input Fields</span></p>'
+            subtext2 = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Cash Flow Statement & Balance Sheet Input Fields</span></p>'
             st.markdown(text_media_query_manual2 + subtext2, unsafe_allow_html=True)
         with col2:
             st.markdown("""
