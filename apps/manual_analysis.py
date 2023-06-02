@@ -1096,8 +1096,8 @@ def app():
         <style>
         @media (max-width: 600px) {
             .line3 {
-                padding: 0.3em;
-                margin-bottom: 8em;
+                padding: 0.5em;
+                margin-bottom: 3em;
             }
         }
         </style>
