@@ -1805,97 +1805,106 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         
         df_income_statement_out_png = st.session_state.df_income_statement_out.style.set_table_styles([
-                {
-                    'selector': 'td',
-                    'props': [('color', '#25476A'), ('font-size', '0.9em')]
-                },
-                {
-                    'selector': 'th:nth-child(1)',
-                    'props': [('text-align', 'left'), ('font-size', '0.9em'), ('font-weight', 'bold'), ('background-color', '#25476A'), ('color', '#FAFAFA')]
-                },
-                {
-                    'selector': 'th:nth-child(n+2)',
-                    'props': [('text-align', 'center'), ('font-weight', 'bold'), ('background-color', '#25476A'), ('color', '#FAFAFA'), ('font-size', '0.9em')]
-                },
-                {
-                    'selector': 'th:last-child',
-                    'props': [('text-align', 'center'), ('font-size', '0.9em')]
-                },
-                {
-                    'selector': 'tr:nth-child(7) td',
-                    'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
-                },
-                {
-                    'selector': 'tr:nth-child(7) td:nth-child(2), tr:nth-child(7) td:nth-child(3)',
-                    'props': [('text-align', 'center')]
-                },
-                {
-                    'selector': 'tr:nth-child(12) td',
-                    'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
-                },
-                {
-                    'selector': 'tr:nth-child(12) td:nth-child(2), tr:nth-child(12) td:nth-child(3)',
-                    'props': [('text-align', 'center')]
-                },
-                {
-                    'selector': 'tr:nth-child(17) td',
-                    'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
-                },
-                {
-                    'selector': 'tr:nth-child(17) td:nth-child(2), tr:nth-child(17) td:nth-child(3)',
-                    'props': [('text-align', 'center')]
-                },
-                {
-                    'selector': 'tr:nth-child(20) td',
-                    'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
-                },
-                {
-                    'selector': 'tr:nth-child(20) td:nth-child(2), tr:nth-child(20) td:nth-child(3)',
-                    'props': [('text-align', 'center')]
-                },
-                {
-                    'selector': 'tr:nth-child(2)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(4)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(8)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(13)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(16)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(19)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(21)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'tr:nth-child(23)',
-                    'props': [('font-style', 'italic')]
-                },
-                {
-                    'selector': 'td:hover',
-                    'props': [('background-color', 'rgba(111, 114, 222, 0.4)')]
-                }
-            ]).apply(lambda row: highlight_diff_by_row(row, color1=(3, 169, 244, 0.5), color2=(0, 0, 0, 0)), axis=1).set_properties(
-                subset=["%s" % st.session_state.user_reporting_period, "Scenario"],
-                **{'text-align': 'center'}, **{'width': '120px'}
-            ).set_properties(subset=[
-                "%s" % st.session_state.user_entity_name + " (" + df_financials['currency_iso'].values[0] + " Millions)"],
-                **{'text-align': 'left'}, **{'width': '400px'}
-            ).hide_index()
+            {
+                'selector': 'td',
+                'props': [('color', '#25476A'), ('font-size', '0.9em')]
+            },
+            {
+                'selector': 'th:nth-child(1)',
+                'props': [('text-align', 'left'), ('font-size', '0.9em'), ('font-weight', 'bold'), ('background-color', '#25476A'), ('color', '#FAFAFA')]
+            },
+            {
+                'selector': 'th:nth-child(n+2)',
+                'props': [('text-align', 'center'), ('font-weight', 'bold'), ('background-color', '#25476A'), ('color', '#FAFAFA'), ('font-size', '0.9em')]
+            },
+            {
+                'selector': 'th:last-child',
+                'props': [('text-align', 'center'), ('font-size', '0.9em')]
+            },
+            {
+                'selector': 'tr:nth-child(7) td',
+                'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
+            },
+            {
+                'selector': 'tr:nth-child(7) td:nth-child(2), tr:nth-child(7) td:nth-child(3)',
+                'props': [('text-align', 'center')]
+            },
+            {
+                'selector': 'tr:nth-child(12) td',
+                'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
+            },
+            {
+                'selector': 'tr:nth-child(12) td:nth-child(2), tr:nth-child(12) td:nth-child(3)',
+                'props': [('text-align', 'center')]
+            },
+            {
+                'selector': 'tr:nth-child(17) td',
+                'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
+            },
+            {
+                'selector': 'tr:nth-child(17) td:nth-child(2), tr:nth-child(17) td:nth-child(3)',
+                'props': [('text-align', 'center')]
+            },
+            {
+                'selector': 'tr:nth-child(20) td',
+                'props': [('text-align', 'left'), ('font-weight', 'bold'), ('background-color', '#6d6e73'), ('color', '#FAFAFA!important')]
+            },
+            {
+                'selector': 'tr:nth-child(20) td:nth-child(2), tr:nth-child(20) td:nth-child(3)',
+                'props': [('text-align', 'center')]
+            },
+            {
+                'selector': 'tr:nth-child(2)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(4)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(8)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(13)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(16)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(19)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(21)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'tr:nth-child(23)',
+                'props': [('font-style', 'italic')]
+            },
+            {
+                'selector': 'td:hover',
+                'props': [('background-color', 'rgba(111, 114, 222, 0.4)')]
+            },
+            {
+                'selector': 'td',
+                'props': [('border', '1px solid #25476A')]
+            },
+            {
+                'selector': '',
+                'props': [('border', '3px solid #25476A')]
+            }
+        ]).set_properties(subset=["%s" % st.session_state.user_reporting_period, "Scenario"], **{'text-align': 'center'}, **{'width': '120px'}).set_properties(subset=["%s" % st.session_state.user_entity_name + " (" + df_financials['currency_iso'].values[0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'}).hide_index()
+
+        # Center the last column
+        df_income_statement_out_png.set_properties(subset=df_income_statement_out_png.columns[-1], **{'text-align': 'center'})
+
+        # Remove double borders
+        df_income_statement_out_png.set_properties(subset=df_income_statement_out_png.columns, **{'border': '1px solid #25476A'})
+
 
         
         
