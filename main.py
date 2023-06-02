@@ -1743,7 +1743,7 @@ text_media_query1 = '''
 '''
 st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
 
-subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
+subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2.25em;">Company Details</span></p>'
 text_media_query2 = '''
     <style>
     @media (max-width: 600px) {
