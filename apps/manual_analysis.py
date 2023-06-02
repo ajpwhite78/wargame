@@ -1248,7 +1248,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             @media (max-width: 600px) {
                .col2 {
                     padding-right: 1em;
-                    margin-top: -6em;
+                    margin-top: 0em;
                 }
                 p.subtext_manual2 {
                     font-size: 2.5em;
@@ -1377,7 +1377,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 p.heading_text4A {
                     font-size: 3.2em;
                     margin-top: -2em;
-                    margin-bottom: 1em;
                 }
             }
             </style>
