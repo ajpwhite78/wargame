@@ -1187,8 +1187,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 padding-bottom: 0px;
             }
             .break-line {
-                display: block;
-                white-space: pre-wrap;
+                display: inline;
+                white-space: normal;
             }
 
             @media (max-width: 600px) {
@@ -1198,8 +1198,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     margin-bottom: 4em;
                 }
                 .break-line {
-                    display: inline;
-                    white-space: normal;
+                    display: block;
+                    white-space: pre-wrap;
                 }
             }
         </style>
