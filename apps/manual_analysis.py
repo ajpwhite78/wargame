@@ -1445,8 +1445,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                             <li>Repurchase of Equity: The total amount of equity repurchased by a company during a period. This may include buying back common stock, preferred stock or other types of equity.</li>                                    
                             <li>Proceeds from Issuance of Debt: The total amount of money a company receives from issuing debt. This may include bonds, notes or other forms of debt financing.</li>
                             <li>Repayments of Long-Term Debt: The total amount of money a company pays back to lenders for long-term debt. This may include interest payments as well as principal repayments.</li>
-                            <li>Notes / Other Split: The breakdown of a company&apos;s short-term debt between notes and other types of short-term debt. Notes refer to short-term debt that is issued with a specific maturity date, while other types of short-term debt may not have a specific maturity date or may be payable on demand.</li>
-                                  
+                            <li>Notes / Other Split: The breakdown of a company&apos;s short-term debt between notes and other types of short-term debt. Notes refer to short-term debt that is issued with a specific maturity date, while other types of short-term debt may not have a specific maturity date or may be payable on demand.</li>    
                             These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
                         </ul>    
                     </span>
