@@ -1207,7 +1207,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 z-index: 1;
                 bottom: 125%;
                 left: 0%;
-                transform: translateX(-50%);
+                transform: translateX(-100%);
 
                 /* Fade in tooltip */
                 opacity: 0;
