@@ -1122,7 +1122,7 @@ class MultiFileDownloader(object):
                     color: #FAFAFA;
                     border-color: #FAFAFA;
                     border-width: 3px;
-                    width: 6em;
+                    width: 5.4em;
                     height: 1.8em;
                     margin-top: 1.5em;
                 }
@@ -1165,7 +1165,7 @@ class MultiFileDownloader(object):
                     color: #FAFAFA;
                     border-color: #FAFAFA;
                     border-width: 3px;
-                    width: 6em;
+                    width: 5.4em;
                     height: 1.8em;
                     margin-top: 1.5em;
                 }
