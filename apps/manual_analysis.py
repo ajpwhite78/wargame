@@ -1242,8 +1242,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             /* Responsive styles */
             @media (max-width: 600px) {
                .col2 {
-                    margin-top: -5em;
-                    margin-bottom: -5em;
                     padding-right: 0.2em;
                 }
                 p.subtext_manual2 {
