@@ -2064,8 +2064,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
              if statement_out_download_type == "CSV":
                 spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
                 spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
-                st.text("")
-                st.text("")
                 statements_out = [(st.session_state.df_income_statement_out.reset_index(drop=True).to_csv().encode(), "manual_analysis_income_statement", "csv"), (st.session_state.df_cash_flow_statement_out.reset_index(drop=True).to_csv().encode(), "manual_analysis_cashflow_statement", "csv"), (st.session_state.df_balance_sheet_statement_out.reset_index(drop=True).to_csv().encode(), "manual_analysis_balance_sheet", "csv")]
                 downloader = MultiFileDownloader()
                 downloader.download_manual_figures(statements_out, st.session_state.user_entity_name)
@@ -2074,8 +2072,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
              if statement_out_download_type == "PNG":
                 spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
                 spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
-                st.text("")
-                st.text("")
                 statements_out = ([df_income_statement_out_png, "manual_analysis_income_statement.to_html()", "png", "Income Statement", 36], [df_cash_flow_statement_out_png.to_html(), "manual_analysis_cash_flow_statement", "png", "Cash Flow Statement", 36], [df_balance_sheet_out_png.to_html(), "manual_analysis_balance_sheet", "png", "Balance Sheet", 36])
                 downloader = MultiFileDownloader()
                 downloader.export_tables(statements_out, st.session_state.user_entity_name)
