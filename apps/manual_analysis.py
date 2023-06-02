@@ -1343,7 +1343,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.text("")
         st.text("")
 
-        col1, col2 = st.columns([5.8, 0.2])
+        col1, col2, col3, col4 = st.columns([5.4, 0.2, 0.2, 0.2])
         with col1:
             subtext2 = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Cash Flow Statement & Balance Sheet Manual Input Fields</span></p>'
             st.markdown(text_media_query_manual2 + subtext2, unsafe_allow_html=True)
@@ -1412,9 +1412,11 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                 """,
                         unsafe_allow_html=True
                         )
+        with col3:
             st.markdown(
                 '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
                 unsafe_allow_html=True)
+        with col4:
             st.markdown(
                 """
                 <div class="tooltip">
