@@ -1193,7 +1193,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 color: #25476A;
                 text-align: justify;
                 font-family: sans-serif;
-                font-size: 3em !important;
+                font-size: 1px !important;
                 display: block; 
                 border-radius: 0.375em;
                 white-space: normal;
