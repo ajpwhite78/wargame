@@ -1072,6 +1072,7 @@ def get_financials(datafame, user_entity_name, user_period):
 def app():
     line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
     line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
+    line3 = '<hr class="line3" style="height:0.1875em; border:0em; background-color: #03A9F4; margin-top: -0.3125em; margin-bottom: -1.25em;">'
     line_media_query1 = '''
         <style>
         @media (max-width: 600px) {
@@ -1091,7 +1092,6 @@ def app():
         }
         </style>
     '''
-    line3 = '<hr style="height: 4px; border:0px; background-color: #03A9F4; margin-top: -5px; margin-bottom: -20px;">'
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
     spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
     st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out = get_default_fields(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period)
@@ -2137,6 +2137,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
+            st.markdown(line_media_query2 + line3, unsafe_allow_html=True)
+            st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
             
         with col2:
             subtext3A = '<p style="margin-bottom: 2px; margin-top: 7px; text-align: right"><span style="font-family:sans-serif; color:#25476A; font-size: 16px;">(blue fields indicate change)&nbsp;&nbsp;&nbsp;&nbsp;</span></p>'
@@ -2153,11 +2155,9 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.markdown(subtext3A, unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.markdown(line3, unsafe_allow_html=True)
-            st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
+
         with col2:
-            st.markdown(line3, unsafe_allow_html=True)
+
             st.markdown('<div style="margin-top: -11px">' + df_cash_flow_statement_out_png.to_html(), unsafe_allow_html=True)
         with col3:
-            st.markdown(line3, unsafe_allow_html=True)
             st.markdown('<div style="margin-top: -11px">' + df_balance_sheet_out_png.to_html(), unsafe_allow_html=True)
