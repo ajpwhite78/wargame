@@ -1185,7 +1185,7 @@ class MultiFileDownloader(object):
                 }
             </style>
             """, unsafe_allow_html=True)
-            filename_out = "Comrate_{}_financial_statements_simulation_analysis_{}".format(name, timestr)
+        filename_out = "Comrate_{}_financial_statements_simulation_analysis_{}".format(name, timestr)
         st.download_button(
             label="Download",
             data=zip_file.getvalue(),
