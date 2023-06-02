@@ -1156,6 +1156,69 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.session_state.manual_analysis_confirm = True
         st.session_state.simulation_analysis_confirm = False       
         
+        
+        styles = """
+        <style>
+            .col {
+                background-color: #25476A;
+                padding-left: 6.25em;
+                padding: 1em;
+                border: 0.3125em solid #03A9F4;
+                border-radius: 0.625em;
+                margin: 0;
+                padding-left: 1.875em;
+                padding-right: 1.875em;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+            }
+            .left {
+                text-align: left;
+                float: left;
+                width: 40%;
+                padding-top: 0em;
+                padding-bottom: 0px;
+            }
+            .right {
+                text-align: right;
+                float: right;
+                width: 60%;
+                padding-top: 0em;
+                padding-bottom: 0px;
+            }
+            .break-line {
+                display: block;
+                white-space: pre-wrap;
+            }
+
+            @media (max-width: 600px) {
+                .col {
+                    border: 0.5em solid #03A9F4;
+                    font-size: 2.25em;
+                    margin-bottom: 4em;
+                }
+                .break-line {
+                    display: inline;
+                    white-space: normal;
+                }
+            }
+        </style>
+        """
+
+        st.markdown(styles, unsafe_allow_html=True)
+
+        left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>Manual Analysis</span>"
+        right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}<span class='break-line'>&nbsp;&nbsp;&nbsp;{}</span></span>".format(st.session_state.user_entity_name, st.session_state.user_reporting_period)
+
+        html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
+        st.markdown(html, unsafe_allow_html=True)
+
+
+
+
+
+        
+        
         text1 = '''
     <p class="text1" style="margin-top: 1em; margin-bottom: 1em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Manual analysis of financial statements involves predicting a company&apos;s financial performance based on expert judgement applied to financial drivers, providing valuable insights into a company&apos;s current financial position and trends by exploring "what-if" scenarios.</span></p>
 '''
