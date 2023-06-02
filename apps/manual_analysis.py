@@ -1250,7 +1250,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 border-width: 0.6em;
                 border-radius: 1.6em;
                 width: 95em;
-                left: 150%;
+                right: 100%;
                 
             }            
             .tooltip2 {
