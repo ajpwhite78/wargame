@@ -1265,10 +1265,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 margin-bottom: 0.2em;
             }
             ul.responsive-ul {
-                font-size: 0.9em;
+                font-size: 3.2em;
             }
             ul.responsive-ul li {
-                font-size: 0.9em;
+                font-size: 3.2em;
             }
             }
         </style>
@@ -1318,7 +1318,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 <div class="tooltip2">
                     <i class="fas fa-info-circle fa-2x"></i>
                     <span class="tooltiptext2">
-                        <ul style="font-size: 0.9em;">
+                        <ul class="responsive-ul" style="font-size: 0.9em;">
                             Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.                               
                             <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
                             <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
