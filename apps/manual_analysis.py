@@ -1196,7 +1196,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 align-items: center;
                 vertical-align: middle;
                 padding-right: 1.875em;
-                margin-top: 0em;
+                margin-top: -1em;
                 margin-bottom: 0em;
             }
             .left2 {
@@ -1230,7 +1230,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 font-family: sans-serif;
                 font-size: 1em;
                 display: block; 
-                width: 100%;
                 border-radius: 0.375em;
                 padding: 0.625em 0.9375em;
                 white-space: normal;
