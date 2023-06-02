@@ -1361,7 +1361,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             <style>
             @media (max-width: 600px) {
                 p.heading_text4 {
-                    font-size: 3.6em;
+                    font-size: 3.5em;
                 }
             }
             </style>
@@ -1370,7 +1370,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             <style>
             @media (max-width: 600px) {
                 p.heading_text4A {
-                    font-size: 3.2em;
+                    font-size: 3.5em;
                     margin-top: -2em;
                 }
             }
@@ -1384,7 +1384,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             user_whatif_cost_of_goods_sold_margin_field = st.empty()
             st.session_state.user_whatif_cost_of_goods_sold_margin = user_whatif_cost_of_goods_sold_margin_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=100.00, step=None, format="%.2f", value=st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, key="whatif_manual_2")
         with col2:
-            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">SG&A Expenses $</span></p>'
+            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">SG&A Expenses $</span></p>'
             st.markdown(text_media_query_manual4 + text, unsafe_allow_html=True)
             user_whatif_sales_general_and_admin_expenses_field = st.empty()
             st.session_state.user_whatif_sales_general_and_admin_expenses = user_whatif_sales_general_and_admin_expenses_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=1.00, format="%.0f", value=st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, key="whatif_manual_3")
@@ -1393,7 +1393,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             user_whatif_research_and_development_expenses_field = st.empty()
             st.session_state.user_whatif_research_and_development_expenses = user_whatif_research_and_development_expenses_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=1.00, format="%.0f", value=st.session_state.default_whatif_research_and_development_expenses_user_out, key="whatif_manual_4")
         with col3:
-            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">D&A Expenses / Sales %</span></p>'
+            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">D&A Expenses / Sales %</span></p>'
             st.markdown(text_media_query_manual4 + text, unsafe_allow_html=True)
             user_whatif_depreciation_and_amortization_expenses_sales_field = st.empty()
             st.session_state.user_whatif_depreciation_and_amortization_expenses_sales = user_whatif_depreciation_and_amortization_expenses_sales_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=None, format="%.2f", value=st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, key="whatif_manual_5")
@@ -1402,7 +1402,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             user_whatif_depreciation_and_amortization_split_field = st.empty()
             st.session_state.user_whatif_depreciation_and_amortization_split = user_whatif_depreciation_and_amortization_split_field.number_input(label="", label_visibility="collapsed", min_value=0, max_value=100, step=None, format="%i", value=st.session_state.default_whatif_depreciation_and_amortization_split_user_out, key="whatif_manual_6")
         with col4:
-            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Interest Rate %</span></p>'
+            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Interest Rate %</span></p>'
             st.markdown(text_media_query_manual4 + text, unsafe_allow_html=True)
             user_whatif_interest_rate_field = st.empty()
             st.session_state.user_whatif_interest_rate = user_whatif_interest_rate_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=None, format="%.2f", value=st.session_state.default_whatif_interest_rate_user_out, key="whatif_manual_7")
@@ -1451,11 +1451,11 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         st.markdown(html3, unsafe_allow_html=True)
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em;">Enter values for the cash flow statement and balance sheet financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
+        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Enter values for the cash flow statement and balance sheet financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
         st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
         col1, col2, col3, col4, col5, col6 = st.columns(6)
         with col1:
-            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Accounts Receivable Days</span></p>'
+            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Accounts Receivable Days</span></p>'
             st.markdown(text_media_query_manual4 + text, unsafe_allow_html=True)
             user_whatif_accounts_receivable_days_field = st.empty()
             st.session_state.user_whatif_accounts_receivable_days = user_whatif_accounts_receivable_days_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=1.00, format="%.0f", value=st.session_state.default_whatif_accounts_receivable_days_user_out, key="whatif_manual_10")
@@ -1482,7 +1482,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             user_whatif_tangible_intangible_split_field = st.empty()
             st.session_state.user_whatif_tangible_intangible_split = user_whatif_tangible_intangible_split_field.number_input(label="", label_visibility="collapsed", min_value=0, max_value=100, step=None, format="%i", value=st.session_state.default_whatif_tangible_intangible_split_user_out, key="whatif_manual_15")
         with col4:
-            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Accounts Payable Days</span></p>'
+            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Accounts Payable Days</span></p>'
             st.markdown(text_media_query_manual4 + text, unsafe_allow_html=True)
             user_whatif_accounts_payable_days_field = st.empty()
             st.session_state.user_whatif_accounts_payable_days = user_whatif_accounts_payable_days_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=1.00, format="%.0f", value=st.session_state.default_whatif_accounts_payable_days_user_out, key="whatif_manual_16")
@@ -1500,7 +1500,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             user_whatif_proceeds_from_issuance_of_debt_field = st.empty()
             st.session_state.user_whatif_proceeds_from_issuance_of_debt = user_whatif_proceeds_from_issuance_of_debt_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=1.00, format="%.0f", value=st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, key="whatif_manual_19")
         with col6:
-            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em; font-weight: bold;">Repayments of Long Term Debt $</span></p>'
+            text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.9em; font-weight: bold;">Repayments of Long Term Debt $</span></p>'
             st.markdown(text_media_query_manual4 + text, unsafe_allow_html=True)
             user_whatif_repayments_of_long_term_debt_field = st.empty()
             st.session_state.user_whatif_repayments_of_long_term_debt = user_whatif_repayments_of_long_term_debt_field.number_input(label="", label_visibility="collapsed", min_value=0.00, max_value=None, step=1.00, format="%.0f", value=st.session_state.default_whatif_repayments_of_long_term_debt_user_out, key="whatif_manual_20")
