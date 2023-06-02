@@ -1222,13 +1222,13 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 border-width: 0.625em;
                 border-style: solid;
                 border-color: #25476A transparent transparent transparent;
-                font-size: 0.5em;
             }
 
             /* Show the tooltip text when you mouse over the tooltip container */
             .tooltip2:hover .tooltiptext2 {
                 visibility: visible;
                 opacity: 1;
+                font-size: 0.5em;
             }
             /* Change icon color on hover */
             .tooltip2:hover i {
