@@ -1719,12 +1719,13 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             },
             gauge={
                 'axis': {'range': ['A+', 'D'], 'dtick': 1, 'tickwidth': 4, 'tickcolor': "#25476A"},
-                'shape': "angular",  # Modify this line to change the angle
+                'shape': "angular",
                 'bar': {'color': "#25476A"},
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 4,
                 'bordercolor': "#25476A"
-            }, valueformat='.1f'
+            },
+            valueformat='.1f'
         ))
 
         manual_current_rating_fig.update_layout(
