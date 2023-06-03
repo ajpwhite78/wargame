@@ -1709,18 +1709,31 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 select_user_whatif_repayments_of_long_term_debt=st.session_state.default_whatif_repayments_of_long_term_debt_user_out,
                 select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
 
-        manual_current_rating_fig = go.Figure(go.Indicator(mode="gauge+number", value=5,
-                                                          domain={'x': [0, 1], 'y': [0, 1]}, title={
-                        'text': 'Credit Rating',
-                        'font': {'size': 10, 'color': "#25476A", 'family': 'sans-serif'}}, gauge={
-                        'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4,
-                                 'tickcolor': "#25476A"}, 'shape': "angular",
-                        'bar': {'color': "#25476A"}, 'bgcolor': 'rgba(0, 0, 0, 0)',
-                        'borderwidth': 4,
-                        'bordercolor': "#25476A"}))
-        manual_current_rating_fig.update_layout(paper_bgcolor='rgba(0, 0, 0, 0)',
-                                           font={'color': "#25476A", 'size': 20})
+        manual_current_rating_fig = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=5,
+            domain={'x': [0, 1], 'y': [0, 1]},
+            title={
+                'text': 'Credit Rating',
+                'font': {'size': 10, 'color': "#25476A", 'family': 'sans-serif'}
+            },
+            gauge={
+                'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4, 'tickcolor': "#25476A"},
+                'shape': "angular",  # Modify this line to change the angle
+                'bar': {'color': "#25476A"},
+                'bgcolor': 'rgba(0, 0, 0, 0)',
+                'borderwidth': 4,
+                'bordercolor': "#25476A"
+            }
+        ))
+
+        manual_current_rating_fig.update_layout(
+            paper_bgcolor='rgba(0, 0, 0, 0)',
+            font={'color': "#25476A", 'size': 20}
+        )
+
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
+
         manual_scenario_rating_fig = go.Figure(go.Indicator(mode="gauge+number", value=5,
                                                           domain={'x': [0, 1], 'y': [0, 1]}, title={
                         'text': 'Credit Rating',
