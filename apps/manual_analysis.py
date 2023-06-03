@@ -1715,7 +1715,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_ratings_fig.add_trace(trace=go.Indicator(mode="gauge+number", value=5,
                                                           domain={'x': [0, 1], 'y': [0, 1]}, title={
                         'text': 'Credit Rating',
-                        'font': {'size': "2em", 'color': "#25476A"}}, gauge={
+                        'font': {'size': 10, 'color': "#25476A", 'family': 'sans-serif'}}, gauge={
                         'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4,
                                  'tickcolor': "#25476A"}, 'shape': "angular",
                         'bar': {'color': "#25476A"}, 'bgcolor': 'rgba(0, 0, 0, 0)',
@@ -1726,7 +1726,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_ratings_fig.add_trace(trace=go.Indicator(mode="gauge+number", value=5,
                                                           domain={'x': [0, 1], 'y': [0, 1]}, title={
                         'text': 'Scenario Rating',
-                        'font': {'size': "2em", 'color': "#25476A"}}, gauge={
+                        'font': {'size': 10, 'color': "#25476A"}}, gauge={
                         'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4,
                                  'tickcolor': "#25476A"}, 'shape': "angular",
                         'bar': {'color': "#25476A"}, 'bgcolor': 'rgba(0, 0, 0, 0)',
