@@ -1725,8 +1725,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 4,
                 'bordercolor': "#25476A"
-            },
-            valueformat='.1f'
+            }
         ))
 
         manual_current_rating_fig.update_layout(
