@@ -1733,7 +1733,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                         'borderwidth': 4,
                         'bordercolor': "#25476A",
                         'threshold': {'line': {'color': "#008080", 'width': 4}, 'thickness': 0.75,
-                                      'value': 0.9}}), row=1, col=1)
+                                      'value': 0.9}}), row=1, col=2)
         manual_ratings_fig.update_layout(paper_bgcolor='rgba(0, 0, 0, 0)',
                                            font={'color': "#25476A", 'size': 20})
 
