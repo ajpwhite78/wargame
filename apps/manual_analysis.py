@@ -1708,6 +1708,29 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 select_user_whatif_repayments_of_long_term_debt=st.session_state.default_whatif_repayments_of_long_term_debt_user_out,
                 select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
 
+        manual_ratings_fig = sp.make_subplots(rows=1, cols=4, specs=[[{"type": "domain"} for c in range(4)] for t in
+                                                                   range(1)], shared_xaxes=True, horizontal_spacing=0.1,
+                                                            vertical_spacing=0.4)
+        manual_ratings_fig.add_trace(trace=go.Indicator(mode="gauge+number", value=5,
+                                                          domain={'x': [0, 1], 'y': [0, 1]}, title={
+                        'text': 'Credit Rating',
+                        'font': {'size': 42, 'color': "#25476A"}}, gauge={
+                        'axis': {'range': [0, 23], 'dtick': 1, 'tickwidth': 4,
+                                 'tickcolor': "#25476A"}, 'shape': "angular",
+                        'bar': {'color': "#25476A"}, 'bgcolor': 'rgba(0,0,0,0)',
+                        'borderwidth': 4,
+                        'bordercolor': "#25476A",
+                        'threshold': {'line': {'color': "#008080", 'width': 4}, 'thickness': 0.75,
+                                      'value': 0.9}}), row=1, col=1)
+        manual_ratings_fig.update_layout(paper_bgcolor='#31333F',
+                                           font={'color': "#008080", 'size': 20}, width=1500,
+                                           height=600)
+
+        manual_ratings_fig.update_xaxes(color="blue", mirror=True, showline=True)
+        st.plotly_chart(manual_ratings_fig, config={'displayModeBar': False})    
+            
+            
+            
         df_income_statement_out_png = st.session_state.df_income_statement_out.style.set_table_styles([{'selector': 'td',
                                                                                           'props': [('color', '#25476A'), ('font-size', '0.9em')]}, {'selector': 'th:nth-child(1)',
                                                                                           'props': [
@@ -2093,7 +2116,11 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         html4 = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
         st.markdown(html4, unsafe_allow_html=True)
         st.markdown(text_media_query_manual1 + text1, unsafe_allow_html=True)
+        
 
+
+        
+        
 
         subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
         text_media_query_manual2 = '''
