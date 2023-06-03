@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pathlib
 import base64
+import plotly.graph_objects as go
 from apps.functions import get_default_fields, run_whatif, highlight_diff_by_row, FileDownloader, MultiFileDownloader
 
 marker_spinner_css = """
