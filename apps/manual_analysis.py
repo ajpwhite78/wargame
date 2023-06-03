@@ -3,6 +3,7 @@ import pandas as pd
 import pathlib
 import base64
 import plotly.graph_objects as go
+import plotly.subplots as sp
 from apps.functions import get_default_fields, run_whatif, highlight_diff_by_row, FileDownloader, MultiFileDownloader
 
 marker_spinner_css = """
@@ -1708,8 +1709,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 select_user_whatif_repayments_of_long_term_debt=st.session_state.default_whatif_repayments_of_long_term_debt_user_out,
                 select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
 
-        manual_ratings_fig = sp.make_subplots(rows=1, cols=4, specs=[[{"type": "domain"} for c in range(4)] for t in
-                                                                   range(1)], shared_xaxes=True, horizontal_spacing=0.1,
+        manual_ratings_fig = sp.make_subplots(rows=2, cols=4, specs=[[{"type": "domain"} for c in range(4)] for t in
+                                                                   range(2)], shared_xaxes=True, horizontal_spacing=0.1,
                                                             vertical_spacing=0.4)
         manual_ratings_fig.add_trace(trace=go.Indicator(mode="gauge+number", value=5,
                                                           domain={'x': [0, 1], 'y': [0, 1]}, title={
