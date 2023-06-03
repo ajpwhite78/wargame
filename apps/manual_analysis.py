@@ -1735,7 +1735,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                         'threshold': {'line': {'color': "#008080", 'width': 4}, 'thickness': 0.75,
                                       'value': 0.9}}), row=1, col=2)
         manual_ratings_fig.update_layout(paper_bgcolor='rgba(0, 0, 0, 0)',
-                                           font={'color': "#25476A", 'size': 20})
+                                           font={'color': "#25476A", 'size': 20}, width=1500)
 
         manual_ratings_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
         st.plotly_chart(manual_ratings_fig, config={'displayModeBar': False})    
