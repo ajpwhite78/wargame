@@ -1803,6 +1803,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 "%s" % st.session_state.user_entity_name + " (" + df_financials['currency_iso'].values[
                     0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'}).hide_index()
 
+        st.table(df_income_statement_out_png)
         
         from IPython.display import display, HTML
         display(HTML(df_income_statement_out_png.to_html(index=False)))
