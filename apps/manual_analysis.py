@@ -2141,6 +2141,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 spinner.empty()
                 spinner_image.empty()
 
+                
+        st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
 
         col1, col2, col3 = st.columns(3)
         with col1:
