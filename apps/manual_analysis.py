@@ -1718,8 +1718,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'font': {'size': 10, 'color': "#25476A", 'family': 'sans-serif'}
             },
             gauge={
-                'axis': {'range': [0, 3], 'dtick': 1, 'tickwidth': 4, 'tickcolor': "#25476A",
-                         'ticktext': ['A+', 'A', 'B', 'C', 'D'], 'tickvals': [0, 1, 2, 3]},
+                'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4, 'tickcolor': "#25476A",
+                         'ticktext': ['', 'AAA', 'AA+', 'AA', 'AA-', 'A+', 'A', 'A-', 'BBB+', 'BBB', 'BBB-', 'BB+', "BB", 'BB-', 'B+', 'B', 'B-', 'CCC+', 'CCC', 'CCC-', 'CC', 'C', 'D'], 'tickvals': [0, 1, 2, 3, ]},
                 'shape': "angular",
                 'bar': {'color': "#25476A"},
                 'bgcolor': 'rgba(0, 0, 0, 0)',
@@ -1728,6 +1728,9 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
         ))
 
+        
+
+        
         manual_current_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20}
