@@ -2164,7 +2164,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'bar': {'color': "rgba(0, 0, 0, 0)"},
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
-                'borderwidth': 8,
+                'borderwidth': 4,
                 'bordercolor': "#25476A",
                 'threshold': {'line': {'color': "#FAFAFA", 'width': 8}, 'thickness': 0.75,
                                                           'value': 21.5-(predict_rating_value-1)}
@@ -2188,7 +2188,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         with col1:
             st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
         with col2:
-            st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
+            st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False})
 
         
         
