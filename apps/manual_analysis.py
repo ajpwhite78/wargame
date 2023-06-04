@@ -2120,14 +2120,30 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                           'value': 21.5-(current_rating_value-1)}
             }
         ))
+        theta = 40
+        r= 0.9
+        x_head = r * cos(radians(theta))
+        y_head = r * sin(radians(theta))
 
+        manual_current_rating_fig.add_annotation(
+            ax=0,
+            ay=0,
+            axref='x',
+            ayref='y',
+            x=x_head,
+            y=y_head,
+            xref='x',
+            yref='y',
+            showarrow=True,
+            arrowhead=3,
+            arrowsize=1,
+            arrowwidth=4
+            )
         manual_current_rating_fig.add_annotation(
     dict(font=dict(color="#25476A", size=42, family="sans-serif"), x=0.5, y=0, xanchor='center',
          xref="paper",
          yref="paper", showarrow=False,
          text="{}<br>Rating<br>{}".format(st.session_state.user_reporting_period, current_rating)))
-
-        
         manual_current_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20}
