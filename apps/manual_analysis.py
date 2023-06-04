@@ -2113,9 +2113,9 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         import matplotlib.colors as clr
         
-        color1 = 'rgba(255, 0, 0, 1)'  # Red
-        color2 = 'rgba(255, 255, 0, 1)'  # Yellow
-        color3 = 'rgba(0, 255, 0, 1)'  # Green
+        color1 = "#705780"
+        color2 = "#008080"
+        color3 = "#FCBC24"
         col_cmap = clr.LinearSegmentedColormap.from_list(name="",
                                                               colors=[color1, color2, color3])
         st.write(col_cmap)  
