@@ -1710,7 +1710,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
 
         manual_current_rating_fig = go.Figure(go.Indicator(
-            mode="gauge+number",
+            mode="gauge",
             value=6.5,
             number= {'font_size' : 50},
             domain={'x': [0, 1], 'y': [0, 1]},
