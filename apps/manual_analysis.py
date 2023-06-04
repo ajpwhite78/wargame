@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from numpy import radians, cos, sin
 import pathlib
 import base64
 import plotly.graph_objects as go
