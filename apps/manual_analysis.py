@@ -2142,8 +2142,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_current_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20},
-            width=500,
-            margin=dict(l=20, r=20, t=20, b=20)
+            width=500
         )
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
@@ -2181,8 +2180,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_scenario_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20},
-            width=500,
-            margin=dict(l=20, r=20, t=20, b=20)
+            width=500
         )
 
         manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True) 
