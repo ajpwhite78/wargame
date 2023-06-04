@@ -2109,8 +2109,17 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         step_size = 1 / (num_steps - 1)
 
         # Generate the colors for each step based on the color scale
-        step_colors = [reversed_color_scale[int(i * step_size * (len(reversed_color_scale) - 1))] for i in range(num_steps)]
+    #    step_colors = [reversed_color_scale[int(i * step_size * (len(reversed_color_scale) - 1))] for i in range(num_steps)]
 
+        import matplotlib.colors as clr
+        
+        color1 = 'rgb(255, 0, 0)'  # Red
+        color2 = 'rgb(255, 255, 0)'  # Yellow
+        color3 = 'rgb(0, 255, 0)'  # Green
+        col_cmap = clr.LinearSegmentedColormap.from_list(name="",
+                                                              colors=[color1, color2, color3])
+        st.write(col_cmap)  
+        
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
             value=0,
