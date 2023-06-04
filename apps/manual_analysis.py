@@ -2123,11 +2123,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         values = np.linspace(0, 1, num_steps)
         colors = col_cmap(values)
         step_colors = [clr.rgb2hex(color) for color in colors]
-        steps = [{'range': [i / (num_steps-1), (i + 1) / (num_steps-1)], 'color': step_colors[i]} for i in range(num_steps)]
-
-        # Print the resulting steps
-        for step in steps:
-            st.write(step)
 
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
@@ -2148,7 +2143,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 4,
                 'bordercolor': "#25476A",
-                'steps': [{'range': [i, i + 1], 'color': step_colors[i]} for i in range(22-1)],
+                'steps': [{'range': [i / (num_steps-1), (i + 1) / (num_steps-1)], 'color': step_colors[i]} for i in range(num_steps)],
                 'threshold': {'line': {'color': "#25476A", 'width': 20}, 'thickness': 0.75,
                                                           'value': 21.5-(current_rating_value-1)}
             }
