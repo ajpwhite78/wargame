@@ -2175,7 +2175,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
     dict(font=dict(color="#25476A", size=42, family="sans-serif"), x=0.5, y=0, xanchor='center',
          xref="paper",
          yref="paper", showarrow=False,
-         text="{}<br>Rating<br>{}".format(st.session_state.user_reporting_period, predict_rating)))
+         text="Scenario<br>Rating<br>{}".format(predict_rating)))
         manual_scenario_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20}
