@@ -2109,7 +2109,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         step_size = 1 / (num_steps - 1)
 
         # Generate the colors for each step based on the color scale
-        step_colors = [colors.find_intermediate_color(reversed_color_scale, i * step_size) for i in range(num_steps)]
+        step_colors = [colors.interpolate(reversed_color_scale, i * step_size) for i in range(num_steps)]
 
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
