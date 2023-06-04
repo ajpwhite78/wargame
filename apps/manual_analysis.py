@@ -2102,10 +2102,20 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             value=current_rating_value+0.5,
             domain={'x': [0, 1], 'y': [0, 1]},
             gauge={
-                'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4, 'tickcolor': "#25476A",
-                         'ticktext': ['AAA', 'AA+', 'AA', 'AA-', 'A+', 'A', 'A-', 'BBB+', 'BBB', 'BBB-', 'BB+', "BB", 'BB-', 'B+', 'B', 'B-', 'CCC+', 'CCC', 'CCC-', 'CC', 'C', 'D'], 'tickvals': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5, 14.5, 15.5, 16.5, 17.5, 18.5, 19.5, 20.5, 21.5], 'tickangle': 0},
+                'axis': {
+                    'range': [0, 22],
+                    'dtick': 1,
+                    'tickwidth': 4,
+                    'tickcolor': "#25476A",
+                    'ticktext': ['AAA', 'AA+', 'AA', 'AA-', 'A+', 'A', 'A-', 'BBB+', 'BBB', 'BBB-', 'BB+', "BB", 'BB-', 'B+', 'B', 'B-', 'CCC+', 'CCC', 'CCC-', 'CC', 'C', 'D'],
+                    'tickvals': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5, 14.5, 15.5, 16.5, 17.5, 18.5, 19.5, 20.5, 21.5],
+                    'tickangle': 0
+                },
                 'shape': "angular",
-                'bar': {'color': "#25476A"},
+                'bar': {
+                    'color': "#25476A",
+                    'gradient': {'type': 'radial', 'color': ['#FFC700', '#25476A']}
+                },
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 4,
                 'bordercolor': "#25476A"
@@ -2137,6 +2147,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                         'bordercolor': "#25476A"}))
         manual_scenario_rating_fig.update_layout(paper_bgcolor='rgba(0, 0, 0, 0)',
                                            font={'color': "#25476A", 'size': 20})
+        manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
         
         col1, col2 = st.columns(2)
         with col1:
