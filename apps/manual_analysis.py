@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pathlib
 import base64
+import matplotlib.colors as clr
 import plotly.graph_objects as go
 import plotly.subplots as sp
 from apps.functions import get_default_fields, run_whatif, highlight_diff_by_row, FileDownloader, MultiFileDownloader
@@ -2096,24 +2097,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         html4 = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
         st.markdown(html4, unsafe_allow_html=True)
         st.markdown(text_media_query_manual1 + text1, unsafe_allow_html=True)
-        
-     #   import plotly.colors.sequential as cs
-        
-        # Create a continuous color scale from red to yellow to green
-      #  color_scale = cs.YlOrRd
-
-        # Reverse the color scale to match the reversed step values
-     #   reversed_color_scale = color_scale[::-1]
-
-        # Define the number of steps and calculate the step size
-        num_steps = 22
-        step_size = 1 / (num_steps - 1)
-
-        # Generate the colors for each step based on the color scale
-    #    step_colors = [reversed_color_scale[int(i * step_size * (len(reversed_color_scale) - 1))] for i in range(num_steps)]
-
-        import matplotlib.colors as clr
-        
+               
         color1 = "#AB47BC"
         color2 = "#FA9F1B"
         color3 = "#0FCC2E"
@@ -2162,18 +2146,53 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
 
-        manual_scenario_rating_fig = go.Figure(go.Indicator(mode="gauge+number", value=5,
-                                                          domain={'x': [0, 1], 'y': [0, 1]}, title={
-                        'text': 'Scenario Rating',
-                        'font': {'size': 10, 'color': "#25476A", 'family': 'sans-serif'}}, gauge={
-                        'axis': {'range': [0, 22], 'dtick': 1, 'tickwidth': 4,
-                                 'tickcolor': "#25476A"}, 'shape': "angular",
-                        'bar': {'color': "#25476A"}, 'bgcolor': 'rgba(0, 0, 0, 0)',
-                        'borderwidth': 4,
-                        'bordercolor': "#25476A"}))
-        manual_scenario_rating_fig.update_layout(paper_bgcolor='rgba(0, 0, 0, 0)',
-                                           font={'color': "#25476A", 'size': 20})
-        manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
+        
+        color1 = "#6f72de"
+        color2 = "#03A9F4"
+        col_cmap = clr.LinearSegmentedColormap.from_list(name="",
+                                                              colors=[color1, color2])
+        num_steps = 1000
+        values = np.linspace(0, 1, num_steps)
+        step_values = np.linspace(0, 22, num_steps)
+        colors = col_cmap(values)
+        step_colors = [clr.rgb2hex(color) for color in colors]
+       
+        manual_scenario_rating_fig = go.Figure(go.Indicator(
+            mode="gauge",
+            value=0,
+            domain={'x': [0, 1], 'y': [0, 1]},
+            gauge={
+                'axis': {
+                    'range': [0, 22],
+                    'dtick': 1,
+                    'tickwidth': 4,
+                    'tickcolor': "#25476A",
+                    'ticktext': ['AAA', 'AA+', 'AA', 'AA-', 'A+', 'A', 'A-', 'BBB+', 'BBB', 'BBB-', 'BB+', "BB", 'BB-', 'B+', 'B', 'B-', 'CCC+', 'CCC', 'CCC-', 'CC', 'C', 'D'][::-1],
+                    'tickvals': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5, 14.5, 15.5, 16.5, 17.5, 18.5, 19.5, 20.5, 21.5],
+                    'tickangle': 0
+                },
+                'shape': "angular",
+                'bar': {'color': "rgba(0, 0, 0, 0)"},
+                'bgcolor': 'rgba(0, 0, 0, 0)',
+                'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
+                'borderwidth': 4,
+                'bordercolor': "#25476A",
+                'threshold': {'line': {'color': "#25476A", 'width': 20}, 'thickness': 0.75,
+                                                          'value': 21.5-(predict_rating_value-1)}
+                }
+            ))
+
+        manual_scenario_rating_fig.add_annotation(
+    dict(font=dict(color="#25476A", size=42, family="sans-serif"), x=0.5, y=0, xanchor='center',
+         xref="paper",
+         yref="paper", showarrow=False,
+         text="Scenario<br>Rating<br>{}".format(st.session_state.user_reporting_period, predict_rating)))
+        manual_scenario_rating_fig.update_layout(
+            paper_bgcolor='rgba(0, 0, 0, 0)',
+            font={'color': "#25476A", 'size': 20}
+        )
+
+        manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)        
         
         col1, col2 = st.columns(2)
         with col1:
