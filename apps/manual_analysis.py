@@ -2187,7 +2187,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         with col1:
             st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
         with col2:
-            st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False})
+            st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
 
         
         
