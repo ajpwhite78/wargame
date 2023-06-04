@@ -1712,6 +1712,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge+number",
             value=6.5,
+            number= {'font_size' : 50},
             domain={'x': [0, 1], 'y': [0, 1]},
             title={
                 'text': 'Credit Rating',
