@@ -2140,7 +2140,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     'tickangle': 0
                 },
                 'shape': "angular",
-                'bar': {'color': "rgba(0, 0, 0, 0)"},
+
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 8,
                 'bordercolor': "#25476A",
