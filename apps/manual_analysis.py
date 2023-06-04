@@ -2096,10 +2096,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.markdown(html4, unsafe_allow_html=True)
         st.markdown(text_media_query_manual1 + text1, unsafe_allow_html=True)
         
-        import plotly.colors as colors
+        import plotly.colors.sequential as cs
         
         # Create a continuous color scale from red to yellow to green
-        color_scale = colors.sequential.YlOrRd
+        color_scale = cs.YlOrRd
 
         # Reverse the color scale to match the reversed step values
         reversed_color_scale = color_scale[::-1]
@@ -2109,7 +2109,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         step_size = 1 / (num_steps - 1)
 
         # Generate the colors for each step based on the color scale
-        step_colors = [colors.interpolate(reversed_color_scale, i * step_size) for i in range(num_steps)]
+        step_colors = [reversed_color_scale[int(i * step_size * (len(reversed_color_scale) - 1))] for i in range(num_steps)]
 
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
