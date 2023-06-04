@@ -2145,43 +2145,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         )
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
- 
-        manual_scenario_rating_fig = go.Figure(go.Indicator(
-            mode="gauge",
-            value=0,
-            domain={'x': [0, 1], 'y': [0, 1]},
-            gauge={
-                'axis': {
-                    'range': [0, 22],
-                    'dtick': 1,
-                    'tickwidth': 4,
-                    'tickcolor': "#25476A",
-                    'ticktext': ['AAA', 'AA+', 'AA', 'AA-', 'A+', 'A', 'A-', 'BBB+', 'BBB', 'BBB-', 'BB+', "BB", 'BB-', 'B+', 'B', 'B-', 'CCC+', 'CCC', 'CCC-', 'CC', 'C', 'D'][::-1],
-                    'tickvals': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5, 14.5, 15.5, 16.5, 17.5, 18.5, 19.5, 20.5, 21.5],
-                    'tickangle': 0
-                },
-                'shape': "angular",
-                'bar': {'color': "rgba(0, 0, 0, 0)"},
-                'bgcolor': 'rgba(0, 0, 0, 0)',
-                'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
-                'borderwidth': 8,
-                'bordercolor': "#25476A",
-                'threshold': {'line': {'color': "#FAFAFA", 'width': 8}, 'thickness': 0.75,
-                                                          'value': 21.5-(predict_rating_value-1)}
-                }
-            ))
-
-        manual_scenario_rating_fig.add_annotation(
-    dict(font=dict(color="#25476A", size=42, family="sans-serif"), x=0.5, y=0, xanchor='center',
-         xref="paper",
-         yref="paper", showarrow=False,
-         text="{}<br>Rating<br>{}".format(st.session_state.user_reporting_period, predict_rating)))
-        manual_scenario_rating_fig.update_layout(
-            paper_bgcolor='rgba(0, 0, 0, 0)',
-            font={'color': "#25476A", 'size': 20}
-        )
-
-        manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)    
+   
         
         col1, col2 = st.columns(2)
         with col1:
