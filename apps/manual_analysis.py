@@ -2129,19 +2129,19 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
                 'borderwidth': 4,
                 'bordercolor': "#25476A",
-                'threshold': {'line': {'color': "#FAFAFA", 'width': 8}, 'thickness': 0.75,
+                'threshold': {'line': {'color': "#FAFAFA", 'width': 5}, 'thickness': 0.75,
                                                           'value': 21.5-(current_rating_value-1)}
                 }
             ))
 
         manual_current_rating_fig.add_annotation(
-    dict(font=dict(color="#25476A", size=42, family="sans-serif"), x=0.5, y=0, xanchor='center',
+    dict(font=dict(color="#25476A", size=25, family="sans-serif"), x=0.5, y=0, xanchor='center',
          xref="paper",
          yref="paper", showarrow=False,
          text="{}<br>Rating<br>{}".format(st.session_state.user_reporting_period, current_rating)))
         manual_current_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
-            font={'color': "#25476A", 'size': 20},
+            font={'color': "#25476A", 'size': 14},
             width=400,
         )
 
