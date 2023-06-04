@@ -2119,12 +2119,15 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         color3 = "#FCBC24"
         col_cmap = clr.LinearSegmentedColormap.from_list(name="",
                                                               colors=[color1, color2, color3])
-        st.write(col_cmap)
-        values = np.linspace(0, 1, 10)
-
-        # Map values to colors using the colormap
+        num_steps = 100
+        values = np.linspace(0, 1, num_steps)
         colors = col_cmap(values)
-        st.write(colors)
+        step_colors = [{'range': [i / num_steps, (i + 1) / num_steps], 'color': clr.rgb2hex(colors[i])} for i in range(num_steps)]
+
+        # Print the resulting step_colors
+        for step_color in step_colors:
+            st.write(step_color)
+
 
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
