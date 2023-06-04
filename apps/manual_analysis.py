@@ -2119,7 +2119,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         color3 = "#FCBC24"
         col_cmap = clr.LinearSegmentedColormap.from_list(name="",
                                                               colors=[color1, color2, color3])
-        num_steps = 100
+        num_steps = 1000
         values = np.linspace(0, 1, num_steps)
         step_values = np.linspace(0, 22, num_steps)
         colors = col_cmap(values)
