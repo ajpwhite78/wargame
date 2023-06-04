@@ -2195,7 +2195,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False}, use_container_width=True)
           
         st.markdown("<style>.full-width-chart .chart-container { display: flex; justify-content: center; }</style>", unsafe_allow_html=True)
-        subtext1A = '<p class="subtext" style="margin-bottom: -20em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
+        subtext1A = '<p class="subtext" style="margine-top: -20em; margin-bottom: -20em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
         text_media_query_manual2 = '''
             <style>
             @media (max-width: 600px) {
