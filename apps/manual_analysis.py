@@ -2197,6 +2197,19 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             st.markdown('<div class="full-width-chart"><div class="chart-container">{}</div></div>'.format(manual_scenario_rating_fig.to_html(include_plotlyjs='cdn')), unsafe_allow_html=True)
 
         
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False}, use_container_width=True)
+            st.markdown("<style>.full-width-chart { margin-top: -200px; }</style>", unsafe_allow_html=True)
+            st.markdown('<div class="full-width-chart">{}</div>'.format(manual_current_rating_fig.to_html(include_plotlyjs='cdn')), unsafe_allow_html=True)
+
+        with col2:
+            st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False}, use_container_width=True)
+            st.markdown("<style>.full-width-chart { margin-top: -200px; }</style>", unsafe_allow_html=True)
+            st.markdown('<div class="full-width-chart">{}</div>'.format(manual_scenario_rating_fig.to_html(include_plotlyjs='cdn')), unsafe_allow_html=True)
+
+        
 
         subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
         text_media_query_manual2 = '''
