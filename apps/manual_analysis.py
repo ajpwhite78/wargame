@@ -2122,12 +2122,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
         ))
         theta = 40
-        r= 0.9
+        r= 0.5
         x_head = r * cos(radians(theta))
         y_head = r * sin(radians(theta))
 
         manual_current_rating_fig.add_annotation(
-            ax=0,
+            ax=0.5,
             ay=0,
             axref='x',
             ayref='y',
