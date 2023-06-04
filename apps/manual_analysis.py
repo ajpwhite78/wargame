@@ -2177,7 +2177,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
                 'borderwidth': 4,
                 'bordercolor': "#25476A",
-                'threshold': {'line': {'color': "#C5C6C7", 'width': 20}, 'thickness': 0.75,
+                'threshold': {'line': {'color': "#FAFAFA", 'width': 10}, 'thickness': 0.75,
                                                           'value': 21.5-(predict_rating_value-1)}
                 }
             ))
