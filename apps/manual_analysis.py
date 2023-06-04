@@ -2122,7 +2122,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         num_steps = 100
         values = np.linspace(0, 1, num_steps)
         colors = col_cmap(values)
-        step_colors = [{'color': clr.rgb2hex(colors[i])} for i in range(num_steps)]
+        step_colors = [clr.rgb2hex(color) for color in colors]
+        steps = [{'range': [i / (num_steps-1), (i + 1) / (num_steps-1)], 'color': step_colors[i]} for i in range(num_steps)]
+
+        # Print the resulting steps
+        for step in steps:
+            st.write(step)
 
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
