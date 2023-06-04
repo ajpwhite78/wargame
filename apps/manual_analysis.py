@@ -2161,7 +2161,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                     'tickvals': [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5, 14.5, 15.5, 16.5, 17.5, 18.5, 19.5, 20.5, 21.5],
                     'tickangle': 0
                 },
-                'font': {'size': 2, 'color': "#25476A"},
                 'shape': "angular",
                 'bar': {'color': "rgba(0, 0, 0, 0)"},
                 'bgcolor': 'rgba(0, 0, 0, 0)',
@@ -2180,7 +2179,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
          text="Scenario<br>Rating<br>{}".format(predict_rating)))
         manual_scenario_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
-            font={'color': "#25476A", 'size': 20},
+            font={'color': "#25476A", 'size': 10},
             width=340,
             height=340
         )
