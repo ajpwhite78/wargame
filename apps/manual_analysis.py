@@ -2142,7 +2142,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'shape': "angular",
                 'bar': {'color': "rgba(0, 0, 0, 0)"},
                 'bgcolor': 'rgba(0, 0, 0, 0)',
-                'borderwidth': 4,
+                'borderwidth': 8,
                 'bordercolor': "#25476A",
                 'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
                 'threshold': {'line': {'color': "#03A9F4", 'width': 20}, 'thickness': 0.75,
