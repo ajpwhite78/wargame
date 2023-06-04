@@ -2116,7 +2116,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 4,
                 'bordercolor': "#25476A",
-                'threshold': {'line': {'color': "#FCBC24", 'width': 10}, 'thickness': 0.75,
+                'threshold': {'line': {'color': "#25476A", 'width': 20}, 'thickness': 0.75,
                                                           'value': current_rating_value-0.5}
             }
         ))
