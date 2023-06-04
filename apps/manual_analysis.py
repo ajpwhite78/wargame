@@ -2066,7 +2066,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.text("")
         st.markdown(styles, unsafe_allow_html=True)
         
-        current_rating = "AA"
+        current_rating = "B+"
         predict_rating = "BBB"
         
         rating_dict = {'AAA': 1, 'AA+': 2, 'AA': 3, 'AA-': 4, 'A+': 5, 'A': 6, 'A-': 7, 'BBB+': 8,
