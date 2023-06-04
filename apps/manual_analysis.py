@@ -2147,7 +2147,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
 
         
-        color1 = "#6f72de"
+        color1 = "#5007E3"
         color2 = "#03A9F4"
         col_cmap = clr.LinearSegmentedColormap.from_list(name="",
                                                               colors=[color1, color2])
