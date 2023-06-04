@@ -2184,10 +2184,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True) 
         
     
-        col1, col2 = st.columns(2)
-        with col1:
-            st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
+        col1, col2, col3, col4, col5  = st.columns([0.1, 1, 0.2, 1, 0.1])
         with col2:
+            st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
+        with col4:
             st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False})
 
         
