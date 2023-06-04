@@ -2127,7 +2127,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         manual_current_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
-            value=15.5,
+            value=0,
             domain={'x': [0, 1], 'y': [0, 1]},
             gauge={
                 'axis': {
@@ -2142,11 +2142,10 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'shape': "angular",
                 'bar': {'color': "rgba(0, 0, 0, 0)"},
                 'bgcolor': 'rgba(0, 0, 0, 0)',
+                'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
                 'borderwidth': 8,
                 'bordercolor': "#25476A",
-
-
-                'threshold': {'line': {'color': "#03A9F4", 'width': 20}, 'thickness': 0.75,
+                'threshold': {'line': {'color': "#25476A", 'width': 20}, 'thickness': 0.75,
                                                           'value': 21.5-(current_rating_value-1)}
             }
         ))
