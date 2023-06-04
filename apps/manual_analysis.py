@@ -2167,13 +2167,13 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
                 'borderwidth': 4,
                 'bordercolor': "#25476A",
-                'threshold': {'line': {'color': "#FAFAFA", 'width': 8}, 'thickness': 0.75,
+                'threshold': {'line': {'color': "#FAFAFA", 'width': 5}, 'thickness': 0.75,
                                                           'value': 21.5-(predict_rating_value-1)}
                 }
             ))
 
         manual_scenario_rating_fig.add_annotation(
-    dict(font=dict(color="#25476A", size=30, family="sans-serif"), x=0.5, y=0, xanchor='center',
+    dict(font=dict(color="#25476A", size=25, family="sans-serif"), x=0.5, y=0, xanchor='center',
          xref="paper",
          yref="paper", showarrow=False,
          text="Scenario<br>Rating<br>{}".format(predict_rating)))
@@ -2189,23 +2189,15 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         col1, col2 = st.columns(2)
         with col1:
             st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False}, use_container_width=True)
-            st.markdown("<style>.full-width-chart .chart-container { display: flex; justify-content: center; margin-bottom: -2000em; }</style>", unsafe_allow_html=True)
+            st.markdown("<style>.full-width-chart .chart-container { display: flex; justify-content: center;}</style>", unsafe_allow_html=True)
             st.markdown('<div class="full-width-chart"><div class="chart-container">{}</div></div>'.format(manual_current_rating_fig.to_html(include_plotlyjs='cdn')), unsafe_allow_html=True)
   
         with col2:
-            st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False}, use_container_width=True, height=320)
-            st.markdown("<style>.full-width-chart .chart-container { display: flex; justify-content: center; margin-bottom: -2000em; }</style>", unsafe_allow_html=True)
+            st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False}, use_container_width=True, height=340)
+            st.markdown("<style>.full-width-chart .chart-container { display: flex; justify-content: center; }</style>", unsafe_allow_html=True)
             st.markdown('<div class="full-width-chart"><div class="chart-container">{}</div></div>'.format(manual_scenario_rating_fig.to_html(include_plotlyjs='cdn')), unsafe_allow_html=True)
 
-        col1, col2 = st.columns(2)
-        with col2:
-            st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False}, use_container_width=True)
-            st.markdown("<style>@media (max-width: 768px) { .full-width-chart .chart-container { margin-top: 20px !important; } .full-width-chart .annotation { font-size: 16px !important; } }</style>", unsafe_allow_html=True)
-            st.markdown("<style>.full-width-chart .chart-container { display: flex; justify-content: center; margin-bottom: -2000em; }</style>", unsafe_allow_html=True)
-            st.markdown('<div class="full-width-chart"><div class="chart-container">{}</div></div>'.format(manual_scenario_rating_fig.to_html(include_plotlyjs='cdn')), unsafe_allow_html=True)
-
-
-        
+            
 
         subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
         text_media_query_manual2 = '''
