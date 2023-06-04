@@ -2179,7 +2179,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
          text="Scenario<br>Rating<br>{}".format(predict_rating)))
         manual_scenario_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
-            font={'color': "#25476A", 'size': 10},
+            font={'color': "#25476A", 'size': 15},
             width=340,
             height=340
         )
