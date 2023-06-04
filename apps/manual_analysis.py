@@ -2142,7 +2142,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_current_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20},
-            width=300,
+            width=500,
             margin=dict(l=20, r=20, t=20, b=20)
         )
 
@@ -2181,7 +2181,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_scenario_rating_fig.update_layout(
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 20},
-            width=300,
+            width=500,
             margin=dict(l=20, r=20, t=20, b=20)
         )
 
@@ -2189,7 +2189,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         
     
         col1, col2  = st.columns(2)
-        with col2:
+        with col1:
             st.plotly_chart(manual_current_rating_fig, config={'displayModeBar': False})
         with col2:
             st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False})
