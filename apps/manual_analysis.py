@@ -2096,13 +2096,13 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         st.markdown(html4, unsafe_allow_html=True)
         st.markdown(text_media_query_manual1 + text1, unsafe_allow_html=True)
         
-        import plotly.colors.sequential as cs
+     #   import plotly.colors.sequential as cs
         
         # Create a continuous color scale from red to yellow to green
-        color_scale = cs.YlOrRd
+      #  color_scale = cs.YlOrRd
 
         # Reverse the color scale to match the reversed step values
-        reversed_color_scale = color_scale[::-1]
+     #   reversed_color_scale = color_scale[::-1]
 
         # Define the number of steps and calculate the step size
         num_steps = 22
