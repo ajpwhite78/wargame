@@ -2121,6 +2121,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                                               colors=[color1, color2, color3])
         num_steps = 100
         values = np.linspace(0, 1, num_steps)
+        step_values = np.linspace(0, 22, num_steps)
         colors = col_cmap(values)
         step_colors = [clr.rgb2hex(color) for color in colors]
 
@@ -2143,7 +2144,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 'bgcolor': 'rgba(0, 0, 0, 0)',
                 'borderwidth': 4,
                 'bordercolor': "#25476A",
-                'steps': [{'range': [i / (num_steps-1), (i + 1) / (num_steps-1)], 'color': step_colors[i]} for i in range(num_steps)],
+                'steps': [{'range': [step_values[i], step_values[i + 1]], 'color': step_colors[i]} for i in range(num_steps - 1)],
                 'threshold': {'line': {'color': "#25476A", 'width': 20}, 'thickness': 0.75,
                                                           'value': 21.5-(current_rating_value-1)}
             }
