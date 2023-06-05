@@ -1807,20 +1807,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                                        **{'text-align': 'center'}, **{'width': '120px'}).set_properties(subset=[
                 "%s" % st.session_state.user_entity_name + " (" + df_financials['currency_iso'].values[
                     0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'})
-
-        hide_table_row_index = """
-            <style>
-            thead tr th:first-child {display:none}
-            tbody th {display:none}
-            </style>
-            """
-
-        # Inject CSS with Markdown
-        st.markdown(hide_table_row_index, unsafe_allow_html=True)      
-        
-        st.table(df_income_statement_out_png)
-
-        
+       
         df_cash_flow_statement_out_png = st.session_state.df_cash_flow_statement_out.style.set_table_styles([{'selector': 'td',
                                                                                           'props': [('color', '#25476A')]},{
             'selector': 'th:nth-child(1)',
@@ -1907,7 +1894,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             axis=1).set_properties(subset=["%s" % st.session_state.user_reporting_period, "Scenario"],
                                    **{'text-align': 'center'}, **{'width': '120px'}).set_properties(subset=[
             "%s" % st.session_state.user_entity_name + " (" + df_financials['currency_iso'].values[
-                0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'}).hide_index()
+                0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'})
 
         df_balance_sheet_out_png = st.session_state.df_balance_sheet_statement_out.style.set_table_styles([{'selector': 'td',
                                                                                           'props': [('color', '#25476A')]},{
@@ -2061,7 +2048,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             axis=1).set_properties(subset=["%s" % st.session_state.user_reporting_period, "Scenario"],
                                    **{'text-align': 'center'}, **{'width': '120px'}).set_properties(subset=[
             "%s" % st.session_state.user_entity_name + " (" + df_financials['currency_iso'].values[
-                0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'}).hide_index()
+                0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'})
 
         st.text("")
         st.markdown(styles, unsafe_allow_html=True)
@@ -2241,7 +2228,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 spinner.empty()
                 spinner_image.empty()
 
-                
+        hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+        st.markdown(hide_table_row_index, unsafe_allow_html=True)
+               
         col1, col2, col3 = st.columns(3)
         with col1:
             left_text = "<span style='font-family: sans-serif; color: #25476A; font-size: 1.7em;'>Income Statement</span>"
@@ -2250,7 +2244,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
             st.markdown(line_media_query3 + line3, unsafe_allow_html=True)
-            st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
+            st.table(df_income_statement_out_png)
+            #st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
             st.text("")
             st.text("")
             st.text("")
