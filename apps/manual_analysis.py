@@ -2143,7 +2143,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 14},
             width=340,
-            height=340
+            height=340,
+            autosize=True)
         )
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
@@ -2182,7 +2183,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             paper_bgcolor='rgba(0, 0, 0, 0)',
             font={'color': "#25476A", 'size': 14},
             width=340,
-            height=340
+            height=340,
+            autosize=True
         )
 
         manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True) 
