@@ -1172,7 +1172,7 @@ marker_spinner_css = """
 
     @keyframes animateBlink {
     0% {
-        background: #9D00FF;
+        background: #9500FF;
     }
     25% {
         background: rgba(0, 0, 0, 0);
