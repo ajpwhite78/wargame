@@ -1592,7 +1592,7 @@ spinner_image_css = """
         display: inline-block;
         width: 25%;
         text-align: center;
-        position: fixed;
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
