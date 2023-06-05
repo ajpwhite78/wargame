@@ -1589,16 +1589,7 @@ spinner_css = """
 spinner_image_css = """
 <style>
     .image-container {{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0%;
-        left: 0%;
-        transform: translate(54%, 0%);
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
+
     
     
     
