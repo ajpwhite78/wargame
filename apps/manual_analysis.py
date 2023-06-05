@@ -2207,7 +2207,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         '''
         st.markdown(text_media_query_manual2 + subtext1A, unsafe_allow_html=True)
         st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; padding-top: 0; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Company financial statements for the reporting period and the expected scenario are shown below. The financial statements may be downloaded for your records.</span></p>'
+        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; padding-top: -20em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Company financial statements for the reporting period and the expected scenario are shown below. The financial statements may be downloaded for your records.</span></p>'
         st.markdown(text_media_query_manual3 + instructions_text, unsafe_allow_html=True)
        
         col1, col2, col3 = st.columns([1, 1, 4])
