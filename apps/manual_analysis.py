@@ -2144,7 +2144,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             font={'color': "#25476A", 'size': 14},
             width=260,
             height=260,
-            margin=dict(t=3, b=0)
+            margin=dict(t=15, b=1)
         )
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
@@ -2184,7 +2184,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             font={'color': "#25476A", 'size': 14},
             width=260,
             height=260,
-            margin=dict(t=5, b=0)
+            margin=dict(t=10, b=0)
         )
 
         manual_scenario_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True) 
