@@ -1830,6 +1830,9 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                           '#FAFAFA'), ('font-size', '0.9em')]}, {
                                                                                                 'selector': 'th:last-child',
                                                                                                 'props': [('text-align', 'center'), ('font-size', '0.9em')]
+                                                                                            }, {
+                                                                                                'selector': 'th:last-child',
+                                                                                                'props': [('text-align', 'center'), ('font-size', '0.9em')]
                                                                                             }, {'selector': 'tr:nth-child(5) td',
                                                                                           'props': [
                                                                                               ('text-align', 'left'),
@@ -1900,11 +1903,11 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 0] + " Millions)"], **{'text-align': 'left'}, **{'width': '400px'})
 
         df_balance_sheet_out_png = st.session_state.df_balance_sheet_statement_out.style.set_table_styles([{'selector': 'td',
-                                                                                          'props': [('color', '#25476A')]},{
+                                                                                          'props': [('color', '#25476A'), ('font-size', '0.9em')]},{
             'selector': 'th:nth-child(1)',
             'props': [(
                 'text-align',
-                'left'), (
+                'left'), ('font-size', '0.9em'), (
                 'font-weight',
                 'bold'), (
                 'background-color',
@@ -1922,7 +1925,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                         'background-color',
                         '#25476A'),
                     ('color',
-                     '#FAFAFA')]},
+                     '#FAFAFA'), ('font-size', '0.9em')]},
                                                                                                            {
                                                                                                                'selector': 'tr:nth-child(7) td',
                                                                                                                'props': [
