@@ -2238,7 +2238,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         custom_css = """
         <style>
             .dataframe {
-                margin-top: -10px;
+                margin-top: -50px;
             }
         </style>
         """
