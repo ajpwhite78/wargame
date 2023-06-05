@@ -1590,12 +1590,7 @@ spinner_image_css = """
 <style>
     .image-container {{
 
-    
-    
-    
-        display: inline-block;
-        width: 25%;
-        text-align: center;
+
         position: absolute;
         top: 50%;
         left: 50%;
