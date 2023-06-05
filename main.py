@@ -581,8 +581,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 0 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 0 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));        
     }
@@ -593,8 +593,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 1 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 1 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));
     }
@@ -605,8 +605,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 2 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 2 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 2 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(5em * sin(2 * 3.14159 * 2 / 50)));
     }
@@ -617,8 +617,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 3 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 3 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));
     }
