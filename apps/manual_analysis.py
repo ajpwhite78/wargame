@@ -1076,8 +1076,8 @@ def get_financials(datafame, user_entity_name, user_period):
 def app():
     line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
     line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
-    line3 = '<hr class="line3" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: -0.4em; margin-bottom: 0em;">'
-    line4 = '<hr class="line3" style="height:0.1875em; border:-3em; background-color: #03A9F4; margin-top: 0em; margin-bottom: -8em;">'
+
+    line3 = '<hr class="line3" style="height:0.1875em; border:0em; background-color: #03A9F4; margin-top: 0em; margin-bottom: -8em;">'
     line_media_query1 = '''
         <style>
         @media (max-width: 600px) {
