@@ -1599,7 +1599,7 @@ spinner_image_css = """
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, 150%);
+        transform: translate(-50%, 200%);
         z-index: 9999;
     }}
 
