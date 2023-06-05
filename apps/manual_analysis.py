@@ -2249,7 +2249,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
-            st.markdown(line_media_query3 + line3, unsafe_allow_html=True)
+          #  st.markdown(line_media_query3 + line3, unsafe_allow_html=True)
             st.table(df_income_statement_out_png)
             #st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
             st.text("")
