@@ -2235,6 +2235,15 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             </style>
             """
         st.markdown(hide_table_row_index, unsafe_allow_html=True)
+        custom_css = """
+        <style>
+            .dataframe {
+                margin-top: -10px;
+            }
+        </style>
+        """
+        # Render the table with custom CSS
+        st.markdown(custom_css, unsafe_allow_html=True)
                
         col1, col2, col3 = st.columns(3)
         with col1:
