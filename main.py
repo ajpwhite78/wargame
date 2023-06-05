@@ -1615,6 +1615,9 @@ spinner_image_css = """
 </div>
 """
 
+spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
+spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+
 if "user_sector" not in st.session_state or "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
     st.session_state["user_country"] = ""
