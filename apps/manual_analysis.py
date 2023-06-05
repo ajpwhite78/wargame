@@ -16,7 +16,7 @@ marker_spinner_css = """
         justify-content: center;
         position: fixed;
         top: 0%;
-        left: 0%
+        left: 0%;
         transform: translate(54%, 0%);
         width: 100%;
         height: 100%;
@@ -29,8 +29,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 0 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 0 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 0 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 0 / 50))), calc(5em * sin(2 * 3.14159 * 0 / 50)));        
     }
@@ -41,8 +41,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 1 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 1 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 1 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 1 / 50))), calc(5em * sin(2 * 3.14159 * 1 / 50)));
     }
@@ -53,8 +53,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 2 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 2 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 2 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 2 / 50))), calc(5em * sin(2 * 3.14159 * 2 / 50)));
     }
@@ -65,8 +65,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 3 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 3 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 3 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 3 / 50))), calc(5em * sin(2 * 3.14159 * 3 / 50)));
     }
@@ -77,8 +77,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 4 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 4 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 4 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 4 / 50))), calc(5em * sin(2 * 3.14159 * 4 / 50)));
     }
@@ -89,8 +89,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 5 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 5 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 5 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 5 / 50))), calc(5em * sin(2 * 3.14159 * 5 / 50)));
     }
@@ -101,8 +101,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 6 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 6 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 6 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(5em * sin(2 * 3.14159 * 6 / 50)));
     }
@@ -113,8 +113,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 7 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 7 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 7 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 7 / 50))), calc(5em * sin(2 * 3.14159 * 7 / 50)));
     }
@@ -125,8 +125,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 8 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 8 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 8 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 8 / 50))), calc(5em * sin(2 * 3.14159 * 8 / 50)));
     }
@@ -137,8 +137,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 9 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 9 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 9 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 9 / 50))), calc(5em * sin(2 * 3.14159 * 9 / 50)));
     }
@@ -149,8 +149,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 10 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 10 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 10 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 10 / 50))), calc(5em * sin(2 * 3.14159 * 10 / 50)));
     }
@@ -161,8 +161,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 11 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 11 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 11 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 11 / 50))), calc(5em * sin(2 * 3.14159 * 11 / 50)));
     }
@@ -173,8 +173,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 12 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 12 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 12 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 12 / 50))), calc(5em * sin(2 * 3.14159 * 12 / 50)));
     }
@@ -185,8 +185,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 13 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 13 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 13 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 13 / 50))), calc(5em * sin(2 * 3.14159 * 13 / 50)));
     }
@@ -197,8 +197,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 14 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 14 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 14 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 14 / 50))), calc(5em * sin(2 * 3.14159 * 14 / 50)));
     }
@@ -209,8 +209,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 15 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 15 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 15 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 15 / 50))), calc(5em * sin(2 * 3.14159 * 15 / 50)));
     }
@@ -221,8 +221,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 16 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 16 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 16 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 16 / 50))), calc(5em * sin(2 * 3.14159 * 16 / 50)));
     }
@@ -233,8 +233,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 17 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 17 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 17 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 17 / 50))), calc(5em * sin(2 * 3.14159 * 17 / 50)));
     }
@@ -245,8 +245,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 18 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 18 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 18 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 18 / 50))), calc(5em * sin(2 * 3.14159 * 18 / 50)));
     }
@@ -257,8 +257,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 19 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 19 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 19 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 19 / 50))), calc(5em * sin(2 * 3.14159 * 19 / 50)));
     }
@@ -269,8 +269,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 20 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 20 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 20 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 20 / 50))), calc(5em * sin(2 * 3.14159 * 20 / 50)));
     }
@@ -281,8 +281,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 21 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 21 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 21 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 21 / 50))), calc(5em * sin(2 * 3.14159 * 21 / 50)));
     }
@@ -293,8 +293,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 22 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 22 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 22 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 22 / 50))), calc(5em * sin(2 * 3.14159 * 22 / 50)));
     }
@@ -305,8 +305,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 23 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 23 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 23 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 23 / 50))), calc(5em * sin(2 * 3.14159 * 23 / 50)));
     }
@@ -317,8 +317,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 24 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 24 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 24 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 24 / 50))), calc(5em * sin(2 * 3.14159 * 24 / 50)));
     }
@@ -329,8 +329,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 25 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 25 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 25 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 25 / 50))), calc(5em * sin(2 * 3.14159 * 25 / 50)));
     }
@@ -341,8 +341,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 26 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 26 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 26 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 26 / 50))), calc(5em * sin(2 * 3.14159 * 26 / 50)));
     }
@@ -353,8 +353,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 27 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 27 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 27 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 27 / 50))), calc(5em * sin(2 * 3.14159 * 27 / 50)));
     }
@@ -365,8 +365,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 28 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 28 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 28 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 28 / 50))), calc(5em * sin(2 * 3.14159 * 28 / 50)));
     }
@@ -377,8 +377,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 29 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 29 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 29 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 29 / 50))), calc(5em * sin(2 * 3.14159 * 29 / 50)));
     }
@@ -389,8 +389,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 30 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 30 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 30 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 30 / 50))), calc(5em * sin(2 * 3.14159 * 30 / 50)));
     }
@@ -401,8 +401,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 31 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 31 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 31 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 31 / 50))), calc(5em * sin(2 * 3.14159 * 31 / 50)));
     }
@@ -413,8 +413,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 32 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 32 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 32 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 32 / 50))), calc(5em * sin(2 * 3.14159 * 32 / 50)));
     }
@@ -425,8 +425,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 33 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 33 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 33 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 33 / 50))), calc(5em * sin(2 * 3.14159 * 33 / 50)));
     }
@@ -437,8 +437,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 34 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 34 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 34 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 34 / 50))), calc(5em * sin(2 * 3.14159 * 34 / 50)));
     }
@@ -449,8 +449,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 35 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 35 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 35 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 35 / 50))), calc(5em * sin(2 * 3.14159 * 35 / 50)));
     }
@@ -461,8 +461,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 36 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 36 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 36 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 36 / 50))), calc(5em * sin(2 * 3.14159 * 36 / 50)));
     }
@@ -473,8 +473,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 37 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 37 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 37 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 37 / 50))), calc(5em * sin(2 * 3.14159 * 37 / 50)));
     }
@@ -485,8 +485,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 38 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 38 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 38 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 38 / 50))), calc(5em * sin(2 * 3.14159 * 38 / 50)));
     }
@@ -497,8 +497,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 39 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 39 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 39 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 39 / 50))), calc(5em * sin(2 * 3.14159 * 39 / 50)));
     }
@@ -509,8 +509,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 40 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 40 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 40 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 40 / 50))), calc(5em * sin(2 * 3.14159 * 40 / 50)));
     }
@@ -521,8 +521,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 41 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 41 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 41 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 41 / 50))), calc(5em * sin(2 * 3.14159 * 41 / 50)));
     }
@@ -533,8 +533,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 42 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 42 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 42 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 42 / 50))), calc(5em * sin(2 * 3.14159 * 42 / 50)));
     }
@@ -545,8 +545,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 43 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 43 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 43 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 43 / 50))), calc(5em * sin(2 * 3.14159 * 43 / 50)));
     }
@@ -557,8 +557,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 44 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 44 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 44 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 44 / 50))), calc(5em * sin(2 * 3.14159 * 44 / 50)));
     }
@@ -569,8 +569,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 45 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 45 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 45 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 45 / 50))), calc(5em * sin(2 * 3.14159 * 45 / 50)));
     }
@@ -581,8 +581,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 46 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 46 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 46 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 46 / 50))), calc(5em * sin(2 * 3.14159 * 46 / 50)));
     }
@@ -593,8 +593,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 47 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 47 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 47 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 47 / 50))), calc(5em * sin(2 * 3.14159 * 47 / 50)));
     }
@@ -605,8 +605,8 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 48 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 48 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 48 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 48 / 50))), calc(5em * sin(2 * 3.14159 * 48 / 50)));
     }
@@ -617,15 +617,15 @@ marker_spinner_css = """
         width: 2em;
         height: 0.375em;
         background: rgba(0, 0, 0, 0);
-        animation: animateBlink 3s linear infinite;
-        animation-delay: calc(3s * 49 / 50);
+        animation: animateBlink 5s linear infinite;
+        animation-delay: calc(5s * 49 / 50);
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 49 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 49 / 50))), calc(5em * sin(2 * 3.14159 * 49 / 50)));
     }
 
     @keyframes animateBlink {
     0% {
-        background: #6f72de;
+        background: #9500FF;
     }
     25% {
         background: rgba(0, 0, 0, 0);
@@ -1108,7 +1108,7 @@ def app():
         </style>
     '''
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
-    spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center.png")), unsafe_allow_html=True)
+    spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
     st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out = get_default_fields(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period)
     st.session_state.df_income_statement_out, st.session_state.df_cash_flow_statement_out, st.session_state.df_balance_sheet_statement_out = run_whatif(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period, select_user_whatif_sales_revenue_growth=st.session_state.default_whatif_sales_revenue_growth_user_out,
 select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, select_user_whatif_sales_general_and_admin_expenses=st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, select_user_whatif_research_and_development_expenses=st.session_state.default_whatif_research_and_development_expenses_user_out, select_user_whatif_depreciation_and_amortization_expenses_sales=st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, select_user_whatif_depreciation_and_amortization_split=st.session_state.default_whatif_depreciation_and_amortization_split_user_out, select_user_whatif_interest_rate=st.session_state.default_whatif_interest_rate_user_out, select_user_whatif_tax_rate=st.session_state.default_whatif_tax_rate_user_out, select_user_whatif_dividend_payout_ratio=st.session_state.default_whatif_dividend_payout_ratio_user_out,select_user_whatif_accounts_receivable_days=st.session_state.default_whatif_accounts_receivable_days_user_out, select_user_whatif_inventory_days=st.session_state.default_whatif_inventory_days_user_out, select_user_whatif_capital_expenditure_sales=st.session_state.default_whatif_capital_expenditure_sales_user_out, select_user_whatif_capital_expenditure=st.session_state.default_whatif_capital_expenditure_user_out, select_user_whatif_capital_expenditure_indicator=st.session_state.default_whatif_capital_expenditure_indicator_user_out, select_user_whatif_tangible_intangible_split=st.session_state.default_whatif_tangible_intangible_split_user_out, select_user_whatif_accounts_payable_days=st.session_state.default_whatif_accounts_payable_days_user_out, select_user_whatif_sale_of_equity=st.session_state.default_whatif_sale_of_equity_user_out, select_user_whatif_repurchase_of_equity=st.session_state.default_whatif_repurchase_of_equity_user_out, select_user_whatif_proceeds_from_issuance_of_debt=st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, select_user_whatif_repayments_of_long_term_debt=st.session_state.default_whatif_repayments_of_long_term_debt_user_out, select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
