@@ -1606,7 +1606,7 @@ spinner_image_css = """
     }}
 </style>
 <div class="image-container">
-    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="40%">
 </div>
 """
 spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
