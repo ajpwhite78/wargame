@@ -1691,6 +1691,48 @@ if "user_whatif_sales_revenue_growth" not in st.session_state or "user_whatif_co
     st.session_state["user_whatif_notes_other_split"] = ""
 
 
+st.markdown("""
+<style>
+/* The input itself */
+div[data-baseweb="select"] > div,
+input[type=number] {
+  margin-top: 0;
+  color: #25476A;
+  background-color: rgba(3, 169, 244, 0.2);
+  border: 0.1875em solid #25476A;
+  font-size: 1em;
+  font-weight: bold;
+}
+.stMultiSelect [data-baseweb="select"] > div,
+.stMultiSelect [data-baseweb="tag"] {
+    font-size: 1em;
+  }
+
+/* Hover effect */
+div[data-baseweb="select"] > div:hover,
+input[type=number]:hover {
+  background-color: rgba(111, 114, 222, 0.4);
+}
+/* Media query for small screens */
+@media (max-width: 1024px) {
+  div[data-baseweb="select"] > div,
+  input[type=number] {
+    font-size: 0.8em;
+    height: 3em;
+  }
+  div[data-baseweb="tag"] > div,
+  input[type=number] {
+    height: auto;
+  }
+@media (max-width: 1024px) {
+  .stMultiSelect [data-baseweb="select"] > div,
+  .stMultiSelect [data-baseweb="tag"] {
+    height: auto !important;
+  }
+  }
+</style>
+""", unsafe_allow_html=True) 
+    
 st.markdown(".stMultiSelect > label {font-size:105%; font-weight:bold; color:red;} ",unsafe_allow_html=True) 
 
 introduction_text = '''
