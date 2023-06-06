@@ -1076,9 +1076,6 @@ def get_financials(datafame, user_entity_name, user_period):
 def app():
     line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
     line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
-    line3 = '<hr class="line3" style="height:0.1875em; bottom:-2em; border:0em; background-color: #03A9F4; margin-top: -0.4em; margin-bottom: 0em;">'
-
-    line4 = '<hr class="line3" style="height:0.1875em; border:0em; background-color: #03A9F4; margin-top: 0em; margin-bottom: -8em;">'
     line_media_query1 = '''
         <style>
         @media (max-width: 600px) {
@@ -1094,17 +1091,6 @@ def app():
             .line2 {
                 padding: 0.3em;
                 margin-bottom: 8em;
-            }
-        }
-        </style>
-    '''
-    line_media_query3 = '''
-        <style>
-        @media (max-width: 600px) {
-            .line3 {
-                padding: 0.4em;
-                margin-top: -2em;
-                margin-bottom: -2em;
             }
         }
         </style>
@@ -2251,7 +2237,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
-          #  st.markdown(line_media_query3 + line3, unsafe_allow_html=True)
             st.table(df_income_statement_out_png)
             #st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
             st.text("")
@@ -2261,7 +2246,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
-            st.markdown(line_media_query3 + line3, unsafe_allow_html=True)
             st.table(df_cash_flow_statement_out_png)
             #st.markdown('<div style="margin-top: -11px">' + df_cash_flow_statement_out_png.to_html(), unsafe_allow_html=True)
             st.text("")
@@ -2271,7 +2255,6 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
-            st.markdown(line_media_query3 + line3, unsafe_allow_html=True)
             st.table(df_balance_sheet_out_png)
             #st.markdown('<div style="margin-top: -11px">' + df_balance_sheet_out_png.to_html(), unsafe_allow_html=True)
 
