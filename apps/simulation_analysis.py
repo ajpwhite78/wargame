@@ -1434,9 +1434,19 @@ def app():
 
     st.markdown(html2, unsafe_allow_html=True)
     st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
+    
+    instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Select simulated income statement, cash flow statement and balance sheet financial fields. Click "Next" once you have made your selections or click "Reset" to reset to the default selection.</span></p>'
+        text_media_query_simulation3 = '''
+            <style>
+            @media (max-width: 1024px) {
+                p.instructions_text {
+                    font-size: 3.2em;
+                }
+            }
+            </style>
+        '''
+        st.markdown(text_media_query_simulation3 + instructions_text, unsafe_allow_html=True)
 
-    instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Select simulated income statement, cash flow statement and balance sheet financial fields. Click "Next" once you have made your selections or click "Reset" to reset to the default selection.</span></p>'
-    st.markdown(instructions_text, unsafe_allow_html=True)
     col1, col2, col3 = st.columns([5, 0.5, 0.5])
     with col1:
         sim_field_options = ["Sales Growth %", "COGS Margin %", "D&A Expenses / Sales %", "Accounts Receivable Days", "Inventory Days", "Capital Expenditure / Sales %", "Accounts Payable Days"]
