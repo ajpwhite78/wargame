@@ -1712,7 +1712,11 @@ span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
 font-size: 1em;
 font-weight: bold;
 }
-
+@media (max-width: 1024px) {
+    span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
+    font-size: 0.8em;
+    }
+}
 
 /* Media query for small screens */
 @media (max-width: 1024px) {
