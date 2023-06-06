@@ -1724,9 +1724,8 @@ input[type=number]:hover {
     height: auto;
   }
 @media (max-width: 1024px) {
-  .stMultiSelect [data-baseweb="select"] > div,
-  .stMultiSelect [data-baseweb="tag"] {
-    height: auto !important;
+  .st-MultiSelect__content {
+    font-size: 0.4em !important;
   }
   }
 </style>
