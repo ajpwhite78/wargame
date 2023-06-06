@@ -1137,6 +1137,226 @@ def change_callback6():
 
 
 def app():
+    styles = """
+        <style>
+            .col {
+                background-color: #25476A;
+                padding-left: 6.25em;
+                padding: 1em;
+                border: 0.3125em solid #03A9F4;
+                border-radius: 0.625em;
+                margin: 0;
+                padding-left: 1.875em;
+                padding-right: 1.875em;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+            }
+            .left {
+                text-align: left;
+                float: left;
+                width: 40%;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+            .right {
+                text-align: right;
+                float: right;
+                width: 60%;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+            .break-line {
+                display: inline;
+                white-space: normal;
+            }
+
+            @media (max-width: 600px) {
+                .col {
+                    border: 0.5em solid #03A9F4;
+                    font-size: 2.25em;
+                    margin-top: -2em;
+                    margin-bottom: 4em;
+                }
+                .break-line {
+                    display: block;
+                    white-space: pre-wrap;
+                }
+            }
+        </style>
+        """
+
+    st.markdown(styles, unsafe_allow_html=True)
+                          
+        styles2 = """
+        <style>
+            .col2 {
+                margin: 0em;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+                padding-right: 0.875em;
+                margin-top: 0em;
+                margin-bottom: 0em;
+            }
+            .left2 {
+                text-align: left;
+                width: 95%;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+            .right2 {
+                text-align: right;
+                width: 5%;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+
+            /* Tooltip container */
+            .tooltip2 {
+                position: relative;
+                margin-bottom: 0em;
+                display: inline-block;
+                margin-top: 0em;
+            }
+
+            /* Tooltip text */
+            .tooltip2 .tooltiptext2 {
+                visibility: hidden;
+                width: 80em;
+                background-color: #b8d9e8;
+                color: #25476A;
+                text-align: justify;
+                font-family: sans-serif;
+                display: block; 
+                border-radius: 0.375em;
+                white-space: normal;
+                padding-left: 0.75em;
+                padding-right: 0.75em;
+                padding-top: 0.5em;
+                padding-bottom: 0em;
+                border: 0.1875em solid #25476A;
+
+                /* Position the tooltip text */
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                transform: translateX(-95%);
+
+                /* Fade in tooltip */
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+
+            /* Tooltip arrow */
+            .tooltip2 .tooltiptext2::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 95.6%;
+                border-width: 0.625em;
+                border-style: solid;
+                border-color: #25476A transparent transparent transparent;
+            }
+
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltip2:hover .tooltiptext2 {
+                visibility: visible;
+                opacity: 1;
+            }
+            /* Change icon color on hover */
+            .tooltip2:hover i {
+                color: rgba(111, 114, 222, 0.8);
+            }   
+            /* Set initial icon color */
+            .tooltip2 i {
+                color: #25476A;
+            }
+            ul.responsive-ul2 {
+                font-size: 0.8em;
+            }
+            ul.responsive-ul2 li {
+                font-size: 1em;
+            }
+
+            /* Responsive styles */
+            @media (max-width: 600px) {
+               .col2 {
+                    padding-right: 1em;
+                    margin-top: 0em;
+                }
+                p.subtext_manual2 {
+                    font-size: 2.5em;
+                }
+            .tooltip2 .tooltiptext2 {
+                border-width: 0.6em;
+                border-radius: 1.6em;
+                width: 98em;
+                left: 50%;
+            }
+            .tooltip2 .tooltiptext2::after {
+                border-width: 2em;
+                left: 93.5%;
+            }
+            .tooltip2 {
+                
+            }
+            .tooltip2 i {
+                font-size: 8em;
+                margin-bottom: 0.2em;
+            }
+            ul.responsive-ul2 {
+                font-size: 3.2em;
+            }
+            ul.responsive-ul2 li {
+                font-size: 1em;
+            }
+            }
+        </style>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        """
+
+    st.markdown(styles2, unsafe_allow_html=True)
+        
+        styles3 = """
+        <style>
+            .col3 {
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+            }
+            .left3 {
+                text-align: left;
+                float: left;
+                width: 60%;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+            .right3 {
+                text-align: right;
+                float: right;
+                width: 40%;
+                padding-top: 0em;
+                padding-bottom: 0em;
+            }
+            @media (max-width: 600px) {
+                .col3 {
+                    font-size: 3.25em;
+                    margin-top: -2em;
+                }
+            }
+        </style>
+        """
+
+    st.markdown(styles3, unsafe_allow_html=True)
+
+    left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>Simulation Analysis</span>"
+    right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}<span class='break-line'>&nbsp;&nbsp;&nbsp;{}</span></span>".format(st.session_state.user_entity_name, st.session_state.user_reporting_period)
+
+    html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
+    st.markdown(html, unsafe_allow_html=True)   
+    
     line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
     line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
@@ -1148,45 +1368,8 @@ def app():
     spinner.empty()
     spinner_image.empty()
 
-    styles = """
-                <style>
-                    .col {
-                        background-color: #25476A;
-                        padding-left: 100px;
-                        padding: 1px;
-                        border: 5px solid #03A9F4;
-                        border-radius: 10px;
-                        height: 100px;
-                        margin: 0;
-                        padding-left: 30px;
-                        padding-right: 30px;
-                    }
-                    .left {
-                        text-align: left;
-                        float: left;
-                        width: 40%;
-                        padding-top: 10px;
-                        padding-bottom: 0px;
-    #                    padding: 10px;
-                    }
-                    .right {
-                        text-align: right;
-                        float: right;
-                        width: 60%;
-                        padding-top: 10px;
-                        padding-bottom: 0px;
-    #                    padding: 10px;
-                    }
-                </style>
-            """
-    st.markdown(styles, unsafe_allow_html=True)
 
-    left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 44px;'>Simulation Analysis</span>"
-    right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 44px;'>{}&nbsp;&nbsp;&nbsp;{}</span>".format(
-        st.session_state.user_entity_name, st.session_state.user_reporting_period)
 
-    html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
-    st.markdown(html, unsafe_allow_html=True)
     text1 = '''
     <p class="text1" style="margin-top: 1em; margin-bottom: -3em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
 '''
