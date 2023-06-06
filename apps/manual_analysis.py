@@ -2232,8 +2232,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                
         col1, col2, col3 = st.columns(3)
         with col1:
-            left_text = "<span style='margin-bottom: 0em; font-family: sans-serif; color: #25476A; font-size: 1.7em;'>Income Statement</span>"
-            right_text = "<span style='margin-bottom: 0em; font-family: sans-serif; color: #25476A; font-size: 0.8em;'>(blue fields indicate change)</span></span>"
+            left_text = "<span style='margin-bottom: -1em; font-family: sans-serif; color: #25476A; font-size: 1.7em;'>Income Statement</span>"
+            right_text = "<span style='margin-bottom: -1em; font-family: sans-serif; color: #25476A; font-size: 0.8em;'>(blue fields indicate change)</span></span>"
 
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
