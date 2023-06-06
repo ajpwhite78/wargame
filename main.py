@@ -1730,7 +1730,7 @@ st.markdown("""
   .stMultiSelect [data-baseweb="select"] > div,
   .stMultiSelect [data-baseweb="tag"] {
     height: auto !important;
-    font-size: 0.2em !important;
+    font-size: 10px !important;
   }
 }
 </style>
