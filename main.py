@@ -1716,6 +1716,9 @@ input[type=number]:hover {
     font-size: 0.8em;
     height: 3em;
   }
+  select[multiple] {
+    height: auto;
+  }
   }
 </style>
 """, unsafe_allow_html=True)
