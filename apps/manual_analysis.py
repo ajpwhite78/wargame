@@ -2128,15 +2128,12 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
 
-        theta = np.linspace(0, np.pi, 100)
-        x = 0.5 + 0.5 * np.cos(theta)
-        y = 0.5 + 0.5 * np.sin(theta)
-        semi_circle_path = f"M {'M'} {'L'.join([str(tx) for tx in zip(x, y)])} Z"
+        manual_current_rating_fig.add_shape(type="circle",
+                                     xref="paper", yref="paper",
+                                     x0=0, y0=0, x1=1, y1=1,
+                                     fillcolor="grey", opacity=0.3,
+                                     layer="below", line=dict(color="grey"))
 
-        manual_current_rating_fig.add_shape(type="path",
-                                             path=semi_circle_path,
-                                             fillcolor="grey", opacity=0.3,
-                                             layer="below", line=dict(color="grey"))
 
 
         
