@@ -1718,7 +1718,7 @@ input[type=number]:hover {
   }
   div[data-baseweb="tag"] > div,
   input[type=number] {
-    height: fit-content;
+    height: auto;
   }
   }
 </style>
