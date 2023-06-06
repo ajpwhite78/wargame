@@ -2130,7 +2130,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         manual_current_rating_fig.add_shape(type="circle",
                                      xref="paper", yref="paper",
-                                     x0=0.34, y0=-0.75, x1=0.66, y1=0.75,
+                                     x0=0.33.5, y0=-0.75, x1=0.66.5, y1=0.75,
                                      fillcolor="#25476A", opacity=1,
                                      layer="below")
 
