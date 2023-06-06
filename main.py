@@ -1724,7 +1724,7 @@ input[type=number]:hover {
 """, unsafe_allow_html=True)
 
 
-st.markdown("""<style>div.css-abycrm.ede6r8z0 {background-color:#008080; font-size: 0.4em;}</style>""", unsafe_allow_html=True)
+st.markdown("""<style>div.st-bh.st-bi.st-c1.st-c2.st-c3.st-b3.st-c4.st-en.st-bj.st-co.st-cp.st-c8.st-cr.st-eo {background-color:#008080; font-size: 0.4em;}</style>""", unsafe_allow_html=True)
 
 
 introduction_text = '''
