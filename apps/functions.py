@@ -642,7 +642,7 @@ marker_spinner_css = """
         background: rgba(0, 0, 0, 0);
     }   
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     #spinner-container-marker {
         transform: translate(57.4%, 0%);
     }
@@ -1032,7 +1032,7 @@ spinner_css = """
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         #custom-spinner {
             display: inline-block;
             width: 20vmin;
@@ -1063,7 +1063,7 @@ spinner_image_css = """
         z-index: 9999;
     }}
 
-    @media (max-width: 600px) {{
+    @media (max-width: 1024px) {{
         .image-container {{
             width: 50%;
         }}
@@ -1124,7 +1124,7 @@ class MultiFileDownloader(object):
                     border-color: #25476A;
                 }
 
-                @media (max-width: 600px) {
+                @media (max-width: 1024px) {
                     button.css-1n1yxpq.edgvbvh10 {
                         width: 100% !important;
                         height: 10em !important;
@@ -1167,7 +1167,7 @@ class MultiFileDownloader(object):
                     border-color: #25476A;
                 }
 
-                @media (max-width: 600px) {
+                @media (max-width: 1024px) {
                     button.css-1n1yxpq.edgvbvh10 {
                         width: 100% !important;
                         height: 10em !important;
