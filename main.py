@@ -59,7 +59,7 @@ st.markdown(
         color: #25476A;
         border-color: #25476A;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
     div.stButton > button {
         width: 100% !important;
         height: 10em !important;
@@ -116,7 +116,7 @@ line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #0
 line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
 line_media_query1 = '''
     <style>
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         .line1 {
             padding: 0.5em;
         }
@@ -125,7 +125,7 @@ line_media_query1 = '''
 '''
 line_media_query2 = '''
     <style>
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         .line2 {
             padding: 0.3em;
             margin-bottom: 8em;
@@ -471,7 +471,7 @@ header3 = """
         .welcome-container div {{
             color: #FAFAFA;
         }}
-        @media screen and (max-width: 600px) {{
+        @media screen and (max-width: 1024px) {{
         .header {{
             flex-direction: column;
             justify-content: center;
@@ -1178,7 +1178,7 @@ marker_spinner_css = """
         background: rgba(0, 0, 0, 0);
     }   
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     #spinner-container-marker {
         transform: translate(57.4%, 0%);
     }
@@ -1568,7 +1568,7 @@ spinner_css = """
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         #custom-spinner {
             display: inline-block;
             width: 20vmin;
@@ -1599,7 +1599,7 @@ spinner_image_css = """
         z-index: 9999;
     }}
 
-    @media (max-width: 600px) {{
+    @media (max-width: 1024px) {{
         .image-container {{
             width: 50%;
         }}
@@ -1710,7 +1710,7 @@ input[type=number]:hover {
   background-color: rgba(111, 114, 222, 0.4);
 }
 /* Media query for small screens */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   div[data-baseweb="select"] > div,
   input[type=number] {
     font-size: 0.8em;
@@ -1726,7 +1726,7 @@ introduction_text = '''
 
 text_media_query1 = '''
     <style>
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         p.introduction_text {
             font-size: 3.2em;
             border-width: 0.5em;
@@ -1741,7 +1741,7 @@ st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
 subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 text_media_query2 = '''
     <style>
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         p.subtext {
             font-size: 2.5em;
         }
@@ -1753,7 +1753,7 @@ st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
 instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Use the dropdown menus to select the sector, country, company name and reporting period of the company you want to analyze. Click "Run" once you have made your selections or click "Cancel" to reset.</span></p>'
 text_media_query3 = '''
     <style>
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         p.instructions_text {
             font-size: 3.2em;
         }
@@ -1766,7 +1766,7 @@ with col1:
     text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">Sector</span></p>'
     text_media_query4 = '''
     <style>
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         p.heading_text {
             font-size: 3.5em;
         }
@@ -2079,7 +2079,7 @@ footer2 = """
         .content-container {{
             /*padding-bottom: 100px;*/
         }}
-     @media screen and (max-width: 600px) {{
+     @media screen and (max-width: 1024px) {{
         .footer {{
             flex-direction: column;
             justify-content: center;
