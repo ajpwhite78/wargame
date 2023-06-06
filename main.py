@@ -1716,8 +1716,9 @@ input[type=number]:hover {
     font-size: 0.8em;
     height: 3em;
   }
-  div[data-baseweb="select"][class*="Multi"] > div {
-    height: auto;
+  div[data-baseweb="tag"] > div,
+  input[type=number] {
+    height: fit-content;
   }
   }
 </style>
