@@ -1724,16 +1724,13 @@ input[type=number]:hover {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown(
-"""
+st.markdown("""
 <style>
-.stMultiSelect [data-baseweb="tag"] {
-  height: fit-content;
-}
-.stMultiSelect [data-baseweb="tag"] span[title] {
-  white-space: normal;
-  max-width: 100%;
-  overflow-wrap: anywhere;
+@media (max-width: 1024px) {
+  .stMultiSelect [data-baseweb="select"] > div,
+  .stMultiSelect [data-baseweb="tag"] {
+    height: auto !important;
+  }
 }
 </style>
 """, unsafe_allow_html=True)
