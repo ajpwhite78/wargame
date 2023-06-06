@@ -1137,6 +1137,28 @@ def change_callback6():
 
 
 def app():
+    line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+    line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
+    line_media_query1 = '''
+        <style>
+        @media (max-width: 1024px) {
+            .line1 {
+                padding: 0.5em;
+            }
+        }
+        </style>
+    '''
+    line_media_query2 = '''
+        <style>
+        @media (max-width: 1024px) {
+            .line2 {
+                padding: 0.3em;
+                margin-bottom: 8em;
+            }
+        }
+        </style>
+    '''
+    
     styles = """
         <style>
             .col {
@@ -1353,12 +1375,9 @@ def app():
 
     left_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>Simulation Analysis</span>"
     right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}<span class='break-line'>&nbsp;&nbsp;&nbsp;{}</span></span>".format(st.session_state.user_entity_name, st.session_state.user_reporting_period)
-
     html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
     st.markdown(html, unsafe_allow_html=True)   
-    
-    line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
-    line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
+
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
     spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
     st.session_state.simulation_analysis_confirm = True
