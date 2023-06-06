@@ -631,7 +631,7 @@ marker_spinner_css = """
         background: rgba(0, 0, 0, 0);
     }   
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     #spinner-container-marker {
         transform: translate(57.4%, 0%);
     }
@@ -1021,7 +1021,7 @@ spinner_css = """
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         #custom-spinner {
             display: inline-block;
             width: 20vmin;
@@ -1052,7 +1052,7 @@ spinner_image_css = """
         z-index: 9999;
     }}
 
-    @media (max-width: 600px) {{
+    @media (max-width: 1024px) {{
         .image-container {{
             width: 50%;
         }}
@@ -1078,7 +1078,7 @@ def app():
     line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
     line_media_query1 = '''
         <style>
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             .line1 {
                 padding: 0.5em;
             }
@@ -1087,7 +1087,7 @@ def app():
     '''
     line_media_query2 = '''
         <style>
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             .line2 {
                 padding: 0.3em;
                 margin-bottom: 8em;
@@ -1139,7 +1139,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 white-space: normal;
             }
 
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 .col {
                     border: 0.5em solid #03A9F4;
                     font-size: 2.25em;
@@ -1249,7 +1249,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             }
 
             /* Responsive styles */
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                .col2 {
                     padding-right: 1em;
                     margin-top: 0em;
@@ -1309,7 +1309,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
                 padding-top: 0em;
                 padding-bottom: 0em;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 .col3 {
                     font-size: 3.25em;
                     margin-top: -2em;
@@ -1333,7 +1333,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 '''
         text_media_query_manual1 = '''
             <style>
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 p.text1 {
                     font-size: 3.2em;
                     border-width: 0.5em;
@@ -1382,7 +1382,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Enter values for the income statement financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
         text_media_query_manual3 = '''
             <style>
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 p.instructions_text {
                     font-size: 3.2em;
                 }
@@ -1395,7 +1395,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             text = '<p class="heading_text4" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">Sales Growth</span></p>'
             text_media_query_manual4 = '''
             <style>
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 p.heading_text4 {
                     font-size: 3.5em;
                 }
@@ -1404,7 +1404,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             '''
             text_media_query_manual4A = '''
             <style>
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 p.heading_text4A {
                     font-size: 3.5em;
                     margin-top: -2em;
@@ -1549,7 +1549,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             instructions_text = '<p class="instructions_text_update" style="margin-top: 2em; margin-bottom: 0em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Click "ReRun" once you have made your selection or click "Reset" to reset to the default values.</span></p>'
             text_media_query_manual3A = '''
             <style>
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 p.instructions_text_update {
                      font-size: 3.2em;
                      margin-top: 0em !important;
@@ -2179,7 +2179,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Financial Statements</span></p>'
         text_media_query_manual2 = '''
             <style>
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 p.subtext {
                     font-size: 2.5em;
                 }
