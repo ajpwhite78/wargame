@@ -1729,7 +1729,7 @@ st.markdown("""
 @media (max-width: 1024px) {
   .stMultiSelect [data-baseweb="select"] > div,
   .stMultiSelect [data-baseweb="tag"] {
-    font-size: 0.8em !important;
+    font-size: 0.2em !important;
     height: auto !important;
   }
 }
