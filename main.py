@@ -1704,7 +1704,7 @@ input[type=number] {
   font-weight: bold;
 }
 .st-MultiSelect > div > div > div {
-    font-size: 0.8em !important;
+    font-size: 0.4em !important;
   }
 
 /* Hover effect */
