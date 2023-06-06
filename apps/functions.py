@@ -1080,22 +1080,13 @@ def img_to_bytes(img_path):
     return encoded
 
 def highlight_diff_by_row(row, color1, color2):
-    numeric_row = pd.to_numeric(row, errors='coerce')
     is_diff_list = []
-    no_diff_list = []
-    if numeric_row.iloc[1:].dtype == np.object:
-        is_diff = [False for _ in range(numeric_row.iloc[1:].shape[0])]
-    else:
-        is_diff = numeric_row.iloc[1:].nunique() > 1
-    no_diff = [False for _ in range(numeric_row.iloc[1:].shape[0])]
+    is_diff = float(row[1].replace(',', '')) != float(row[2].replace(',', ''))
     is_diff_list.append(is_diff)
-    no_diff_list.append(no_diff)
-#    list1 = ["background: %s" % color2 if cell else "background: %s" % color2 for cell in no_diff_list]
     list1 = ["background: rgba(%s, %s, %s, %s)" % (
     color2[0], color2[1], color2[2], color2[3]) if cell else "background: rgba(%s, %s, %s, %s)" % (
     color2[0], color2[1], color2[2], color2[3]) for cell in is_diff_list]
     list2 = list1
-#    list3 = ["background: %s" % color1 if cell else "background: %s" % color2 for cell in is_diff_list]
     list3 = ["background: rgba(%s, %s, %s, %s)" % (
     color1[0], color1[1], color1[2], color1[3]) if cell else "background: rgba(%s, %s, %s, %s)" % (
     color2[0], color2[1], color2[2], color2[3]) for cell in is_diff_list]
