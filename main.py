@@ -1714,7 +1714,7 @@ input[type=number]:hover {
   div[data-baseweb="select"] > div,
   input[type=number] {
     font-size: 0.8em;
-    height: auto;
+    height: 3em;
   }
   div[data-baseweb="select"][class*="Multi"] > div {
     height: auto;
