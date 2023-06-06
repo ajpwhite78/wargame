@@ -1724,7 +1724,7 @@ input[type=number]:hover {
 """, unsafe_allow_html=True)
 
 
-st.markdown("""<style>div.st-bh.st-bi.st-c1.st-c2.st-c3.st-b3.st-c4.st-en.st-bj.st-co.st-cp.st-c8.st-cr.st-eo {background-color:#008080; font-size: 0.4em;}</style>""", unsafe_allow_html=True)
+st.markdown("""<style>div.st-ae st-ep st-ag st-ah st-ai st-aj st-c4 st-eq st-er st-bp st-bq st-br st-bs st-e7 st-e8 st-e9 st-ea st-au st-av st-aw st-ax st-bh st-es st-et st-eu st-b4 st-ev st-ew st-b6 st-ex st-ey st-ez st-f0 st-f1 st-cn  st-f2 {background-color:#008080; font-size: 0.4em;}</style>""", unsafe_allow_html=True)
 
 
 introduction_text = '''
