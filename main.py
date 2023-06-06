@@ -1708,6 +1708,12 @@ div[data-baseweb="select"] > div:hover,
 input[type=number]:hover {
   background-color: rgba(111, 114, 222, 0.4);
 }
+span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
+font-size: 1em;
+font-weight: bold;
+}
+
+
 /* Media query for small screens */
 @media (max-width: 1024px) {
   div[data-baseweb="select"] > div,
