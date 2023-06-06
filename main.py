@@ -1720,11 +1720,14 @@ input[type=number]:hover {
   input[type=number] {
     height: auto;
   }
+@media (max-width: 1024px) {
+  .stMultiSelect [data-baseweb="select"] > div,
+  .stMultiSelect [data-baseweb="tag"] {
+    height: auto !important;
+  }
   }
 </style>
 """, unsafe_allow_html=True)
-
-
 
 introduction_text = '''
     <p class="introduction_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Welcome to the Paydar wargame scenario analysis application, empowering you to make informed decisions regarding the current and future financial performance of target companies based on manual and scenario-based financial statement and credit rating analyses.</span></p>
