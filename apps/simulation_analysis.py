@@ -634,7 +634,7 @@ marker_spinner_css = """
         background: rgba(0, 0, 0, 0);
     }   
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     #spinner-container-marker {
         transform: translate(57.4%, 0%);
     }
@@ -1023,7 +1023,7 @@ spinner_css = """
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
         #custom-spinner {
             display: inline-block;
             width: 20vmin;
@@ -1054,7 +1054,7 @@ spinner_image_css = """
         z-index: 9999;
     }}
 
-    @media (max-width: 600px) {{
+    @media (max-width: 1024px) {{
         .image-container {{
             width: 50%;
         }}
@@ -1192,7 +1192,7 @@ def app():
 '''
     text_media_query_simulation1 = '''
         <style>
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             p.text1 {
                 font-size: 3.2em;
                 border-width: 0.5em;
@@ -1898,7 +1898,7 @@ def app():
                     /* Tooltip text */
                     .tooltip2 .tooltiptext {
                         visibility: hidden;
-                        width: 600px;
+                        width: 1024px;
                         background-color: #b8d9e8;
                         color: #25476A;
                         text-align: justify;
@@ -2133,7 +2133,7 @@ def app():
                                         /* Tooltip text */
                                         .tooltip2 .tooltiptext {
                                             visibility: hidden;
-                                            width: 600px;
+                                            width: 1024px;
                                             background-color: #b8d9e8;
                                             color: #25476A;
                                             text-align: justify;
