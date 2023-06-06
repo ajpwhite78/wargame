@@ -1730,16 +1730,6 @@ st.markdown("""
   .stMultiSelect [data-baseweb="select"] > div,
   .stMultiSelect [data-baseweb="tag"] {
     height: auto !important;
-  }
-}
-</style>
-""", unsafe_allow_html=True)
-st.markdown("""
-<style>
-/* Media query for small screens */
-@media (max-width: 1024px) {
-  .stMultiSelect > div,
-  .stMultiSelect > div > div > span {
     font-size: 0.2em !important;
   }
 }
