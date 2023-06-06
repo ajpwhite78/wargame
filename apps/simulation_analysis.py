@@ -1137,8 +1137,8 @@ def change_callback6():
 
 
 def app():
-    line = '<hr style="height: 5px; border:0px; background-color: #03A9F4; margin-top: 0px;">'
-    line2 = '<hr style="height: 3x; border:0px; background-color: #25476A; margin-top: -30px;">'
+    line1 = '<hr class="line1" style="height:0.3em; border:0em; background-color: #03A9F4; margin-top: 0em;">'
+    line2 = '<hr class="line2" style="height:0.1875em; border:0em; background-color: #25476A; margin-top: 0.2em;">'
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
     spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
     st.session_state.simulation_analysis_confirm = True
