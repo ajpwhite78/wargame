@@ -2128,6 +2128,14 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
 
         manual_current_rating_fig.update_xaxes(color="#25476A", mirror=True, showline=True)
 
+        manual_current_rating_fig.add_shape(type="circle",
+                                     xref="paper", yref="paper",
+                                     x0=0, y0=0, x1=1, y1=1,
+                                     fillcolor="grey", opacity=0.3,
+                                     layer="below", line=dict(color="grey"))
+
+        
+        
         manual_scenario_rating_fig = go.Figure(go.Indicator(
             mode="gauge",
             value=0,
