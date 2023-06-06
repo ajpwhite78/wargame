@@ -1450,8 +1450,18 @@ def app():
     col1, col2, col3 = st.columns([5, 0.5, 0.5])
     with col1:
         sim_field_options = ["Sales Growth %", "COGS Margin %", "D&A Expenses / Sales %", "Accounts Receivable Days", "Inventory Days", "Capital Expenditure / Sales %", "Accounts Payable Days"]
-        text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">Simulated Fields</span></p>'
-        st.markdown(text, unsafe_allow_html=True)
+        text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">Simulated Fields</span></p>'
+        text_media_query_simulation4 = '''
+        <style>
+        @media (max-width: 1024px) {
+            p.heading_text {
+                font-size: 3.5em;
+            }
+        }
+        </style>
+    '''
+        st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
+        
         if "user_whatif_simulated_values" not in st.session_state:
             st.multiselect(label="", label_visibility="collapsed", options=sim_field_options, default=sim_field_options,
                            key="user_whatif_simulated_values", on_change=change_callback3)
