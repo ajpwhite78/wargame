@@ -1367,10 +1367,11 @@ def app():
     default_fields = [st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out]
     spinner.empty()
     spinner_image.empty()
-
+    
     text1 = '''
-    <p class="text1" style="margin-top: 1em; margin-bottom: -3em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
+    <p class="text1" style="margin-top: 1em; margin-bottom: 1em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Simulation analysis of financial statements involves a model that simulates a company&apos;s financial performance under multiple scenarios, assessing the risks and opportunities associated with different potential outcomes.</span></p>
 '''
+     
     text_media_query_simulation1 = '''
         <style>
         @media (max-width: 1024px) {
@@ -1378,107 +1379,51 @@ def app():
                 font-size: 3.2em;
                 border-width: 0.5em;
                 position: relative;
-                top: -2em;
+                top: -1.5em;
+                margin-bottom: -5em;
             }
         }
         </style>
     '''
     st.markdown(text_media_query_simulation1 + text1, unsafe_allow_html=True)
 
-    st.text("")
-    st.text("")
-    col1, col2 = st.columns([5.8, 0.2])
-    with col1:
-        subtext1 = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Income Statement, Cash Flow Statement & Balance Sheet Simulated Input Fields</span></p>'
-        st.markdown(subtext1, unsafe_allow_html=True)
-    with col2:
-        st.markdown("""
-                            <style>
-                            /* Tooltip container */
-                            .tooltip {
-                                position: relative;
-                                margin-bottom: 0px;
-                                display: inline-block;
-                        #        border-bottom: 1px dotted black;
-                            }
-
-                            /* Tooltip text */
-                            .tooltip .tooltiptext {
-                                visibility: hidden;
-                                width: 1000px;
-                                background-color: #b8d9e8;
-                                color: #25476A;
-                                text-align: justify;
-                                border-radius: 6px;
-                                padding: 10px 15px;
-                                white-space: normal;
-                                padding: 10px 10px 10px 10px;
-                                border: 2px solid #25476A;
-
-                                /* Position the tooltip text */
-                                position: absolute;
-                                z-index: 1;
-                                bottom: 125%;
-                                left: 50%;
-                                margin-left: -950px;
-
-                                /* Fade in tooltip */
-                                opacity: 0;
-                                transition: opacity 0.3s;
-                            }
-
-                            /* Tooltip arrow */
-                            .tooltip .tooltiptext::after {
-                                content: "";
-                                position: absolute;
-                                top: 100%;
-                                left: 95%;
-                                margin-left: -5px;
-                                border-width: 5px;
-                                border-style: solid;
-                                border-color: #25476A transparent transparent transparent;
-                            }
-
-                            /* Show the tooltip text when you mouse over the tooltip container */
-                            .tooltip:hover .tooltiptext {
-                                visibility: visible;
-                                opacity: 1;
-                            }
-                            /* Change icon color on hover */
-                            .tooltip:hover i {
-                                color: rgba(111, 114, 222, 0.8);
-                            }   
-                            /* Set initial icon color */
-                            .tooltip i {
-                                color: #25476A;
-                            }
-                            </style>
-                            """,
-                    unsafe_allow_html=True
-                    )
-        st.markdown(
-            '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
-            unsafe_allow_html=True)
-        st.markdown(
-            """
-            <div class="tooltip">
-                <i class="fas fa-info-circle fa-2x""></i>
-                <span class="tooltiptext">
-                    <ul>
-                    The simulation model provides the user with the option to simulate the following risk factors.                               
+    html2 = """
+    <div class="col2">
+        <div class="left2">
+            <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
+        </div>
+        <div class="right2">
+            <div class="tooltip2">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <span class="tooltiptext2">
+                    <ul class="responsive-ul2">
+                        The simulation model provides the user with the option to simulate the following risk factors.                              
                         <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
                         <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
                         <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
                         <li>Accounts Receivable Days: The number of days it takes for a company to collect payment for goods or services sold. A lower number of days is generally seen as a positive sign, indicating that a company is efficient in its collections process.</li>
                         <li>Inventory Days: The number of days it takes for a company to sell its inventory. A lower number of days is generally seen as a positive sign, indicating that a company has a strong demand for its products.</li>
                         <li>Capital Expenditure / Sales: The ratio of capital expenditures to sales. This ratio indicates how much a company is investing in long-term assets relative to its revenue. A higher ratio may suggest that a company is investing more in its long-term growth and may have higher future earnings potential.</li>
-                        <li>Accounts Payable Days: The number of days it takes for a company to pay its bills to suppliers. A higher number of days may indicate that a company is using its suppliers&apos; money to finance its operations and may be seen as a positive sign for the company&apos;s cash flow management.</li>                    Simulating these risk factors can help provide an understanding of the potential impact of different scenarios on a company&apos;s financial health and performance.
-                    </ul>
+                        <li>Accounts Payable Days: The number of days it takes for a company to pay its bills to suppliers. A higher number of days may indicate that a company is using its suppliers&apos; money to finance its operations and may be seen as a positive sign for the company&apos;s cash flow management.</li>
+                        Simulating these risk factors can help provide an understanding of the potential impact of different scenarios on a company&apos;s financial health and performance.
+                    </ul>    
                 </span>
             </div>
-            """,
-            unsafe_allow_html=True
-        )
+        </div>
+    </div>
+    """
+
+    st.markdown(html2, unsafe_allow_html=True)
+    st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
+    
+    st.text("")
+    st.text("")
+    col1, col2 = st.columns([5.8, 0.2])
+    with col1:
+        subtext1 = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Income Statement, Cash Flow Statement & Balance Sheet Simulated Input Fields</span></p>'
+        st.markdown(subtext1, unsafe_allow_html=True)
+
+      
 
     st.markdown(line, unsafe_allow_html=True)
     st.markdown(line2, unsafe_allow_html=True)
