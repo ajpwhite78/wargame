@@ -1703,9 +1703,8 @@ input[type=number] {
   font-size: 1em;
   font-weight: bold;
 }
-.stMultiSelect [data-baseweb="select"] > div,
-.stMultiSelect [data-baseweb="tag"] {
-    font-size: 1em;
+.st-MultiSelect > div > div > div {
+    font-size: 0.8em !important;
   }
 
 /* Hover effect */
