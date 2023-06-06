@@ -1171,7 +1171,7 @@ def app():
                 white-space: normal;
             }
 
-            @media (max-width: 600px) {
+            @media (max-width: 1024px) {
                 .col {
                     border: 0.5em solid #03A9F4;
                     font-size: 2.25em;
@@ -1280,7 +1280,7 @@ def app():
         }
 
         /* Responsive styles */
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
            .col2 {
                 padding-right: 1em;
                 margin-top: 0em;
@@ -1340,7 +1340,7 @@ def app():
             padding-top: 0em;
             padding-bottom: 0em;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             .col3 {
                 font-size: 3.25em;
                 margin-top: -2em;
