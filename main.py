@@ -1740,7 +1740,7 @@ st.markdown("""
 @media (max-width: 1024px) {
   .stMultiSelect > div,
   .stMultiSelect > div > div > span {
-    font-size: 0.8em !important;
+    font-size: 0.2em !important;
   }
 }
 </style>
