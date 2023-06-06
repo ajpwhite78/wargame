@@ -1390,7 +1390,7 @@ def app():
     html2 = """
     <div class="col2">
         <div class="left2">
-            <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
+            <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement, Cash Flow Statement & Balance Sheet Simulated Input Fields</span></p>
         </div>
         <div class="right2">
             <div class="tooltip2">
@@ -1415,18 +1415,7 @@ def app():
 
     st.markdown(html2, unsafe_allow_html=True)
     st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
-    
-    st.text("")
-    st.text("")
-    col1, col2 = st.columns([5.8, 0.2])
-    with col1:
-        subtext1 = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Income Statement, Cash Flow Statement & Balance Sheet Simulated Input Fields</span></p>'
-        st.markdown(subtext1, unsafe_allow_html=True)
 
-      
-
-    st.markdown(line, unsafe_allow_html=True)
-    st.markdown(line2, unsafe_allow_html=True)
     instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Select simulated income statement, cash flow statement and balance sheet financial fields. Click "Next" once you have made your selections or click "Reset" to reset to the default selection.</span></p>'
     st.markdown(instructions_text, unsafe_allow_html=True)
     col1, col2, col3 = st.columns([5, 0.5, 0.5])
