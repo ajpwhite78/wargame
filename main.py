@@ -1704,7 +1704,7 @@ input[type=number] {
   font-weight: bold;
 }
 .stMultiSelect [data-baseweb="select"] > div,
-  .stMultiSelect [data-baseweb="tag"] {
+ input[type=number] {
     font-size: 1em;
   }
 
