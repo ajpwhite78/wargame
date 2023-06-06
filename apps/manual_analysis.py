@@ -2238,7 +2238,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
             st.table(df_income_statement_out_png)
-            st.text(")
+            st.text("")
             #st.markdown('<div style="margin-top: -11px">' + df_income_statement_out_png.to_html(), unsafe_allow_html=True)
         with col2:
             left_text = "<span style='margin-bottom: 0em; font-family: sans-serif; color: #25476A; font-size: 1.7em;'>Cash Flow Statement</span>"
@@ -2247,7 +2247,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             html5 = f"<div class='col3'><div class='left3'>{left_text}</div><div class='right3'>{right_text}</div></div>"
             st.markdown(html5, unsafe_allow_html=True)
             st.table(df_cash_flow_statement_out_png)
-            st.text(")
+            st.text("")
             #st.markdown('<div style="margin-top: -11px">' + df_cash_flow_statement_out_png.to_html(), unsafe_allow_html=True)
         with col3:
             left_text = "<span style='margin-bottom: 0em; font-family: sans-serif; color: #25476A; font-size: 1.7em;'>Balance Sheet</span>"
