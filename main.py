@@ -12,7 +12,7 @@ st.set_page_config(page_title="Paydar", page_icon="images/Favicon.png", layout="
 
 dirpath = os.path.dirname(__file__)
 
-if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.session_state or "df_field_name_mapping" not in st.session_state:
+if "df_input_file" not in st.session_state or "df_input" not in st.session_state or "df_field_name_mapping_file" not in st.sessionFselect_state or "df_field_name_mapping" not in st.session_state:
     st.session_state.df_input_file = 'TechHardware_WhatIfFields_Ccy_v2_short_test.csv'
     st.session_state.df_input = pd.read_csv(st.session_state.df_input_file)
     
@@ -1704,7 +1704,7 @@ input[type=number] {
   font-weight: bold;
 }
 .stMultiSelect [data-baseweb="select"] > div,
- input[type=number] {
+.stMultiSelect [data-baseweb="tag"] {
     font-size: 1em;
   }
 
@@ -1732,6 +1732,8 @@ input[type=number]:hover {
   }
 </style>
 """, unsafe_allow_html=True)
+
+st.markdown(".stMultiSelect > label {font-size:105%; font-weight:bold; color:red;} ",unsafe_allow_html=True) 
 
 introduction_text = '''
     <p class="introduction_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #25476A; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; padding-left: 0.75em; padding-right: 0.75em; padding-top: 0.5em; padding-bottom: 0.5em; font-family: sans-serif; font-size: 1em; font-weight: bold; display: block; width: 100%; border: 0.1875em solid #25476A;">Welcome to the Paydar wargame scenario analysis application, empowering you to make informed decisions regarding the current and future financial performance of target companies based on manual and scenario-based financial statement and credit rating analyses.</span></p>
