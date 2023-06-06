@@ -1703,10 +1703,6 @@ input[type=number] {
   font-size: 1em;
   font-weight: bold;
 }
-.st-MultiSelect > div > div > div {
-    font-size: 0.4em !important;
-  }
-
 /* Hover effect */
 div[data-baseweb="select"] > div:hover,
 input[type=number]:hover {
