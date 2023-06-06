@@ -1723,10 +1723,6 @@ input[type=number]:hover {
   input[type=number] {
     height: auto;
   }
-@media (max-width: 1024px) {
-  .st-MultiSelect__content {
-    font-size: 0.4em !important;
-  }
   }
 </style>
 """, unsafe_allow_html=True) 
