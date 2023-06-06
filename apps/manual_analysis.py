@@ -2114,7 +2114,7 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
             ))
 
         manual_current_rating_fig.add_annotation(
-    dict(font=dict(color="#25476A", size=25, family="sans-serif"), x=0.5, y=0, xanchor='center',
+    dict(font=dict(color="#FAFAFA", size=25, family="sans-serif"), x=0.5, y=0, xanchor='center',
          xref="paper",
          yref="paper", showarrow=False,
          text="{}<br>Rating<br>{}".format(st.session_state.user_reporting_period, current_rating)))
@@ -2131,8 +2131,8 @@ select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cos
         manual_current_rating_fig.add_shape(type="circle",
                                      xref="paper", yref="paper",
                                      x0=0.32, y0=-0.75, x1=0.68, y1=0.75,
-                                     fillcolor="grey", opacity=0.3,
-                                     layer="below", line=dict(color="grey"))
+                                     fillcolor="#25476A", opacity=1,
+                                     layer="below")
 
 
 
