@@ -1476,85 +1476,17 @@ def app():
         st.session_state.next1_confirm = True
 
     if st.session_state.next1_confirm == True:
-        col1, col2 = st.columns([5.8, 0.2])
-        with col1:
-            subtext1 = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Income Statement, Cash Flow Statement & Balance Sheet Manual Input Fields</span></p>'
-            st.markdown(subtext1, unsafe_allow_html=True)
-        with col2:
-            st.markdown("""
-                                <style>
-                                /* Tooltip container */
-                                .tooltip {
-                                    position: relative;
-                                    margin-bottom: 0px;
-                                    display: inline-block;
-                            #        border-bottom: 1px dotted black;
-                                }
-
-                                /* Tooltip text */
-                                .tooltip .tooltiptext {
-                                    visibility: hidden;
-                                    width: 1000px;
-                                    background-color: #b8d9e8;
-                                    color: #25476A;
-                                    text-align: justify;
-                                    border-radius: 6px;
-                                    padding: 10px 15px;
-                                    white-space: normal;
-                                    padding: 10px 10px 10px 10px;
-                                    border: 2px solid #25476A;
-
-                                    /* Position the tooltip text */
-                                    position: absolute;
-                                    z-index: 1;
-                                    bottom: 125%;
-                                    left: 50%;
-                                    margin-left: -950px;
-
-                                    /* Fade in tooltip */
-                                    opacity: 0;
-                                    transition: opacity 0.3s;
-                                }
-
-                                /* Tooltip arrow */
-                                .tooltip .tooltiptext::after {
-                                    content: "";
-                                    position: absolute;
-                                    top: 100%;
-                                    left: 95%;
-                                    margin-left: -5px;
-                                    border-width: 5px;
-                                    border-style: solid;
-                                    border-color: #25476A transparent transparent transparent;
-                                }
-
-                                /* Show the tooltip text when you mouse over the tooltip container */
-                                .tooltip:hover .tooltiptext {
-                                    visibility: visible;
-                                    opacity: 1;
-                                }
-                                /* Change icon color on hover */
-                                .tooltip:hover i {
-                                    color: rgba(111, 114, 222, 0.8);
-                                }   
-                                /* Set initial icon color */
-                                .tooltip i {
-                                    color: #25476A;
-                                }
-                                </style>
-                                """,
-                        unsafe_allow_html=True
-                        )
-            st.markdown(
-                '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">',
-                unsafe_allow_html=True)
-            st.markdown(
-                """
-                <div class="tooltip">
-                    <i class="fas fa-info-circle fa-2x""></i>
-                    <span class="tooltiptext">
-                        <ul>
-                        Specific risk factors are typically kept static during a simulation because they are assumed to be constant over the short-term time horizon of the simulation.                          
+        html3 = """
+        <div class="col2">
+            <div class="left2">
+                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement, Cash Flow Statement & Balance Sheet Manual Input Fields</span></p>
+            </div>
+            <div class="right2">
+                <div class="tooltip2">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                    <span class="tooltiptext2">
+                        <ul class="responsive-ul2">
+                            Specific risk factors are typically kept static during a simulation because they are assumed to be constant over the short-term time horizon of the simulation.                          
                             <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities and marketing costs.</li>
                             <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company&apos;s commitment to innovation and growth.</li>
                             <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
@@ -1569,20 +1501,19 @@ def app():
                             <li>Proceeds from Issuance of Debt: The total amount of money a company receives from issuing debt. This may include bonds, notes or other forms of debt financing.</li>
                             <li>Repayments of Long-Term Debt: The total amount of money a company pays back to lenders for long-term debt. This may include interest payments as well as principal repayments.</li>
                             <li>Notes / Other Split: The breakdown of a company&apos;s short-term debt between notes and other types of short-term debt. Notes refer to short-term debt that is issued with a specific maturity date, while other types of short-term debt may not have a specific maturity date or may be payable on demand.</li>
-                        The purpose of a simulation is to understand the potential impact of changing certain variables or assumptions, such as sales growth or COGS margin, on the overall financial performance of a company. By keeping other variables constant, the simulation is able to isolate the effects of the specific risk factors being analyzed. Additionally, it may be challenging to predict how these static variables might change over the simulation period, making it more practical to assume they remain constant. However, it is important to note that in real-world situations, these financial metrics and ratios will likely change over time and they should be continuously monitored to determine a company&apos;s financial position and performance.
-                        </ul>
+                            The purpose of a simulation is to understand the potential impact of changing certain variables or assumptions, such as sales growth or COGS margin, on the overall financial performance of a company. By keeping other variables constant, the simulation is able to isolate the effects of the specific risk factors being analyzed. Additionally, it may be challenging to predict how these static variables might change over the simulation period, making it more practical to assume they remain constant. However, it is important to note that in real-world situations, these financial metrics and ratios will likely change over time and they should be continuously monitored to determine a company&apos;s financial position and performance.
+                        </ul>  
                     </span>
                 </div>
-                """,
-                unsafe_allow_html=True
-            )
+            </div>
+        </div>
+        """
 
+        st.markdown(html3, unsafe_allow_html=True)
+        st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
+        instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Enter values for the non-simulated income statement, cash flow statement and balance sheet financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
+        st.markdown(text_media_query_simulation3 + instructions_text, unsafe_allow_html=True)
 
-
-        st.markdown(line, unsafe_allow_html=True)
-        st.markdown(line2, unsafe_allow_html=True)
-        instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Enter values for the non-simulated income statement, cash flow statement and balance sheet financial fields based on expectations for the company. Default values provided are based on the prior financial period.</span></p>'
-        st.markdown(instructions_text, unsafe_allow_html=True)
         field_options = ["Sales Growth %", "COGS Margin %", "SG&A Expenses $", "R&D Expenses $", "D&A Expenses / Sales %", "D&A Split %", "Interest Rate %", "Tax Rate %", "Dividend Payout Ratio %",
                              "Accounts Receivable Days", "Inventory Days", "Capital Expenditure / Sales %", "Capital Expenditure $", "Capital Expenditure Type", "Capex Tangible / Intangible Split %",
                              "Accounts Payable Days", "Sale of Equity $", "Repurchase of Equity $", "Proceeds from Issuance of Debt $", "Repayments of Long Term Debt $", "Notes / Other Split %"]
