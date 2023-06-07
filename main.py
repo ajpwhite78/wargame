@@ -1776,8 +1776,8 @@ arrows_image_css = """
 </div>
 """
 
-st.markdown(arrows_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
-
+#st.markdown(arrows_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
+spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
 
 subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 text_media_query2 = '''
