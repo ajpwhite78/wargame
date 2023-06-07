@@ -1523,7 +1523,7 @@ def get_default_fields(select_user_entity_name, select_user_period):
 
 @st.cache_data(show_spinner=False)
 def run_whatif(select_user_entity_name, select_user_period, select_user_whatif_sales_revenue_growth, select_user_whatif_cost_of_goods_sold_margin, select_user_whatif_sales_general_and_admin_expenses, select_user_whatif_research_and_development_expenses, select_user_whatif_depreciation_and_amortization_expenses_sales, select_user_whatif_depreciation_and_amortization_split, select_user_whatif_interest_rate, select_user_whatif_tax_rate, select_user_whatif_dividend_payout_ratio, select_user_whatif_accounts_receivable_days, select_user_whatif_inventory_days, select_user_whatif_capital_expenditure_sales, select_user_whatif_capital_expenditure, select_user_whatif_capital_expenditure_indicator, select_user_whatif_tangible_intangible_split, select_user_whatif_accounts_payable_days, select_user_whatif_sale_of_equity, select_user_whatif_repurchase_of_equity, select_user_whatif_proceeds_from_issuance_of_debt, select_user_whatif_repayments_of_long_term_debt, select_user_whatif_notes_other_split):
-    st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
+
     def get_financials(datafame, user_entity_name, user_period):
         entity_financials = datafame.loc[
             (datafame['entity_name'] == user_entity_name) & (datafame['period'] == user_period)]
