@@ -1609,6 +1609,43 @@ spinner_image_css = """
 </div>
 """
 
+
+arrows_image_css = """
+<style>
+    .image-container {{
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }}
+
+    @media (max-width: 1024px) {{
+        .image-container {{
+            width: 50%;
+        }}
+    }}
+</style>
+<div class="image-container">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
+</div>
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
 if "user_sector" not in st.session_state or "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
     st.session_state["user_country"] = ""
