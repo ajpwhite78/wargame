@@ -1707,10 +1707,8 @@ def app():
 
         col1, col2, col3, col4 = st.columns([4, 1.05, 0.5, 0.5])
         with col1:
-            st.text("")
-            st.text("")
-            instructions_text = '<p style="margin-top: -25px; margin-bottom: 20px; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 18px;">Click "Next" once you have made your selections or click "Reset" to reset to the default values.</span></p>'
-            st.markdown(instructions_text, unsafe_allow_html=True)
+            instructions_text = '<p class="instructions_text" style="margin-top: -1.8em; margin-bottom: 0.8em; text-align: justify;"><span style="font-family:sans-serif; color:#25476A; font-size: 1em;">Click "Next" once you have made your selections or click "Reset" to reset to the default values.</span></p>'
+            st.markdown(text_media_query_simulation3 + instructions_text, unsafe_allow_html=True)
         with col3:
             next_button2 = st.button("Next", key="whatif_sim_2A")
         with col4:
