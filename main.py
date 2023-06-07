@@ -1,6 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
-import streamlit_nested_layout
 import pandas as pd
 import pathlib
 import base64
