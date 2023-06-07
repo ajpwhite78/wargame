@@ -1609,44 +1609,6 @@ spinner_image_css = """
 </div>
 """
 
-
-arrows_image_css = """
-<style>
-    .image-container {{
-        display: inline-block;
-        width: 25%;
-        text-align: center;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-    }}
-
-    @media (max-width: 1024px) {{
-        .image-container {{
-            width: 50%;
-        }}
-    }}
-</style>
-<div class="image-container">
-    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
-</div>
-"""
-
-st.markdown(arrows_image_css.format(img_to_bytes("images/arrows.png")), unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
-
-
 if "user_sector" not in st.session_state or "user_country" not in st.session_state or "user_entity_name" not in st.session_state or "user_reporting_period" not in st.session_state or "user_whatif" not in st.session_state:
     st.session_state["user_sector"] = ""
     st.session_state["user_country"] = ""
@@ -1788,6 +1750,34 @@ text_media_query1 = '''
     </style>
 '''
 st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
+
+
+arrows_image_css = """
+<style>
+    .image-container {{
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }}
+
+    @media (max-width: 1024px) {{
+        .image-container {{
+            width: 50%;
+        }}
+    }}
+</style>
+<div class="image-container">
+    <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
+</div>
+"""
+
+st.markdown(arrows_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
+
 
 subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
 text_media_query2 = '''
