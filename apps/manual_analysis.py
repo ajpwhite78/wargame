@@ -1097,6 +1097,32 @@ def app():
     '''
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
     spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
+    arrows_image_css = """
+    <style>
+        .image-container {{
+            display: inline-block;
+            width: 25%;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }}
+
+        @media (max-width: 1024px) {{
+            .image-container {{
+                width: 50%;
+            }}
+        }}
+    </style>
+    <div class="image-container">
+        <img src="data:image/png;base64,{}" class="img-fluid" alt="logo" width="30%">
+    </div>
+    """
+
+    st.markdown(arrows_image_css.format(img_to_bytes("images/arrows.png")), unsafe_allow_html=True)
+    
     st.session_state.default_whatif_sales_revenue_growth_user_out, st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, st.session_state.default_whatif_research_and_development_expenses_user_out, st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, st.session_state.default_whatif_depreciation_and_amortization_split_user_out, st.session_state.default_whatif_interest_rate_user_out, st.session_state.default_whatif_tax_rate_user_out, st.session_state.default_whatif_dividend_payout_ratio_user_out, st.session_state.default_whatif_accounts_receivable_days_user_out, st.session_state.default_whatif_inventory_days_user_out, st.session_state.default_whatif_capital_expenditure_sales_user_out, st.session_state.default_whatif_capital_expenditure_user_out, st.session_state.default_whatif_capital_expenditure_indicator_user_out, st.session_state.default_whatif_tangible_intangible_split_user_out, st.session_state.default_whatif_accounts_payable_days_user_out, st.session_state.default_whatif_sale_of_equity_user_out, st.session_state.default_whatif_repurchase_of_equity_user_out, st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, st.session_state.default_whatif_repayments_of_long_term_debt_user_out, st.session_state.default_whatif_notes_other_split_user_out = get_default_fields(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period)
     st.session_state.df_income_statement_out, st.session_state.df_cash_flow_statement_out, st.session_state.df_balance_sheet_statement_out = run_whatif(select_user_entity_name=st.session_state.user_entity_name, select_user_period=st.session_state.user_reporting_period, select_user_whatif_sales_revenue_growth=st.session_state.default_whatif_sales_revenue_growth_user_out,
 select_user_whatif_cost_of_goods_sold_margin=st.session_state.default_whatif_cost_of_goods_sold_margin_user_out, select_user_whatif_sales_general_and_admin_expenses=st.session_state.default_whatif_sales_general_and_admin_expenses_user_out, select_user_whatif_research_and_development_expenses=st.session_state.default_whatif_research_and_development_expenses_user_out, select_user_whatif_depreciation_and_amortization_expenses_sales=st.session_state.default_whatif_depreciation_and_amortization_expenses_sales_user_out, select_user_whatif_depreciation_and_amortization_split=st.session_state.default_whatif_depreciation_and_amortization_split_user_out, select_user_whatif_interest_rate=st.session_state.default_whatif_interest_rate_user_out, select_user_whatif_tax_rate=st.session_state.default_whatif_tax_rate_user_out, select_user_whatif_dividend_payout_ratio=st.session_state.default_whatif_dividend_payout_ratio_user_out,select_user_whatif_accounts_receivable_days=st.session_state.default_whatif_accounts_receivable_days_user_out, select_user_whatif_inventory_days=st.session_state.default_whatif_inventory_days_user_out, select_user_whatif_capital_expenditure_sales=st.session_state.default_whatif_capital_expenditure_sales_user_out, select_user_whatif_capital_expenditure=st.session_state.default_whatif_capital_expenditure_user_out, select_user_whatif_capital_expenditure_indicator=st.session_state.default_whatif_capital_expenditure_indicator_user_out, select_user_whatif_tangible_intangible_split=st.session_state.default_whatif_tangible_intangible_split_user_out, select_user_whatif_accounts_payable_days=st.session_state.default_whatif_accounts_payable_days_user_out, select_user_whatif_sale_of_equity=st.session_state.default_whatif_sale_of_equity_user_out, select_user_whatif_repurchase_of_equity=st.session_state.default_whatif_repurchase_of_equity_user_out, select_user_whatif_proceeds_from_issuance_of_debt=st.session_state.default_whatif_proceeds_from_issuance_of_debt_user_out, select_user_whatif_repayments_of_long_term_debt=st.session_state.default_whatif_repayments_of_long_term_debt_user_out, select_user_whatif_notes_other_split=st.session_state.default_whatif_notes_other_split_user_out)
