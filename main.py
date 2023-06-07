@@ -1634,6 +1634,7 @@ arrows_image_css = """
 </div>
 """
 
+st.markdown(arrows_image_css.format(img_to_bytes("images/arrows.png")), unsafe_allow_html=True)
 
 
 
