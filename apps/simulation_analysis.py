@@ -109,7 +109,6 @@ marker_spinner_css = """
         border-radius: 0.5em;
         transform: rotate(calc(360deg * 6 / 50)) translate(calc(5em * (1 - cos(2 * 3.14159 * 6 / 50))), calc(5em * sin(2 * 3.14159 * 6 / 50)));
     }
-    
     .marker7 {
         position: absolute;
         left: 0;
@@ -1377,7 +1376,7 @@ def app():
     right_text = "<span style='font-family: sans-serif; color: #FAFAFA; font-size: 2.25em;'>{}<span class='break-line'>&nbsp;&nbsp;&nbsp;{}</span></span>".format(st.session_state.user_entity_name, st.session_state.user_reporting_period)
     html = f"<div class='col'><div class='left'>{left_text}</div><div class='right'>{right_text}</div></div>"
     st.markdown(html, unsafe_allow_html=True)   
-
+    st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
     spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
     spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
     st.session_state.simulation_analysis_confirm = True
