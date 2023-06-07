@@ -1777,6 +1777,7 @@ arrows_image_css = """
 """
 
 #st.markdown(arrows_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
+spinner = st.markdown(marker_spinner_css, unsafe_allow_html=True)
 spinner_image = st.markdown(spinner_image_css.format(img_to_bytes("images/spinner_center2.png")), unsafe_allow_html=True)
 
 subtext1A = '<p class="subtext" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 2em;">Company Details</span></p>'
