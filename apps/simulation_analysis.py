@@ -1469,19 +1469,13 @@ def app():
             st.multiselect(label="", label_visibility="collapsed", options=sim_field_options, default=st.session_state.user_whatif_simulated_values, key="user_whatif_simulated_values", on_change=change_callback3)
 
     with col2:
-        st.text("")
-        st.text("")
         next_button1 = st.button("Next", key="whatif_sim_2")
     with col3:
-        st.text("")
-        st.text("")
         reset_button1 = st.button("Reset", key="whatif_reset_1", on_click=reset3)
     if next_button1:
         st.session_state.next1_confirm = True
 
     if st.session_state.next1_confirm == True:
-        st.text("")
-        st.text("")
         col1, col2 = st.columns([5.8, 0.2])
         with col1:
             subtext1 = '<p style="margin-bottom: 0px;"><span style="font-family:sans-serif; color:#25476A; font-size: 40px;">Income Statement, Cash Flow Statement & Balance Sheet Manual Input Fields</span></p>'
