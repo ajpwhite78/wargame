@@ -1561,8 +1561,8 @@ def app():
         with col1:
             for i in range(0, (N + (1 if M >= 1 else 0)), 1):
                 if st.session_state.user_whatif_manual_field_options[i] == "Capital Expenditure Type":
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i])]].selectbox(
                         label = "", label_visibility = "collapsed",
@@ -1573,17 +1573,17 @@ def app():
 #                        options=["Dollar", "Sales %"],
 #                        key="whatif_sim_" + str(i + 3))
                 else:
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i])]].number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i])], key="whatif_sim_"+str(i+3), on_change=change_callback3)
 #                    globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i])]] = st.number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i])], key="whatif_sim_"+str(i+3))
-                st.text("")
+
         with col2:
             for j in range(0, (N + (1 if M - 1 >= 1 else 0)), 1):
                 if st.session_state.user_whatif_manual_field_options[i+j+1] == "Capital Expenditure Type":
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+1]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+1]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]] = globals()[field_names[
                         field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]].selectbox(
@@ -1595,17 +1595,17 @@ def app():
 #                        options=["Dollar", "Sales %"],
 #                        key="whatif_sim_" + str(i+j+1+3))
                 else:
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+1]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+1]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]].number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], key="whatif_sim_"+str(i+j+1+3), on_change=change_callback3)
 #                    globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])]] = st.number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+1])], key="whatif_sim_"+str(i+j+1+3))
-                st.text("")
+
         with col3:
             for k in range(0, (N + (1 if M - 2 >= 1 else 0)), 1):
                 if st.session_state.user_whatif_manual_field_options[i+j+k+2] == "Capital Expenditure Type":
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+2]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+2]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[
                         field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])]] = st.empty()
                     globals()[field_names_alt[
@@ -1621,17 +1621,17 @@ def app():
 #                        options=["Dollar", "Sales %"],
 #                        key="whatif_sim_" + str(i+j+k+2+3))
                 else:
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+2]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+2]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])]].number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], key="whatif_sim_"+str(i+j+k+2+3), on_change=change_callback3)
 #                    globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])]] = st.number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+2])], key="whatif_sim_"+str(i+j+k+2+3))
-                st.text("")
+
         with col4:
             for ii in range(0, (N + (1 if M - 3 >= 1 else 0)), 1):
                 if st.session_state.user_whatif_manual_field_options[i+j+k+ii+3] == "Capital Expenditure Type":
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+3]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+3]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[
                         field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])]] = st.empty()
                     globals()[field_names_alt[
@@ -1647,17 +1647,17 @@ def app():
 #                        options=["Dollar", "Sales %"],
 #                        key="whatif_sim_" + str(i+j+k+ii+3+3))
                 else:
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+3]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+3]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])]].number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], key="whatif_sim_"+str(i+j+k+ii+3+3), on_change=change_callback3)
 #                    globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])]] = st.number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+3])], key="whatif_sim_"+str(i+j+k+ii+3+3))
-                st.text("")
+
         with col5:
             for jj in range(0, (N + (1 if M - 4 >= 1 else 0)), 1):
                 if st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4] == "Capital Expenditure Type":
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[
                         field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])]] = st.empty()
                     globals()[field_names_alt[
@@ -1673,17 +1673,17 @@ def app():
 #                        options=["Dollar", "Sales %"],
 #                        key="whatif_sim_" + str(i+j+k+ii+jj+4+3))
                 else:
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])]].number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], key="whatif_sim_"+str(i+j+k+ii+jj+4+3), on_change=change_callback3)
 #                    globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])]] = st.number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+4])], key="whatif_sim_"+str(i+j+k+ii+jj+4+3))
-                st.text("")
+
         with col6:
             for kk in range(0, (N + (1 if M - 5 >= 1 else 0)), 1):
                 if st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5] == "Capital Expenditure Type":
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[
                         field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])]] = st.empty()
                     globals()[field_names_alt[
@@ -1699,12 +1699,12 @@ def app():
 #                        options=["Dollar", "Sales %"],
 #                        key="whatif_sim_" + str(i+j+k+ii+jj+kk+5+3))
                 else:
-                    text = '<p style="margin-bottom: 2px;"><span style="font-family:sans-serif; color:#25476A; font-size: 15px; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5]
-                    st.markdown(text, unsafe_allow_html=True)
+                    text = '<p class="heading_text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">%s</span></p>' % st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5]
+                    st.markdown(text_media_query_simulation4 + text, unsafe_allow_html=True)
                     globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])]] = st.empty()
                     globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])]] = globals()[field_names[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])]].number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], key="whatif_sim_"+str(i+j+k+ii+jj+kk+5+3), on_change=change_callback3)
 #                    globals()[field_names_alt[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])]] = st.number_input(label = "", label_visibility = "collapsed", min_value=min_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], max_value=max_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], step=step_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], format=format_list[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], value=default_fields[field_options.index(st.session_state.user_whatif_manual_field_options[i+j+k+ii+jj+kk+5])], key="whatif_sim_"+str(i+j+k+ii+jj+kk+5+3))
-                st.text("")
+
         col1, col2, col3, col4 = st.columns([4, 1.05, 0.5, 0.5])
         with col1:
             st.text("")
